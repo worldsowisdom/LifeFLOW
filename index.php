@@ -705,7 +705,11 @@
 		MovePurpleSpiral();
 	  
       // Move newyz
-      eg_newy.setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
+      // orig: eg_newy.setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
+	  eval(document.getElementById("ai5").textContent); // mv newy/galaxy3 from svg ai
+
+	  
+	  
       eg_newy2.setAttribute("transform", "translate(" +x_pos+ ", " +galaxy4_y_pos+ " )");
       avril_niblet_1.setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
 
