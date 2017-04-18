@@ -679,8 +679,23 @@
       pink_rect.setAttribute("transform", "translate( 0.0 , " +y_pos+ " )");
 
       eg_niblet.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
-      eg_biggo.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
 
+//	we're trying herenow some new ai...
+
+
+// orig:      eg_biggo.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
+		//call instead from <desc>...
+
+		eval(document.getElementById("ai2").textContent); // try running ai
+		
+		//p make array of ai[]
+		
+/*	old way to do desc ai:
+		var ai = document.getElementById("ai2").textContent; // try running ai
+		ai = ai.substring(1, ai.length()); // strip leading double quote
+		ai = ai.substring(0, ai.length() - 1); // strip trailing double quote
+		ai;
+*/
       eg_medy.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
 //      eg_medy.setAttribute("transform", "translate(0.0, " +y_pos+ " )");
 
