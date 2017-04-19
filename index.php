@@ -157,7 +157,7 @@
 //		creature_array[creature_index] = document.getElementById("creature_name"); // add creature to js from svg...
 //		i think we'll need to carefully loop through each svg element...
 		var creatures_by_class = document.getElementsByClassName("creatureClass"); // should create an array containing all creatures...
-		//var k;
+		//var k; ...for now we're using creature_index instead, I think this should work... :)
 		for (creature_index = 0; creature_index < creatures_by_class.length; creature_index++) {
 			creature_array[creature_index] = creatures_by_class[creature_index];
 		}
@@ -417,7 +417,7 @@
 		document.getElementById("svg2")
 			.insertBefore(creature_array[creature_index], document.getElementById("galaxy3")); // WHERE TO INSERT? add the new clone into the inline svg (to get written automatically to file later)
 				// m instead do an appendChild to svg2 (above)...
-		creature_index++; // go to next clone
+		creature_index++; // go to next creature
 		
 		
 	}
