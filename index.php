@@ -148,7 +148,7 @@
 		// Also same for creature_array[]? probably yes
 		
 		//first I think we should clear the previously user-created creatures
-//		creature_array = [];
+		creature_array = [];
 		
 		
 		//then load them anew...
@@ -156,6 +156,12 @@
 		
 //		creature_array[creature_index] = document.getElementById("creature_name"); // add creature to js from svg...
 //		i think we'll need to carefully loop through each svg element...
+		var creatures_by_class = document.getElementsByClassName("creatureClass"); // shoudl create an array containing all creatures...
+		//var k;
+		(for creature_index = 0; creature_index < creatures_by_class.length; creature_index++) {
+			creature_array[creature_index] = creatures_by_class[creature_index];
+		}
+
 		
 		
 //		the_rect = evt.target.ownerDocument.getElementById("mediumcreature3");
