@@ -155,6 +155,7 @@
 //		creature_index = 0; // go back to beginning - is this necessary? probably yes.
 		
 //		creature_array[creature_index] = document.getElementById("creature_name"); // add creature to js from svg...
+//		i think we'll need to carefully loop through each svg element...
 		
 		
 //		the_rect = evt.target.ownerDocument.getElementById("mediumcreature3");
@@ -178,6 +179,7 @@
 	
 	function LoadCreatures() {
 	//Download creatures from server via AJAX requests.
+	//Could maybe be combined with OpenArea()
 	
 	xhr = new XMLHttpRequest();
 //	xhr.open("GET","creatures/0123456789.svg",false);
@@ -195,6 +197,8 @@
   }
 
 	function LoadUI() {
+		//Loads the user interface. The UI itself should be moved out of here and into its own file.
+		//SO what's in ui2.svg???
 	
 	xhr = new XMLHttpRequest();
 	xhr.open("GET","ui/ui2.svg",false);
@@ -221,6 +225,7 @@
 		
 		var xhr_new = new XMLHttpRequest();
 		xhr_new.open("GET",active_area + ((/\?/).test(active_area) ? "&" : "?") + "time="+(new Date()).getTime(),false); //load dynamically! :)
+			// btw the test above is probably unecessary, as it should already be loading e.g. "...?area=Area-01", although it worx! :)
 		xhr_new.overrideMimeType("image/svg+xml");
 		xhr_new.send("");
 		document.getElementById("svgContainerCreatures")
@@ -398,6 +403,8 @@
 		creature_array[creature_index].setAttributeNS(null,"style","fill:blue;stroke:purple"); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(-40,20)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
+	// add "Creature" class, for later readding/loading! :)
+		creature_array[creature_index].setAttributeNS(null,"class","creatureClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
 						// insert clone_index into clone, for ease of deletion. 
 	//		clone_array[clone_index].setAttribute("clone_index",clone_index); // insert clone_index into clone, for ease of deletion.
 			// or should it be : "onmousedown=deleteClone(clone_index)"...? py...
