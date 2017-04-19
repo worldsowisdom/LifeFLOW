@@ -711,7 +711,7 @@
 // orig:      eg_biggo.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
 		//call instead from <desc>...
 
-		eval(document.getElementById("ai2").textContent); // try running ai
+//useful? i think biggo		eval(document.getElementById("ai2").textContent); // try running ai
 		
 		//p make array of ai[]
 		
@@ -731,9 +731,17 @@
 	  
       // Move newyz
       // orig: eg_newy.setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
-	  eval(document.getElementById("ai5").textContent); // mv newy/galaxy3 from svg ai
+//useful?  i think galaxy???	  eval(document.getElementById("ai5").textContent); // mv newy/galaxy3 from svg ai
 
+	  // Can we similarly mv whole creatureClass e.g.?
+	  //eval(document.getElementByClass("creatureClass").textContent); // mv newy/galaxy3 from svg ai
 	  
+	  /* fix:
+		for (creature_index = 0; creature_index < creature_array.length; creature_index++) {
+			creature_array[creature_index].setAttribute("transform", "translate(" +Math.random()*100+ ", " +Math.random()*100+ " )"); // mv randomly! :)
+//orig			creature_array[creature_index] = creatures_by_class[creature_index];
+		}
+		*/
 	  
       eg_newy2.setAttribute("transform", "translate(" +x_pos+ ", " +galaxy4_y_pos+ " )");
       avril_niblet_1.setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
