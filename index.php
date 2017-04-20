@@ -757,7 +757,7 @@
 	  // add something like (for each clone in array, animate)
 	  
 	 // for (i <= clone_index in clone_array) clone_array[clone_index].setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )"); i++
-	 for (i = 0; i < clone_index; i++) clone_array[i].setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
+	 for (i = 0; i < clone_index; i++) clone_array[i].setAttribute("transform", "translate(" +2*Math.random()*x_pos+ ", " +2*Math.random()*y_pos+ " )");
 
 	 // mv user-defined creatures; replace this with more sophisiticated motions then w/ custom AI! :)
 	 for (i = 0; i < creature_index; i++) creature_array[i].setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
