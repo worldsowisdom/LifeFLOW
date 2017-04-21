@@ -453,6 +453,10 @@
 		
 		document.getElementById("svg2") // rm clone from inline svg
 			.removeChild(document.getElementById(""+creature_name+"")); //um...
+		
+		//should also rm from array (and maybe change index???)
+//something like this		removeFromArray(creature_array, indexOf(creature_name)); // rm creature from array
+		// also probably decrement creature_index...
 
 	}
 	
