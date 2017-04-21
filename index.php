@@ -1292,11 +1292,13 @@
 
 <p></p>
 
-<p>This is the first LifeFLOW! :) It is kind of like a game, and kind of like nature! :)</p>
+<p>Welcome to LifeFLOW! :) It is kind of like a game, and kind of like nature! :)</p>
 
-<p></p>
+<p>LifeFLOW is a little place where we can play with moving machines. Each of these creatures goes around the area exploring and playing. You can observe them move, interact with them by touching, cloning, creating, removing, and more. New features continue to become available. You can also navigate around many different areas. <strong>Please contribute something to the flow, and enjoy! :)</strong></p>
 
-<p>LifeFLOW is a little place where we can play with moving machines. Each of these creatures goes around the area exploring and playing. <strong>Please contribute something to the flow, and enjoy! :)</strong></p>
+<p>A few tips: Use the blue square navigator to browse around the areas. Currently areas save every full period. We're still in the very early stages and welcome your comments on growth and development!</p>
+
+<p>Some questions: What do you like or dislike about LifeFLOW? What do you want next? What do you think makes or would make LifeFLOW useful, beautiful, interesting?</p>
 
 <p>Contact: <a href="mailto:life@worldsowisdom.com?subject=LifeFLOW">life@worldsowisdom.com</a>! :)</p>
 
