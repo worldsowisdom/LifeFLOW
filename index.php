@@ -1292,7 +1292,9 @@
 
 <p></p>
 
-<p>Welcome to LifeFLOW! :) It is kind of like a game, and kind of like nature! :)</p>
+<p><h2>Welcome to LifeFLOW! :)</h2></p>
+
+<p>It is kind of like a game, and kind of like nature! :)</p>
 
 <p>LifeFLOW is a little place where we can play with moving machines. Each of these creatures goes around the area exploring and playing. You can observe them move, interact with them by touching, cloning, creating, removing, and more. New features continue to become available. You can also navigate around many different areas. <strong>Please contribute something to the flow, and enjoy! :)</strong></p>
 
