@@ -425,7 +425,13 @@
 		//<desc> - this is AI! :)
 		// m also add <id="a-##########"> and/or <class="personalityClass>
 		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
-		var creature_desc = document.createTextNode("ai"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\");.setAttribute(\"transform\", \"translate(3,5)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+			//eg_newy.setAttribute("transform", "translate(" +Math.random()*100+ ", " +Math.random()*100+ " )"); // mv randomly! :)
+	//document.getElementById("Creature-0.778706729708058");
+//	eg_newy.setAttribute("transform", "translate(3,5)");
+	
+//	" +Math.random()*100+ ", " +Math.random()*100+ " )");
+
 		creature_desc_element.appendChild(creature_desc); // add AI to <desc> (I think this is necessary...)
 		creature_array[creature_index].appendChild(creature_desc_element); // add <desc> to new creature. Not sure if this worx...
 
