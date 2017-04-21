@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="ui-new.svg"><defs
+   id="defs4"><script
+   type="text/ecmascript"
+   id="script4269"><![CDATA[
+
+    var time = 0;
+    var delta_time = 25;
+    var max_time = 1000;
+    var dir = 1;
+	var dir_purple_spiral = 1;
+	var opacity_ps = .9;
+	
+    var the_rect;
+    var pink_rect;
+    var eg_niblet;
+    var eg_medy;
+    var eg_biggo;
+    var eg_newy;
+    var purple_spiral;
+    var avril_niblet_1;
+
+	var creatures = svg1;
+	
+    function Start(evt) {
+
+      the_rect = evt.target.ownerDocument.getElementById("BlueRect");
+      pink_rect = evt.target.ownerDocument.getElementById("PinkRect");
+      eg_niblet = evt.target.ownerDocument.getElementById("NibletEG");
+      eg_medy = evt.target.ownerDocument.getElementById("MedyEG");
+      eg_biggo = evt.target.ownerDocument.getElementById("BiggoEG");
+      eg_newy = evt.target.ownerDocument.getElementById("NewyEG");
+      eg_newy2 = evt.target.ownerDocument.getElementById("NewyEG2");
+      purple_spiral = evt.target.ownerDocument.getElementById("PurpleSpiral");
+      avril_niblet_1 = evt.target.ownerDocument.getElementById("AvrilNiblet1");
+      Oscillate();
+    }
+
+
+	function Save() {
+		//creatures = svg1;
+		//$var = $_POST['foo'];
+		//file_put_contents('file_where_stored_value_is.php', $var);
+	}
+
+	function Move(creature, x, y) {
+		creature.setAttribute("transform", "translate(x, y)");
+	}
+	
+	function Turn() {
+		dir = -dir;
+	}
+	
+	function Act(creature) {
+		//creature.setAttribute('fill-opacity',)
+		//BiggoEG.setAttribute('fill-opacity','BiggoEG.getAttribute('fill-opacity')*0.9');
+		creature.setAttribute('fill-opacity',creature.getAttribute('fill-opacity')*0.9);
+	}
+
+	function Speed() {
+		delta_time = 1 / delta_time;
+	}
+	
+	function Randomize() {
+		time = Math.random()*1000;
+	}
+	
+	function Reverse(creature) {
+		dir_purple_spiral = -dir_purple_spiral;
+		opacity_ps = opacity_ps * 0.9;
+//		opacity_ps = opacity_ps - 0.2;
+		purple_spiral.setAttribute('fill-opacity',opacity_ps);
+//		purple_spiral.setAttribute('fill-opacity','0.1');
+	//	purple_spiral.setAttribute('fill-opacity','0.25');
+	//	purple_spiral.setAttribute('fill','fill+1');
+		//dir = -dir;
+	}
+
+//	function Reverse() {
+//		dir = -dir;
+//	}
+
+	function MovePurpleSpiral() {
+	
+	//	Move(purple_spiral);
+	//	x_pos_ps = x_pos * 3;
+	//	dir_purple_spiral = dir_purple_spiral * x_pos;
+		x_pos_ps = (time * 25) / max_time * dir_purple_spiral;
+		purple_spiral.setAttribute("transform", "translate(" +x_pos_ps+ ", " +y_pos+ ")");
+		//purple_spiral.setAttribute("transform", "rotate(90, 100, 120)");
+//		purple_spiral.setAttribute("transform", "rotate(90, " +x_pos_ps+ ", " +y_pos+ ")");
+
+	}
+	
+    function Oscillate() {
+
+      time = time + dir * delta_time;
+      if (time >  max_time)  dir = -1;
+      if (time < -max_time)  dir =  1;
+
+      // Calculate x position
+      x_pos = (time * 25) / max_time;
+      the_rect.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
+      pink_rect.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
+      eg_niblet.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
+      eg_medy.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
+      eg_biggo.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
+
+      // Calculate y position
+      y_pos = (time * 25) / max_time;
+      eg_medy.setAttribute("transform", "translate(0.0, " +y_pos+ " )");
+
+      // move(purple_spiral, " +x_pos+ ", 0.0);
+	  //x_pos_ps = x_pos * 3;
+      //purple_spiral.setAttribute("transform", "translate(" +x_pos_ps+ ", " +y_pos+ ")");
+		MovePurpleSpiral();
+	  
+      // Move newyz
+      eg_newy.setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
+      eg_newy2.setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
+      avril_niblet_1.setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
+
+
+      // Repeat
+      setTimeout("Oscillate()", delta_time)
+    }
+
+    window.Oscillate = Oscillate
+
+   ]]></script>
+opacity_ps onmousedown=&quot;Reverse(PurpleSpiral)&quot; id=&quot;PurpleSpiral&quot; d=&quot;m 282.09113,269.50729 c 1.52075,1.52076 -1.29967,2.80025 -2.52761,2.52761 -3.32763,-0.73884 -3.86257,-5.00113 -2.5276,-7.58281 2.38796,-4.61803 8.58895,-5.15902 12.63801,-2.5276 5.94217,3.86172 6.4939,12.22544 2.5276,17.69322 -5.28645,7.28768 -15.87921,7.84514 -22.74842,2.52759 -8.6442,-6.69159 -9.20486,-19.54122 -2.5276,-27.80363 8.08706,-10.00688 23.20787,-10.56947 32.85884,-2.52759 11.37333,9.47708 11.93717,26.8774 2.52759,37.91404 -10.86373,12.74223 -30.54887,13.30692 -42.96924,2.52759 -14.11282,-12.24817 -14.67812,-34.22169 -2.52759,-48.02445 13.63105,-15.4846 37.8955,-16.05034 53.07965,-2.52759 16.85728,15.01283 17.42336,41.57006 2.52759,58.13486&quot; id=&quot;path4800&quot; inkscape:tile-cx=&quot;185.6451&quot; inkscape:tile-cy=&quot;265.9547&quot; inkscape:tile-h=&quot;68.00056&quot; inkscape:tile-w=&quot;75.106916&quot; inkscape:tile-x0=&quot;148.09164&quot; inkscape:tile-y0=&quot;231.95443&quot; sodipodi:argument=&quot;-18.064157&quot; sodipodi:cx=&quot;182.09113&quot; sodipodi:cy=&quot;269.50729&quot; sodipodi:expansion=&quot;1&quot; sodipodi:radius=&quot;42.894836&quot; sodipodi:revolution=&quot;3&quot; sodipodi:t0=&quot;0&quot; sodipodi:type=&quot;spiral&quot; style=&quot;fill:#800080;fill-rule:evenodd;stroke:#000000;stroke-width:0.2081555px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;&gt;</defs>
+<sodipodi:namedview
+   id="base"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:pageopacity="0.0"
+   inkscape:pageshadow="2"
+   inkscape:zoom="0.7"
+   inkscape:cx="398.09766"
+   inkscape:cy="744.28571"
+   inkscape:document-units="px"
+   inkscape:current-layer="svg2"
+   showgrid="false"
+   inkscape:window-width="1366"
+   inkscape:window-height="706"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1" />
+<metadata
+   id="metadata7">
+  <rdf:RDF>
+    <cc:Work
+       rdf:about="">
+      <dc:format>image/svg+xml</dc:format>
+      <dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      <dc:title />
+    </cc:Work>
+  </rdf:RDF>
+</metadata>
+<g
+   inkscape:label="Layer 1"
+   inkscape:groupmode="layer"
+   id="layer1" />
+<svg
+   id="svg1"
+   height="450"
+   onload="Start(evt)"
+   version="1.1"
+   width="450"><script
+   type="text/ecmascript"
+   id="script8"><![CDATA[
+
+    var time = 0;
+    var delta_time = 25;
+    var max_time = 1000;
+    var dir = 1;
+	var dir_purple_spiral = 1;
+	var opacity_ps = .9;
+	
+    var the_rect;
+    var pink_rect;
+    var eg_niblet;
+    var eg_medy;
+    var eg_biggo;
+    var eg_newy;
+    var purple_spiral;
+    var avril_niblet_1;
+
+	var creatures = svg1;
+	
+    function Start(evt) {
+
+      the_rect = evt.target.ownerDocument.getElementById("BlueRect");
+      pink_rect = evt.target.ownerDocument.getElementById("PinkRect");
+      eg_niblet = evt.target.ownerDocument.getElementById("NibletEG");
+      eg_medy = evt.target.ownerDocument.getElementById("MedyEG");
+      eg_biggo = evt.target.ownerDocument.getElementById("BiggoEG");
+      eg_newy = evt.target.ownerDocument.getElementById("NewyEG");
+      eg_newy2 = evt.target.ownerDocument.getElementById("NewyEG2");
+      purple_spiral = evt.target.ownerDocument.getElementById("PurpleSpiral");
+      avril_niblet_1 = evt.target.ownerDocument.getElementById("AvrilNiblet1");
+      Oscillate();
+    }
+
+
+	function Save() {
+		//creatures = svg1;
+		//$var = $_POST['foo'];
+		//file_put_contents('file_where_stored_value_is.php', $var);
+	}
+
+	function Move(creature, x, y) {
+		creature.setAttribute("transform", "translate(x, y)");
+	}
+	
+	function Turn() {
+		dir = -dir;
+	}
+	
+	function Act(creature) {
+		//creature.setAttribute('fill-opacity',)
+		//BiggoEG.setAttribute('fill-opacity','BiggoEG.getAttribute('fill-opacity')*0.9');
+		creature.setAttribute('fill-opacity',creature.getAttribute('fill-opacity')*0.9);
+	}
+
+	function Speed() {
+		delta_time = 1 / delta_time;
+	}
+	
+	function Randomize() {
+		time = Math.random()*1000;
+	}
+	
+	function Reverse(creature) {
+		dir_purple_spiral = -dir_purple_spiral;
+		opacity_ps = opacity_ps * 0.9;
+//		opacity_ps = opacity_ps - 0.2;
+		purple_spiral.setAttribute('fill-opacity',opacity_ps);
+//		purple_spiral.setAttribute('fill-opacity','0.1');
+	//	purple_spiral.setAttribute('fill-opacity','0.25');
+	//	purple_spiral.setAttribute('fill','fill+1');
+		//dir = -dir;
+	}
+
+//	function Reverse() {
+//		dir = -dir;
+//	}
+
+	function MovePurpleSpiral() {
+	
+	//	Move(purple_spiral);
+	//	x_pos_ps = x_pos * 3;
+	//	dir_purple_spiral = dir_purple_spiral * x_pos;
+		x_pos_ps = (time * 25) / max_time * dir_purple_spiral;
+		purple_spiral.setAttribute("transform", "translate(" +x_pos_ps+ ", " +y_pos+ ")");
+		//purple_spiral.setAttribute("transform", "rotate(90, 100, 120)");
+//		purple_spiral.setAttribute("transform", "rotate(90, " +x_pos_ps+ ", " +y_pos+ ")");
+
+	}
+	
+    function Oscillate() {
+
+      time = time + dir * delta_time;
+      if (time >  max_time)  dir = -1;
+      if (time < -max_time)  dir =  1;
+
+      // Calculate x position
+      x_pos = (time * 25) / max_time;
+      the_rect.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
+      pink_rect.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
+      eg_niblet.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
+      eg_medy.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
+      eg_biggo.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
+
+      // Calculate y position
+      y_pos = (time * 25) / max_time;
+      eg_medy.setAttribute("transform", "translate(0.0, " +y_pos+ " )");
+
+      // move(purple_spiral, " +x_pos+ ", 0.0);
+	  //x_pos_ps = x_pos * 3;
+      //purple_spiral.setAttribute("transform", "translate(" +x_pos_ps+ ", " +y_pos+ ")");
+		MovePurpleSpiral();
+	  
+      // Move newyz
+      eg_newy.setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
+      eg_newy2.setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
+      avril_niblet_1.setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
+
+
+      // Repeat
+      setTimeout("Oscillate()", delta_time)
+    }
+
+    window.Oscillate = Oscillate
+
+   ]]></script>
+<rect
+   height="450"
+   id="Border"
+   style="fill:none;stroke:#800080"
+   width="450"
+   x="0"
+   y="0" />
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a11">
+  <rect
+     height="90"
+     id="BlueRect"
+     onmouseout="setAttribute('fill-opacity','0.5')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     style="fill:#0000ff;stroke:#000000"
+     width="90"
+     x="150"
+     y="90">
+    <desc
+       id="desc3364">A clickable square to test simple JavaScript.</desc>
+    <title
+       id="title3362" />
+  </rect>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a16">
+  <rect
+     height="90"
+     id="PinkRect"
+     onmouseout="setAttribute('fill-opacity','0.75')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     style="fill:#ff00ff;stroke:#000000"
+     width="90"
+     x="60"
+     y="300">
+    <desc
+       id="desc19">A clickable square!</desc>
+    <title
+       id="title21" />
+  </rect>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a23">
+  <rect
+     height="90"
+     id="YellowRect"
+     onmouseout="setAttribute('fill-opacity','0.5')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     style="fill:yellow;stroke:#000000"
+     width="90"
+     x="150"
+     y="90">
+    <desc
+       id="desc26">A clickable square!</desc>
+    <title
+       id="title28" />
+  </rect>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a30">
+  <rect
+     height="90"
+     id="OrangeRect"
+     onmouseout="setAttribute('fill-opacity','0.75')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     style="fill:orange;stroke:#000000"
+     width="90"
+     x="60"
+     y="300">
+    <desc
+       id="desc33">A clickable square!</desc>
+    <title
+       id="title35" />
+  </rect>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a37">
+  <circle
+     height="90"
+     id="PurpleSpiral2"
+     onmouseout="setAttribute('fill-opacity','0.75')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     style="fill:purple;stroke:#000000"
+     width="90"
+     x="60"
+     y="300">
+    <desc
+       id="desc40">A clickable square!</desc>
+    <title
+       id="title42" />
+  </circle>
+</a>
+<path
+   id="path44" />
+opacity_ps onmousedown=&quot;Reverse(PurpleSpiral)&quot; id=&quot;PurpleSpiral&quot; d=&quot;m 282.09113,269.50729 c 1.52075,1.52076 -1.29967,2.80025 -2.52761,2.52761 -3.32763,-0.73884 -3.86257,-5.00113 -2.5276,-7.58281 2.38796,-4.61803 8.58895,-5.15902 12.63801,-2.5276 5.94217,3.86172 6.4939,12.22544 2.5276,17.69322 -5.28645,7.28768 -15.87921,7.84514 -22.74842,2.52759 -8.6442,-6.69159 -9.20486,-19.54122 -2.5276,-27.80363 8.08706,-10.00688 23.20787,-10.56947 32.85884,-2.52759 11.37333,9.47708 11.93717,26.8774 2.52759,37.91404 -10.86373,12.74223 -30.54887,13.30692 -42.96924,2.52759 -14.11282,-12.24817 -14.67812,-34.22169 -2.52759,-48.02445 13.63105,-15.4846 37.8955,-16.05034 53.07965,-2.52759 16.85728,15.01283 17.42336,41.57006 2.52759,58.13486&quot; id=&quot;path4800&quot; inkscape:tile-cx=&quot;185.6451&quot; inkscape:tile-cy=&quot;265.9547&quot; inkscape:tile-h=&quot;68.00056&quot; inkscape:tile-w=&quot;75.106916&quot; inkscape:tile-x0=&quot;148.09164&quot; inkscape:tile-y0=&quot;231.95443&quot; sodipodi:argument=&quot;-18.064157&quot; sodipodi:cx=&quot;182.09113&quot; sodipodi:cy=&quot;269.50729&quot; sodipodi:expansion=&quot;1&quot; sodipodi:radius=&quot;42.894836&quot; sodipodi:revolution=&quot;3&quot; sodipodi:t0=&quot;0&quot; sodipodi:type=&quot;spiral&quot; style=&quot;fill:#800080;fill-rule:evenodd;stroke:#000000;stroke-width:0.2081555px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;&gt;</svg>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a46">
+  <rect
+     height="10"
+     id="NibletEG"
+     onmouseout="setAttribute('fill-opacity','0.5')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     style="fill:green;stroke:lightgreen"
+     width="10"
+     x="300"
+     y="300">
+    <desc
+       id="desc49">A clickable square to test simple JavaScript.</desc>
+    <title
+       id="title51" />
+  </rect>
+</a>
+<!--abejita!-->
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/abejita.html"
+   id="a53">
+  <rect
+     height="10"
+     id="AvrilNiblet1"
+     onmouseout="setAttribute('fill-opacity','0.5')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     style="fill:yellow;stroke:black"
+     width="10"
+     x="225"
+     y="225">
+    <desc
+       id="desc56">Avril's first little niblet! :)</desc>
+    <title
+       id="title58" />
+  </rect>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a60">
+  <g
+     id="MedyEG"
+     onmouseout="setAttribute('fill-opacity','0.1')"
+     onmouseover="setAttribute('fill-opacity','1.0')">
+    <rect
+       style="opacity:0.87000002;fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:0.6047619;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect6509"
+       width="63.533783"
+       height="31.766891"
+       x="59.868374"
+       y="281.74832" />
+    <path
+       style="opacity:0.87000002;fill:#ff8080;fill-opacity:1;stroke:#0000ff;stroke-width:0.6047619;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path6511"
+       d="m 81.860835,300.07539 -6.160837,-1.4834 -4.714657,4.23419 -0.493011,-6.31769 -5.483865,-3.17547 5.856139,-2.42116 1.325442,-6.19674 4.112304,4.82134 6.303033,-0.65433 -3.314595,5.40091 z" />
+    <path
+       style="opacity:0.87000002;fill:#ff8080;fill-opacity:1;stroke:#0000ff;stroke-width:0.6047619;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path6513"
+       d="m 108.74051,312.2934 -1.06782,-3.99694 -3.89796,-1.38629 3.47135,-2.25068 0.1139,-4.13556 3.21323,2.60595 3.96835,-1.16963 -1.48546,3.86124 2.33867,3.41269 -4.13129,-0.21956 z" />
+    <path
+       style="opacity:0.87000002;fill:#ff8080;fill-opacity:1;stroke:#0000ff;stroke-width:0.6047619;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path6515"
+       d="m 92.857067,295.18814 -2.173306,-0.73698 -1.839194,1.3725 0.02933,-2.29468 -1.873674,-1.32505 2.191432,-0.6812 0.6812,-2.19143 1.32505,1.87368 2.294678,-0.0293 -1.372506,1.8392 z" />
+    <path
+       style="opacity:0.87000002;fill:#ff8080;fill-opacity:1;stroke:#0000ff;stroke-width:0.6047619;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path6517"
+       d="m 84.736419,309.55335 2.201552,-4.70569 -2.628342,-4.48131 5.155694,0.63966 3.44978,-3.8845 0.984842,5.10102 4.760422,2.08056 -4.547027,2.51294 -0.507677,5.17036 -3.79506,-3.54794 z" />
+  </g>
+</a>
+<a
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a68">
+  <g
+     id="BiggoEG"
+     onmouseout="setAttribute('fill-opacity','0.25')"
+     onmouseover="setAttribute('fill-opacity','1.0')">
+    <desc
+       id="desc4151">A big creature for LifeFLOW! :)</desc>
+    <circle
+       r="29.934187"
+       cy="259.14496"
+       cx="302.39636"
+       id="path4137"
+       style="opacity:0.28999999;fill:#ffff00;stroke:#800080;stroke-width:0.6047619" />
+    <circle
+       r="7.3308215"
+       cy="265.86487"
+       cx="307.8945"
+       id="path4139"
+       style="opacity:0.28999999;fill:#ffff00;stroke:#800080;stroke-width:0.6047619" />
+    <ellipse
+       ry="10.996231"
+       rx="3.6654108"
+       cy="251.20323"
+       cx="292.01105"
+       id="path4141"
+       style="opacity:0.28999999;fill:#0000ff;stroke:#800080;stroke-width:0.6047619" />
+    <ellipse
+       ry="3.6654108"
+       rx="9.7744284"
+       cy="253.64687"
+       cx="317.66891"
+       id="path4143"
+       style="opacity:0.28999999;fill:#0000ff;stroke:#800080;stroke-width:0.6047619" />
+  </g>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a76">
+  <circle
+     cx="225"
+     cy="375"
+     id="NewyEG"
+     onmouseout="setAttribute('fill-opacity','0.1')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     r="30"
+     style="fill:blue;stroke:green">
+    <desc
+       id="desc79">A new creature!</desc>
+    <title
+       id="title81" />
+  </circle>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a83">
+  <circle
+     cx="115"
+     cy="175"
+     id="NewyEG2"
+     onmouseout="setAttribute('fill-opacity','0.1')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     r="30"
+     style="fill:black;stroke:red">
+    <desc
+       id="desc86">A new creature!</desc>
+    <title
+       id="title88" />
+  </circle>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick=TLUCRBGYW5XTS"
+   id="a90"
+   transform="translate(270.72088,20.203051)">
+  <rect
+     height="10"
+     id="NibletEGdemo"
+     onmouseout="setAttribute('fill-opacity','0.5')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     style="fill:#008000;stroke:#90ee90"
+     width="10"
+     x="300"
+     y="30">
+    <desc
+       id="desc93">A clickable square to test simple JavaScript.</desc>
+    <title
+       id="title95" />
+  </rect>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick=V5C7SW55G7J2S"
+   id="a97"
+   transform="translate(270.72088,20.203051)">
+  <text
+     x="300"
+     y="15"
+     font-size="15"
+     id="text99"
+     style="font-size:15px;font-family:Verdana">CONTRIBUTE! :)</text>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick=TLUCRBGYW5XTS"
+   id="a101"
+   transform="translate(270.72088,20.203051)">
+  <text
+     x="300"
+     y="60"
+     id="text103">Little niblet! :)</text>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick=SBNNRLFPME2UN"
+   id="a105"
+   transform="translate(270.72088,20.203051)">
+  <g
+     id="MedyEGdemo"
+     onmouseout="setAttribute('fill-opacity','0.1')"
+     onmouseover="setAttribute('fill-opacity','1.0')">
+    <rect
+       style="opacity:0.87000002;fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:0.6047619;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect108"
+       width="63.533783"
+       height="31.766891"
+       x="300"
+       y="75" />
+    <path
+       style="opacity:0.87000002;fill:#ff8080;fill-opacity:1;stroke:#0000ff;stroke-width:0.6047619;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path110"
+       d="m 360,102 -6.16084,-1.4834 -4.71465,4.23419 -0.49302,-6.31769 -5.48386,-3.17547 5.85614,-2.42116 1.32544,-6.19674 4.1123,4.82134 6.30304,-0.65433 -3.3146,5.40091 z"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:0.87000002;fill:#ff8080;fill-opacity:1;stroke:#0000ff;stroke-width:0.6047619;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path112"
+       d="m 320,90 -1.06782,-3.99694 -3.89796,-1.38629 3.47135,-2.25068 0.1139,-4.13556 3.21323,2.60595 3.96835,-1.16963 -1.48546,3.86124 2.33867,3.41269 -4.13129,-0.21956 z"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:0.87000002;fill:#ff8080;fill-opacity:1;stroke:#0000ff;stroke-width:0.6047619;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path114"
+       d="m 315,88 -2.17331,-0.73698 -1.83919,1.3725 0.0293,-2.29468 -1.87367,-1.32505 2.19143,-0.6812 0.6812,-2.19143 1.32505,1.87368 2.29468,-0.0293 -1.37251,1.8392 z"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:0.87000002;fill:#ff8080;fill-opacity:1;stroke:#0000ff;stroke-width:0.6047619;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path116"
+       d="m 330,90 2.20155,-4.70569 -2.62834,-4.48131 5.15569,0.63966 3.44978,-3.8845 0.98485,5.10102 4.76042,2.08056 -4.54703,2.51294 -0.50768,5.17036 -3.79506,-3.54794 z"
+       inkscape:connector-curvature="0" />
+  </g>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick=SBNNRLFPME2UN"
+   id="a118"
+   transform="translate(270.72088,20.203051)">
+  <text
+     x="300"
+     y="120"
+     id="text120">Medium creature! :)</text>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick=V5C7SW55G7J2S"
+   id="a122"
+   transform="translate(270.72088,20.203051)">
+  <g
+     id="BiggoEGdemo"
+     onmouseout="setAttribute('fill-opacity','0.5')"
+     onmouseover="setAttribute('fill-opacity','1.0')">
+    <desc
+       id="desc125">A big creature for LifeFLOW! :)</desc>
+    <circle
+       r="30"
+       cy="160"
+       cx="330"
+       id="circle127"
+       style="opacity:0.28999999;fill:#ffff00;stroke:#800080;stroke-width:0.6047619" />
+    <circle
+       r="7.3308215"
+       cy="165"
+       cx="337"
+       id="circle129"
+       style="opacity:0.28999999;fill:#ffff00;stroke:#800080;stroke-width:0.6047619" />
+    <ellipse
+       ry="10.996231"
+       rx="3.6654108"
+       cy="147"
+       cx="322"
+       id="ellipse131"
+       style="opacity:0.28999999;fill:#0000ff;stroke:#800080;stroke-width:0.6047619" />
+    <ellipse
+       ry="3.6654108"
+       rx="9.7744284"
+       cy="170"
+       cx="315"
+       id="ellipse133"
+       style="opacity:0.28999999;fill:#0000ff;stroke:#800080;stroke-width:0.6047619" />
+  </g>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick=V5C7SW55G7J2S"
+   id="a135"
+   transform="translate(270.72088,20.203051)">
+  <text
+     x="300"
+     y="210"
+     id="text137">Big beauty! :)</text>
+</a>
+<!-- text menu items -->
+<text
+   x="100"
+   y="400"
+   opacity="0.1"
+   onmousedown="Turn()"
+   onmouseover="setAttribute('transform', 'translate("
+   onmouseout="setAttribute('opacity','0.1')"
+   id="text139" />
++x_pos+ &quot;, 0.0 )')&quot;&gt;Reverse the flow! :)<rect
+   height="450"
+   id="rect4271"
+   style="fill:none;stroke:#800080"
+   width="450"
+   x="0"
+   y="0" />
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a4273">
+  <rect
+     height="90"
+     id="rect4275"
+     onmouseout="setAttribute('fill-opacity','0.5')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     style="fill:#0000ff;stroke:#000000"
+     width="90"
+     x="150"
+     y="90">
+    <desc
+       id="desc4277">A clickable square to test simple JavaScript.</desc>
+    <title
+       id="title4279" />
+  </rect>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a4281">
+  <rect
+     height="90"
+     id="rect4283"
+     onmouseout="setAttribute('fill-opacity','0.75')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     style="fill:#ff00ff;stroke:#000000"
+     width="90"
+     x="60"
+     y="300">
+    <desc
+       id="desc4285">A clickable square!</desc>
+    <title
+       id="title4287" />
+  </rect>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a4289">
+  <rect
+     height="90"
+     id="rect4291"
+     onmouseout="setAttribute('fill-opacity','0.5')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     style="fill:#ffff00;stroke:#000000"
+     width="90"
+     x="150"
+     y="90">
+    <desc
+       id="desc4293">A clickable square!</desc>
+    <title
+       id="title4295" />
+  </rect>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a4297">
+  <rect
+     height="90"
+     id="rect4299"
+     onmouseout="setAttribute('fill-opacity','0.75')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     style="fill:#ffa500;stroke:#000000"
+     width="90"
+     x="60"
+     y="300">
+    <desc
+       id="desc4301">A clickable square!</desc>
+    <title
+       id="title4303" />
+  </rect>
+</a>
+<a
+   style="fill-opacity:0.75"
+   xlink:href="http://life.worldsowisdom.com/flow/"
+   id="a4305">
+  <circle
+     r="0"
+     cy="0"
+     cx="0"
+     height="90"
+     id="circle4307"
+     onmouseout="setAttribute('fill-opacity','0.75')"
+     onmouseover="setAttribute('fill-opacity','1.0')"
+     style="fill:#800080;stroke:#000000"
+     width="90"
+     x="60"
+     y="300">
+    <desc
+       id="desc4309">A clickable square!</desc>
+    <title
+       id="title4311" />
+  </circle>
+</a>
+<path
+   inkscape:connector-curvature="0"
+   d=""
+   id="path4313" />
+<rect
+   y="493.11005"
+   x="-0.31850582"
+   width="450.63702"
+   style="fill:none;stroke:#800080;stroke-width:0.36298838;opacity:1"
+   id="rect4338"
+   height="59.208439" />
+<rect
+   height="59.208439"
+   id="rect4340"
+   style="fill:none;stroke:#800080;stroke-width:0.36298838;opacity:1"
+   width="450.63702"
+   x="-0.31850582"
+   y="493.11005" />
+<rect
+   y="-539.17566"
+   x="-2.604248"
+   width="450.63702"
+   style="fill:none;stroke:#800080;stroke-width:0.36298838;opacity:1"
+   id="rect4342"
+   height="59.208439"
+   transform="matrix(0,1,-1,0,0,0)" />
+<rect
+   y="593.11005"
+   x="-0.31850582"
+   width="450.63702"
+   style="fill:none;stroke:#800080;stroke-width:0.36298838;opacity:1"
+   id="rect4344"
+   height="59.208439" />
+<rect
+   height="167.53242"
+   id="rect4346"
+   style="fill:none;stroke:#800080;stroke-width:0.61042333"
+   width="450.38959"
+   x="-0.19478837"
+   y="747.23376" />
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   x="34.285713"
+   y="789.50507"
+   id="text4348"
+   sodipodi:linespacing="125%"><tspan
+     sodipodi:role="line"
+     id="tspan4350"
+     x="34.285713"
+     y="789.50507">Combine input &amp; output</tspan><tspan
+     sodipodi:role="line"
+     x="34.285713"
+     y="839.50507"
+     id="tspan4352">in textarea?</tspan></text>
+<rect
+   style="opacity:1;fill:none;stroke:#800080"
+   id="rect4356"
+   width="60"
+   height="60"
+   x="-1.0101526"
+   y="492.7377" />
+<rect
+   y="492.7377"
+   x="58.989845"
+   height="60"
+   width="60"
+   id="rect4358"
+   style="opacity:1;fill:none;stroke:#800080" />
+<rect
+   style="opacity:1;fill:none;stroke:#800080"
+   id="rect4360"
+   width="60"
+   height="60"
+   x="118.98985"
+   y="492.7377" />
+<rect
+   y="492.7377"
+   x="178.98985"
+   height="60"
+   width="60"
+   id="rect4362"
+   style="opacity:1;fill:none;stroke:#800080" />
+<rect
+   style="opacity:1;fill:none;stroke:#800080"
+   id="rect4364"
+   width="60"
+   height="60"
+   x="238.98985"
+   y="492.7377" />
+<rect
+   y="492.7377"
+   x="298.98987"
+   height="60"
+   width="60"
+   id="rect4366"
+   style="opacity:1;fill:none;stroke:#800080" />
+<rect
+   style="opacity:1;fill:none;stroke:#800080"
+   id="rect4368"
+   width="60"
+   height="60"
+   x="388.98987"
+   y="492.7377" />
+<rect
+   y="386.7377"
+   x="478.98987"
+   height="60"
+   width="60"
+   id="rect4370"
+   style="opacity:1;fill:none;stroke:#800080" />
+<rect
+   style="opacity:1;fill:none;stroke:#800080"
+   id="rect4372"
+   width="60"
+   height="60"
+   x="478.98987"
+   y="-3.2622986" />
+<rect
+   y="56.737701"
+   x="478.98987"
+   height="60"
+   width="60"
+   id="rect4374"
+   style="opacity:1;fill:none;stroke:#800080" />
+<rect
+   style="opacity:1;fill:none;stroke:#800080"
+   id="rect4376"
+   width="60"
+   height="60"
+   x="478.98987"
+   y="116.7377" />
+<rect
+   y="176.7377"
+   x="478.98987"
+   height="60"
+   width="60"
+   id="rect4378"
+   style="opacity:1;fill:none;stroke:#800080" />
+<rect
+   style="opacity:1;fill:none;stroke:#800080"
+   id="rect4380"
+   width="60"
+   height="60"
+   x="478.98987"
+   y="236.7377" />
+<rect
+   y="296.7377"
+   x="478.98987"
+   height="60"
+   width="60"
+   id="rect4382"
+   style="opacity:1;fill:none;stroke:#800080" />
+<circle
+   style="opacity:1;fill:none;stroke:#800080"
+   id="path4384"
+   cx="513"
+   cy="520.79077"
+   r="39.285713" />
+</svg>
