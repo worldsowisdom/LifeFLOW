@@ -425,7 +425,7 @@
 		//<desc> - this is AI! :)
 		// m also add <id="a-##########"> and/or <class="personalityClass>
 		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
-		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\");.setAttribute(\"transform\", \"translate(3,5)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(3,5)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 			//eg_newy.setAttribute("transform", "translate(" +Math.random()*100+ ", " +Math.random()*100+ " )"); // mv randomly! :)
 	//document.getElementById("Creature-0.778706729708058");
 //	eg_newy.setAttribute("transform", "translate(3,5)");
@@ -705,6 +705,7 @@
 //	  if (lifetime % 10000 == 0) SaveCreatures();
 
 	  
+	  // Calculate reference coordinate with respect to time:
       // Calculate x position
       x_pos = (time * 25) / max_time;
       // Calculate y position
@@ -773,6 +774,13 @@
 	 // mv user-defined creatures; replace this with more sophisiticated motions then w/ custom AI! :)
 	 for (i = 0; i < creature_index; i++) creature_array[i].setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
 	 
+	 // instead of hard-coding here the movements generally for all generated creatures, let's load each individual creature's personaliity! :)
+	 //for each creature, execute/eval() its personality/<desc>
+	 
+	 for (i = 0; i < creature_index; i++) creature_array[i].setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
+	 //i think it should be for each creature eval(creature_array[i]:getbyclass(personalityClass)) or sthg...
+//ref:		eval(document.getElementById("ai2").textContent); // try running ai
+		eval(creature_index[i].childNodes[1].textContent); // Run the creature's <desc> personality. NOTE: Should ideally refer to <desc> in a more specifiic way, in case we have other childNodes before <desc> than <title>!
       // Repeat
       setTimeout("Oscillate()", delta_time)
     }
