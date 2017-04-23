@@ -1238,7 +1238,7 @@
 
 			</td>
 			<td width=30% valign="top">
-			<p><strong>Rent a flow area!</strong></p>
+			<p><strong>Rent a private flow area!</strong></p>
 			
 			<p></p>
 			
