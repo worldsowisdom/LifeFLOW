@@ -751,10 +751,11 @@
 //	we're trying herenow some new ai...
 
 
-// orig:      eg_biggo.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
+// orig:
+      eg_biggo.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
 		//call instead from <desc>...
 
-//useful? i think biggo
+//useful? i think biggo - was useful for testing ai, for now just leaving biggo floating about! :)
 //		eval(document.getElementById("ai2").textContent); // try running ai
 		
 		//p make array of ai[]
@@ -774,8 +775,8 @@
 		MovePurpleSpiral();
 	  
       // Move newyz
-      // orig: eg_newy.setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
-//useful?  i think galaxy???
+      orig: eg_newy.setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
+//useful?  i think galaxy??? - was useful for testing personality, now just floating about! :)
 //	  eval(document.getElementById("ai5").textContent); // mv newy/galaxy3 from svg ai
 
 	  // Can we similarly mv whole creatureClass e.g.?
@@ -805,7 +806,7 @@
 	 // mv user-defined creatures; replace this with more sophisiticated motions then w/ custom AI! :)
 //orig second copy???	 for (i = 0; i < creature_index; i++) creature_array[i].setAttribute("transform", "translate(" +x_pos+ ", " +y_pos+ " )");
 	 
-	 // instead of hard-coding here the movements generally for all generated creatures, let's load each individual creature's personaliity! :)
+	 // instead of hard-coding here the movements generally for all generated creatures, let's load each individual creature's personality! :)
 	 //for each creature, execute/eval() its personality/<desc>
 	 
 	 for (i = 0; i < creature_index; i++) eval(creature_array[i].childNodes[1].textContent); // Run the creature's <desc> personality. NOTE: Should ideally refer to <desc> in a more specifiic way, in case we have other childNodes before <desc> than <title>!
