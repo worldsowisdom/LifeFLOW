@@ -539,7 +539,7 @@
 		//Eventually it will become a nesting "map" that lets players move around the areas! :)
 		
 		//check if Navigator already open:
-		if (navigator_open == true) close_navigator(); else
+		if (navigator_open == true) close_navigator(); else {
 		
 
 		//create g, add stuff to g, add go to dom...
@@ -623,6 +623,7 @@
 		//m at some point we'll separate multidimensional array innitiation from use?
 		
 		navigator_open = true; // set toggle on.
+		}// try closing code block outside of case where Navigator was already open and we simply close it.
 	} //close function navigate()
 	
 	
