@@ -99,6 +99,7 @@
 	
 	var creature_index = 0; //keep track of creatures.
 	
+//	var creatures_by_class = 0; // this should m be merged w/ the above creature_index...
 	
 //	var area_array = []; // map of areas for navigator
 	var area_array = new Array(10); // map of areas for navigator
@@ -152,7 +153,7 @@
 		
 		
 		//then load them anew...
-//		creature_index = 0; // go back to beginning - is this necessary? probably yes.
+//		creature_index = 0; // go back to beginning - is this necessary? probably yes. actually I think it shouldn't be with the below.
 		
 //		creature_array[creature_index] = document.getElementById("creature_name"); // add creature to js from svg...
 //		i think we'll need to carefully loop through each svg element...
@@ -460,12 +461,6 @@
 		//Delete a creature
 		//can m eventually also replace deleteClone()
 		
-
-		document.getElementById("svg2") // rm clone from inline svg
-//orig			.removeChild(document.getElementById(""+creature_name+"")); //um...
-			.removeChild(document.getElementById(creature_name)); //um...
-
-		
 		//should also rm from array (and maybe change index???)
 //something like this		removeFromArray(creature_array, indexOf(creature_name)); // rm creature from array
 		// also probably decrement creature_index...
@@ -479,7 +474,15 @@
 		// removeFromArray (creature_array, document.getElementById(creature_name));
 //makeitwork
 		creature_index--; // decrement (reduce) creature_index for future operations/additions.
+		//creatures_by_class--; // decrement (reduce) creature_index for future operations/additions.
+		//the above vars should probably be merged/combined...
 			
+
+		document.getElementById("svg2") // rm clone from inline svg
+//orig			.removeChild(document.getElementById(""+creature_name+"")); //um...
+			.removeChild(document.getElementById(creature_name)); //um...
+
+		UpdateCreatures(); // seems to fix array issue after del??? not sure if this is a sane approach...
 
 	}
 	
