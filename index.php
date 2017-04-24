@@ -460,17 +460,21 @@
 		//Delete a creature
 		//can m eventually also replace deleteClone()
 		
-		document.getElementById("svg2") // rm clone from inline svg
-			.removeChild(document.getElementById(""+creature_name+"")); //um...
-		
 		//should also rm from array (and maybe change index???)
 //something like this		removeFromArray(creature_array, indexOf(creature_name)); // rm creature from array
 		// also probably decrement creature_index...
+
+		//		testdel = creature_name; //debug
+//make it work
 		removeFromArray(creature_array, creature_array.indexOf(document.getElementById(creature_name))); // rm clone from creature_array...
 		//check the above, and implement removeFromArray()...
 		//seems to check out! :)
 		// removeFromArray (creature_array, document.getElementById(creature_name));
 		creature_index--; // decrement (reduce) creature_index for future operations/additions.
+		
+
+		document.getElementById("svg2") // rm clone from inline svg
+			.removeChild(document.getElementById(""+creature_name+"")); //um...
 		
 
 	}
