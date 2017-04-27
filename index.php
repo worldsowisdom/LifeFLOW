@@ -1455,7 +1455,7 @@
 
 <p>A few tips: Use the blue square navigator to browse around the areas. Currently areas save every full period. We're still in the very early stages and welcome your comments on growth and development!</p>
 
-<p>Some questions: What do you like or dislike about LifeFLOW? What do you want next? What do you think makes or would make LifeFLOW useful, beautiful, interesting?</p>
+<p>Some questions: What do you like or dislike about LifeFLOW? What do you want next? What do you think makes or would make LifeFLOW more useful, beautiful, interesting?</p>
 
 <p>Contact: <a href="mailto:life@worldsowisdom.com?subject=LifeFLOW">life@worldsowisdom.com</a>! :)</p>
 
