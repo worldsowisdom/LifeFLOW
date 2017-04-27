@@ -4,7 +4,7 @@
 	<title>LifeFLOW</title>
 </head>
 <body>
-<p><a href="/" id="logo" rel="home" title="Home"><img alt="LifeWOW" src="img/LifeWOW.png" />LifeFLOW<img alt="Hearts" src="img/hearts.svg" width="60"></a></p>
+<p><a href="/" id="logo" rel="home" title="Home"><img alt="LifeWOW" src="img/LifeWOW.png" />LifeFLOW<img alt="Hearts" src="img/hearts.svg" width="60"></a><a href="#About">About LifeFLOW! :)</a> - <a href="#Music">Choose Your Music! :)</a></p>
 <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
 
 <table border="0" cellpadding="1" cellspacing="1" style="width: 600px;">
@@ -1443,7 +1443,7 @@
 
 <p></p>
 
-<p><h2>Welcome to LifeFLOW! :)</h2></p>
+<p><h2 id="About">Welcome to LifeFLOW! :)</h2></p>
 
 <p>It is kind of like a game, and kind of like nature! :)</p>
 
@@ -1455,7 +1455,7 @@
 
 <p>Contact: <a href="mailto:life@worldsowisdom.com?subject=LifeFLOW">life@worldsowisdom.com</a>! :)</p>
 
-<p><h3>Music</h3>
+<p><h3 id="Music">Music</h3>
 <p>Here is some music. Please let us know what else you would like! :)</p>
 <iframe width="100%" height="450" scrolling="no" frameborder="no" src="http://www.bitlisten.com/"></iframe>
 <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/309714233&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
