@@ -17,7 +17,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="allcreatures10.svg"><title>LifeFLOW area: avril3! :)</title>
+   sodipodi:docname="newcreatures-plain.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -63,16 +63,6 @@
        y2="178.50594"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-215.03742,319.7082)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient6501"
-       id="linearGradient4201"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-215.03742,88.12946)"
-       x1="242.51431"
-       y1="178.50594"
-       x2="313.40628"
-       y2="178.50594" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -81,11 +71,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497476"
-     inkscape:cx="-35.608276"
+     inkscape:zoom="0.24748738"
+     inkscape:cx="463.57331"
      inkscape:cy="265.90363"
      inkscape:document-units="px"
-     inkscape:current-layer="svg2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1366"
      inkscape:window-height="706"
@@ -186,7 +176,7 @@
     <g
        id="g6519eg"
        inkscape:label="#MedyEG"
-       transform="translate(280,133.35502)">
+       transform="translate(0,53.355016)">
       <rect
          y="281.74832"
          x="59.868374"
@@ -301,182 +291,20 @@
      width="448"
      x="1"
      y="1" />
-  <path
-     sodipodi:type="spiral"
-     style="fill:#00ffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.6047619px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     id="eaglynew"
-     sodipodi:cx="73.308212"
-     sodipodi:cy="393.74982"
-     sodipodi:expansion="1"
-     sodipodi:revolution="3"
-     sodipodi:radius="41.613129"
-     sodipodi:argument="-18.147299"
-     sodipodi:t0="0"
-     d="m 73.308212,393.74982 c 1.592741,1.3477 -1.030876,2.81189 -2.239973,2.64724 -3.276579,-0.4462 -4.137127,-4.52375 -3.054508,-7.12719 1.936552,-4.65694 7.887895,-5.67954 12.014402,-3.46177 6.055815,3.25466 7.263028,11.296 3.869042,16.90161 -4.52365,7.4714 -14.719492,8.86373 -21.788831,4.27631 -8.896041,-5.77281 -10.473289,-18.15026 -4.683575,-26.67604 7.01212,-10.32587 21.585119,-12.08797 31.563258,-5.09085 11.758893,8.24586 13.705843,25.02253 5.49811,36.45048 -9.476152,13.19401 -28.461631,15.32586 -41.337687,5.90537 -14.630593,-10.70415 -16.947384,-31.90193 -6.312644,-46.2249 11.930572,-16.06821 35.343106,-18.56999 51.112116,-6.71991 17.506588,13.15584 20.193418,38.78494 7.127178,55.99933"
-     transform="translate(25, 25 )">
-    <desc
-       id="desc36">a new test shape to play with! :)</desc>
-  </path>
-  <rect
-     height="90"
-     id="BlueRect"
-     onmouseout="setAttribute('fill-opacity','0.5')"
-     onmouseover="setAttribute('fill-opacity','1.0')"
-     style="fill:#0000ff;stroke:#000000"
-     width="90"
-     x="150"
-     y="90"
-     transform="translate(25, 0.0 )">
-    <desc
-       id="desc3364">A clickable square to test simple JavaScript.</desc>
-    <title
-       id="title3362" />
-  </rect>
-  <rect
-     height="90"
-     id="PinkRect"
-     onmouseout="setAttribute('fill-opacity','0.75')"
-     onmouseover="setAttribute('fill-opacity','1.0')"
-     style="fill:#ff00ff;stroke:#000000"
-     width="90"
-     x="60"
-     y="300"
-     transform="translate(25, 0.0 )"
-     fill-opacity="0.75">
-    <desc
-       id="desc42">A clickable square!</desc>
-    <title
-       id="title44" />
-  </rect>
-  <rect
-     height="10"
-     id="NibletEG"
-     onmouseout="setAttribute('fill-opacity','0.5')"
-     onmouseover="setAttribute('fill-opacity','1.0')"
-     style="fill:green;stroke:lightgreen"
-     width="10"
-     x="300"
-     y="300"
-     transform="translate(25, 0.0 )">
-    <desc
-       id="desc47">A clickable square to test simple JavaScript.</desc>
-    <title
-       id="title49" />
-  </rect>
-  <rect
-     style="opacity:0.87000002;fill:url(#linearGradient4201);fill-opacity:1;stroke:#0000ff;stroke-width:0.6047619;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter5001)"
-     id="MedyEG"
-     width="40.319515"
-     height="23.214266"
-     x="42.763119"
-     y="255.02811" />
-  <g
-     id="BiggoEG"
-     transform="translate(25, 0.0 )">
-    <desc
-       id="desc53">A big creature for LifeFLOW! :)</desc>
-    <circle
-       r="29.934187"
-       cy="259.14496"
-       cx="302.39636"
-       id="path4137"
-       style="opacity:0.28999999;fill:#ffff00;stroke:#800080;stroke-width:0.6047619" />
-    <circle
-       r="7.3308215"
-       cy="265.86487"
-       cx="307.8945"
-       id="path4139"
-       style="opacity:0.28999999;fill:#ffff00;stroke:#800080;stroke-width:0.6047619" />
-    <ellipse
-       ry="10.996231"
-       rx="3.6654108"
-       cy="251.20323"
-       cx="292.01105"
-       id="path4141"
-       style="opacity:0.28999999;fill:#0000ff;stroke:#800080;stroke-width:0.6047619" />
-    <ellipse
-       ry="3.6654108"
-       rx="9.7744284"
-       cy="253.64687"
-       cx="317.66891"
-       id="path4143"
-       style="opacity:0.28999999;fill:#0000ff;stroke:#800080;stroke-width:0.6047619" />
-  </g>
-  <circle
-     cx="225"
-     cy="375"
-     id="NewyEG"
-     onmouseout="setAttribute('fill-opacity','0.1')"
-     onmouseover="setAttribute('fill-opacity','1.0')"
-     r="30"
-     style="fill:blue;stroke:green"
-     transform="translate(25, 25 )"
-     fill-opacity="0.1">
-    <desc
-       id="desc60">A new creature!</desc>
-    <title
-       id="title62" />
-  </circle>
-  <circle
-     cx="115"
-     cy="175"
-     id="NewyEG2"
-     onmouseout="setAttribute('fill-opacity','0.1')"
-     onmouseover="setAttribute('fill-opacity','1.0')"
-     r="30"
-     style="fill:black;stroke:red"
-     transform="translate(25, 25 )">
-    <desc
-       id="desc65">A new creature!</desc>
-    <title
-       id="title67" />
-  </circle>
-  <path
-     fill-opacity="0.43046721000000016"
-     onmousedown="Reverse(PurpleSpiral)"
-     id="PurpleSpiral"
-     d="m 282.09113,269.50729 c 1.52075,1.52076 -1.29967,2.80025 -2.52761,2.52761 -3.32763,-0.73884 -3.86257,-5.00113 -2.5276,-7.58281 2.38796,-4.61803 8.58895,-5.15902 12.63801,-2.5276 5.94217,3.86172 6.4939,12.22544 2.5276,17.69322 -5.28645,7.28768 -15.87921,7.84514 -22.74842,2.52759 -8.6442,-6.69159 -9.20486,-19.54122 -2.5276,-27.80363 8.08706,-10.00688 23.20787,-10.56947 32.85884,-2.52759 11.37333,9.47708 11.93717,26.8774 2.52759,37.91404 -10.86373,12.74223 -30.54887,13.30692 -42.96924,2.52759 -14.11282,-12.24817 -14.67812,-34.22169 -2.52759,-48.02445 13.63105,-15.4846 37.8955,-16.05034 53.07965,-2.52759 16.85728,15.01283 17.42336,41.57006 2.52759,58.13486"
-     inkscape:tile-cx="185.6451"
-     inkscape:tile-cy="265.9547"
-     inkscape:tile-h="68.00056"
-     inkscape:tile-w="75.106916"
-     inkscape:tile-x0="148.09164"
-     inkscape:tile-y0="231.95443"
-     sodipodi:argument="-18.064157"
-     sodipodi:cx="182.09113"
-     sodipodi:cy="269.50729"
-     sodipodi:expansion="1"
-     sodipodi:radius="42.894836"
-     sodipodi:revolution="3"
-     sodipodi:t0="0"
-     sodipodi:type="spiral"
-     style="fill:#800080;fill-rule:evenodd;stroke:#000000;stroke-width:0.2081555px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     transform="translate(25, 25)" />
-  <rect
-     height="10"
-     id="AvrilNiblet1"
-     onmouseout="setAttribute('fill-opacity','0.5')"
-     onmouseover="setAttribute('fill-opacity','1.0')"
-     style="fill:yellow;stroke:black"
-     width="10"
-     x="225"
-     y="225"
-     transform="translate(25, 25 )">
-    <desc
-       id="desc71">Avril's first little niblet! :)</desc>
-    <title
-       id="title73" />
-  </rect>
-  
-  <image id="back3" width="448" height="448" x="1" y="1" xlink:href="creatures/png/back3.png"/>
-  <image id="galaxy3" width="294" height="150" x="150" y="100" style="opacity:0.5" onmousedown="tool(eg_newy)" xlink:href="creatures/png/galaxy3.png"/>
-  <image id="galaxy4" width="306" height="150" x="50" y="250" style="opacity:0.25" onmousedown="tool(eg_newy2)" xlink:href="creatures/png/galaxy4.png"/>
-  <image id="planet3" width="157" height="150" x="100" y="250" style="opacity:0.5" onmousedown="tool(eg_niblet)" xlink:href="creatures/png/planet3.png"/>
-  <image id="planet4" width="150" height="150" x="300" y="150" style="opacity:0.9" onmousedown="tool(eg_medy)" xlink:href="creatures/png/planet4.png"/>
-  <image id="satellite3" width="79" height="150" x="200" y="250" onmousedown="tool(satellite3)" xlink:href="creatures/png/satellite3.png"/>
-  <image id="satellite4" width="109" height="75" x="50" y="50" onmousedown="tool(satellite4)" xlink:href="creatures/png/satellite4.png"/>
-  <image id="bigbeauty3"  width="92" height="110" x="100" y="150" onmousedown="tool(eg_biggo)" xlink:href="creatures/png/bigbeauty3.png"/>
-  <image id="mediumcreature3" width="38" height="50" x="300" y="175" onmousedown="tool(the_rect)" xlink:href="creatures/png/mediumcreature3.png"/>
-  <image id="niblet3" width="21" height="32" x="400" y="350" onmousedown="tool(pink_rect)" xlink:href="creatures/png/niblet3.png"/>
-  
-</svg>
+	 
+	 
+	 <!-- creatures from original versions! :) -->
+	 
+			<a style="fill-opacity:0.75" xlink:href="http://life.worldsowisdom.com/flow/"> <rect height="90" id="YellowRect" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:yellow;stroke:#000000" width="90" x="150" y="90"> <desc id="desc3364">A clickable square!</desc>
+			<title id="title3362"></title>
+			</rect> </a> <a style="fill-opacity:0.75" xlink:href="http://life.worldsowisdom.com/flow/">
+			<rect height="90" id="OrangeRect" onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:orange;stroke:#000000" width="90" x="60" y="300"> <desc id="desc3364">A clickable square!</desc>
+			<title id="title3362"></title>
+			</rect> </a>
+
+<path xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" sodipodi:type="spiral" style="fill:#00ffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.6047619px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" id="eaglynew" sodipodi:cx="73.308212" sodipodi:cy="393.74982" sodipodi:expansion="1" sodipodi:revolution="3" sodipodi:radius="41.613129" sodipodi:argument="-18.147299" sodipodi:t0="0" d="m 73.308212,393.74982 c 1.592741,1.3477 -1.030876,2.81189 -2.239973,2.64724 -3.276579,-0.4462 -4.137127,-4.52375 -3.054508,-7.12719 1.936552,-4.65694 7.887895,-5.67954 12.014402,-3.46177 6.055815,3.25466 7.263028,11.296 3.869042,16.90161 -4.52365,7.4714 -14.719492,8.86373 -21.788831,4.27631 -8.896041,-5.77281 -10.473289,-18.15026 -4.683575,-26.67604 7.01212,-10.32587 21.585119,-12.08797 31.563258,-5.09085 11.758893,8.24586 13.705843,25.02253 5.49811,36.45048 -9.476152,13.19401 -28.461631,15.32586 -41.337687,5.90537 -14.630593,-10.70415 -16.947384,-31.90193 -6.312644,-46.2249 11.930572,-16.06821 35.343106,-18.56999 51.112116,-6.71991 17.506588,13.15584 20.193418,38.78494 7.127178,55.99933" transform="translate(25, 25 )">
+    <desc id="desc36">a new test shape to play with! :)</desc>
+  </path><rect xmlns="http://www.w3.org/2000/svg" height="10" id="AvrilNiblet1" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:yellow;stroke:black" width="10" x="225" y="225" transform="translate(25, 25 )">
+    <desc id="desc71">Avril's first little niblet! :)</desc>
+    <title id="title73"/>
+  </rect><path xmlns="http://www.w3.org/2000/svg" fill-opacity="0.43046721000000016" onmousedown="Reverse(PurpleSpiral)" id="PurpleSpiral" d="m 282.09113,269.50729 c 1.52075,1.52076 -1.29967,2.80025 -2.52761,2.52761 -3.32763,-0.73884 -3.86257,-5.00113 -2.5276,-7.58281 2.38796,-4.61803 8.58895,-5.15902 12.63801,-2.5276 5.94217,3.86172 6.4939,12.22544 2.5276,17.69322 -5.28645,7.28768 -15.87921,7.84514 -22.74842,2.52759 -8.6442,-6.69159 -9.20486,-19.54122 -2.5276,-27.80363 8.08706,-10.00688 23.20787,-10.56947 32.85884,-2.52759 11.37333,9.47708 11.93717,26.8774 2.52759,37.91404 -10.86373,12.74223 -30.54887,13.30692 -42.96924,2.52759 -14.11282,-12.24817 -14.67812,-34.22169 -2.52759,-48.02445 13.63105,-15.4846 37.8955,-16.05034 53.07965,-2.52759 16.85728,15.01283 17.42336,41.57006 2.52759,58.13486" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:tile-cx="185.6451" inkscape:tile-cy="265.9547" inkscape:tile-h="68.00056" inkscape:tile-w="75.106916" inkscape:tile-x0="148.09164" inkscape:tile-y0="231.95443" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" sodipodi:argument="-18.064157" sodipodi:cx="182.09113" sodipodi:cy="269.50729" sodipodi:expansion="1" sodipodi:radius="42.894836" sodipodi:revolution="3" sodipodi:t0="0" sodipodi:type="spiral" style="fill:#800080;fill-rule:evenodd;stroke:#000000;stroke-width:0.2081555px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" transform="translate(25, 25)"/><image xmlns="http://www.w3.org/2000/svg" id="back3" width="448" height="448" x="1" y="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="creatures/png/back3.png"/><image xmlns="http://www.w3.org/2000/svg" id="galaxy3" width="294" height="150" x="150" y="100" style="opacity:0.5" onmousedown="tool(eg_newy)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="creatures/png/galaxy3.png" transform="translate(25, 25 )"/><image xmlns="http://www.w3.org/2000/svg" id="galaxy4" width="306" height="150" x="50" y="250" style="opacity:0.25" onmousedown="tool(eg_newy2)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="creatures/png/galaxy4.png" transform="translate(25, 12.5 )"/><image xmlns="http://www.w3.org/2000/svg" id="planet3" width="157" height="150" x="100" y="250" style="opacity:0.5" onmousedown="tool(eg_niblet)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="creatures/png/planet3.png" transform="translate(25, 0.0 )"/><image xmlns="http://www.w3.org/2000/svg" id="planet4" width="150" height="150" x="300" y="150" style="opacity:0.9" onmousedown="tool(eg_medy)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="creatures/png/planet4.png" transform="translate(25, 0.0 )"/><image xmlns="http://www.w3.org/2000/svg" id="satellite3" width="79" height="150" x="200" y="250" onmousedown="tool(satellite3)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="creatures/png/satellite3.png" transform="translate(25, 25 )"/><image xmlns="http://www.w3.org/2000/svg" id="satellite4" width="109" height="75" x="50" y="50" onmousedown="tool(satellite4)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="creatures/png/satellite4.png" transform="translate(25, 25 )"/><image xmlns="http://www.w3.org/2000/svg" id="mediumcreature3" width="38" height="50" x="300" y="175" onmousedown="tool(the_rect)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="creatures/png/mediumcreature3.png" transform="translate( 0.0 , 25 )"/><image xmlns="http://www.w3.org/2000/svg" id="niblet3" width="21" height="32" x="400" y="350" onmousedown="tool(pink_rect)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="creatures/png/niblet3.png" transform="translate( 0.0 , 25 )"/><image xmlns="http://www.w3.org/2000/svg" id="bigbeauty3" width="92" height="110" x="100" y="150" onmousedown="tool(eg_biggo)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="creatures/png/bigbeauty3.png" transform="translate(25, 0.0 )"/><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.18269572046267002" x="436.2637156668072" y="418.9249050273028" width="3.69292339897636" height="36.238344959139106" style="fill:yellow;stroke:black" transform="translate(333.7875599648952, 11.860515825159613)" onmousedown="deleteCreature('Creature-0.18269572046267002')" class="creatureClass"><title>Creature-0.18269572046267002</title><desc>document.getElementById("Creature-0.18269572046267002").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.6642096683314509" x="83.51462810459878" y="133.4476367798301" width="6.46382236895958" height="31.55333177810986" style="fill:yellow;stroke:black" transform="translate(983.9593089423264, 21.590395564639564)" onmousedown="deleteCreature('Creature-0.6642096683314509')" class="creatureClass"><title>Creature-0.6642096683314509</title><desc>document.getElementById("Creature-0.6642096683314509").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.0324456376446185" x="198.47624744833422" y="315.85926979077743" width="23.504446774168144" height="25.438841829637646" style="fill:yellow;stroke:black" transform="translate(616.8416514813874, 40.298766099669756)" onmousedown="deleteCreature('Creature-0.0324456376446185')" class="creatureClass"><title>Creature-0.0324456376446185</title><desc>document.getElementById("Creature-0.0324456376446185").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.45324830748001443" x="318.7115069400985" y="239.3017100420922" width="8.943012478547487" height="0.5432044072685827" style="fill:yellow;stroke:black" transform="translate(53.70865503190303, 0.6271972040245877)" onmousedown="deleteCreature('Creature-0.45324830748001443')" class="creatureClass"><title>Creature-0.45324830748001443</title><desc>document.getElementById("Creature-0.45324830748001443").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.045515606043025514" x="253.2848418949692" y="30.797924354807414" width="36.05588003362538" height="9.546820584251892" style="fill:yellow;stroke:black" transform="translate(178.42599846083274, 5.969959240507217)" onmousedown="deleteCreature('Creature-0.045515606043025514')" class="creatureClass"><title>Creature-0.045515606043025514</title><desc>document.getElementById("Creature-0.045515606043025514").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.060181263190546286" x="227.52313449478964" y="238.33363323825975" width="15.784248876135806" height="4.159845203341375" style="fill:pink;stroke:yellow" transform="translate(7.508215531940442, 46.087069378776626)" onmousedown="deleteCreature('Creature-0.060181263190546286')" class="creatureClass"><title>Creature-0.060181263190546286</title><desc>document.getElementById("Creature-0.060181263190546286").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.4025749304882522" x="355.60559454949026" y="223.13990081828197" width="12.418595481891565" height="13.123454030311542" style="fill:pink;stroke:yellow" transform="translate(8.203460126109707, 35.26284168221452)" onmousedown="deleteCreature('Creature-0.4025749304882522')" class="creatureClass"><title>Creature-0.4025749304882522</title><desc>document.getElementById("Creature-0.4025749304882522").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.5918559490345672" x="177.29981499823225" y="211.60862608708666" width="1.813681119204249" height="11.960449450317721" style="fill:pink;stroke:yellow" transform="translate(5.09881611744827, 0.17595638212305476)" onmousedown="deleteCreature('Creature-0.5918559490345672')" class="creatureClass"><title>Creature-0.5918559490345672</title><desc>document.getElementById("Creature-0.5918559490345672").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.11667122350075787" x="442.63947648005035" y="338.2823159139194" width="36.1663781249257" height="23.462935890826504" style="fill:yellow;stroke:black" transform="translate(58.728211060931734, 43.07924100815418)" onmousedown="deleteCreature('Creature-0.11667122350075787')" class="creatureClass"><title>Creature-0.11667122350075787</title><desc>document.getElementById("Creature-0.11667122350075787").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.8552939622583076" x="135.9630470621888" y="422.0844299711418" width="0.20722000381050876" height="4.40821667953478" style="fill:yellow;stroke:black" transform="translate(744.5776424397885, 24.67604523097303)" onmousedown="deleteCreature('Creature-0.8552939622583076')" class="creatureClass"><title>Creature-0.8552939622583076</title><desc>document.getElementById("Creature-0.8552939622583076").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.8657966049738872" x="400.194991184551" y="433.86698121025637" width="27.95039156113119" height="34.735741843328725" style="fill:yellow;stroke:black" transform="translate(135.80580231453277, 9.089235664014916)" onmousedown="deleteCreature('Creature-0.8657966049738872')" class="creatureClass"><title>Creature-0.8657966049738872</title><desc>document.getElementById("Creature-0.8657966049738872").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.8444816423807582" x="326.73109444503916" y="37.838647873972455" width="27.889141124636936" height="20.362270963458347" style="fill:yellow;stroke:black" transform="translate(915.1762881500669, 2.4338458268054475)" onmousedown="deleteCreature('Creature-0.8444816423807582')" class="creatureClass"><title>Creature-0.8444816423807582</title><desc>document.getElementById("Creature-0.8444816423807582").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.9222150521214822" x="426.94237095098697" y="79.83690453658737" width="31.585970102245575" height="32.02690913960745" style="fill:yellow;stroke:black" transform="translate(793.1707645056607, 38.20374857741472)" onmousedown="deleteCreature('Creature-0.9222150521214822')" class="creatureClass"><title>Creature-0.9222150521214822</title><desc>document.getElementById("Creature-0.9222150521214822").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.05737000943008752" x="62.22910588519891" y="337.1842064750135" width="18.88558951136929" height="6.820641685076669" style="fill:yellow;stroke:black" transform="translate(773.498676983003, 8.50926727322876)" onmousedown="deleteCreature('Creature-0.05737000943008752')" class="creatureClass"><title>Creature-0.05737000943008752</title><desc>document.getElementById("Creature-0.05737000943008752").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.3477359826994586" x="100.98327384939665" y="97.54865790591751" width="7.101121249482674" height="22.328213029986905" style="fill:yellow;stroke:black" transform="translate(766.4377216309322, 11.86483966846813)" onmousedown="deleteCreature('Creature-0.3477359826994586')" class="creatureClass"><title>Creature-0.3477359826994586</title><desc>document.getElementById("Creature-0.3477359826994586").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.90682661503722" x="241.49640487887808" y="192.60831051574283" width="17.596425773756472" height="25.10762644842197" style="fill:yellow;stroke:black" transform="translate(11.845402294233809, 46.13129874942421)" onmousedown="deleteCreature('Creature-0.90682661503722')" class="creatureClass"><title>Creature-0.90682661503722</title><desc>document.getElementById("Creature-0.90682661503722").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.7054054622808446" x="123.87173976715019" y="60.93542189491971" width="12.389611729772492" height="30.1825108297895" style="fill:yellow;stroke:black" transform="translate(606.8598352924253, 4.085109144779874)" onmousedown="deleteCreature('Creature-0.7054054622808446')" class="creatureClass"><title>Creature-0.7054054622808446</title><desc>document.getElementById("Creature-0.7054054622808446").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect><rect xmlns="http://www.w3.org/2000/svg" id="Creature-0.3969055877091725" x="389.4004451392184" y="393.5996560357932" width="31.929614439433944" height="22.095244521912942" style="fill:yellow;stroke:black" transform="translate(71.6044559198743, 34.09857023684057)" onmousedown="deleteCreature('Creature-0.3969055877091725')" class="creatureClass"><title>Creature-0.3969055877091725</title><desc>document.getElementById("Creature-0.3969055877091725").setAttribute("transform", "translate("+time*Math.random()+", "+50*Math.random()+")");</desc></rect></svg>

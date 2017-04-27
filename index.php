@@ -527,8 +527,8 @@
 		creature_array[creature_index].setAttributeNS(null,"id",creature_name); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"x",x_new); // give the new creature a starting x.
 		creature_array[creature_index].setAttributeNS(null,"y",y_new); // give the new creature a starting y.
-		creature_array[creature_index].setAttributeNS(null,"width",20*Math.random()); // give the new creature a different width.
-		creature_array[creature_index].setAttributeNS(null,"height",20*Math.random()); // give the new creature a different height.
+		creature_array[creature_index].setAttributeNS(null,"width",80*Math.random()); // give the new creature a different width.
+		creature_array[creature_index].setAttributeNS(null,"height",40*Math.random()); // give the new creature a different height.
 		creature_array[creature_index].setAttributeNS(null,"style","fill:yellow;stroke:black"); // give the new clone a different color.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(-40,20)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
