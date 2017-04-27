@@ -1445,7 +1445,7 @@
 
 <p><h2 id="About">Welcome to LifeFLOW! :)</h2></p>
 
-<p>It is kind of like a game, and kind of like nature! :)</p>
+<p><b>LifeFLOW</b> is a fun evolving part of <a href="http://life.worldsowisdom.com/">Life Worlds O Wisdom (LifeWOW)</a>. It is kind of like a game, and kind of like nature! :)</p>
 
 <p>You can think of LifeFLOW as a digital terrarium/aquarium, or "digitarium". We create and play with living electronic creatures who travel their environmental realms. How cool is that? :)</p>
 
