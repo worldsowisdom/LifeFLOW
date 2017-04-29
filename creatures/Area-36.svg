@@ -17,7 +17,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="allcreatures10.svg"><title>LifeFLOW area: avril3! :)</title>
+   sodipodi:docname="newcreatures-plain.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -63,16 +63,6 @@
        y2="178.50594"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-215.03742,319.7082)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient6501"
-       id="linearGradient4201"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-215.03742,88.12946)"
-       x1="242.51431"
-       y1="178.50594"
-       x2="313.40628"
-       y2="178.50594" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -81,11 +71,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497476"
-     inkscape:cx="-35.608276"
+     inkscape:zoom="0.24748738"
+     inkscape:cx="463.57331"
      inkscape:cy="265.90363"
      inkscape:document-units="px"
-     inkscape:current-layer="svg2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1366"
      inkscape:window-height="706"
@@ -186,7 +176,7 @@
     <g
        id="g6519eg"
        inkscape:label="#MedyEG"
-       transform="translate(280,133.35502)">
+       transform="translate(0,53.355016)">
       <rect
          y="281.74832"
          x="59.868374"
@@ -301,182 +291,20 @@
      width="448"
      x="1"
      y="1" />
-  <path
-     sodipodi:type="spiral"
-     style="fill:#00ffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.6047619px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     id="eaglynew"
-     sodipodi:cx="73.308212"
-     sodipodi:cy="393.74982"
-     sodipodi:expansion="1"
-     sodipodi:revolution="3"
-     sodipodi:radius="41.613129"
-     sodipodi:argument="-18.147299"
-     sodipodi:t0="0"
-     d="m 73.308212,393.74982 c 1.592741,1.3477 -1.030876,2.81189 -2.239973,2.64724 -3.276579,-0.4462 -4.137127,-4.52375 -3.054508,-7.12719 1.936552,-4.65694 7.887895,-5.67954 12.014402,-3.46177 6.055815,3.25466 7.263028,11.296 3.869042,16.90161 -4.52365,7.4714 -14.719492,8.86373 -21.788831,4.27631 -8.896041,-5.77281 -10.473289,-18.15026 -4.683575,-26.67604 7.01212,-10.32587 21.585119,-12.08797 31.563258,-5.09085 11.758893,8.24586 13.705843,25.02253 5.49811,36.45048 -9.476152,13.19401 -28.461631,15.32586 -41.337687,5.90537 -14.630593,-10.70415 -16.947384,-31.90193 -6.312644,-46.2249 11.930572,-16.06821 35.343106,-18.56999 51.112116,-6.71991 17.506588,13.15584 20.193418,38.78494 7.127178,55.99933"
-     transform="translate(25, 25 )">
-    <desc
-       id="desc36">a new test shape to play with! :)</desc>
-  </path>
-  <rect
-     height="90"
-     id="BlueRect"
-     onmouseout="setAttribute('fill-opacity','0.5')"
-     onmouseover="setAttribute('fill-opacity','1.0')"
-     style="fill:#0000ff;stroke:#000000"
-     width="90"
-     x="150"
-     y="90"
-     transform="translate(25, 0.0 )">
-    <desc
-       id="desc3364">A clickable square to test simple JavaScript.</desc>
-    <title
-       id="title3362" />
-  </rect>
-  <rect
-     height="90"
-     id="PinkRect"
-     onmouseout="setAttribute('fill-opacity','0.75')"
-     onmouseover="setAttribute('fill-opacity','1.0')"
-     style="fill:#ff00ff;stroke:#000000"
-     width="90"
-     x="60"
-     y="300"
-     transform="translate(25, 0.0 )"
-     fill-opacity="0.75">
-    <desc
-       id="desc42">A clickable square!</desc>
-    <title
-       id="title44" />
-  </rect>
-  <rect
-     height="10"
-     id="NibletEG"
-     onmouseout="setAttribute('fill-opacity','0.5')"
-     onmouseover="setAttribute('fill-opacity','1.0')"
-     style="fill:green;stroke:lightgreen"
-     width="10"
-     x="300"
-     y="300"
-     transform="translate(25, 0.0 )">
-    <desc
-       id="desc47">A clickable square to test simple JavaScript.</desc>
-    <title
-       id="title49" />
-  </rect>
-  <rect
-     style="opacity:0.87000002;fill:url(#linearGradient4201);fill-opacity:1;stroke:#0000ff;stroke-width:0.6047619;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter5001)"
-     id="MedyEG"
-     width="40.319515"
-     height="23.214266"
-     x="42.763119"
-     y="255.02811" />
-  <g
-     id="BiggoEG"
-     transform="translate(25, 0.0 )">
-    <desc
-       id="desc53">A big creature for LifeFLOW! :)</desc>
-    <circle
-       r="29.934187"
-       cy="259.14496"
-       cx="302.39636"
-       id="path4137"
-       style="opacity:0.28999999;fill:#ffff00;stroke:#800080;stroke-width:0.6047619" />
-    <circle
-       r="7.3308215"
-       cy="265.86487"
-       cx="307.8945"
-       id="path4139"
-       style="opacity:0.28999999;fill:#ffff00;stroke:#800080;stroke-width:0.6047619" />
-    <ellipse
-       ry="10.996231"
-       rx="3.6654108"
-       cy="251.20323"
-       cx="292.01105"
-       id="path4141"
-       style="opacity:0.28999999;fill:#0000ff;stroke:#800080;stroke-width:0.6047619" />
-    <ellipse
-       ry="3.6654108"
-       rx="9.7744284"
-       cy="253.64687"
-       cx="317.66891"
-       id="path4143"
-       style="opacity:0.28999999;fill:#0000ff;stroke:#800080;stroke-width:0.6047619" />
-  </g>
-  <circle
-     cx="225"
-     cy="375"
-     id="NewyEG"
-     onmouseout="setAttribute('fill-opacity','0.1')"
-     onmouseover="setAttribute('fill-opacity','1.0')"
-     r="30"
-     style="fill:blue;stroke:green"
-     transform="translate(25, 25 )"
-     fill-opacity="0.1">
-    <desc
-       id="desc60">A new creature!</desc>
-    <title
-       id="title62" />
-  </circle>
-  <circle
-     cx="115"
-     cy="175"
-     id="NewyEG2"
-     onmouseout="setAttribute('fill-opacity','0.1')"
-     onmouseover="setAttribute('fill-opacity','1.0')"
-     r="30"
-     style="fill:black;stroke:red"
-     transform="translate(25, 25 )">
-    <desc
-       id="desc65">A new creature!</desc>
-    <title
-       id="title67" />
-  </circle>
-  <path
-     fill-opacity="0.43046721000000016"
-     onmousedown="Reverse(PurpleSpiral)"
-     id="PurpleSpiral"
-     d="m 282.09113,269.50729 c 1.52075,1.52076 -1.29967,2.80025 -2.52761,2.52761 -3.32763,-0.73884 -3.86257,-5.00113 -2.5276,-7.58281 2.38796,-4.61803 8.58895,-5.15902 12.63801,-2.5276 5.94217,3.86172 6.4939,12.22544 2.5276,17.69322 -5.28645,7.28768 -15.87921,7.84514 -22.74842,2.52759 -8.6442,-6.69159 -9.20486,-19.54122 -2.5276,-27.80363 8.08706,-10.00688 23.20787,-10.56947 32.85884,-2.52759 11.37333,9.47708 11.93717,26.8774 2.52759,37.91404 -10.86373,12.74223 -30.54887,13.30692 -42.96924,2.52759 -14.11282,-12.24817 -14.67812,-34.22169 -2.52759,-48.02445 13.63105,-15.4846 37.8955,-16.05034 53.07965,-2.52759 16.85728,15.01283 17.42336,41.57006 2.52759,58.13486"
-     inkscape:tile-cx="185.6451"
-     inkscape:tile-cy="265.9547"
-     inkscape:tile-h="68.00056"
-     inkscape:tile-w="75.106916"
-     inkscape:tile-x0="148.09164"
-     inkscape:tile-y0="231.95443"
-     sodipodi:argument="-18.064157"
-     sodipodi:cx="182.09113"
-     sodipodi:cy="269.50729"
-     sodipodi:expansion="1"
-     sodipodi:radius="42.894836"
-     sodipodi:revolution="3"
-     sodipodi:t0="0"
-     sodipodi:type="spiral"
-     style="fill:#800080;fill-rule:evenodd;stroke:#000000;stroke-width:0.2081555px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     transform="translate(25, 25)" />
-  <rect
-     height="10"
-     id="AvrilNiblet1"
-     onmouseout="setAttribute('fill-opacity','0.5')"
-     onmouseover="setAttribute('fill-opacity','1.0')"
-     style="fill:yellow;stroke:black"
-     width="10"
-     x="225"
-     y="225"
-     transform="translate(25, 25 )">
-    <desc
-       id="desc71">Avril's first little niblet! :)</desc>
-    <title
-       id="title73" />
-  </rect>
-  
-  <image id="back3" width="448" height="448" x="1" y="1" xlink:href="creatures/png/back3.png"/>
-  <image id="galaxy3" width="294" height="150" x="150" y="100" style="opacity:0.5" onmousedown="tool(eg_newy)" xlink:href="creatures/png/galaxy3.png"/>
-  <image id="galaxy4" width="306" height="150" x="50" y="250" style="opacity:0.25" onmousedown="tool(eg_newy2)" xlink:href="creatures/png/galaxy4.png"/>
-  <image id="planet3" width="157" height="150" x="100" y="250" style="opacity:0.5" onmousedown="tool(eg_niblet)" xlink:href="creatures/png/planet3.png"/>
-  <image id="planet4" width="150" height="150" x="300" y="150" style="opacity:0.9" onmousedown="tool(eg_medy)" xlink:href="creatures/png/planet4.png"/>
-  <image id="satellite3" width="79" height="150" x="200" y="250" onmousedown="tool(satellite3)" xlink:href="creatures/png/satellite3.png"/>
-  <image id="satellite4" width="109" height="75" x="50" y="50" onmousedown="tool(satellite4)" xlink:href="creatures/png/satellite4.png"/>
-  <image id="bigbeauty3"  width="92" height="110" x="100" y="150" onmousedown="tool(eg_biggo)" xlink:href="creatures/png/bigbeauty3.png"/>
-  <image id="mediumcreature3" width="38" height="50" x="300" y="175" onmousedown="tool(the_rect)" xlink:href="creatures/png/mediumcreature3.png"/>
-  <image id="niblet3" width="21" height="32" x="400" y="350" onmousedown="tool(pink_rect)" xlink:href="creatures/png/niblet3.png"/>
-  
-</svg>
+	 
+	 
+	 <!-- creatures from original versions! :) -->
+	 
+			<a style="fill-opacity:0.75" xlink:href="http://life.worldsowisdom.com/flow/"> <rect height="90" id="YellowRect" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:yellow;stroke:#000000" width="90" x="150" y="90"> <desc id="desc3364">A clickable square!</desc>
+			<title id="title3362"></title>
+			</rect> </a> <a style="fill-opacity:0.75" xlink:href="http://life.worldsowisdom.com/flow/">
+			<rect height="90" id="OrangeRect" onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:orange;stroke:#000000" width="90" x="60" y="300"> <desc id="desc3364">A clickable square!</desc>
+			<title id="title3362"></title>
+			</rect> </a>
+
+<path xmlns="http://www.w3.org/2000/svg" sodipodi:type="spiral" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" style="fill:#00ffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.6047619px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" id="eaglynew" sodipodi:cx="73.308212" sodipodi:cy="393.74982" sodipodi:expansion="1" sodipodi:revolution="3" sodipodi:radius="41.613129" sodipodi:argument="-18.147299" sodipodi:t0="0" d="m 73.308212,393.74982 c 1.592741,1.3477 -1.030876,2.81189 -2.239973,2.64724 -3.276579,-0.4462 -4.137127,-4.52375 -3.054508,-7.12719 1.936552,-4.65694 7.887895,-5.67954 12.014402,-3.46177 6.055815,3.25466 7.263028,11.296 3.869042,16.90161 -4.52365,7.4714 -14.719492,8.86373 -21.788831,4.27631 -8.896041,-5.77281 -10.473289,-18.15026 -4.683575,-26.67604 7.01212,-10.32587 21.585119,-12.08797 31.563258,-5.09085 11.758893,8.24586 13.705843,25.02253 5.49811,36.45048 -9.476152,13.19401 -28.461631,15.32586 -41.337687,5.90537 -14.630593,-10.70415 -16.947384,-31.90193 -6.312644,-46.2249 11.930572,-16.06821 35.343106,-18.56999 51.112116,-6.71991 17.506588,13.15584 20.193418,38.78494 7.127178,55.99933" transform="translate(25, 25 )">
+    <desc id="desc36">a new test shape to play with! :)</desc>
+  </path><rect xmlns="http://www.w3.org/2000/svg" height="10" id="AvrilNiblet1" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:yellow;stroke:black" width="10" x="225" y="225" transform="translate(25, 25 )">
+    <desc id="desc71">Avril's first little niblet! :)</desc>
+    <title id="title73"/>
+  </rect><path xmlns="http://www.w3.org/2000/svg" fill-opacity="0.43046721000000016" onmousedown="Reverse(PurpleSpiral)" id="PurpleSpiral" d="m 282.09113,269.50729 c 1.52075,1.52076 -1.29967,2.80025 -2.52761,2.52761 -3.32763,-0.73884 -3.86257,-5.00113 -2.5276,-7.58281 2.38796,-4.61803 8.58895,-5.15902 12.63801,-2.5276 5.94217,3.86172 6.4939,12.22544 2.5276,17.69322 -5.28645,7.28768 -15.87921,7.84514 -22.74842,2.52759 -8.6442,-6.69159 -9.20486,-19.54122 -2.5276,-27.80363 8.08706,-10.00688 23.20787,-10.56947 32.85884,-2.52759 11.37333,9.47708 11.93717,26.8774 2.52759,37.91404 -10.86373,12.74223 -30.54887,13.30692 -42.96924,2.52759 -14.11282,-12.24817 -14.67812,-34.22169 -2.52759,-48.02445 13.63105,-15.4846 37.8955,-16.05034 53.07965,-2.52759 16.85728,15.01283 17.42336,41.57006 2.52759,58.13486" inkscape:tile-cx="185.6451" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:tile-cy="265.9547" inkscape:tile-h="68.00056" inkscape:tile-w="75.106916" inkscape:tile-x0="148.09164" inkscape:tile-y0="231.95443" sodipodi:argument="-18.064157" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" sodipodi:cx="182.09113" sodipodi:cy="269.50729" sodipodi:expansion="1" sodipodi:radius="42.894836" sodipodi:revolution="3" sodipodi:t0="0" sodipodi:type="spiral" style="fill:#800080;fill-rule:evenodd;stroke:#000000;stroke-width:0.2081555px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" transform="translate(25, 25)"/><image xmlns="http://www.w3.org/2000/svg" id="back3" width="448" height="448" x="1" y="1" xlink:href="creatures/png/back3.png" xmlns:xlink="http://www.w3.org/1999/xlink"/><image xmlns="http://www.w3.org/2000/svg" id="galaxy3" width="294" height="150" x="150" y="100" style="opacity:0.5" onmousedown="tool(eg_newy)" xlink:href="creatures/png/galaxy3.png" xmlns:xlink="http://www.w3.org/1999/xlink" transform="rotate(90,225,225)"/><image xmlns="http://www.w3.org/2000/svg" id="galaxy4" width="306" height="150" x="50" y="250" style="opacity:0.25" onmousedown="tool(eg_newy2)" xlink:href="creatures/png/galaxy4.png" xmlns:xlink="http://www.w3.org/1999/xlink" transform="translate(25, 12.5 )"/><image xmlns="http://www.w3.org/2000/svg" id="planet3" width="157" height="150" x="100" y="250" style="opacity:0.5" onmousedown="tool(eg_niblet)" xlink:href="creatures/png/planet3.png" xmlns:xlink="http://www.w3.org/1999/xlink" transform="translate(25, 0.0 )"/><image xmlns="http://www.w3.org/2000/svg" id="planet4" width="150" height="150" x="300" y="150" style="opacity:0.9" onmousedown="tool(eg_medy)" xlink:href="creatures/png/planet4.png" xmlns:xlink="http://www.w3.org/1999/xlink" transform="translate(25, 0.0 )"/><image xmlns="http://www.w3.org/2000/svg" id="satellite3" width="79" height="150" x="200" y="250" onmousedown="tool(satellite3)" xlink:href="creatures/png/satellite3.png" xmlns:xlink="http://www.w3.org/1999/xlink" transform="translate(25, 25 )"/><image xmlns="http://www.w3.org/2000/svg" id="satellite4" width="109" height="75" x="50" y="50" onmousedown="tool(satellite4)" xlink:href="creatures/png/satellite4.png" xmlns:xlink="http://www.w3.org/1999/xlink" transform="translate(25, 25 )"/><image xmlns="http://www.w3.org/2000/svg" id="mediumcreature3" width="38" height="50" x="300" y="175" onmousedown="tool(the_rect)" xlink:href="creatures/png/mediumcreature3.png" xmlns:xlink="http://www.w3.org/1999/xlink" transform="translate( 0.0 , 25 )"/><image xmlns="http://www.w3.org/2000/svg" id="niblet3" width="21" height="32" x="400" y="350" onmousedown="tool(pink_rect)" xlink:href="creatures/png/niblet3.png" xmlns:xlink="http://www.w3.org/1999/xlink" transform="translate( 0.0 , 25 )"/><image xmlns="http://www.w3.org/2000/svg" id="bigbeauty3" width="92" height="110" x="100" y="150" onmousedown="tool(eg_biggo)" xlink:href="creatures/png/bigbeauty3.png" xmlns:xlink="http://www.w3.org/1999/xlink"/><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.8021289554461078" r="20" cx="413.6396740286618" cy="147.96026376601966" style="fill:blue;stroke:purple" transform="translate(9.662462027332532, 33.5374656362751)" onmousedown="deleteCreature('Creature-0.8021289554461078')" class="creatureClass"><title>Creature-0.8021289554461078</title><desc>document.getElementById("Creature-0.8021289554461078").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.2340652395469237" r="20" cx="287.51989736290017" cy="231.45347925912674" style="fill:blue;stroke:purple" transform="translate(19.30106029869145, 23.4142913033053)" onmousedown="deleteCreature('Creature-0.2340652395469237')" class="creatureClass"><title>Creature-0.2340652395469237</title><desc>document.getElementById("Creature-0.2340652395469237").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.8040097973533604" r="20" cx="203.8483788996361" cy="245.3519465075302" style="fill:blue;stroke:purple" transform="translate(20.071158072750237, 22.447189162546106)" onmousedown="deleteCreature('Creature-0.8040097973533604')" class="creatureClass"><title>Creature-0.8040097973533604</title><desc>document.getElementById("Creature-0.8040097973533604").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.917702733379161" r="20" cx="91.39848596360535" cy="393.52214521765137" style="fill:blue;stroke:purple" transform="translate(19.071455148199306, 36.54848706197013)" onmousedown="deleteCreature('Creature-0.917702733379161')" class="creatureClass"><title>Creature-0.917702733379161</title><desc>document.getElementById("Creature-0.917702733379161").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.07822356414976106" r="20" cx="24.982408769934995" cy="188.1141445712198" style="fill:blue;stroke:purple" transform="translate(22.43998835434333, 40.710674858012105)" onmousedown="deleteCreature('Creature-0.07822356414976106')" class="creatureClass"><title>Creature-0.07822356414976106</title><desc>document.getElementById("Creature-0.07822356414976106").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.6587906955942767" r="20" cx="332.54215212091833" cy="161.39613785245848" style="fill:blue;stroke:purple" transform="translate(21.352021707394876, 11.497849531833776)" onmousedown="deleteCreature('Creature-0.6587906955942767')" class="creatureClass"><title>Creature-0.6587906955942767</title><desc>document.getElementById("Creature-0.6587906955942767").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.8264126724656593" r="20" cx="275.6750702709039" cy="124.31132258246552" style="fill:blue;stroke:purple" transform="translate(22.174062452415395, 24.06850528490047)" onmousedown="deleteCreature('Creature-0.8264126724656593')" class="creatureClass"><title>Creature-0.8264126724656593</title><desc>document.getElementById("Creature-0.8264126724656593").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.18867843903602666" r="20" cx="149.4982428598556" cy="110.6155434581851" style="fill:blue;stroke:purple" transform="translate(28.486111056181986, 24.26596382185498)" onmousedown="deleteCreature('Creature-0.18867843903602666')" class="creatureClass"><title>Creature-0.18867843903602666</title><desc>document.getElementById("Creature-0.18867843903602666").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.05078670274319197" r="20" cx="57.30354270220273" cy="284.83366951527165" style="fill:blue;stroke:purple" transform="translate(6.520724518825284, 46.631737717445866)" onmousedown="deleteCreature('Creature-0.05078670274319197')" class="creatureClass"><title>Creature-0.05078670274319197</title><desc>document.getElementById("Creature-0.05078670274319197").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.8692830413913052" r="20" cx="358.9365250159178" cy="181.0283678070162" style="fill:blue;stroke:purple" transform="translate(32.56989415183601, 36.64970715201626)" onmousedown="deleteCreature('Creature-0.8692830413913052')" class="creatureClass"><title>Creature-0.8692830413913052</title><desc>document.getElementById("Creature-0.8692830413913052").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.13250188791295237" r="20" cx="326.57645607717825" cy="328.83223803470725" style="fill:blue;stroke:purple" transform="translate(27.02818787017733, 28.21153326236913)" onmousedown="deleteCreature('Creature-0.13250188791295237')" class="creatureClass"><title>Creature-0.13250188791295237</title><desc>document.getElementById("Creature-0.13250188791295237").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.9837072686174371" r="20" cx="401.09490106699167" cy="18.985686595916995" style="fill:blue;stroke:purple" transform="translate(2.9808503741864407, 45.09695130725894)" onmousedown="deleteCreature('Creature-0.9837072686174371')" class="creatureClass"><title>Creature-0.9837072686174371</title><desc>document.getElementById("Creature-0.9837072686174371").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.8931143859964414" r="20" cx="15.043708676945256" cy="47.841149289313776" style="fill:blue;stroke:purple" transform="translate(24.47970808756149, 43.69032215139949)" onmousedown="deleteCreature('Creature-0.8931143859964414')" class="creatureClass"><title>Creature-0.8931143859964414</title><desc>document.getElementById("Creature-0.8931143859964414").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.5984592888028304" r="20" cx="49.37745270803649" cy="122.64396699182042" style="fill:blue;stroke:purple" transform="translate(13.615163165071714, 35.0492317085875)" onmousedown="deleteCreature('Creature-0.5984592888028304')" class="creatureClass"><title>Creature-0.5984592888028304</title><desc>document.getElementById("Creature-0.5984592888028304").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.8897301858571361" r="20" cx="57.50101807399071" cy="389.6685103097374" style="fill:blue;stroke:purple" transform="translate(1.9414561439046576, 8.571839332386489)" onmousedown="deleteCreature('Creature-0.8897301858571361')" class="creatureClass"><title>Creature-0.8897301858571361</title><desc>document.getElementById("Creature-0.8897301858571361").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.11467348643266118" r="20" cx="172.64982563878215" cy="247.12384716965067" style="fill:blue;stroke:purple" transform="translate(24.31240743322752, 28.45654962065487)" onmousedown="deleteCreature('Creature-0.11467348643266118')" class="creatureClass"><title>Creature-0.11467348643266118</title><desc>document.getElementById("Creature-0.11467348643266118").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.34704146054895635" r="20" cx="205.2822861329679" cy="288.1233445409703" style="fill:blue;stroke:purple" transform="translate(31.979274062484876, 30.26202185292592)" onmousedown="deleteCreature('Creature-0.34704146054895635')" class="creatureClass"><title>Creature-0.34704146054895635</title><desc>document.getElementById("Creature-0.34704146054895635").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.6135140452061506" r="20" cx="375.8099839740139" cy="141.38394238472117" style="fill:blue;stroke:purple" transform="translate(12.20569606661151, 26.382748487167863)" onmousedown="deleteCreature('Creature-0.6135140452061506')" class="creatureClass"><title>Creature-0.6135140452061506</title><desc>document.getElementById("Creature-0.6135140452061506").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.6056798396633616" r="20" cx="117.02511717482976" cy="312.6034511387007" style="fill:blue;stroke:purple" transform="translate(10.062352624329051, 29.754306531362122)" onmousedown="deleteCreature('Creature-0.6056798396633616')" class="creatureClass"><title>Creature-0.6056798396633616</title><desc>document.getElementById("Creature-0.6056798396633616").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.17588569581520785" r="20" cx="253.2259819199731" cy="88.20221935373077" style="fill:blue;stroke:purple" transform="translate(25.005006051008095, 22.39535244103696)" onmousedown="deleteCreature('Creature-0.17588569581520785')" class="creatureClass"><title>Creature-0.17588569581520785</title><desc>document.getElementById("Creature-0.17588569581520785").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.7315176661081103" r="20" cx="216.64342235795087" cy="142.2261152449238" style="fill:blue;stroke:purple" transform="translate(9.670969928552458, 15.58644052284226)" onmousedown="deleteCreature('Creature-0.7315176661081103')" class="creatureClass"><title>Creature-0.7315176661081103</title><desc>document.getElementById("Creature-0.7315176661081103").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.24085926423551096" r="20" cx="228.33955015352367" cy="295.5006551346953" style="fill:blue;stroke:purple" transform="translate(24.403550492994647, 11.24026609540083)" onmousedown="deleteCreature('Creature-0.24085926423551096')" class="creatureClass"><title>Creature-0.24085926423551096</title><desc>document.getElementById("Creature-0.24085926423551096").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.5916926151337402" r="20" cx="90.08782596513329" cy="258.1426174336524" style="fill:blue;stroke:purple" transform="translate(32.191380661925685, 48.77695542227588)" onmousedown="deleteCreature('Creature-0.5916926151337402')" class="creatureClass"><title>Creature-0.5916926151337402</title><desc>document.getElementById("Creature-0.5916926151337402").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.9373372294548993" r="20" cx="86.93702168624525" cy="262.8976070934831" style="fill:blue;stroke:purple" transform="translate(7.90141040897113, 30.97782325872184)" onmousedown="deleteCreature('Creature-0.9373372294548993')" class="creatureClass"><title>Creature-0.9373372294548993</title><desc>document.getElementById("Creature-0.9373372294548993").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.9830388626419453" r="20" cx="33.097871666855546" cy="37.63750087072286" style="fill:blue;stroke:purple" transform="translate(31.221400066333096, 31.68060702740115)" onmousedown="deleteCreature('Creature-0.9830388626419453')" class="creatureClass"><title>Creature-0.9830388626419453</title><desc>document.getElementById("Creature-0.9830388626419453").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.07125096496197736" r="20" cx="262.7731727292383" cy="283.97751603921654" style="fill:blue;stroke:purple" transform="translate(8.750465726602883, 39.96346352520721)" onmousedown="deleteCreature('Creature-0.07125096496197736')" class="creatureClass"><title>Creature-0.07125096496197736</title><desc>document.getElementById("Creature-0.07125096496197736").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.148835366403949" r="20" cx="7.198259509895966" cy="207.9638031908" style="fill:blue;stroke:purple" transform="translate(1.0825520799872967, 29.403390124449523)" onmousedown="deleteCreature('Creature-0.148835366403949')" class="creatureClass"><title>Creature-0.148835366403949</title><desc>document.getElementById("Creature-0.148835366403949").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.5776961037928149" r="20" cx="187.2449968642544" cy="67.83726160570761" style="fill:blue;stroke:purple" transform="translate(18.17058529707587, 8.9174900407629)" onmousedown="deleteCreature('Creature-0.5776961037928149')" class="creatureClass"><title>Creature-0.5776961037928149</title><desc>document.getElementById("Creature-0.5776961037928149").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.8432450771840243" r="20" cx="268.0332229089369" cy="123.91655175144368" style="fill:blue;stroke:purple" transform="translate(27.017173639608572, 9.97114697984587)" onmousedown="deleteCreature('Creature-0.8432450771840243')" class="creatureClass"><title>Creature-0.8432450771840243</title><desc>document.getElementById("Creature-0.8432450771840243").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.6433994523702636" r="20" cx="61.0595102416654" cy="232.81976485345643" style="fill:blue;stroke:purple" transform="translate(21.488065757416987, 29.52191394239617)" onmousedown="deleteCreature('Creature-0.6433994523702636')" class="creatureClass"><title>Creature-0.6433994523702636</title><desc>document.getElementById("Creature-0.6433994523702636").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.4650683225067147" r="20" cx="322.0188953601996" cy="177.3868801336911" style="fill:blue;stroke:purple" transform="translate(11.71462027852836, 44.94094431416532)" onmousedown="deleteCreature('Creature-0.4650683225067147')" class="creatureClass"><title>Creature-0.4650683225067147</title><desc>document.getElementById("Creature-0.4650683225067147").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.1737137336938609" r="20" cx="190.1888852235774" cy="53.32318253823014" style="fill:blue;stroke:purple" transform="translate(11.939338643489643, 9.675344270129449)" onmousedown="deleteCreature('Creature-0.1737137336938609')" class="creatureClass"><title>Creature-0.1737137336938609</title><desc>document.getElementById("Creature-0.1737137336938609").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.6995317037312068" r="20" cx="446.1595622747999" cy="287.70365175343005" style="fill:blue;stroke:purple" transform="translate(18.284754073830463, 1.3511935306950384)" onmousedown="deleteCreature('Creature-0.6995317037312068')" class="creatureClass"><title>Creature-0.6995317037312068</title><desc>document.getElementById("Creature-0.6995317037312068").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.1998659154966289" r="20" cx="56.72080126763427" cy="428.18504898033507" style="fill:blue;stroke:purple" transform="translate(19.2008710597584, 8.45546806936185)" onmousedown="deleteCreature('Creature-0.1998659154966289')" class="creatureClass"><title>Creature-0.1998659154966289</title><desc>document.getElementById("Creature-0.1998659154966289").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.9033014233101948" r="20" cx="313.2952741777577" cy="423.9510677938833" style="fill:blue;stroke:purple" transform="translate(13.741676974738496, 7.235504540303)" onmousedown="deleteCreature('Creature-0.9033014233101948')" class="creatureClass"><title>Creature-0.9033014233101948</title><desc>document.getElementById("Creature-0.9033014233101948").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle><circle xmlns="http://www.w3.org/2000/svg" id="Creature-0.3897334840397698" r="20" cx="16.142980995905642" cy="214.1726314624195" style="fill:blue;stroke:purple" transform="translate(11.42729096852938, 20.88370085795499)" onmousedown="deleteCreature('Creature-0.3897334840397698')" class="creatureClass"><title>Creature-0.3897334840397698</title><desc>document.getElementById("Creature-0.3897334840397698").setAttribute("transform", "translate("+33*Math.random()+", "+50*Math.random()+")");</desc></circle></svg>
