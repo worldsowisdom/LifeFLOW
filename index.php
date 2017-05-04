@@ -1233,13 +1233,13 @@
     
 	</g>
 
-	<!--Button 7: Ungroup creatures-->
+	<!--Button 7: New ultral creature! :)-->
 	
-	<g id="Ungroup"
-				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="ungroup()";>
-				<title>Ungroup creatures! :)</title>
+	<g id="CreateUltral"
+				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="createCool()";>
+				<title>Create ultral creature! :)</title>
 	
-			<rect height="32" width="32" x="270" y="40" id="Button6" onmousedown="Act(BiggoEG)" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:brown;stroke:orange"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
+			<rect height="32" width="32" x="270" y="40" id="Button6" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:brown;stroke:orange"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
 			</rect>
 
 			
@@ -1259,11 +1259,11 @@
 	
 	</g>
 
-	<!--Button 8: LoadCreatures1-->
+	<!--Button 8: New extral creature! :)-->
 			<!--button 8 exterior-->
 			
-			<a style="fill-opacity:0.75" xlink:href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLUCRBGYW5XTS">
-			<rect height="32" width="32" x="310" y="40" id="Button8" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:purple;stroke:lightpurple"> <desc id="First button on toolbar! :)">Open Avril7! :)</desc><title>Open area Avril3! :)</title>
+			<a style="fill-opacity:0.75">
+			<rect height="32" width="32" x="310" y="40" id="Button8" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:purple;stroke:lightpurple"> <desc id="First button on toolbar! :)">Open Avril7! :)</desc><title>Create new extral creature! :)</title>
 			</rect> </a> 
 
 
@@ -1276,7 +1276,7 @@
        height="20"
        x="316"
        y="46"
-	   onmousedown="OpenArea('creatures/avril3.svg')" ><title>Open area Avril3! :)</title>
+	   onmousedown="OpenArea('creatures/avril3.svg')" ><title>Create new extral creature! :)</title>
       <desc
          id="desc4311">Save icon</desc>
     </rect>
