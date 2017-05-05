@@ -406,7 +406,8 @@
 		//another take at improving creature personality
 		
 		//do any preprocessing
-		x = document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
+		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
 		
 		//translate creature_name x y
 		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+")"); // transform the creature
