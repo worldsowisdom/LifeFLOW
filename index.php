@@ -425,19 +425,22 @@
 	
 	function getNearestNeighbor(creature_name) {
 		var distanceMeasure; // check how far apart creature_name is from o creatures
-		var distanceShortest; // tmp store the shortest distance while iterating through
+		var distanceShortest = 450; // tmp store the shortest distance while iterating through
+		var nearestNeighbor; // store the nearest neighbor
+		
 		//find the nearest other creature to creature_name
 		if (creature_index > 0) {
 			//if any other creatures around, calculate distances and keep the smallest
 			for (var i = 0; i < creature_index; i++) {
 				//iterate through creatures
-				distanceMeasure = 5; // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
+				distanceMeasure = 5*Math.random(); // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
 				if (distanceMeasure < distanceShortest) {
 					//if this is the shortest distance so far, then make this the return creature.
-					nearestNeighbor = i; //should we return the index, or the whole creature?
+					distanceShortest = distanceMeasure; //set the new shortest distance
+					nearestNeighbor = i; //store the index of the new shortest distance
 				}
 			}
-		return i; //should we return the index, or the whole creature?
+		return nearestNeighbor; //should we return the index, or the whole creature?
 			
 		}
 
