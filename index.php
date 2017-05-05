@@ -434,7 +434,7 @@
 			for (var i = 0; i < creature_index; i++) {
 				//iterate through creatures
 //orig				distanceMeasure = 5*Math.random(); // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
-				distanceMeasure = document.getElementById(creature_name).getBoundingClientRect().x - creature_array[i].getBoundingClientRect().x; // calculate x diff
+				distanceMeasure = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[i].getBoundingClientRect().x) + (document.getElementById(creature_name).getBoundingClientRect().y - creature_array[i].getBoundingClientRect().y); // calculate x diff
 //btw what would diff x plus diff y give???				
 				
 				5*Math.random(); // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
