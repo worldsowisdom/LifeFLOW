@@ -406,8 +406,8 @@
 		//another take at improving creature personality
 		
 		//do any preprocessing
-		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5*Math.random(); // update x
-		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
+		x = x + document.getElementById(creature_name).getBoundingClientRect().x / 5 + 5*Math.random(); // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 10 + 5*Math.random(); // update y
 /*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
 		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
 */
@@ -621,7 +621,7 @@
 		creature_array[creature_index].setAttributeNS(null,"y",y_new); // give the new creature a starting y.
 		creature_array[creature_index].setAttributeNS(null,"width",80*Math.random()); // give the new creature a different width.
 		creature_array[creature_index].setAttributeNS(null,"height",40*Math.random()); // give the new creature a different height.
-		creature_array[creature_index].setAttributeNS(null,"style","fill:white;stroke:purple"); // give the new clone a different color.
+		creature_array[creature_index].setAttributeNS(null,"style","fill:brown;stroke:white"); // give the new clone a different color.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(-40,20)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
@@ -640,7 +640,11 @@
 		//<desc> - this is AI! :)
 		// m also add <id="a-##########"> and/or <class="personalityClass>
 		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
-	var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+	var creature_desc = document.createTextNode("moveCreature(\""+creature_name+"\", -120, -30)"); // make it flutter about like some kind of random particle
+	
+	
+	
+//more b4 ultral	document.getElementById(\""+creature_name+"\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 //b4 ultral	var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+document.getElementById(\""+creature_name+"\").getAttribute(\"x\")*time/max_time*5+\", \"+document.getElementById(\""+creature_name+"\").getAttribute(\"height\")*time/max_time*Math.sqrt(5)+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 //b4heliotropic		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+time*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 //orig		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(Math.random()*30,Math.random()*50)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
