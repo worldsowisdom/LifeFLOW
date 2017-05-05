@@ -433,7 +433,11 @@
 			//if any other creatures around, calculate distances and keep the smallest
 			for (var i = 0; i < creature_index; i++) {
 				//iterate through creatures
-				distanceMeasure = 5*Math.random(); // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
+//orig				distanceMeasure = 5*Math.random(); // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
+				distanceMeasure = document.getElementById(creature_name).getBoundingClientRect().x - creature_array[i].getBoundingClientRect().x; // calculate x diff
+//btw what would diff x plus diff y give???				
+				
+				5*Math.random(); // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
 				if (distanceMeasure < distanceShortest) {
 					//if this is the shortest distance so far, then make this the return creature.
 					distanceShortest = distanceMeasure; //set the new shortest distance
