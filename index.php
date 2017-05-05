@@ -395,6 +395,21 @@
 		//assign a personality (set of behaviors) to a creature
 		
 		//insert a set of steps into SVG <desc>
+		//should yield basically eval("personalitycode")
+		//e.g. document.getElementById(creature_name).setAttribute("transform", "translate(3,8), rotate(90)";
+		document.getElementById(creature_name).setAttribute("transform", "translate(3,5)"); // transform the creature
+			//could assign the above to a var and later eval() it if necessary
+		
+	}
+	
+	function moveCreature(creature_name, x, y) {
+		//another take at improving creature personality
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+")"); // transform the creature
+			//now just make it relative to current position or o creature etc., instead of origin.
+			
+		
+		
+		
 		
 	}
 	
@@ -616,7 +631,7 @@
 		//<desc> - this is AI! :)
 		// m also add <id="a-##########"> and/or <class="personalityClass>
 		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
-	var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+document.getElementById(\""+creature_name+"\").getAttribute(\"x\")*1.1+\", \"+document.getElementById(\""+creature_name+"\").getAttribute(\"height\")*Math.sqrt(5)+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+	var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 //b4 ultral	var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+document.getElementById(\""+creature_name+"\").getAttribute(\"x\")*time/max_time*5+\", \"+document.getElementById(\""+creature_name+"\").getAttribute(\"height\")*time/max_time*Math.sqrt(5)+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 //b4heliotropic		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+time*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 //orig		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(Math.random()*30,Math.random()*50)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
