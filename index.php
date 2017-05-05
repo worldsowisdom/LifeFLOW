@@ -404,6 +404,11 @@
 	
 	function moveCreature(creature_name, x, y) {
 		//another take at improving creature personality
+		
+		//do any preprocessing
+		x = document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
+		
+		//translate creature_name x y
 		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+")"); // transform the creature
 			//now just make it relative to current position or o creature etc., instead of origin.
 			
