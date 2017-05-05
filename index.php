@@ -406,14 +406,14 @@
 		//another take at improving creature personality
 		
 		//do any preprocessing
-		x = x + document.getElementById(creature_name).getBoundingClientRect().x / 5 + 5*Math.random(); // update x
-		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 10 + 5*Math.random(); // update y
+		x = x + document.getElementById(creature_name).getBoundingClientRect().x / 2 + 25*Math.random(); // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 10 + 50*Math.random(); // update y
 /*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
 		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
 */
 		
 		//translate creature_name x y
-		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+")"); // transform the creature
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+"), rotate("+x*y/38+")"); // transform the creature
 			//now just make it relative to current position or o creature etc., instead of origin.
 			
 		
