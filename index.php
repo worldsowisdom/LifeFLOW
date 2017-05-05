@@ -642,6 +642,30 @@
 		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
 	var creature_desc = document.createTextNode("moveCreature(\""+creature_name+"\", -120, -30)"); // make it flutter about like some kind of random particle
 	
+	
+	
+//more b4 ultral	document.getElementById(\""+creature_name+"\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+//b4 ultral	var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+document.getElementById(\""+creature_name+"\").getAttribute(\"x\")*time/max_time*5+\", \"+document.getElementById(\""+creature_name+"\").getAttribute(\"height\")*time/max_time*Math.sqrt(5)+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+//b4heliotropic		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+time*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+//orig		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(Math.random()*30,Math.random()*50)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+			//eg_newy.setAttribute("transform", "translate(" +Math.random()*100+ ", " +Math.random()*100+ " )"); // mv randomly! :)
+	//document.getElementById("Creature-0.778706729708058");
+//	eg_newy.setAttribute("transform", "translate(3,5)");
+	
+//	" +Math.random()*100+ ", " +Math.random()*100+ " )");
+
+		creature_desc_element.appendChild(creature_desc); // add AI to <desc> (I think this is necessary...)
+		creature_array[creature_index].appendChild(creature_desc_element); // add <desc> to new creature. Not sure if this worx...
+
+	
+		// Add new creaturez to HTML DOM:	
+		document.getElementById("svg2")
+			.insertBefore(creature_array[creature_index], document.getElementById("galaxy3")); // WHERE TO INSERT? add the new clone into the inline svg (to get written automatically to file later)
+				// m instead do an appendChild to svg2 (above)...
+		creature_index++; // go to next creature
+		
+		
+	}
 
 	function createExtral() {
 		//Create a cool new  creature! :)
@@ -661,7 +685,7 @@
 		creature_array[creature_index].setAttributeNS(null,"y",y_new); // give the new creature a starting y.
 		creature_array[creature_index].setAttributeNS(null,"width",80*Math.random()); // give the new creature a different width.
 		creature_array[creature_index].setAttributeNS(null,"height",40*Math.random()); // give the new creature a different height.
-		creature_array[creature_index].setAttributeNS(null,"style","fill:brown;stroke:white"); // give the new clone a different color.
+		creature_array[creature_index].setAttributeNS(null,"style","fill:orange;stroke:yellow"); // give the new clone a different color.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(-40,20)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
