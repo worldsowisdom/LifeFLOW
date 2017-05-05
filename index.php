@@ -1359,7 +1359,10 @@
 	<!--Button 8: New extral creature! :)-->
 			<!--button 8 exterior-->
 			
-			<a style="fill-opacity:0.75">
+	<g id="CreateExtral"
+				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="createUltral()";>
+
+				<a style="fill-opacity:0.75">
 			<rect height="32" width="32" x="310" y="40" id="Button8" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:purple;stroke:lightpurple"> <desc id="First button on toolbar! :)">Open Avril7! :)</desc><title>Create new extral creature! :)</title>
 			</rect> </a> 
 
@@ -1372,13 +1375,12 @@
        width="20"
        height="20"
        x="316"
-       y="46"
-	   onmousedown="OpenArea('creatures/avril3.svg')" ><title>Create new extral creature! :)</title>
+       y="46" ><title>Create new extral creature! :)</title>
       <desc
          id="desc4311">Save icon</desc>
     </rect>
 
-	
+	</g>
 
 	<!--Button 9: Navigate-->
 			
