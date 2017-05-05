@@ -429,7 +429,7 @@
 		var nearestNeighbor; // store the nearest neighbor
 		
 		//find the nearest other creature to creature_name
-		if (creature_index > 0) {
+		if (creature_index > 1) {
 			//if any other creatures around, calculate distances and keep the smallest
 			for (var i = 0; i < creature_index; i++) {
 				//iterate through creatures
@@ -455,7 +455,7 @@
 		
 		//do any preprocessing
 		//here we should probably check for nearby creatures, and move somewhere along the way to the closest.
-		if (creature_index > 0) {
+		if (creature_index > 1) {
 			
 			//if any other creatures, find the nearest creature and chase it! :)
 			var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
