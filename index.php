@@ -437,7 +437,7 @@
 				distanceMeasure = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[i].getBoundingClientRect().x) + (document.getElementById(creature_name).getBoundingClientRect().y - creature_array[i].getBoundingClientRect().y); // calculate x diff
 //btw what would diff x plus diff y give???				
 				
-				5*Math.random(); // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
+//				5*Math.random(); // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
 				if (distanceMeasure < distanceShortest) {
 					//if this is the shortest distance so far, then make this the return creature.
 					distanceShortest = distanceMeasure; //set the new shortest distance
@@ -458,24 +458,29 @@
 		if (creature_index > 0) {
 			
 			//if any other creatures, find the nearest creature and chase it! :)
-			
+			var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
 			//getNearestNeighbor(creature_name);
 			//iterate through creature_array[] and measure distance difference
 				//measure vector distance, only keep the smallest
 			//mv to a location between them
+			x = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) / 2;// mv somewhere between creature_name and nearestNeighbor
+			y = (document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) / 2;// mv somewhere between creature_name and nearestNeighbor
 
 		} //if other creatures (else just wander randomly)
 		
-		
+		else {
 		//update x and y
+		
+		
 		x = x + document.getElementById(creature_name).getBoundingClientRect().x / 2 + 2*Math.random(); // update x
 		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 1000 + 10*Math.random(); // update y
 /*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
 		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
 */
+		} // else wander around if no other creatures nearby
 		
 		//translate creature_name x y
-		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+"), rotate("+x*y/38+")"); // transform the creature
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+")"); // transform the creature
 			//now just make it relative to current position or o creature etc., instead of origin.
 			
 		
