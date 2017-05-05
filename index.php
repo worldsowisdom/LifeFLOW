@@ -422,12 +422,45 @@
 		
 	}
 	
+	
+	function getNearestNeighbor(creature_name) {
+		//find the nearest other creature to creature_name
+		if (creature_index > 0) {
+			//if any other creatures around, calculate distances and keep the smallest
+			for (var i = 0; i < creature_index; i++) {
+				//iterate through creatures
+				distanceMeasure = 5; // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
+				if (distance < distanceShortest) {
+					//if this is the shortest distance so far, then make this the return creature.
+					nearestNeighbor = i; //should we return the index, or the whole creature?
+				}
+			}
+		return i; //should we return the index, or the whole creature?
+			
+		}
+
+	}
+	
 	function moveExtralCreature(creature_name, x, y) {
 		//another take at improving creature personality
 		
 		//do any preprocessing
-		x = x + document.getElementById(creature_name).getBoundingClientRect().x / 2 + 25*Math.random(); // update x
-		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 10 + 50*Math.random(); // update y
+		//here we should probably check for nearby creatures, and move somewhere along the way to the closest.
+		if (creature_index > 0) {
+			
+			//if any other creatures, find the nearest creature and chase it! :)
+			
+			//getNearestNeighbor(creature_name);
+			//iterate through creature_array[] and measure distance difference
+				//measure vector distance, only keep the smallest
+			//mv to a location between them
+
+		} //if other creatures (else just wander randomly)
+		
+		
+		//update x and y
+		x = x + document.getElementById(creature_name).getBoundingClientRect().x / 2 + 2*Math.random(); // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 1000 + 10*Math.random(); // update y
 /*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
 		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
 */
