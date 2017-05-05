@@ -463,8 +463,8 @@
 			//iterate through creature_array[] and measure distance difference
 				//measure vector distance, only keep the smallest
 			//mv to a location between them
-			x = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) / 2;// mv somewhere between creature_name and nearestNeighbor
-			y = (document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) / 2;// mv somewhere between creature_name and nearestNeighbor
+			x = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) / 2 * Math.random();// mv somewhere between creature_name and nearestNeighbor
+			y = (document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) / 2 * Math.random();// mv somewhere between creature_name and nearestNeighbor
 
 		} //if other creatures (else just wander randomly)
 		
