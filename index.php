@@ -422,6 +422,26 @@
 		
 	}
 	
+	function moveExtralCreature(creature_name, x, y) {
+		//another take at improving creature personality
+		
+		//do any preprocessing
+		x = x + document.getElementById(creature_name).getBoundingClientRect().x / 2 + 25*Math.random(); // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 10 + 50*Math.random(); // update y
+/*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
+*/
+		
+		//translate creature_name x y
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+"), rotate("+x*y/38+")"); // transform the creature
+			//now just make it relative to current position or o creature etc., instead of origin.
+			
+		
+		
+		
+		
+	}
+	
 	
 	function create() {
 		//Create a new creature! :)
@@ -704,7 +724,7 @@
 		//<desc> - this is AI! :)
 		// m also add <id="a-##########"> and/or <class="personalityClass>
 		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
-	var creature_desc = document.createTextNode("moveCreature(\""+creature_name+"\", -120, -30)"); // make it flutter about like some kind of random particle
+	var creature_desc = document.createTextNode("moveExtralCreature(\""+creature_name+"\", -120, -30)"); // make it flutter about like some kind of insect or bacterium
 	
 	
 	
