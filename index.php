@@ -44,7 +44,8 @@
 	var active_tool = "Touch"; //tool for playing/interacting with creaturez! :)
 		//eventually p set default to Inspect
 
-
+	var test12345 = "debugdata"; //test stuff
+	var test23456 = "debugdata2"; //test stuff
 		
 		
 		// php interferes with local testing w/o a server, so comment out the URL GET area for local-only testing...
@@ -502,8 +503,14 @@
 			//iterate through creature_array[] and measure distance difference
 				//measure vector distance, only keep the smallest
 			//mv to a location between them
-			if ((document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) < 0) {x = document.getElementById(creature_name).getBoundingClientRect().x + 1} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 1};
-			if ((document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) < 0) {y = document.getElementById(creature_name).getBoundingClientRect().y + 1} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 1};
+		test12345 = (document.getElementById(creature_name).getBoundingClientRect().x);
+		test23456 = creature_array[nearestNeighbor];//(creature_array[nearestNeighbor].getBoundingClientRect().x);
+		
+		//test12345 = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x);
+			if ((document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) < 0) {x = document.getElementById(creature_name).getBoundingClientRect().x * 0.5 + 5} else {x = document.getElementById(creature_name).getBoundingClientRect().x / 0.01 - 5};
+			if ((document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) < 0) {y = document.getElementById(creature_name).getBoundingClientRect().y * 0.3} else {y = document.getElementById(creature_name).getBoundingClientRect().y / 0.1};
+//			if ((document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) < 0) {x = document.getElementById(creature_name).getBoundingClientRect().x + 0.001} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 0.001};
+//			if ((document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) < 0) {y = document.getElementById(creature_name).getBoundingClientRect().y + 0.001} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 0.001};
 //			x = ((document.getElementById(creature_name).getBoundingClientRect().x + creature_array[nearestNeighbor].getBoundingClientRect().x) / 2 * Math.random());// mv somewhere between creature_name and nearestNeighbor
 //			y = ((document.getElementById(creature_name).getBoundingClientRect().y + creature_array[nearestNeighbor].getBoundingClientRect().y) / 2 * Math.random());// mv somewhere between creature_name and nearestNeighbor
 
