@@ -489,6 +489,45 @@
 		
 	}
 	
+	function moveSmoothyCreature(creature_name, x, y) {
+		//another take at improving creature personality
+		
+		//do any preprocessing
+		//here we should probably check for nearby creatures, and move somewhere along the way to the closest.
+		if (creature_index > 1) {
+			
+			//if any other creatures, find the nearest creature and chase it! :)
+			var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
+			//getNearestNeighbor(creature_name);
+			//iterate through creature_array[] and measure distance difference
+				//measure vector distance, only keep the smallest
+			//mv to a location between them
+			x = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) / 2 * Math.random();// mv somewhere between creature_name and nearestNeighbor
+			y = (document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) / 2 * Math.random();// mv somewhere between creature_name and nearestNeighbor
+
+		} //if other creatures (else just wander randomly)
+		
+		else {
+		//update x and y
+		
+		
+		x = x + document.getElementById(creature_name).getBoundingClientRect().x / 2 + 2*Math.random(); // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 1000 + 10*Math.random(); // update y
+/*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
+*/
+		} // else wander around if no other creatures nearby
+		
+		//translate creature_name x y
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+")"); // transform the creature
+			//now just make it relative to current position or o creature etc., instead of origin.
+			
+		
+		
+		
+		
+	}
+	
 	
 	function create() {
 		//Create a new creature! :)
@@ -586,7 +625,10 @@
 		//<desc> - this is AI! :)
 		// m also add <id="a-##########"> and/or <class="personalityClass>
 		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
-		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+33*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+
+		var creature_desc = document.createTextNode("moveSmoothyCreature(\""+creature_name+"\", -120, -30)"); // make it flutter about like some kind of insect or bacterium
+
+//b4smoothy		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+33*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 //orig		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(Math.random()*30,Math.random()*50)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 			//eg_newy.setAttribute("transform", "translate(" +Math.random()*100+ ", " +Math.random()*100+ " )"); // mv randomly! :)
 	//document.getElementById("Creature-0.778706729708058");
@@ -596,6 +638,7 @@
 
 		creature_desc_element.appendChild(creature_desc); // add AI to <desc> (I think this is necessary...)
 		creature_array[creature_index].appendChild(creature_desc_element); // add <desc> to new creature. Not sure if this worx...
+
 
 	
 		// Add new creaturez to HTML DOM:	
