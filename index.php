@@ -502,8 +502,10 @@
 			//iterate through creature_array[] and measure distance difference
 				//measure vector distance, only keep the smallest
 			//mv to a location between them
-			x = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) / 2 * Math.random();// mv somewhere between creature_name and nearestNeighbor
-			y = (document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) / 2 * Math.random();// mv somewhere between creature_name and nearestNeighbor
+			if ((document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) < 0) {x = document.getElementById(creature_name).getBoundingClientRect().x + 1} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 1};
+			if ((document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) < 0) {y = document.getElementById(creature_name).getBoundingClientRect().y + 1} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 1};
+//			x = ((document.getElementById(creature_name).getBoundingClientRect().x + creature_array[nearestNeighbor].getBoundingClientRect().x) / 2 * Math.random());// mv somewhere between creature_name and nearestNeighbor
+//			y = ((document.getElementById(creature_name).getBoundingClientRect().y + creature_array[nearestNeighbor].getBoundingClientRect().y) / 2 * Math.random());// mv somewhere between creature_name and nearestNeighbor
 
 		} //if other creatures (else just wander randomly)
 		
@@ -511,8 +513,8 @@
 		//update x and y
 		
 		
-		x = x + document.getElementById(creature_name).getBoundingClientRect().x / 2 + 2*Math.random(); // update x
-		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 1000 + 10*Math.random(); // update y
+		x = x * document.getElementById(creature_name).getBoundingClientRect().x / 2 + 2*Math.random(); // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 10 + 10*Math.random(); // update y
 /*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
 		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
 */
@@ -626,7 +628,7 @@
 		// m also add <id="a-##########"> and/or <class="personalityClass>
 		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
 
-		var creature_desc = document.createTextNode("moveSmoothyCreature(\""+creature_name+"\", -120, -30)"); // make it flutter about like some kind of insect or bacterium
+		var creature_desc = document.createTextNode("moveSmoothyCreature(\""+creature_name+"\", 0, 0)"); // make it flutter about like some kind of insect or bacterium
 
 //b4smoothy		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+33*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 //orig		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(Math.random()*30,Math.random()*50)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
