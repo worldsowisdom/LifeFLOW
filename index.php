@@ -507,12 +507,12 @@
 		test23456 = creature_array[nearestNeighbor];//(creature_array[nearestNeighbor].getBoundingClientRect().x);
 		
 		//test12345 = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x);
-			if ((document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) < 0) {x = document.getElementById(creature_name).getBoundingClientRect().x * 0.5 + 5} else {x = document.getElementById(creature_name).getBoundingClientRect().x / 0.01 - 5};
-			if ((document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) < 0) {y = document.getElementById(creature_name).getBoundingClientRect().y * 0.3} else {y = document.getElementById(creature_name).getBoundingClientRect().y / 0.1};
-//			if ((document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) < 0) {x = document.getElementById(creature_name).getBoundingClientRect().x + 0.001} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 0.001};
-//			if ((document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) < 0) {y = document.getElementById(creature_name).getBoundingClientRect().y + 0.001} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 0.001};
-//			x = ((document.getElementById(creature_name).getBoundingClientRect().x + creature_array[nearestNeighbor].getBoundingClientRect().x) / 2 * Math.random());// mv somewhere between creature_name and nearestNeighbor
-//			y = ((document.getElementById(creature_name).getBoundingClientRect().y + creature_array[nearestNeighbor].getBoundingClientRect().y) / 2 * Math.random());// mv somewhere between creature_name and nearestNeighbor
+//debug			if (Math.random() < 0.5) {x = document.getElementById(creature_name).getBoundingClientRect().x + 0.001} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 0.001};
+//debug			if (Math.random() < 0.5) {y = document.getElementById(creature_name).getBoundingClientRect().y + 0.001} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 0.001};
+//new			if ((document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) < 0) {x = document.getElementById(creature_name).getBoundingClientRect().x * 0.001} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 0.001};
+//new			if ((document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) < 0) {y = document.getElementById(creature_name).getBoundingClientRect().y / 0.001} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 0.001};
+			x = ((document.getElementById(creature_name).getBoundingClientRect().x + creature_array[nearestNeighbor].getBoundingClientRect().x) / 2 * Math.random());// mv somewhere between creature_name and nearestNeighbor
+			y = ((document.getElementById(creature_name).getBoundingClientRect().y + creature_array[nearestNeighbor].getBoundingClientRect().y) / 2 * Math.random());// mv somewhere between creature_name and nearestNeighbor
 
 		} //if other creatures (else just wander randomly)
 		
@@ -520,8 +520,8 @@
 		//update x and y
 		
 		
-		x = x * document.getElementById(creature_name).getBoundingClientRect().x / 2 + 2*Math.random(); // update x
-		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 10 + 10*Math.random(); // update y
+		x = x * document.getElementById(creature_name).getBoundingClientRect().x / 0.5 + 20*Math.random(); // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 2 + 10*Math.random(); // update y
 /*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
 		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
 */
@@ -635,7 +635,7 @@
 		// m also add <id="a-##########"> and/or <class="personalityClass>
 		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
 
-		var creature_desc = document.createTextNode("moveSmoothyCreature(\""+creature_name+"\", 0, 0)"); // make it flutter about like some kind of insect or bacterium
+		var creature_desc = document.createTextNode("moveSmoothyCreature(\""+creature_name+"\", 1, 1)"); // make it flutter about like some kind of insect or bacterium
 
 //b4smoothy		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+33*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 //orig		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(Math.random()*30,Math.random()*50)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
