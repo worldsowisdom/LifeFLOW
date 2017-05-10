@@ -44,7 +44,8 @@
 	var active_tool = "Touch"; //tool for playing/interacting with creaturez! :)
 		//eventually p set default to Inspect
 
-
+	var test12345 = "debugdata"; //test stuff
+	var test23456 = "debugdata2"; //test stuff
 		
 		
 		// php interferes with local testing w/o a server, so comment out the URL GET area for local-only testing...
@@ -391,6 +392,152 @@
 	}
 	
 	
+	function givePersonality(creature_name) {
+		//assign a personality (set of behaviors) to a creature
+		
+		//insert a set of steps into SVG <desc>
+		//should yield basically eval("personalitycode")
+		//e.g. document.getElementById(creature_name).setAttribute("transform", "translate(3,8), rotate(90)";
+		document.getElementById(creature_name).setAttribute("transform", "translate(3,5)"); // transform the creature
+			//could assign the above to a var and later eval() it if necessary
+		
+	}
+	
+	function moveCreature(creature_name, x, y) {
+		//another take at improving creature personality
+		
+		//do any preprocessing
+		x = x + document.getElementById(creature_name).getBoundingClientRect().x / 2 + 25*Math.random(); // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 10 + 50*Math.random(); // update y
+/*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
+*/
+		
+		//translate creature_name x y
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+"), rotate("+x*y/38+")"); // transform the creature
+			//now just make it relative to current position or o creature etc., instead of origin.
+			
+		
+		
+		
+		
+	}
+	
+	
+	function getNearestNeighbor(creature_name) {
+		var distanceMeasure; // check how far apart creature_name is from o creatures
+		var distanceShortest = 450; // tmp store the shortest distance while iterating through
+		var nearestNeighbor; // store the nearest neighbor
+		
+		//find the nearest other creature to creature_name
+		if (creature_index > 1) {
+			//if any other creatures around, calculate distances and keep the smallest
+			for (var i = 0; i < creature_index; i++) {
+				//iterate through creatures
+//orig				distanceMeasure = 5*Math.random(); // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
+				distanceMeasure = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[i].getBoundingClientRect().x) + (document.getElementById(creature_name).getBoundingClientRect().y - creature_array[i].getBoundingClientRect().y); // calculate x diff
+//btw what would diff x plus diff y give???				
+				
+//				5*Math.random(); // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
+				if (distanceMeasure < distanceShortest) {
+					//if this is the shortest distance so far, then make this the return creature.
+					distanceShortest = distanceMeasure; //set the new shortest distance
+					nearestNeighbor = i; //store the index of the new shortest distance
+				}
+			}
+		return nearestNeighbor; //should we return the index, or the whole creature?
+			
+		}
+
+	}
+	
+	function moveExtralCreature(creature_name, x, y) {
+		//another take at improving creature personality
+		
+		//do any preprocessing
+		//here we should probably check for nearby creatures, and move somewhere along the way to the closest.
+		if (creature_index > 1) {
+			
+			//if any other creatures, find the nearest creature and chase it! :)
+			var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
+			//getNearestNeighbor(creature_name);
+			//iterate through creature_array[] and measure distance difference
+				//measure vector distance, only keep the smallest
+			//mv to a location between them
+			x = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) / 2 * Math.random();// mv somewhere between creature_name and nearestNeighbor
+			y = (document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) / 2 * Math.random();// mv somewhere between creature_name and nearestNeighbor
+
+		} //if other creatures (else just wander randomly)
+		
+		else {
+		//update x and y
+		
+		
+		x = x + document.getElementById(creature_name).getBoundingClientRect().x / 2 + 2*Math.random(); // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 1000 + 10*Math.random(); // update y
+/*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
+*/
+		} // else wander around if no other creatures nearby
+		
+		//translate creature_name x y
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+")"); // transform the creature
+			//now just make it relative to current position or o creature etc., instead of origin.
+			
+		
+		
+		
+		
+	}
+	
+	function moveSmoothyCreature(creature_name, x, y) {
+		//another take at improving creature personality
+		
+		//do any preprocessing
+		//here we should probably check for nearby creatures, and move somewhere along the way to the closest.
+		if (creature_index > 1) {
+			
+			//if any other creatures, find the nearest creature and chase it! :)
+			var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
+			//getNearestNeighbor(creature_name);
+			//iterate through creature_array[] and measure distance difference
+				//measure vector distance, only keep the smallest
+			//mv to a location between them
+		test12345 = (document.getElementById(creature_name).getBoundingClientRect().x);
+		test23456 = creature_array[nearestNeighbor];//(creature_array[nearestNeighbor].getBoundingClientRect().x);
+		
+		//test12345 = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x);
+//debug			if (Math.random() < 0.5) {x = document.getElementById(creature_name).getBoundingClientRect().x + 0.001} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 0.001};
+//debug			if (Math.random() < 0.5) {y = document.getElementById(creature_name).getBoundingClientRect().y + 0.001} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 0.001};
+//new			if ((document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) < 0) {x = document.getElementById(creature_name).getBoundingClientRect().x * 0.001} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 0.001};
+//new			if ((document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) < 0) {y = document.getElementById(creature_name).getBoundingClientRect().y / 0.001} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 0.001};
+			x = ((document.getElementById(creature_name).getBoundingClientRect().x + creature_array[nearestNeighbor].getBoundingClientRect().x) / 2 * Math.random());// mv somewhere between creature_name and nearestNeighbor
+			y = ((document.getElementById(creature_name).getBoundingClientRect().y + creature_array[nearestNeighbor].getBoundingClientRect().y) / 2 * Math.random());// mv somewhere between creature_name and nearestNeighbor
+
+		} //if other creatures (else just wander randomly)
+		
+		else {
+		//update x and y
+		
+		
+		x = x * document.getElementById(creature_name).getBoundingClientRect().x / 0.5 + 20*Math.random(); // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 2 + 10*Math.random(); // update y
+/*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
+*/
+		} // else wander around if no other creatures nearby
+		
+		//translate creature_name x y
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+")"); // transform the creature
+			//now just make it relative to current position or o creature etc., instead of origin.
+			
+		
+		
+		
+		
+	}
+	
+	
 	function create() {
 		//Create a new creature! :)
 		//We'll want to generalize this...
@@ -438,6 +585,69 @@
 
 		creature_desc_element.appendChild(creature_desc); // add AI to <desc> (I think this is necessary...)
 		creature_array[creature_index].appendChild(creature_desc_element); // add <desc> to new creature. Not sure if this worx...
+
+	
+		// Add new creaturez to HTML DOM:	
+		document.getElementById("svg2")
+			.insertBefore(creature_array[creature_index], document.getElementById("galaxy3")); // WHERE TO INSERT? add the new clone into the inline svg (to get written automatically to file later)
+				// m instead do an appendChild to svg2 (above)...
+		creature_index++; // go to next creature
+		
+		
+	}
+
+	
+	function createSmoothy() {
+		//Create a new creature! :)
+		//We'll want to generalize this...
+		//First let's make a new function for new creature type, then we can generalize...
+		
+		var cx_new = Math.random()*450; // create random starting x
+		var cy_new = Math.random()*450; // create random starting y
+		
+		
+		var creature_name = "Creature-"+Math.random(); //e.g. "Creature-0.17239898123"
+	//	var creature_name = creature.getAttribute("id")+"-"+Math.random(); //e.g. "the_rect-0.17239898123"
+		creature_array[creature_index] = document.createElementNS(xmlns,"circle"); //create a new creature! :)
+	//			getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
+	//	creature_array[creature_index] = document.getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
+		creature_array[creature_index].setAttributeNS(null,"id",creature_name); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"r",20); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"cx",cx_new); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"cy",cy_new); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"style","fill:blue;stroke:purple"); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"transform","translate(-40,20)"); // translate the new clone.
+		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
+	// add "Creature" class, for later readding/loading! :)
+		creature_array[creature_index].setAttributeNS(null,"class","creatureClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
+						// insert clone_index into clone, for ease of deletion. 
+	//		clone_array[clone_index].setAttribute("clone_index",clone_index); // insert clone_index into clone, for ease of deletion.
+			// or should it be : "onmousedown=deleteClone(clone_index)"...? py...
+			
+	// add <title> (hover-over tip where available) and <desc> (AI)! :)
+		//<title> - this is the hover-over tooltip on desktop/laptop...
+		var creature_title_element = document.createElementNS(xmlns,"title"); // creature_title_element is a <title> element
+		var creature_title = document.createTextNode(creature_name); // creature_title is the creature name. Right now this is autogenerated ID, could be user-given name instead.
+		creature_title_element.appendChild(creature_title); // add ID to <title> (I think this is necessary...)
+		creature_array[creature_index].appendChild(creature_title_element); // add <title> to new creature.
+
+		//<desc> - this is AI! :)
+		// m also add <id="a-##########"> and/or <class="personalityClass>
+		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
+
+		var creature_desc = document.createTextNode("moveSmoothyCreature(\""+creature_name+"\", 1, 1)"); // make it flutter about like some kind of insect or bacterium
+
+//b4smoothy		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+33*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+//orig		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(Math.random()*30,Math.random()*50)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+			//eg_newy.setAttribute("transform", "translate(" +Math.random()*100+ ", " +Math.random()*100+ " )"); // mv randomly! :)
+	//document.getElementById("Creature-0.778706729708058");
+//	eg_newy.setAttribute("transform", "translate(3,5)");
+	
+//	" +Math.random()*100+ ", " +Math.random()*100+ " )");
+
+		creature_desc_element.appendChild(creature_desc); // add AI to <desc> (I think this is necessary...)
+		creature_array[creature_index].appendChild(creature_desc_element); // add <desc> to new creature. Not sure if this worx...
+
 
 	
 		// Add new creaturez to HTML DOM:	
@@ -549,6 +759,135 @@
 		// m also add <id="a-##########"> and/or <class="personalityClass>
 		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
 	var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+document.getElementById(\""+creature_name+"\").getAttribute(\"x\")*time/max_time*5+\", \"+document.getElementById(\""+creature_name+"\").getAttribute(\"height\")*time/max_time*Math.sqrt(5)+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+//b4heliotropic		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+time*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+//orig		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(Math.random()*30,Math.random()*50)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+			//eg_newy.setAttribute("transform", "translate(" +Math.random()*100+ ", " +Math.random()*100+ " )"); // mv randomly! :)
+	//document.getElementById("Creature-0.778706729708058");
+//	eg_newy.setAttribute("transform", "translate(3,5)");
+	
+//	" +Math.random()*100+ ", " +Math.random()*100+ " )");
+
+		creature_desc_element.appendChild(creature_desc); // add AI to <desc> (I think this is necessary...)
+		creature_array[creature_index].appendChild(creature_desc_element); // add <desc> to new creature. Not sure if this worx...
+
+	
+		// Add new creaturez to HTML DOM:	
+		document.getElementById("svg2")
+			.insertBefore(creature_array[creature_index], document.getElementById("galaxy3")); // WHERE TO INSERT? add the new clone into the inline svg (to get written automatically to file later)
+				// m instead do an appendChild to svg2 (above)...
+		creature_index++; // go to next creature
+		
+		
+	}
+
+	
+	function createUltral() {
+		//Create a cool new  creature! :)
+		//Should do something a little more interesting!!! :)
+		
+		var x_new = Math.random()*450; // create random starting x
+		var y_new = Math.random()*450; // create random starting y
+		
+		
+		var creature_name = "Creature-"+Math.random(); //e.g. "Creature-0.17239898123"
+	//	var creature_name = creature.getAttribute("id")+"-"+Math.random(); //e.g. "the_rect-0.17239898123"
+		creature_array[creature_index] = document.createElementNS(xmlns,"rect"); //create a new creature! :)
+	//			getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
+	//	creature_array[creature_index] = document.getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
+		creature_array[creature_index].setAttributeNS(null,"id",creature_name); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"x",x_new); // give the new creature a starting x.
+		creature_array[creature_index].setAttributeNS(null,"y",y_new); // give the new creature a starting y.
+		creature_array[creature_index].setAttributeNS(null,"width",80*Math.random()); // give the new creature a different width.
+		creature_array[creature_index].setAttributeNS(null,"height",40*Math.random()); // give the new creature a different height.
+		creature_array[creature_index].setAttributeNS(null,"style","fill:brown;stroke:white"); // give the new clone a different color.
+		creature_array[creature_index].setAttributeNS(null,"transform","translate(-40,20)"); // translate the new clone.
+		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
+	// add "Creature" class, for later readding/loading! :)
+		creature_array[creature_index].setAttributeNS(null,"class","creatureClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
+						// insert clone_index into clone, for ease of deletion. 
+	//		clone_array[clone_index].setAttribute("clone_index",clone_index); // insert clone_index into clone, for ease of deletion.
+			// or should it be : "onmousedown=deleteClone(clone_index)"...? py...
+			
+	// add <title> (hover-over tip where available) and <desc> (AI)! :)
+		//<title> - this is the hover-over tooltip on desktop/laptop...
+		var creature_title_element = document.createElementNS(xmlns,"title"); // creature_title_element is a <title> element
+		var creature_title = document.createTextNode(creature_name); // creature_title is the creature name. Right now this is autogenerated ID, could be user-given name instead.
+		creature_title_element.appendChild(creature_title); // add ID to <title> (I think this is necessary...)
+		creature_array[creature_index].appendChild(creature_title_element); // add <title> to new creature.
+
+		//<desc> - this is AI! :)
+		// m also add <id="a-##########"> and/or <class="personalityClass>
+		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
+	var creature_desc = document.createTextNode("moveCreature(\""+creature_name+"\", -120, -30)"); // make it flutter about like some kind of random particle
+	
+	
+	
+//more b4 ultral	document.getElementById(\""+creature_name+"\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+//b4 ultral	var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+document.getElementById(\""+creature_name+"\").getAttribute(\"x\")*time/max_time*5+\", \"+document.getElementById(\""+creature_name+"\").getAttribute(\"height\")*time/max_time*Math.sqrt(5)+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+//b4heliotropic		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+time*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+//orig		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(Math.random()*30,Math.random()*50)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+			//eg_newy.setAttribute("transform", "translate(" +Math.random()*100+ ", " +Math.random()*100+ " )"); // mv randomly! :)
+	//document.getElementById("Creature-0.778706729708058");
+//	eg_newy.setAttribute("transform", "translate(3,5)");
+	
+//	" +Math.random()*100+ ", " +Math.random()*100+ " )");
+
+		creature_desc_element.appendChild(creature_desc); // add AI to <desc> (I think this is necessary...)
+		creature_array[creature_index].appendChild(creature_desc_element); // add <desc> to new creature. Not sure if this worx...
+
+	
+		// Add new creaturez to HTML DOM:	
+		document.getElementById("svg2")
+			.insertBefore(creature_array[creature_index], document.getElementById("galaxy3")); // WHERE TO INSERT? add the new clone into the inline svg (to get written automatically to file later)
+				// m instead do an appendChild to svg2 (above)...
+		creature_index++; // go to next creature
+		
+		
+	}
+
+	function createExtral() {
+		//Create a cool new  creature! :)
+		//Should do something a little more interesting!!! :)
+		
+		var x_new = Math.random()*450; // create random starting x
+		var y_new = Math.random()*450; // create random starting y
+		
+		
+		var creature_name = "Creature-"+Math.random(); //e.g. "Creature-0.17239898123"
+	//	var creature_name = creature.getAttribute("id")+"-"+Math.random(); //e.g. "the_rect-0.17239898123"
+		creature_array[creature_index] = document.createElementNS(xmlns,"rect"); //create a new creature! :)
+	//			getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
+	//	creature_array[creature_index] = document.getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
+		creature_array[creature_index].setAttributeNS(null,"id",creature_name); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"x",x_new); // give the new creature a starting x.
+		creature_array[creature_index].setAttributeNS(null,"y",y_new); // give the new creature a starting y.
+		creature_array[creature_index].setAttributeNS(null,"width",80*Math.random()); // give the new creature a different width.
+		creature_array[creature_index].setAttributeNS(null,"height",40*Math.random()); // give the new creature a different height.
+		creature_array[creature_index].setAttributeNS(null,"style","fill:orange;stroke:yellow"); // give the new clone a different color.
+		creature_array[creature_index].setAttributeNS(null,"transform","translate(-40,20)"); // translate the new clone.
+		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
+	// add "Creature" class, for later readding/loading! :)
+		creature_array[creature_index].setAttributeNS(null,"class","creatureClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
+						// insert clone_index into clone, for ease of deletion. 
+	//		clone_array[clone_index].setAttribute("clone_index",clone_index); // insert clone_index into clone, for ease of deletion.
+			// or should it be : "onmousedown=deleteClone(clone_index)"...? py...
+			
+	// add <title> (hover-over tip where available) and <desc> (AI)! :)
+		//<title> - this is the hover-over tooltip on desktop/laptop...
+		var creature_title_element = document.createElementNS(xmlns,"title"); // creature_title_element is a <title> element
+		var creature_title = document.createTextNode(creature_name); // creature_title is the creature name. Right now this is autogenerated ID, could be user-given name instead.
+		creature_title_element.appendChild(creature_title); // add ID to <title> (I think this is necessary...)
+		creature_array[creature_index].appendChild(creature_title_element); // add <title> to new creature.
+
+		//<desc> - this is AI! :)
+		// m also add <id="a-##########"> and/or <class="personalityClass>
+		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
+	var creature_desc = document.createTextNode("moveExtralCreature(\""+creature_name+"\", -120, -30)"); // make it flutter about like some kind of insect or bacterium
+	
+	
+	
+//more b4 ultral	document.getElementById(\""+creature_name+"\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+//b4 ultral	var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+document.getElementById(\""+creature_name+"\").getAttribute(\"x\")*time/max_time*5+\", \"+document.getElementById(\""+creature_name+"\").getAttribute(\"height\")*time/max_time*Math.sqrt(5)+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 //b4heliotropic		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+time*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 //orig		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(Math.random()*30,Math.random()*50)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 			//eg_newy.setAttribute("transform", "translate(" +Math.random()*100+ ", " +Math.random()*100+ " )"); // mv randomly! :)
@@ -1198,7 +1537,7 @@
 	<!-- Button 6: New circular creature -->
 			
 	<g id="Create"
-				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="create()";>
+				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="createSmoothy()";>
 				<title>Create a circle! :)</title>
 			
 			<rect height="32" width="32" x="230" y="40" id="Button7" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:blue;stroke:lightgreen"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
@@ -1233,13 +1572,13 @@
     
 	</g>
 
-	<!--Button 7: Ungroup creatures-->
+	<!--Button 7: New ultral creature! :)-->
 	
-	<g id="Ungroup"
-				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="ungroup()";>
-				<title>Ungroup creatures! :)</title>
+	<g id="CreateUltral"
+				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="createUltral()";>
+				<title>Create ultral creature! :)</title>
 	
-			<rect height="32" width="32" x="270" y="40" id="Button6" onmousedown="Act(BiggoEG)" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:brown;stroke:orange"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
+			<rect height="32" width="32" x="270" y="40" id="Button6" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:brown;stroke:orange"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
 			</rect>
 
 			
@@ -1259,11 +1598,14 @@
 	
 	</g>
 
-	<!--Button 8: LoadCreatures1-->
+	<!--Button 8: New extral creature! :)-->
 			<!--button 8 exterior-->
 			
-			<a style="fill-opacity:0.75" xlink:href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TLUCRBGYW5XTS">
-			<rect height="32" width="32" x="310" y="40" id="Button8" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:purple;stroke:lightpurple"> <desc id="First button on toolbar! :)">Open Avril7! :)</desc><title>Open area Avril3! :)</title>
+	<g id="CreateExtral"
+				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="createExtral()";>
+
+				<a style="fill-opacity:0.75">
+			<rect height="32" width="32" x="310" y="40" id="Button8" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:purple;stroke:lightpurple"> <desc id="First button on toolbar! :)">Open Avril7! :)</desc><title>Create new extral creature! :)</title>
 			</rect> </a> 
 
 
@@ -1275,13 +1617,12 @@
        width="20"
        height="20"
        x="316"
-       y="46"
-	   onmousedown="OpenArea('creatures/avril3.svg')" ><title>Open area Avril3! :)</title>
+       y="46" ><title>Create new extral creature! :)</title>
       <desc
          id="desc4311">Save icon</desc>
     </rect>
 
-	
+	</g>
 
 	<!--Button 9: Navigate-->
 			
@@ -1453,6 +1794,8 @@
 <p>LifeFLOW is a little place where we can play with moving machines. Each of these creatures goes around the area exploring and playing. You can observe them move, interact with them by touching, cloning, creating, removing, and more. New features continue to become available. You can also navigate around many different areas. <strong>Please contribute something to the flow, and enjoy! :)</strong></p>
 
 <p>For extra special creatures, we store information about them at <a href="http://life.worldsowisdom.com/?q=bank">LifeBANK</a>. This includes data like name and code, and metadata like imagery and what makes each creature so special.</p>
+
+<p>You can create a variety of creature types already, and we're continuing to add more. Try cllicking some of the buttons! :)</p>
 
 <p>A few tips: Use the blue square navigator to browse around the areas. Currently areas save every full period. We're still in the very early stages and welcome your comments on growth and development!</p>
 
