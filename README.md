@@ -1,5 +1,7 @@
   # LifeFLOW
-LifeFLOW is a fun evolving game. It provides a "digitarium" to play and learn about nature! :) http://life.worldsowisdom.com/flow/
+LifeFLOW is a fun evolving game. It provides a "digitarium" to play and learn about nature! :)
+
+http://life.worldsowisdom.com/flow/
 
 *********************
 
@@ -15,12 +17,12 @@ http://life.worldsowisdom.com/flow/
 
 Developing LifeFLOW
 
-You can develop LifeFLOW on any system with a web server and PHP. Most Linux distributions include these, or on Windows you can download and install XAMPP (https://www.apachefriends.org/index.html).
+You can develop LifeFLOW on any system with a web server and PHP. Most Linux distributions include these, or on Windows you can download and install XAMPP (https://www.apachefriends.org/).
 
 *********************
 
 Contact
 
-Contact the team by e-mail (life@worldsowisdom.com) or at the LifeWOW website (http://life.worldsowisdom.com/) or at GitHub (https://github.com/worldsowisdom/LifeFLOW/).
+Contact the team by e-mail (life@worldsowisdom.com) or at the LifeFLOW website (http://life.worldsowisdom.com/flow/) or at GitHub (https://github.com/worldsowisdom/LifeFLOW/).
 
 Rock & Roll!!!!!!! :)
