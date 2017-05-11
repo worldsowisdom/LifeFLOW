@@ -21,7 +21,7 @@
 
   Simply place the program files in a directory within your web server tree, and browse to that location with your favorite web browser! :)
 
-  If under a particular environment the page doesn't load, specify the actual index page with an area, for example yourdomain.com/index.php?area=Area-05
+  If under a particular environment the page doesn't load, specify the actual index page with an area, for example yourdomain.com/lifeflow/index.php?area=Area-05
 
   For any other questions, please contact us! :)
 
