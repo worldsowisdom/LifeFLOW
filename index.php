@@ -521,7 +521,7 @@
 		//update x and y
 		
 		
-		x = x * document.getElementById(creature_name).getBoundingClientRect().x / 0.5 + 20*Math.random(); // update x
+		x = x * document.getElementById(creature_name).getBoundingClientRect().x / 5 + 20*Math.random(); // update x
 		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 2 + 10*Math.random(); // update y
 /*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
 		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
