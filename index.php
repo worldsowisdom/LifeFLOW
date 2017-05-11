@@ -28,6 +28,7 @@
 			
    <![CDATA[
 
+   //This begins the JavaScript code for LifeFLOW! :)
 //	Start(evt);
    
    
