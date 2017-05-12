@@ -576,7 +576,7 @@
 		} // else wander around if no other creatures nearby
 		
 		//translate creature_name x y
-		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate(12"+time/max_time*Math.random()+")"); // transform the creature
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate(2"+time*Math.random()+")"); // transform the creature
 			//now just make it relative to current position or o creature etc., instead of origin.
 			
 		
