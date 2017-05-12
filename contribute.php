@@ -1,7 +1,7 @@
 <html>
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<title>LifeFLOW</title>
+	<title>LifeFLOW - Contribute! :)</title>
 </head>
 <body>
 <p><a href="/" id="logo" rel="home" title="Home"><img alt="LifeWOW" src="img/LifeWOW.png" />LifeFLOW<img alt="Hearts" src="img/hearts.svg" width="60"></a><a href="#About">About LifeFLOW! :)</a> - <a href="#Music">Choose Your Music! :)</a></p>
