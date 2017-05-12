@@ -538,6 +538,53 @@
 		
 	}
 	
+	function moveCoolCreature(creature_name, x, y) {
+		//another take at improving creature personality
+		
+		//do any preprocessing
+		//here we should probably check for nearby creatures, and move somewhere along the way to the closest.
+		if (creature_index > 1) {
+			
+			//if any other creatures, find the nearest creature and chase it! :)
+			var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
+			//getNearestNeighbor(creature_name);
+			//iterate through creature_array[] and measure distance difference
+				//measure vector distance, only keep the smallest
+			//mv to a location between them
+		test12345 = (document.getElementById(creature_name).getBoundingClientRect().x);
+		test23456 = creature_array[nearestNeighbor];//(creature_array[nearestNeighbor].getBoundingClientRect().x);
+		
+		//test12345 = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x);
+//debug			if (Math.random() < 0.5) {x = document.getElementById(creature_name).getBoundingClientRect().x + 0.001} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 0.001};
+//debug			if (Math.random() < 0.5) {y = document.getElementById(creature_name).getBoundingClientRect().y + 0.001} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 0.001};
+//new			if ((document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) < 0) {x = document.getElementById(creature_name).getBoundingClientRect().x * 0.001} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 0.001};
+//new			if ((document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) < 0) {y = document.getElementById(creature_name).getBoundingClientRect().y / 0.001} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 0.001};
+			x = (((document.getElementById(creature_name).getBoundingClientRect().x + creature_array[nearestNeighbor].getBoundingClientRect().x) / 2) * 0.3 + 0.1*(document.getElementById(creature_name).getBoundingClientRect().x - document.getElementById(creature_name).getAttribute("x")));// mv somewhere between creature_name and nearestNeighbor
+			y = ((document.getElementById(creature_name).getBoundingClientRect().y + creature_array[nearestNeighbor].getBoundingClientRect().y) / 2 * 0.3);// mv somewhere between creature_name and nearestNeighbor
+
+		} //if other creatures (else just wander randomly)
+		
+		else {
+		//update x and y
+		
+		
+		x = x * document.getElementById(creature_name).getBoundingClientRect().x / 5 + 20*Math.random(); // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 2 + 10*Math.random(); // update y
+/*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
+*/
+		} // else wander around if no other creatures nearby
+		
+		//translate creature_name x y
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate(2"+time*Math.random()+")"); // transform the creature
+			//now just make it relative to current position or o creature etc., instead of origin.
+			
+		
+		
+		
+		
+	}
+	
 	
 	function create() {
 		//Create a new creature! :)
@@ -726,8 +773,10 @@
 		//Create a cool new  creature! :)
 		//Should do something a little more interesting!!! :)
 		
-		var x_new = Math.random()*450; // create random starting x
-		var y_new = Math.random()*450; // create random starting y
+		var x_new = 0; // create random starting x
+		var y_new = 0; // create random starting y
+//orig		var x_new = Math.random()*450; // create random starting x
+//orig		var y_new = Math.random()*450; // create random starting y
 		
 		
 		var creature_name = "Creature-"+Math.random(); //e.g. "Creature-0.17239898123"
@@ -759,7 +808,8 @@
 		//<desc> - this is AI! :)
 		// m also add <id="a-##########"> and/or <class="personalityClass>
 		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
-	var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+document.getElementById(\""+creature_name+"\").getAttribute(\"x\")*time/max_time*5+\", \"+document.getElementById(\""+creature_name+"\").getAttribute(\"height\")*time/max_time*Math.sqrt(5)+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+		var creature_desc = document.createTextNode("moveCoolCreature(\""+creature_name+"\", 1, 1)"); // make it flutter about like some kind of insect or bacterium
+//b4smootheningcool 	var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+document.getElementById(\""+creature_name+"\").getAttribute(\"x\")*time/max_time*5+\", \"+document.getElementById(\""+creature_name+"\").getAttribute(\"height\")*time/max_time*Math.sqrt(5)+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 //b4heliotropic		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+time*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 //orig		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(Math.random()*30,Math.random()*50)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
 			//eg_newy.setAttribute("transform", "translate(" +Math.random()*100+ ", " +Math.random()*100+ " )"); // mv randomly! :)
@@ -1796,7 +1846,7 @@
 
 <p>For extra special creatures, we store information about them at <a href="http://life.worldsowisdom.com/?q=bank">LifeBANK</a>. This includes data like name and code, and metadata like imagery and what makes each creature so special.</p>
 
-<p>You can create a variety of creature types already, and we're continuing to add more. Try cllicking some of the buttons! :)</p>
+<p>You can create a variety of creature types already, and we're continuing to add more. Try clicking some of the buttons! :)</p>
 
 <p>A few tips: Use the blue square navigator to browse around the areas. Currently areas save every full period. We're still in the very early stages and welcome your comments on growth and development!</p>
 
