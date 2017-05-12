@@ -559,8 +559,8 @@
 //debug			if (Math.random() < 0.5) {y = document.getElementById(creature_name).getBoundingClientRect().y + 0.001} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 0.001};
 //new			if ((document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) < 0) {x = document.getElementById(creature_name).getBoundingClientRect().x * 0.001} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 0.001};
 //new			if ((document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) < 0) {y = document.getElementById(creature_name).getBoundingClientRect().y / 0.001} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 0.001};
-			x = (((document.getElementById(creature_name).getBoundingClientRect().x + creature_array[nearestNeighbor].getBoundingClientRect().x) / 2) * 0.3);// mv somewhere between creature_name and nearestNeighbor
-			y = ((document.getElementById(creature_name).getBoundingClientRect().y + creature_array[nearestNeighbor].getBoundingClientRect().y) / 20 * Math.random());// mv somewhere between creature_name and nearestNeighbor
+			x = (((document.getElementById(creature_name).getBoundingClientRect().x + creature_array[nearestNeighbor].getBoundingClientRect().x) / 2) * 0.3 + 0.1*(document.getElementById(creature_name).getBoundingClientRect().x - document.getElementById(creature_name).getAttribute("x")));// mv somewhere between creature_name and nearestNeighbor
+			y = ((document.getElementById(creature_name).getBoundingClientRect().y + creature_array[nearestNeighbor].getBoundingClientRect().y) / 2 * 0.3);// mv somewhere between creature_name and nearestNeighbor
 
 		} //if other creatures (else just wander randomly)
 		
@@ -576,7 +576,7 @@
 		} // else wander around if no other creatures nearby
 		
 		//translate creature_name x y
-		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+")"); // transform the creature
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate(12"+time/max_time*Math.random()+")"); // transform the creature
 			//now just make it relative to current position or o creature etc., instead of origin.
 			
 		
@@ -773,8 +773,10 @@
 		//Create a cool new  creature! :)
 		//Should do something a little more interesting!!! :)
 		
-		var x_new = Math.random()*450; // create random starting x
-		var y_new = Math.random()*450; // create random starting y
+		var x_new = 0; // create random starting x
+		var y_new = 0; // create random starting y
+//orig		var x_new = Math.random()*450; // create random starting x
+//orig		var y_new = Math.random()*450; // create random starting y
 		
 		
 		var creature_name = "Creature-"+Math.random(); //e.g. "Creature-0.17239898123"
