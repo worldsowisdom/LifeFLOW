@@ -82,10 +82,11 @@
 
 		<!-- text menu items -->
 			
-			<text x="30" y="20" opacity="0.1" onmousedown="Turn()" onmouseover="setAttribute('opacity','0.75')" onmouseout="setAttribute('opacity','0.1')" onmouseover="setAttribute('transform', 'translate(" +x_pos+ ", 0.0 )')">Reverse the flow! :)</text>
+			<text x="30" y="20" opacity="0.1" onmousedown="Turn()" onmouseover="setAttribute('opacity','0.75')" onmouseout="setAttribute('opacity','0.1')" onmouseover="setAttribute('transform', 'translate(" +x_pos+ ", 0.0 )')">Reverse the Flow! :)</text>
 			<text x="180" y="20" opacity="0.1" onmousedown="Speed()" onmouseover="setAttribute('opacity','0.75')" onmouseout="setAttribute('opacity','0.1')" onmouseover="setAttribute('transform', 'translate(" +x_pos+ ", 0.0 )')">Pause/Resume! :)</text>
 			<text x="320" y="20" opacity="0.1" onmousedown="Randomize()" onmouseover="setAttribute('opacity','0.75')" onmouseout="setAttribute('opacity','0.1')" onmouseover="setAttribute('transform', 'translate(" +x_pos+ ", 0.0 )')">Flow Forth! :)</text>
-
+			
+			
 		<!-- graphical buttons -->
 		
 
