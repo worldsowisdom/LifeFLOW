@@ -753,6 +753,8 @@
 		// General function to give birth to new creaturez! :)
 		
 		//takes a creature argument and calls a special birthing function! :)
+		//eventually we should change this so that it uses a single birthing function with any parametrage.
+			// and m one day OOP...
 		
 		switch (creature) {
 			// give birth according to creature type! :)
@@ -761,6 +763,30 @@
 				createSmoothy();
 				break;
 			case "Creature-02":
+				createStatic();
+				break;
+			case "Creature-03":
+				create();
+				break;
+			case "Creature-04":
+				createRect();
+				break;
+			case "Creature-05":
+				createCool();
+				break;
+			case "Creature-06":
+				createExtral();
+				break;
+			case "Creature-07":
+				createUltral();
+				break;
+			case "Creature-08":
+				createStatic();
+				break;
+			case "Creature-09":
+				createStatic();
+				break;
+			case "Creature-10":
 				createStatic();
 				break;
 			//etc.! :)
