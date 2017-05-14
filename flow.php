@@ -547,7 +547,7 @@
 
 			if (staticMode == 0) {
 				//if way out of bounds then mv back
-				if ((document.getElementById(creature_name).getBoundingClientRect().x > 450) || (document.getElementById(creature_name).getBoundingClientRect().y  > 450)) {staticMode = 1};
+				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 1};
 				
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
 					x = firstX + 3 * Math.random();
@@ -570,10 +570,10 @@
 				
 				//if way out of bounds then mv back
 				//probably move this or something like it into a more general creature-checking thing for area boundaryz! :)
-				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x -= 100};
-				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x += 100};
-				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y -= 100};
-				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y += 100};
+				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x -= 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x += 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y -= 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y += 200*Math.random()};
 			
 
 			}
