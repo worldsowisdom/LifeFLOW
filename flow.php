@@ -97,6 +97,7 @@
 
 
 	var coolMode = 0; // give cool creature a mode, default to 0
+	var staticMode = 0; // give static creature a mode, default to 0
 		
 
 	
@@ -528,8 +529,79 @@
 		
 	}
 	
-	function moveStaticCreature(creature_name, x, y) {
+	function  moveStaticCreature(creature_name, x, y) {
+		var blah = "testblah";
+	}
+
+	function blankmoveStaticCreature(creature_name, x, y) {
 		//another take at improving creature personality
+		//do any preprocessing
+
+		var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
+
+		
+		//here we should probably check for nearby creatures, and move somewhere along the way to the closest.
+		if (creature_index > 1) {
+			if (staticMode == 0) {
+				//if any other creatures, find the nearest creature and chase it! :)
+				//getNearestNeighbor(creature_name);
+				//iterate through creature_array[] and measure distance difference
+					//measure vector distance, only keep the smallest
+				//mv to a location between them
+			test12345 = (document.getElementById(creature_name).getBoundingClientRect().x);
+			test23456 = creature_array[nearestNeighbor];//(creature_array[nearestNeighbor].getBoundingClientRect().x);
+			
+			//test12345 = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x);
+	//debug			if (Math.random() < 0.5) {x = document.getElementById(creature_name).getBoundingClientRect().x + 0.001} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 0.001};
+	//debug			if (Math.random() < 0.5) {y = document.getElementById(creature_name).getBoundingClientRect().y + 0.001} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 0.001};
+	//new			if ((document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x) < 0) {x = document.getElementById(creature_name).getBoundingClientRect().x * 0.001} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 0.001};
+	//new			if ((document.getElementById(creature_name).getBoundingClientRect().y - creature_array[nearestNeighbor].getBoundingClientRect().y) < 0) {y = document.getElementById(creature_name).getBoundingClientRect().y / 0.001} else {y = document.getElementById(creature_name).getBoundingClientRect().y - 0.001};
+				x = (((document.getElementById(creature_name).getBoundingClientRect().x + creature_array[nearestNeighbor].getBoundingClientRect().x) / 2) * 0.3 + 0.1*(document.getElementById(creature_name).getBoundingClientRect().x - document.getElementById(creature_name).getAttribute("x")));// mv somewhere between creature_name and nearestNeighbor
+				y = ((document.getElementById(creature_name).getBoundingClientRect().y + creature_array[nearestNeighbor].getBoundingClientRect().y) / 2 * 0.3);// mv somewhere between creature_name and nearestNeighbor
+				
+				
+//orig				if (document.getElementById(creature_name).getBoundingClientRect().x  - creature_array[nearestNeighbor].getBoundingClientRect().x <= 25) {
+				if (Math.random() < 0.5) {
+					staticMode = 1;
+				} // set coolMode to 1 if the X's get very close to each other
+
+			} //do mode0 stuff
+			
+			else if (staticMode == 1) {
+			
+				//do some other cool stuff
+
+					x = (200+((document.getElementById(creature_name).getBoundingClientRect().x + creature_array[nearestNeighbor].getBoundingClientRect().x) / 0.2) * 0.03 - 0.75*(document.getElementById(creature_name).getBoundingClientRect().x - document.getElementById(creature_name).getAttribute("x")));// mv somewhere between creature_name and nearestNeighbor
+					y = (100+(document.getElementById(creature_name).getBoundingClientRect().y + creature_array[nearestNeighbor].getBoundingClientRect().y) / 2 * 0.3);// mv somewhere between creature_name and nearestNeighbor
+
+					//orig					if (document.getElementById(creature_name).getBoundingClientRect().x  - creature_array[nearestNeighbor].getBoundingClientRect().x >= 25) {
+					if (Math.random() < 0.5) {
+						staticMode = 0;
+					} // set coolMode to 0 if the X's get very far from each other
+
+			
+			} // do mode1 stuff
+		
+		} //if other creatures (else just wander randomly)
+		
+		
+		
+		else {
+		//update x and y
+		
+		
+		x = x * document.getElementById(creature_name).getBoundingClientRect().x / 5 + 20*Math.random(); // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y / 2 + 10*Math.random(); // update y
+/*orig		x = x + document.getElementById(creature_name).getBoundingClientRect().x + 5; // update x
+		y = y + document.getElementById(creature_name).getBoundingClientRect().y + 5; // update y
+*/
+		} // else wander around if no other creatures nearby
+		
+		//translate creature_name x y
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+time*Math.random()+")"); // transform the creature
+			//now just make it relative to current position or o creature etc., instead of origin.
+			
+		
 	
 	}
 	
@@ -770,6 +842,7 @@
 		// m also add <id="a-##########"> and/or <class="personalityClass>
 		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
 
+		//moving cool creature for now to test static stuff, but should be moveStaticCreature! :) jejeje
 		var creature_desc = document.createTextNode("moveStaticCreature(\""+creature_name+"\", 1, 1)"); // make it flutter about like some kind of insect or bacterium
 
 //b4smoothy		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+33*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
