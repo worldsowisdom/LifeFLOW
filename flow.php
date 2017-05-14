@@ -431,7 +431,7 @@
 //btw what would diff x plus diff y give???				
 				
 //				5*Math.random(); // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
-				if ((distanceMeasure < distanceShortest) && (i != creature_array.indexOf(creature_name))) {
+				if ((distanceMeasure < distanceShortest) && (i != creature_array.indexOf(document.getElementById(creature_name)))) {
 					//if this is the shortest distance so far, then make this the return creature.
 					distanceShortest = distanceMeasure; //set the new shortest distance
 					nearestNeighbor = i; //store the index of the new shortest distance
@@ -561,8 +561,8 @@
 				
 				else {
 					//they're touching! :)
-					x = firstX + 0.3 * Math.random();
-					y = firstY + 0.3 * Math.random();
+					x = firstX + .3 * Math.random();
+					y = firstY + .3 * Math.random();
 				}
 			}
 			
