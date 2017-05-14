@@ -583,7 +583,7 @@
 		}
 		
 		//translate creature_name x y
-		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+")"); // transform the creature
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+x*y*Math.random()+" "+document.getElementById(creature_name).getBoundingClientRect().x+" "+document.getElementById(creature_name).getBoundingClientRect().y+")"); // transform the creature
 
 	}
 
@@ -871,12 +871,12 @@
 	//			getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
 	//	creature_array[creature_index] = document.getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
 		creature_array[creature_index].setAttributeNS(null,"id",creature_name); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"x1",cx_new+25*Math.random()); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"x1",cx_new+45*Math.random()); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"x2",cx_new); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"y1",cy_new+25*Math.random()); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"y1",cy_new+55*Math.random()); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"y2",cy_new); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"style","fill:blue;stroke:purple"); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"stroke-width",10*Math.random()); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"style","fill:orange;stroke:pink"); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"stroke-width",20*Math.random()); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
