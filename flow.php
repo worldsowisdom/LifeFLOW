@@ -547,7 +547,7 @@
 
 			if (staticMode == 0) {
 				//if way out of bounds then mv back
-				if ((document.getElementById(creature_name).getBoundingClientRect().x > 450) || (document.getElementById(creature_name).getBoundingClientRect().y  > 450)) {staticMode = 1};
+				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 1};
 				
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
 					x = firstX + 3 * Math.random();
@@ -566,6 +566,16 @@
 					x = firstX + 6 * (Math.random() - .5);
 					y = firstY + 6 * (Math.random() - .5);
 				}
+				
+				
+				//if way out of bounds then mv back
+				//probably move this or something like it into a more general creature-checking thing for area boundaryz! :)
+				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x -= 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x += 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y -= 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y += 200*Math.random()};
+			
+
 			}
 				
 			else if (staticMode == 1) {
@@ -581,9 +591,11 @@
 			
 			
 		}
-		
+
 		//translate creature_name x y
-		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+")"); // transform the creature
+		pivot_x = (document.getElementById(creature_name).getBoundingClientRect().left + document.getElementById(creature_name).getBoundingClientRect().right) / 2; // average coordinates for pivot around middle.
+		pivot_y = (document.getElementById(creature_name).getBoundingClientRect().top + document.getElementById(creature_name).getBoundingClientRect().bottom) / 2; // average coordinates for pivot around middle.
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+x/y*(Math.random()-0.5)+" "+pivot_x+" "+pivot_y+")"); // transform the creature
 
 	}
 
@@ -871,12 +883,12 @@
 	//			getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
 	//	creature_array[creature_index] = document.getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
 		creature_array[creature_index].setAttributeNS(null,"id",creature_name); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"x1",cx_new+25*Math.random()); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"x1",cx_new+45*Math.random()); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"x2",cx_new); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"y1",cy_new+25*Math.random()); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"y1",cy_new+55*Math.random()); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"y2",cy_new); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"style","fill:blue;stroke:purple"); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"stroke-width",10*Math.random()); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"style","fill:orange;stroke:pink"); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"stroke-width",20*Math.random()); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
