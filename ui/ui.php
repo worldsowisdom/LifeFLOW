@@ -301,14 +301,14 @@
 	
 	</g>
 
-	<!--Button 8: New extral creature! :)-->
+	<!--Button 8: Creature Browser!!! :)-->
 			<!--button 8 exterior-->
 			
-	<g id="CreateExtral"
-				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="createExtral()";>
+	<g id="CreatureBrowser"
+				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="browse()";>
 
 				<a style="fill-opacity:0.75">
-			<rect height="32" width="32" x="310" y="40" id="Button8" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:purple;stroke:lightpurple"> <desc id="First button on toolbar! :)">Open Avril7! :)</desc><title>Create new extral creature! :)</title>
+			<rect height="32" width="32" x="310" y="40" id="Button8" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:purple;stroke:lightpurple"> <desc id="Nth button on toolbar! :)">Creature browser! :)</desc><title>Browse creatures! :)</title>
 			</rect> </a> 
 
 
@@ -320,9 +320,9 @@
        width="20"
        height="20"
        x="316"
-       y="46" ><title>Create new extral creature! :)</title>
+       y="46" ><title>Browse creatures! :)</title>
       <desc
-         id="desc4311">Save icon</desc>
+         id="desc4311">Creature browser icon</desc>
     </rect>
 
 	</g>
