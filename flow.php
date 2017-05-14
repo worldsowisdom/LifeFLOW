@@ -418,8 +418,8 @@
 	
 	function getNearestNeighbor(creature_name) {
 		var distanceMeasure; // check how far apart creature_name is from o creatures
-		var distanceShortest = 450; // tmp store the shortest distance while iterating through
-		var nearestNeighbor; // store the nearest neighbor
+		var distanceShortest = 1000; // tmp store the shortest distance while iterating through
+		var nearestNeighbor; //default to self = creature_array.indexOf(creature_name); // store the nearest neighbor
 		
 		//find the nearest other creature to creature_name
 		if (creature_index > 1) {
@@ -427,11 +427,11 @@
 			for (var i = 0; i < creature_index; i++) {
 				//iterate through creatures
 //orig				distanceMeasure = 5*Math.random(); // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
-				distanceMeasure = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[i].getBoundingClientRect().x) + (document.getElementById(creature_name).getBoundingClientRect().y - creature_array[i].getBoundingClientRect().y); // calculate x diff
+				distanceMeasure = (Math.abs(document.getElementById(creature_name).getBoundingClientRect().x - creature_array[i].getBoundingClientRect().x) + Math.abs(document.getElementById(creature_name).getBoundingClientRect().y - creature_array[i].getBoundingClientRect().y)); // calculate x diff
 //btw what would diff x plus diff y give???				
 				
 //				5*Math.random(); // calculate distance, probably something like Math.sqrt(Math.square(x)+Math.square(y))..
-				if (distanceMeasure < distanceShortest) {
+				if ((distanceMeasure < distanceShortest) && (i != creature_array.indexOf(creature_name))) {
 					//if this is the shortest distance so far, then make this the return creature.
 					distanceShortest = distanceMeasure; //set the new shortest distance
 					nearestNeighbor = i; //store the index of the new shortest distance
@@ -546,19 +546,22 @@
 		if (staticMode == 0) {
 			
 			if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
-				x = firstX + 0.3;
-				y = firstY + 0.3;
+				x = firstX + 0.03;
+				y = firstY + 0.03;
 				
 			}
 			
 			else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
-				x = firstX - 0.3;
-				y = firstY - 0.3;
+				x = firstX - 0.03;
+				y = firstY - 0.03;
 				
 			}
 			
 			else {
 				//they're touching! :)
+				//x = firstX + 30 * Math.random();
+				//y = firstY + 30 * Math.random();
+
 			}
 			
 		}
