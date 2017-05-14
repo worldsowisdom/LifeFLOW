@@ -529,39 +529,41 @@
 		
 	}
 	
-	function  moveStaticCreature(creature_name, x, y) {
+	function moveStaticCreature(creature_name, x, y) {
 //debug		var blah = "testblah";
 	
 		// Figure out nearest neighboring creature! :)
-		var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
-	
-		// Getting existing translate X and Y, in order to apply subsequent X and Y
-		var xforms = document.getElementById(creature_name).transform.baseVal; // An SVGTransformList
-		var firstXForm = xforms.getItem(0);       // An SVGTransform
-		if (firstXForm.type == SVGTransform.SVG_TRANSFORM_TRANSLATE){
-		  var firstX = firstXForm.matrix.e,
-			  firstY = firstXForm.matrix.f;
-		}		
+		if (creature_index > 1) {
+			var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
+		
+			
+			// Getting existing translate X and Y, in order to apply subsequent X and Y
+			var xforms = document.getElementById(creature_name).transform.baseVal; // An SVGTransformList
+			var firstXForm = xforms.getItem(0);       // An SVGTransform
+			if (firstXForm.type == SVGTransform.SVG_TRANSFORM_TRANSLATE){
+			  var firstX = firstXForm.matrix.e,
+				  firstY = firstXForm.matrix.f;
+			}		
 
-		if (staticMode == 0) {
-			
-			if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
-				x = firstX + 0.03;
-				y = firstY + 0.03;
+			if (staticMode == 0) {
 				
-			}
-			
-			else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
-				x = firstX - 0.03;
-				y = firstY - 0.03;
+				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
+					x = firstX + 0.3;
+					y = firstY + 0.3;
+					
+				}
 				
-			}
-			
-			else {
-				//they're touching! :)
-				//x = firstX + 30 * Math.random();
-				//y = firstY + 30 * Math.random();
-
+				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
+					x = firstX - 0.3;
+					y = firstY - 0.3;
+					
+				}
+				
+				else {
+					//they're touching! :)
+					x = firstX + 0.3 * Math.random();
+					y = firstY + 0.3 * Math.random();
+				}
 			}
 			
 		}
