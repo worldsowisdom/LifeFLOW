@@ -1351,7 +1351,7 @@
 
 		var navigator_cancel = document.createElementNS(xmlns,"text");
 		navigator_cancel.setAttributeNS(null,"id","navigator_title");
-		navigator_cancel.setAttributeNS(null,"x","190");
+		navigator_cancel.setAttributeNS(null,"x","175");
 		navigator_cancel.setAttributeNS(null,"y","435");
 		navigator_cancel.setAttributeNS(null,"font-size","24");
 		navigator_cancel.setAttributeNS(null,"fill","lightblue");
