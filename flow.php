@@ -593,7 +593,9 @@
 		}
 
 		//translate creature_name x y
-		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+x/y*Math.random()+" "+document.getElementById(creature_name).getBoundingClientRect().x+" "+document.getElementById(creature_name).getBoundingClientRect().y+")"); // transform the creature
+		pivot_x = (document.getElementById(creature_name).getBoundingClientRect().left + document.getElementById(creature_name).getBoundingClientRect().right) / 2; // average coordinates for pivot around middle.
+		pivot_y = (document.getElementById(creature_name).getBoundingClientRect().top + document.getElementById(creature_name).getBoundingClientRect().bottom) / 2; // average coordinates for pivot around middle.
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+x/y*(Math.random()-0.5)+" "+pivot_x+" "+pivot_y+")"); // transform the creature
 
 	}
 
