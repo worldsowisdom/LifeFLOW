@@ -93,6 +93,9 @@
 	var area_array = new Array(10); // map of areas for navigator
 	var navigator_open = false; // 0: area navigator closed. 1: area navigator open.
 	
+	var species_array = new Array(10); // map of creatures for browser
+	var browser_open = false; // 0: creature browser closed. 1: creature browser open.
+	
 	var xmlns = "http://www.w3.org/2000/svg" // set URI for SVG NameSpace
 
 
@@ -1377,6 +1380,118 @@
 		document.getElementById("svg2").removeChild(document.getElementById("navigator_g"));
 		
 		navigator_open = false; // set toggle off.
+	}
+	
+	
+	function browse() {
+		//Browse the LifeFLOW creatures! :)
+		
+		//The creature browser starts life as a simple 100x100 grid of boxes.
+		//Eventually it will become a nesting "map" that lets players move among the creatures! :)
+		//It can also include creature lab tools to build and modify creature designz! :)
+		
+		//check if Browser already open:
+		if (browser_open == true) close_browser(); else {
+		
+
+		//create g, add stuff to g, add go to dom...
+		var browser_g = document.createElementNS(xmlns,"g");
+		browser_g.setAttributeNS(null,"id","browser_g");
+		document.getElementById("svg2").appendChild(browser_g);
+	
+		// Create BROWSE CREATURES text and CANCEL button.
+		// eventually create a g too, for all the browser elements...
+		
+		//BROWSE
+		var browser_title = document.createElementNS(xmlns,"text");
+		browser_title.setAttributeNS(null,"id","browser_title");
+		browser_title.setAttributeNS(null,"x","90");
+		browser_title.setAttributeNS(null,"y","35");
+		browser_title.setAttributeNS(null,"font-size","32");
+		browser_title.setAttributeNS(null,"fill","lightgreen");
+		browser_title.textContent = "BROWSE CREATURES";
+//		browser_title.setAttributeNS(null,"content","BROWSE CREATURES");
+		document.getElementById("browser_g").appendChild(browser_title);
+
+		//CANCEL
+		var browser_cancel = document.createElementNS(xmlns,"text");
+		browser_cancel.setAttributeNS(null,"id","browser_cancel");
+		browser_cancel.setAttributeNS(null,"x","190");
+		browser_cancel.setAttributeNS(null,"y","435");
+		browser_cancel.setAttributeNS(null,"font-size","24");
+		browser_cancel.setAttributeNS(null,"fill","lightblue");
+		browser_cancel.setAttributeNS(null,"opacity","0.75");
+		browser_cancel.setAttributeNS(null,"onmouseover","setAttributeNS(null,'fill-opacity','0.5')");
+		browser_cancel.setAttributeNS(null,"onmouseout","setAttributeNS(null,'fill-opacity','0.75')");
+		browser_cancel.setAttributeNS(null,"onmousedown","close_browser()");
+		browser_cancel.textContent = "CANCEL";
+		document.getElementById("browser_g").appendChild(browser_cancel);
+
+		
+		// do we have to declare the array subarrays? looks like good practice
+		
+		// for (i < 10) (for (j < 10) (draw boxes, make 'em pretty)
+		for (var i = 0; i < 10; i++) { // loop through columns 1-10.
+			species_array[i] = new Array(10);
+			//area_array[i] = i; // each column in the array gets a number
+			for (var j = 0; j < 10; j++) { // loop through rows 1-10.
+				//area_array[i][j] = (i+","+j); // each row (in each column) get a number
+				
+				//create squares, populate them w/ text/img, make them open areas, etc! :)
+				//area_array[i][j] = "<rect width="32" height="32" x="" y="" id="area-x,y" onmousedown="openArea(area-x,y)" onmouseover="setAttribute('fill-opacity','0.75')" onmouseout="setAttribute('fill-opacity','0.5')" style="fill:lightblue;stroke:blue"><title>Area x,y</title></rect>"
+				//p have to escape lots of single or double quotes
+				//actually i think there's a better way: add w/ js, m make a container svg/div for it...
+				species_array[i][j] = document.createElementNS(xmlns,"rect");
+				species_array[i][j].setAttributeNS(null,"id","Creature-"+i+j);
+				species_array[i][j].setAttributeNS(null,"width","32");
+				species_array[i][j].setAttributeNS(null,"height","32");
+				species_array[i][j].setAttributeNS(null,"x",(36*i)+45);
+				species_array[i][j].setAttributeNS(null,"y",(36*j)+50);
+				species_array[i][j].setAttributeNS(null,"style","fill:lightgreen;stroke:green;opacity:0.5");
+				species_array[i][j].setAttributeNS(null,"onmousedown","NewCreature('creatures/Area-"+i+j+".svg')"); // CHANGE TO CREATURE
+								//create NewCreature()... (and call special types w/ case)
+				//set color according to presence of file...				
+				//also show previews...
+				species_array[i][j].setAttributeNS(null,"onmouseover","setAttributeNS(null,'fill-opacity','0.5')");
+				species_array[i][j].setAttributeNS(null,"onmouseout","setAttributeNS(null,'fill-opacity','1')");
+//				area_array[i][j].setAttributeNS(null,"onmousedown","OpenArea('creatures/avril3.svg')");
+				//add the rest of the attributes...
+				//p somehow group them?!
+				//incl. <title>
+				
+				//append boxes to SVG
+//				document.getElementById("svgContainerCreatures").appendChild(area_array[i][j]);
+				document.getElementById("browser_g").appendChild(species_array[i][j]);
+//				document.getElementById("svg2").insertBefore(area_array[i][j],document.getElementById("BlueRect"));
+
+				//create <title> to show which area each map opens
+				var title = document.createElementNS(xmlns,"title");
+				title.textContent = "Creature-"+i+j;
+				document.getElementById("Creature-"+i+j).appendChild(title);
+				
+				//above line seems to be causing issues... m sthg with all the quotes?
+				//makea new div within? make a new g...
+				//update not sure if this is still an issue (May 14, 2017)
+				
+			} // close j/row loop
+		} //close i/column loop
+		//m at some point we'll separate multidimensional array innitiation from use?
+		
+		browser_open = true; // set toggle on.
+		}// try closing code block outside of case where Navigator was already open and we simply close it.
+	} //close function browse()
+	
+	
+	function close_browser() {
+		//turn off/destroy Browser
+		//m useful for example for cancel browser?
+		
+		//destroy browser in DOM, and turn off toggle
+		
+		//p much easier w/ a new group, then just destroy the g
+		document.getElementById("svg2").removeChild(document.getElementById("browser_g"));
+		
+		browser_open = false; // set toggle off.
 	}
 	
 	
