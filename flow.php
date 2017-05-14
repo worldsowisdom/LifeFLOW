@@ -749,6 +749,25 @@
 		
 	}
 	
+	function newCreature(creature) {
+		// General function to give birth to new creaturez! :)
+		
+		//takes a creature argument and calls a special birthing function! :)
+		
+		switch (creature) {
+			// give birth according to creature type! :)
+			
+			case "Creature-01":
+				createSmoothy();
+				break;
+			case "Creature-02":
+				createStatic();
+				break;
+			//etc.! :)
+			default:
+				createCool();
+		}
+	}
 	
 	function create() {
 		//Create a new creature! :)
