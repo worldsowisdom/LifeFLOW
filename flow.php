@@ -566,6 +566,16 @@
 					x = firstX + 6 * (Math.random() - .5);
 					y = firstY + 6 * (Math.random() - .5);
 				}
+				
+				
+				//if way out of bounds then mv back
+				//probably move this or something like it into a more general creature-checking thing for area boundaryz! :)
+				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x -= 100};
+				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x += 100};
+				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y -= 100};
+				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y += 100};
+			
+
 			}
 				
 			else if (staticMode == 1) {
@@ -581,9 +591,9 @@
 			
 			
 		}
-		
+
 		//translate creature_name x y
-		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+x*y*Math.random()+" "+document.getElementById(creature_name).getBoundingClientRect().x+" "+document.getElementById(creature_name).getBoundingClientRect().y+")"); // transform the creature
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+x/y*Math.random()+" "+document.getElementById(creature_name).getBoundingClientRect().x+" "+document.getElementById(creature_name).getBoundingClientRect().y+")"); // transform the creature
 
 	}
 
