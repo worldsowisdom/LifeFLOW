@@ -1470,7 +1470,7 @@
 				species_array[i][j].setAttributeNS(null,"x",(36*i)+45);
 				species_array[i][j].setAttributeNS(null,"y",(36*j)+50);
 				species_array[i][j].setAttributeNS(null,"style","fill:lightgreen;stroke:green;opacity:0.5");
-				species_array[i][j].setAttributeNS(null,"onmousedown","NewCreature('creatures/Area-"+i+j+".svg')"); // CHANGE TO CREATURE
+				species_array[i][j].setAttributeNS(null,"onmousedown","newCreature('Creature-"+i+j+"')"); // CHANGE TO CREATURE
 								//create NewCreature()... (and call special types w/ case)
 				//set color according to presence of file...				
 				//also show previews...
