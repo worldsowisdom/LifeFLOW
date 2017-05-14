@@ -546,6 +546,8 @@
 			}		
 
 			if (staticMode == 0) {
+				//if way out of bounds then mv back
+				if ((document.getElementById(creature_name).getBoundingClientRect().x > 450) || (document.getElementById(creature_name).getBoundingClientRect().y  > 450)) {staticMode = 1};
 				
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
 					x = firstX + 3;
@@ -565,6 +567,18 @@
 					y = firstY + 6 * (Math.random() - .5);
 				}
 			}
+				
+			else if (staticMode == 1) {
+				//if way out of bounds, mv bak towards center
+				x = firstX - 13;
+				y = firstY - 13;
+				
+				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
+				
+					staticMode = 0; //reset mode
+				}
+			}
+			
 			
 		}
 		
