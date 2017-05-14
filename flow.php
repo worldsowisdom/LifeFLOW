@@ -1323,19 +1323,19 @@
 		document.getElementById("navigator_g").appendChild(navigator_title);
 
 
-		var navigator_title = document.createElementNS(xmlns,"text");
-		navigator_title.setAttributeNS(null,"id","navigator_title");
-		navigator_title.setAttributeNS(null,"x","190");
-		navigator_title.setAttributeNS(null,"y","435");
-		navigator_title.setAttributeNS(null,"font-size","24");
-		navigator_title.setAttributeNS(null,"fill","lightblue");
-		navigator_title.setAttributeNS(null,"opacity","0.75");
-		navigator_title.setAttributeNS(null,"onmouseover","setAttributeNS(null,'fill-opacity','0.5')");
-		navigator_title.setAttributeNS(null,"onmouseout","setAttributeNS(null,'fill-opacity','0.75')");
-		navigator_title.setAttributeNS(null,"onmousedown","close_navigator()");
-		navigator_title.textContent = "CANCEL";
+		var navigator_cancel = document.createElementNS(xmlns,"text");
+		navigator_cancel.setAttributeNS(null,"id","navigator_title");
+		navigator_cancel.setAttributeNS(null,"x","190");
+		navigator_cancel.setAttributeNS(null,"y","435");
+		navigator_cancel.setAttributeNS(null,"font-size","24");
+		navigator_cancel.setAttributeNS(null,"fill","lightblue");
+		navigator_cancel.setAttributeNS(null,"opacity","0.75");
+		navigator_cancel.setAttributeNS(null,"onmouseover","setAttributeNS(null,'fill-opacity','0.5')");
+		navigator_cancel.setAttributeNS(null,"onmouseout","setAttributeNS(null,'fill-opacity','0.75')");
+		navigator_cancel.setAttributeNS(null,"onmousedown","close_navigator()");
+		navigator_cancel.textContent = "CANCEL";
 //		navigator_title.setAttributeNS(null,"content","NAVIGATE AREAS");
-		document.getElementById("navigator_g").appendChild(navigator_title);
+		document.getElementById("navigator_g").appendChild(navigator_cancel);
 
 		
 		// do we have to declare the array subarrays? looks like good practice
