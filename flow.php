@@ -531,6 +531,23 @@
 	
 	function  moveStaticCreature(creature_name, x, y) {
 		var blah = "testblah";
+		
+		// Getting
+		var xforms = document.getElementById(creature_name).transform.baseVal; // An SVGTransformList
+		var firstXForm = xforms.getItem(0);       // An SVGTransform
+		if (firstXForm.type == SVGTransform.SVG_TRANSFORM_TRANSLATE){
+		  var firstX = firstXForm.matrix.e,
+			  firstY = firstXForm.matrix.f;
+		}		
+
+		if (staticMode == 0) {
+			x = firstX + 0.3;
+			y = firstY;
+		}
+		
+		//translate creature_name x y
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+")"); // transform the creature
+
 	}
 
 	function blankmoveStaticCreature(creature_name, x, y) {
