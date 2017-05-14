@@ -550,14 +550,14 @@
 				if ((document.getElementById(creature_name).getBoundingClientRect().x > 450) || (document.getElementById(creature_name).getBoundingClientRect().y  > 450)) {staticMode = 1};
 				
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
-					x = firstX + 3;
-					y = firstY + 3
+					x = firstX + 3 * Math.random();
+					y = firstY + 3 * Math.random();
 					
 				}
 				
 				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
-					x = firstX - 3;
-					y = firstY - 3;
+					x = firstX - 3 * Math.random();
+					y = firstY - 3 * Math.random();
 					
 				}
 				
