@@ -548,14 +548,14 @@
 			if (staticMode == 0) {
 				
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
-					x = firstX + 0.3;
-					y = firstY + 0.3;
+					x = firstX + 3;
+					y = firstY + 3
 					
 				}
 				
 				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
-					x = firstX - 0.3;
-					y = firstY - 0.3;
+					x = firstX - 3;
+					y = firstY - 3;
 					
 				}
 				
