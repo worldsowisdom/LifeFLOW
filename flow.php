@@ -1282,6 +1282,7 @@
 		//Eventually it will become a nesting "map" that lets players move around the areas! :)
 		
 		//check if Navigator already open:
+		if (browser_open == true) close_browser();
 		if (navigator_open == true) close_navigator(); else {
 		
 
@@ -1391,7 +1392,9 @@
 		//It can also include creature lab tools to build and modify creature designz! :)
 		
 		//check if Browser already open:
+		if (navigator_open == true) close_navigator();
 		if (browser_open == true) close_browser(); else {
+
 		
 
 		//create g, add stuff to g, add go to dom...
