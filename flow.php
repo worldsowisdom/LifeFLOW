@@ -1405,7 +1405,7 @@
 		//BROWSE
 		var browser_title = document.createElementNS(xmlns,"text");
 		browser_title.setAttributeNS(null,"id","browser_title");
-		browser_title.setAttributeNS(null,"x","90");
+		browser_title.setAttributeNS(null,"x","60");
 		browser_title.setAttributeNS(null,"y","35");
 		browser_title.setAttributeNS(null,"font-size","32");
 		browser_title.setAttributeNS(null,"fill","lightgreen");
@@ -1416,10 +1416,10 @@
 		//CANCEL
 		var browser_cancel = document.createElementNS(xmlns,"text");
 		browser_cancel.setAttributeNS(null,"id","browser_cancel");
-		browser_cancel.setAttributeNS(null,"x","190");
+		browser_cancel.setAttributeNS(null,"x","175");
 		browser_cancel.setAttributeNS(null,"y","435");
 		browser_cancel.setAttributeNS(null,"font-size","24");
-		browser_cancel.setAttributeNS(null,"fill","lightblue");
+		browser_cancel.setAttributeNS(null,"fill","lightgreen");
 		browser_cancel.setAttributeNS(null,"opacity","0.75");
 		browser_cancel.setAttributeNS(null,"onmouseover","setAttributeNS(null,'fill-opacity','0.5')");
 		browser_cancel.setAttributeNS(null,"onmouseout","setAttributeNS(null,'fill-opacity','0.75')");
