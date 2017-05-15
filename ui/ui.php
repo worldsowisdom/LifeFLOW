@@ -492,7 +492,7 @@
 
 <p><a href="http://life.worldsowisdom.com/flow"><img src="http://localhost/flow/img/LifeFLOW.png" align="right"><b>LifeFLOW</b></a> is a fun evolving part of <a href="http://life.worldsowisdom.com/">Life Worlds O Wisdom (LifeWOW)</a>. It is kind of like a game, and kind of like nature! :)</p>
 
-<p>You can think of LifeFLOW as a digital terrarium/aquarium, or <i>digitarium</i>. We create and play with living electronic creatures who travel their environmental realms. How cool is that? :)</p>
+<p>You can think of LifeFLOW as a digital (virtual) terrarium/aquarium, or <i>digitarium</i>. We create and play with living electronic creatures who travel their environmental realms. How cool is that? :)</p>
 
 <p>LifeFLOW is a little place where we can play with moving machines. Each of these creatures goes around the area exploring and playing. You can observe them move, interact with them by touching, cloning, creating, removing, and more. New features continue to become available. You can also navigate around many different areas. <strong>Please contribute something to the flow, and enjoy! :)</strong></p>
 
@@ -502,7 +502,7 @@
 
 <p><b>A few tips:</b> Use the <font color="blue">blue square navigator</font> to browse around the areas. Use the <font color="green">green square browser</font> to navigate among the creatures. Currently the first column of creatures are unique. Currently areas save every full period. We're still in the very early stages and welcome your comments on growth and development!</p>
 
-<p><b>Some questions for discussion:</b> How would you describe LifeFLOW? How does a digitarium compare with a terrarium or aquarium? Do you consider LifeFLOW creatures "alive"? What does it mean to you for something to be alive? What is life?
+<p><b>Some questions for discussion:</b> How would you describe LifeFLOW? How does a digitarium compare with a terrarium or aquarium? Do you consider LifeFLOW creatures "alive"? What does it mean to you for something to be alive? What does evolution have to do with living? What is life?
 
 <p><b>Some questions for improvement:</b> What do you like or dislike about LifeFLOW? What do you want next? What do you think makes or would make LifeFLOW more useful, beautiful, interesting?</p>
 
