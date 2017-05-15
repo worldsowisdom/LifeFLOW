@@ -349,6 +349,7 @@
 		if (active_tool == "Touch") touch(creature); //touch(creature);
 		if (active_tool == "Clone") clone(creature); //clone(creature);
 		if (active_tool == "Create") create(creature); //create(creature);
+		if (active_tool == "Delete") deleteCreature(creature); //create(creature);
 	/*	if (active_tool == "Download") touch(creature); //touch(creature);
 		if (active_tool == "Upload") touch(creature); //touch(creature);
 		if (active_tool == "Group") touch(creature); //touch(creature);
@@ -364,6 +365,13 @@
 	
 	function clone(creature) {
 		//Clone a creature! :)
+		
+		
+		//This was originally written with reference to var creature. For reference to creature_name instead, check for "Creature-" at beginning.
+		var re_creature = /^Creature-/; //regex matching creature starting with "Creature-"
+		if (re_creature.test(creature) == 1) {creature = document.getElementById(creature);} //Set creature_names to their creature var
+		
+		
 		var clone_name = creature.getAttribute("id")+"-"+Math.random(); //e.g. "the_rect-0.17239898123"
 		clone_array[clone_index] = creature.cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
 		clone_array[clone_index].setAttribute("id",clone_name); // give the new clone a different id.
@@ -815,7 +823,7 @@
 		creature_array[creature_index].setAttributeNS(null,"cy",cy_new); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"style","fill:blue;stroke:purple"); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(-40,20)"); // translate the new clone.
-		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
+		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
 		creature_array[creature_index].setAttributeNS(null,"class","creatureClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
 						// insert clone_index into clone, for ease of deletion. 
@@ -938,7 +946,7 @@
 		creature_array[creature_index].setAttributeNS(null,"style","fill:orange;stroke:pink"); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"stroke-width",20*Math.random()); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
-		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
+		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
 		creature_array[creature_index].setAttributeNS(null,"class","creatureClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
 						// insert clone_index into clone, for ease of deletion. 
@@ -1003,7 +1011,7 @@
 		creature_array[creature_index].setAttributeNS(null,"height",20*Math.random()); // give the new creature a different height.
 		creature_array[creature_index].setAttributeNS(null,"style","fill:pink;stroke:yellow"); // give the new clone a different color.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(-40,20)"); // translate the new clone.
-		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
+		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
 		creature_array[creature_index].setAttributeNS(null,"class","creatureClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
 						// insert clone_index into clone, for ease of deletion. 
@@ -1065,7 +1073,7 @@
 		creature_array[creature_index].setAttributeNS(null,"height",40*Math.random()); // give the new creature a different height.
 		creature_array[creature_index].setAttributeNS(null,"style","fill:yellow;stroke:black"); // give the new clone a different color.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(-40,20)"); // translate the new clone.
-		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
+		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
 		creature_array[creature_index].setAttributeNS(null,"class","creatureClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
 						// insert clone_index into clone, for ease of deletion. 
@@ -1126,7 +1134,7 @@
 		creature_array[creature_index].setAttributeNS(null,"height",40*Math.random()); // give the new creature a different height.
 		creature_array[creature_index].setAttributeNS(null,"style","fill:brown;stroke:white"); // give the new clone a different color.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(-40,20)"); // translate the new clone.
-		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
+		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
 		creature_array[creature_index].setAttributeNS(null,"class","creatureClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
 						// insert clone_index into clone, for ease of deletion. 
@@ -1190,7 +1198,7 @@
 		creature_array[creature_index].setAttributeNS(null,"height",40*Math.random()); // give the new creature a different height.
 		creature_array[creature_index].setAttributeNS(null,"style","fill:orange;stroke:yellow"); // give the new clone a different color.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(-40,20)"); // translate the new clone.
-		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
+		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
 		creature_array[creature_index].setAttributeNS(null,"class","creatureClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
 						// insert clone_index into clone, for ease of deletion. 
@@ -1278,14 +1286,19 @@
 		//Touch a creature! :)
 		//the creature should at least respond minimally, and eventually have sophisticated behaviors...
 		
-		var x_mv = Math.random() * (time * 25) / max_time;
-		var y_mv = Math.random() * (time * 25) / max_time;
+		var x_mv = Math.random() * (time * 250) / max_time;
+		var y_mv = Math.random() * (time * 250) / max_time;
+
+		//This was originally written with reference to var creature. For reference to creature_name instead, check for "Creature-" at beginning.
+		var re_creature = /^Creature-/; //regex matching creature starting with "Creature-"
+		if (re_creature.test(creature) == 1) {creature = document.getElementById(creature);} //Set creature_names to their creature var
 		
 		creature.setAttribute("transform", "translate("+x_mv+", "+y_mv+")");
+/*		creature.setAttribute("transform", "rotate(90,225,225)");
 		creature.setAttribute("transform", "rotate(90,225,225)");
 		creature.setAttribute("transform", "rotate(90,225,225)");
 		creature.setAttribute("transform", "rotate(90,225,225)");
-		creature.setAttribute("transform", "rotate(90,225,225)");
+*/
 		/*		x_mv -= 2.5;
 		y_mv += 2.5;
 //		setTimeout("creature.setAttribute('transform', 'translate('+x_mv+', '+y_mv+')')", delta_time);
