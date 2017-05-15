@@ -939,7 +939,7 @@
 		creature_array[creature_index].setAttributeNS(null,"style","fill:orange;stroke:pink"); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"stroke-width",20*Math.random()); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
-		creature_array[creature_index].setAttributeNS(null,"onmousedown","deleteCreature('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
+		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
 		creature_array[creature_index].setAttributeNS(null,"class","creatureClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
 						// insert clone_index into clone, for ease of deletion. 
@@ -1279,14 +1279,19 @@
 		//Touch a creature! :)
 		//the creature should at least respond minimally, and eventually have sophisticated behaviors...
 		
-		var x_mv = Math.random() * (time * 25) / max_time;
+		var x_mv = Math.random() * (time * 250) / max_time;
 		var y_mv = Math.random() * (time * 25) / max_time;
+
+		//This was originally written with reference to var creature. For reference to creature_name instead, check for "Creature-" at beginning.
+		var re_creature = /^Creature-/; //regex matching creature starting with "Creature-"
+		if (re_creature.test(creature) == 1) {creature = document.getElementById(creature);} //Set creature_names to their creature var
 		
 		creature.setAttribute("transform", "translate("+x_mv+", "+y_mv+")");
+/*		creature.setAttribute("transform", "rotate(90,225,225)");
 		creature.setAttribute("transform", "rotate(90,225,225)");
 		creature.setAttribute("transform", "rotate(90,225,225)");
 		creature.setAttribute("transform", "rotate(90,225,225)");
-		creature.setAttribute("transform", "rotate(90,225,225)");
+*/
 		/*		x_mv -= 2.5;
 		y_mv += 2.5;
 //		setTimeout("creature.setAttribute('transform', 'translate('+x_mv+', '+y_mv+')')", delta_time);
