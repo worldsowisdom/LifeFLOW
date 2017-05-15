@@ -1280,7 +1280,7 @@
 		//the creature should at least respond minimally, and eventually have sophisticated behaviors...
 		
 		var x_mv = Math.random() * (time * 250) / max_time;
-		var y_mv = Math.random() * (time * 25) / max_time;
+		var y_mv = Math.random() * (time * 250) / max_time;
 
 		//This was originally written with reference to var creature. For reference to creature_name instead, check for "Creature-" at beginning.
 		var re_creature = /^Creature-/; //regex matching creature starting with "Creature-"
