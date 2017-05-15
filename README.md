@@ -1,6 +1,6 @@
     # LifeFLOW
     
-  LifeFLOW is a fun evolving game. It provides a "digitarium" (digital terrarium/aquarium) to play and learn about nature! :)
+  LifeFLOW is a fun evolving game. It provides a "digitarium" (digital vivarium, i.e. a virtual terrarium/aquarium) to play and learn about nature! :)
 
   http://life.worldsowisdom.com/flow/
 
