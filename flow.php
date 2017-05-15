@@ -365,6 +365,13 @@
 	
 	function clone(creature) {
 		//Clone a creature! :)
+		
+		
+		//This was originally written with reference to var creature. For reference to creature_name instead, check for "Creature-" at beginning.
+		var re_creature = /^Creature-/; //regex matching creature starting with "Creature-"
+		if (re_creature.test(creature) == 1) {creature = document.getElementById(creature);} //Set creature_names to their creature var
+		
+		
 		var clone_name = creature.getAttribute("id")+"-"+Math.random(); //e.g. "the_rect-0.17239898123"
 		clone_array[clone_index] = creature.cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
 		clone_array[clone_index].setAttribute("id",clone_name); // give the new clone a different id.
