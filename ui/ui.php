@@ -275,13 +275,13 @@
     
 	</g>
 
-	<!--Button 7: New ultral creature! :)-->
+	<!--Button 7: Delete creature! :)-->
 	
-	<g id="CreateUltral"
-				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="createUltral()";>
-				<title>Create ultral creature! :)</title>
+	<g id="Delete"
+				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="setTool('Delete')";>
+				<title>Delete creature! :)</title>
 	
-			<rect height="32" width="32" x="270" y="40" id="Button6" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:brown;stroke:orange"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
+			<rect height="32" width="32" x="270" y="40" id="Button6" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:brown;stroke:orange"> <desc id="Delete creature button! :)">A button to delete creatures in LifeFLOW :)</desc>
 			</rect>
 
 			

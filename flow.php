@@ -349,6 +349,7 @@
 		if (active_tool == "Touch") touch(creature); //touch(creature);
 		if (active_tool == "Clone") clone(creature); //clone(creature);
 		if (active_tool == "Create") create(creature); //create(creature);
+		if (active_tool == "Delete") deleteCreature(creature); //create(creature);
 	/*	if (active_tool == "Download") touch(creature); //touch(creature);
 		if (active_tool == "Upload") touch(creature); //touch(creature);
 		if (active_tool == "Group") touch(creature); //touch(creature);
