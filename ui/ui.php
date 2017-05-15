@@ -492,7 +492,7 @@
 
 <p><a href="http://life.worldsowisdom.com/flow"><img src="http://localhost/flow/img/LifeFLOW.png" align="right"><b>LifeFLOW</b></a> is a fun evolving part of <a href="http://life.worldsowisdom.com/">Life Worlds O Wisdom (LifeWOW)</a>. It is kind of like a game, and kind of like nature! :)</p>
 
-<p>You can think of LifeFLOW as a digital terrarium/aquarium, or <i>digitarium</i>. We create and play with living electronic creatures who travel their environmental realms. How cool is that? :)</p>
+<p>You can think of LifeFLOW as a digital (virtual) terrarium/aquarium, or <i>digitarium</i>. We create and play with living electronic creatures who travel their environmental realms. How cool is that? :)</p>
 
 <p>LifeFLOW is a little place where we can play with moving machines. Each of these creatures goes around the area exploring and playing. You can observe them move, interact with them by touching, cloning, creating, removing, and more. New features continue to become available. You can also navigate around many different areas. <strong>Please contribute something to the flow, and enjoy! :)</strong></p>
 
