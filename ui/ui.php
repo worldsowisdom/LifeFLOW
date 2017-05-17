@@ -453,7 +453,7 @@
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-			<p><a href="mailto:life@worldsowisdom.com?subject=Free LifeFLOW area"><img src="img/LifeFLOWzone-288x162.png"></p>
+			<p><a href="mailto:life@worldsowisdom.com?subject=Free LifeFLOW area"><img src="img/LifeFLOWzone-11.png"></p>
 			
 			<p>FREE LifeFLOW area - E-mail now!</a></p>
 			
