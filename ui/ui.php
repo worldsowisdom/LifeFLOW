@@ -453,7 +453,7 @@
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-			<p><a href="mailto:life@worldsowisdom.com?subject=Free LifeFLOW area"><img src="img/LifeFLOW.png"></p>
+			<p><a href="mailto:life@worldsowisdom.com?subject=Free LifeFLOW area"><img src="img/LifeFLOWzone-11.png"></p>
 			
 			<p>FREE LifeFLOW area - E-mail now!</a></p>
 			
@@ -464,8 +464,8 @@
 			</td>
 			
 			<td valign="top" align="center">
-			<p><strong>Ads</strong></p>
-			<a href="http://eaglegamma.com/writing/el-burrito-que-queria-volar/"><img src="http://eaglegamma.com/wp-content/uploads/Burrito-front-300x193.png" width="160" /> El burrito que quer&iacute;a volar <br>Print Edition <br>200 Mexican pesos <br>$11.50 US</a></center>
+			<p><strong>Sponsors</strong></p>
+			<a href="http://eaglegamma.com/writing/el-burrito-que-queria-volar/"><img src="http://eaglegamma.com/wp-content/uploads/Burrito-front-300x193.png" width="160" /> El burrito que quer&iacute;a volar <br>Print Edition <br>BONUS: English & Español!<br>200 Mexican pesos <br>$11.50 US</a></center>
 
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="HA5GGA9SNPZMN" /> <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" type="image" /> <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" /></form>
 			</td>
@@ -490,7 +490,7 @@
 
 <p><h2 id="About">Welcome to LifeFLOW! :)</h2></p>
 
-<p><a href="http://life.worldsowisdom.com/flow"><img src="http://localhost/flow/img/LifeFLOW.png" align="right"><b>LifeFLOW</b></a> is a fun evolving part of <a href="http://life.worldsowisdom.com/">Life Worlds O Wisdom (LifeWOW)</a>. It is kind of like a game, and kind of like nature! :)</p>
+<p><a href="http://life.worldsowisdom.com/flow"><img src="./img/LifeFLOW.png" align="right"><b>LifeFLOW</b></a> is a fun evolving part of <a href="http://life.worldsowisdom.com/">Life Worlds O Wisdom (LifeWOW)</a>. It is kind of like a game, and kind of like nature! :)</p>
 
 <p>You can think of LifeFLOW as a digital <a href="https://en.wikipedia.org/wiki/Vivarium">vivarium</a>, or <b><i>digitarium</i></b> (i.e. a virtual terrarium/aquarium). We create and play with living electronic creatures who travel their environmental realms. How cool is that? :)</p>
 
@@ -502,11 +502,11 @@
 
 <p><b>A few tips:</b> Use the <font color="blue">blue square navigator</font> to browse around the areas. Use the <font color="green">green square browser</font> to navigate among the creatures. Currently the first column of creatures are unique. Currently areas save every full period. We're still in the very early stages and welcome your comments on growth and development!</p>
 
-<p><b>Some questions for discussion:</b> How would you describe LifeFLOW? How does a digitarium compare with a terrarium or aquarium? Do you consider LifeFLOW creatures "alive"? What does it mean to you for something to be alive? What does evolution have to do with living? What is life?
+<p><b>Some questions for consideration:</b> How would you describe LifeFLOW? How does a digitarium compare with a terrarium or aquarium? Do you consider LifeFLOW creatures "alive"? What does it mean to you for something to be alive? What does evolution have to do with living? What is life?
 
 <p><b>Some questions for improvement:</b> What do you like or dislike about LifeFLOW? What do you want next? What do you think makes or would make LifeFLOW more useful, beautiful, interesting?</p>
 
-<p><b>Development:</b> LifeFLOW is free and open source (MIT license). <a href="https://github.com/worldsowisdom/LifeFLOW">Come join us in creating the coolest software on the planet at GitHub</a>! :)
+<p><b>Development:</b> LifeFLOW is free and open source (MIT license). <a href="https://github.com/worldsowisdom/LifeFLOW">Come join us (at GitHub) in creating the coolest software on the planet!</a>! :)
 
 <p><b>Contact:</b> <a href="mailto:life@worldsowisdom.com?subject=LifeFLOW">life@worldsowisdom.com</a>! :)</p>
 
