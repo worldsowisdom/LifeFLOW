@@ -804,17 +804,26 @@
 					
 					//check for eating, mating, etc.! :)
 					var special_event = Math.random(); // roll the dice...
-					//can change this to a switch statement...
+					//can change this to a switch statement... although maybe don't want to...
 					
 					//can also check for random mutations, e.g. to articulation or other elements of code! :)
 					
-					if (special_event <= 0.01) { // one ine a hundred
+					if (special_event <= 0.03) { // three in a hundred
 						clone(creature_name); //clone for now, could also reproduce sexually, etc.! :)
+						return;
+					}
+
+					else if (special_event <= 0.06) { // three in a hundred
+						createLifePath2(); //give birth! :)
+						createLifePath2(); //give birth to a litter! :)
+						return;
+						//can later recombine creature codez... mutate... etc.! :)
 					}
 
 
 					//get eaten once every ten times...
 					else if (special_event <= 0.1) { //one in ten
+					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
 					}
