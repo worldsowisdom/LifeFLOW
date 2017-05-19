@@ -145,8 +145,8 @@
 		// Also same for creature_array[]? probably yes
 		
 		//first I think we should clear the previously user-created creatures
-		creature_array = [];
-		
+//		creature_array = [];
+		creature_array.length = 0; // different approach that deletes existing array contents instead of creating new array.
 		
 		//then load them anew...
 //		creature_index = 0; // go back to beginning - is this necessary? probably yes. actually I think it shouldn't be with the below.
@@ -778,13 +778,6 @@
 				//if way out of bounds then mv back
 				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 1};
 
-				//if way out of bounds then mv back
-				//probably move this or something like it into a more general creature-checking thing for area boundaryz! :)
-				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x -= 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x += 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y -= 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y += 200*Math.random()};
-			
 
 				
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
@@ -816,13 +809,14 @@
 					else if (special_event <= 0.06) { // three in a hundred
 						createLifePath2(); //give birth! :)
 						createLifePath2(); //give birth to a litter! :)
+						createLifePath2(); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
 					}
 
 
 					//get eaten once every ten times...
-					else if (special_event <= 0.1) { //one in ten
+					else if (special_event <= 0.2) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
@@ -836,7 +830,14 @@
 					
 				}
 				
-				
+				//if way out of bounds then mv back
+				//probably move this or something like it into a more general creature-checking thing for area boundaryz! :)
+				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x -= 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x += 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y -= 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y += 200*Math.random()};
+			
+
 
 			} //staticmode0
 				
