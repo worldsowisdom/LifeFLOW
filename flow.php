@@ -792,8 +792,29 @@
 				
 				else {
 					//they're touching! :)
-					x = firstX + 6 * (Math.random() - .5);
-					y = firstY + 6 * (Math.random() - .5);
+					
+					//check for eating, mating, etc.! :)
+					var special_event = Math.random(); // roll the dice...
+					//can change this to a switch statement...
+					
+					//can also check for random mutations, e.g. to articulation or other elements of code! :)
+					
+					if (special_event <= 0.01) { // one ine a hundred
+						clone(creature_name); //clone for now, could also reproduce sexually, etc.! :)
+					}
+
+
+					//get eaten once every ten times...
+					else if (special_event <= 0.1) { //one in ten
+						deleteCreature(creature_name); //get eaten
+					}
+					
+					else { //default case
+						x = firstX + 6 * (Math.random() - .5);
+						y = firstY + 6 * (Math.random() - .5);
+						//mv about randomly...
+					}
+					
 				}
 				
 				
