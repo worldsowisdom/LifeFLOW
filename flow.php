@@ -777,6 +777,15 @@
 			if (staticMode == 0) {
 				//if way out of bounds then mv back
 				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 1};
+
+				//if way out of bounds then mv back
+				//probably move this or something like it into a more general creature-checking thing for area boundaryz! :)
+				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x -= 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x += 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y -= 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y += 200*Math.random()};
+			
+
 				
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
 					x = firstX + 3 * Math.random();
@@ -807,6 +816,7 @@
 					//get eaten once every ten times...
 					else if (special_event <= 0.1) { //one in ten
 						deleteCreature(creature_name); //get eaten
+						return; //stop running function on deleted/eaten creature
 					}
 					
 					else { //default case
@@ -818,15 +828,8 @@
 				}
 				
 				
-				//if way out of bounds then mv back
-				//probably move this or something like it into a more general creature-checking thing for area boundaryz! :)
-				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x -= 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x += 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y -= 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y += 200*Math.random()};
-			
 
-			}
+			} //staticmode0
 				
 			else if (staticMode == 1) {
 				//if way out of bounds, mv bak towards center
@@ -840,7 +843,7 @@
 			}
 			
 			
-		}
+		} // if multiple creatures (figure out nearest neighbor) 
 
 		//translate creature_name x y
 		pivot_x = (document.getElementById(creature_name).getBoundingClientRect().left + document.getElementById(creature_name).getBoundingClientRect().right) / 2; // average coordinates for pivot around middle.
