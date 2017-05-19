@@ -1217,11 +1217,9 @@
 	//	creature_array[creature_index] = document.getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
 		creature_array[creature_index].setAttributeNS(null,"id",creature_name); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"d","M "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
-/*		creature_array[creature_index].setAttributeNS(null,"x1",cx_new+45*Math.random()); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"x2",cx_new); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"y1",cy_new+55*Math.random()); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"y2",cy_new); // give the new clone a different id.
-old stuff from prev creaturez*/
+			//for now the creature gets some hand-coded articulation points. we should give it an array of points instead... Calling for a storage solution...
+			//creature_array[creature_index][articulation_index]
+			
 		creature_array[creature_index].setAttributeNS(null,"style","fill:black;stroke:yellow"); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"stroke-width",20*Math.random()); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
