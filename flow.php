@@ -1365,8 +1365,8 @@
 			//creature_array[creature_index][articulation_index]
 			//or use object with {x:y}?
 			//remember that it should be (now or later) flexible enough to accommodte all kinds of curves too...
-			//or could read (from DOM) and then edit the attribute... m the best option...
-		creature_array[creature_index].setAttributeNS(null,"style","fill:black;stroke:yellow"); // give the new clone a different id.
+			//or could read (from DOM) and then edit the attribute... m the best option... (I think so - eg 5/19/17)
+		creature_array[creature_index].setAttributeNS(null,"style","fill:yellow;stroke:orange"); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"stroke-width",20*Math.random()); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
