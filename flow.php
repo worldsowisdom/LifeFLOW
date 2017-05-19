@@ -1216,7 +1216,7 @@
 	//			getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
 	//	creature_array[creature_index] = document.getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
 		creature_array[creature_index].setAttributeNS(null,"id",creature_name); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"d","M "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"d","M "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
 /*		creature_array[creature_index].setAttributeNS(null,"x1",cx_new+45*Math.random()); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"x2",cx_new); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"y1",cy_new+55*Math.random()); // give the new clone a different id.
