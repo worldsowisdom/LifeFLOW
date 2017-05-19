@@ -1806,7 +1806,7 @@
 		navigator_g.setAttributeNS(null,"id","navigator_g");
 		document.getElementById("svg2").appendChild(navigator_g);
 	
-		// Create NAVIGATE AREAS text and CANCEL button.
+		// Create NAVIGATE AREAS text and CLOSE button.
 		// eventually create a g too, for all the navigator elements...
 		var navigator_title = document.createElementNS(xmlns,"text");
 		navigator_title.setAttributeNS(null,"id","navigator_title");
@@ -1819,19 +1819,19 @@
 		document.getElementById("navigator_g").appendChild(navigator_title);
 
 
-		var navigator_cancel = document.createElementNS(xmlns,"text");
-		navigator_cancel.setAttributeNS(null,"id","navigator_title");
-		navigator_cancel.setAttributeNS(null,"x","175");
-		navigator_cancel.setAttributeNS(null,"y","435");
-		navigator_cancel.setAttributeNS(null,"font-size","24");
-		navigator_cancel.setAttributeNS(null,"fill","lightblue");
-		navigator_cancel.setAttributeNS(null,"opacity","0.75");
-		navigator_cancel.setAttributeNS(null,"onmouseover","setAttributeNS(null,'fill-opacity','0.5')");
-		navigator_cancel.setAttributeNS(null,"onmouseout","setAttributeNS(null,'fill-opacity','0.75')");
-		navigator_cancel.setAttributeNS(null,"onmousedown","close_navigator()");
-		navigator_cancel.textContent = "CANCEL";
+		var navigator_close = document.createElementNS(xmlns,"text");
+		navigator_close.setAttributeNS(null,"id","navigator_title");
+		navigator_close.setAttributeNS(null,"x","185");
+		navigator_close.setAttributeNS(null,"y","435");
+		navigator_close.setAttributeNS(null,"font-size","24");
+		navigator_close.setAttributeNS(null,"fill","lightblue");
+		navigator_close.setAttributeNS(null,"opacity","0.75");
+		navigator_close.setAttributeNS(null,"onmouseover","setAttributeNS(null,'fill-opacity','0.5')");
+		navigator_close.setAttributeNS(null,"onmouseout","setAttributeNS(null,'fill-opacity','0.75')");
+		navigator_close.setAttributeNS(null,"onmousedown","close_navigator()");
+		navigator_close.textContent = "CLOSE";
 //		navigator_title.setAttributeNS(null,"content","NAVIGATE AREAS");
-		document.getElementById("navigator_g").appendChild(navigator_cancel);
+		document.getElementById("navigator_g").appendChild(navigator_close);
 
 		
 		// do we have to declare the array subarrays? looks like good practice
@@ -1888,7 +1888,7 @@
 	
 	function close_navigator() {
 		//turn off/destroy Navigator
-		//m useful for example for cancel navigator?
+		//m useful for example for close navigator?
 		
 		//destroy navigator in DOM, and turn off toggle
 		
@@ -1917,7 +1917,7 @@
 		browser_g.setAttributeNS(null,"id","browser_g");
 		document.getElementById("svg2").appendChild(browser_g);
 	
-		// Create BROWSE CREATURES text and CANCEL button.
+		// Create BROWSE CREATURES text and CLOSE button.
 		// eventually create a g too, for all the browser elements...
 		
 		//BROWSE
@@ -1931,19 +1931,19 @@
 //		browser_title.setAttributeNS(null,"content","BROWSE CREATURES");
 		document.getElementById("browser_g").appendChild(browser_title);
 
-		//CANCEL
-		var browser_cancel = document.createElementNS(xmlns,"text");
-		browser_cancel.setAttributeNS(null,"id","browser_cancel");
-		browser_cancel.setAttributeNS(null,"x","175");
-		browser_cancel.setAttributeNS(null,"y","435");
-		browser_cancel.setAttributeNS(null,"font-size","24");
-		browser_cancel.setAttributeNS(null,"fill","lightgreen");
-		browser_cancel.setAttributeNS(null,"opacity","0.75");
-		browser_cancel.setAttributeNS(null,"onmouseover","setAttributeNS(null,'fill-opacity','0.5')");
-		browser_cancel.setAttributeNS(null,"onmouseout","setAttributeNS(null,'fill-opacity','0.75')");
-		browser_cancel.setAttributeNS(null,"onmousedown","close_browser()");
-		browser_cancel.textContent = "CANCEL";
-		document.getElementById("browser_g").appendChild(browser_cancel);
+		//CLOSE
+		var browser_close = document.createElementNS(xmlns,"text");
+		browser_close.setAttributeNS(null,"id","browser_close");
+		browser_close.setAttributeNS(null,"x","185");
+		browser_close.setAttributeNS(null,"y","435");
+		browser_close.setAttributeNS(null,"font-size","24");
+		browser_close.setAttributeNS(null,"fill","lightgreen");
+		browser_close.setAttributeNS(null,"opacity","0.75");
+		browser_close.setAttributeNS(null,"onmouseover","setAttributeNS(null,'fill-opacity','0.5')");
+		browser_close.setAttributeNS(null,"onmouseout","setAttributeNS(null,'fill-opacity','0.75')");
+		browser_close.setAttributeNS(null,"onmousedown","close_browser()");
+		browser_close.textContent = "CLOSE";
+		document.getElementById("browser_g").appendChild(browser_close);
 
 		
 		// do we have to declare the array subarrays? looks like good practice
@@ -2002,7 +2002,7 @@
 	
 	function close_browser() {
 		//turn off/destroy Browser
-		//m useful for example for cancel browser?
+		//m useful for example for close browser?
 		
 		//destroy browser in DOM, and turn off toggle
 		
