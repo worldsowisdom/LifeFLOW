@@ -498,7 +498,7 @@
 
 <p>For extra special creatures, we store information about them at <b><a href="http://life.worldsowisdom.com/?q=bank">LifeBANK</a></b>. This includes data like name and code, and metadata like imagery and what makes each creature so special.</p>
 
-<p>You can create a variety of creature types already, and we're continuing to add more. Try clicking some of the buttons! :)</p>
+<p>You can create a variety of creature types already, and we're continuing to add more. Try pressing some of the buttons! :)</p>
 
 <p><b>A few tips:</b> Use the <font color="blue">blue square navigator</font> to browse around the areas. Use the <font color="green">green square browser</font> to navigate among the creatures. Currently the first column of creatures are unique. Currently areas save every full period. We're still in the very early stages and welcome your comments on growth and development!</p>
 
