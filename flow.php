@@ -157,6 +157,7 @@
 		//var k; ...for now we're using creature_index instead, I think this should work... :)
 		for (creature_index = 0; creature_index < creatures_by_class.length; creature_index++) {
 			creature_array[creature_index] = creatures_by_class[creature_index];
+			
 		}
 
 		
@@ -801,12 +802,13 @@
 					
 					//can also check for random mutations, e.g. to articulation or other elements of code! :)
 					
+					/*
 					if (special_event <= 0.03) { // three in a hundred
 						clone(creature_name); //clone for now, could also reproduce sexually, etc.! :)
 						return;
 					}
-
-					else if (special_event <= 0.06) { // three in a hundred
+					***** this cloning causes a problem, in which deleting the creature through the later case fails *****
+					else*/ if (special_event <= 0.06) { // three in a hundred
 						createLifePath2(); //give birth! :)
 						createLifePath2(); //give birth to a litter! :)
 						createLifePath2(); //give birth to a litter! :)
@@ -816,12 +818,13 @@
 
 
 					//get eaten once every ten times...
+					//there's some issue w/ deleting...
 					else if (special_event <= 0.5) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
 					}
-					
+
 					else { //default case
 						x = firstX + 6 * (Math.random() - .5);
 						y = firstY + 6 * (Math.random() - .5);
@@ -1721,6 +1724,14 @@
 		//debug
 //		testdel = creature_name; //debug
 //make it work
+
+
+		document.getElementById("svg2") // rm clone from inline svg
+//orig			.removeChild(document.getElementById(""+creature_name+"")); //um...
+			.removeChild(document.getElementById(creature_name)); //um...
+
+			
+/*
 		removeFromArray(creature_array, creature_array.indexOf(document.getElementById(creature_name))); // rm clone from creature_array...
 		//check the above, and implement removeFromArray()...
 		//seems to check out! :)
@@ -1729,12 +1740,9 @@
 		creature_index--; // decrement (reduce) creature_index for future operations/additions.
 		//creatures_by_class--; // decrement (reduce) creature_index for future operations/additions.
 		//the above vars should probably be merged/combined...
+*/			
+
 			
-
-		document.getElementById("svg2") // rm clone from inline svg
-//orig			.removeChild(document.getElementById(""+creature_name+"")); //um...
-			.removeChild(document.getElementById(creature_name)); //um...
-
 		UpdateCreatures(); // seems to fix array issue after del??? not sure if this is a sane approach...
 
 	}
