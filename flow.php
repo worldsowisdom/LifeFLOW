@@ -1721,6 +1721,8 @@
 		//debug
 //		testdel = creature_name; //debug
 //make it work
+
+/*
 		removeFromArray(creature_array, creature_array.indexOf(document.getElementById(creature_name))); // rm clone from creature_array...
 		//check the above, and implement removeFromArray()...
 		//seems to check out! :)
@@ -1729,7 +1731,7 @@
 		creature_index--; // decrement (reduce) creature_index for future operations/additions.
 		//creatures_by_class--; // decrement (reduce) creature_index for future operations/additions.
 		//the above vars should probably be merged/combined...
-			
+*/			
 
 		document.getElementById("svg2") // rm clone from inline svg
 //orig			.removeChild(document.getElementById(""+creature_name+"")); //um...
