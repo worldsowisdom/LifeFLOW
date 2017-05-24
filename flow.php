@@ -818,10 +818,17 @@
 
 
 					//get eaten once every ten times...
-					//there's some issue w/ deleting...
+					//there's some issue w/ deleting if there are clones of this creature around...
 					else if (special_event <= 0.3) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
+						return; //stop running function on deleted/eaten creature
+					}
+
+					//do other cool stuff! :)
+					else if (special_event <= 3.0 && x > 5 && y < 200) { //one in ten, five...
+					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
+						document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
 						return; //stop running function on deleted/eaten creature
 					}
 
