@@ -1868,7 +1868,19 @@
 				
 		creature_index++; // go to next creature
 				
+
+		var creatureParty; //for now just add something manually, eventually we can modularize the creature parts.
+		creatureParty = document.createElementNS(xmlns,"path"); //create a new creature! :)
+		creatureParty.setAttributeNS(null,"id",creature_name+"-part"); // give the new clone a different id.
+		creatureParty.setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
+		creatureParty.setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
+		creatureParty.setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
+		creatureParty.setAttributeNS(null,"class","creaturePartClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
+				
+		document.getElementById(creature_name)
+			.appendChild(creatureParty); //Add first creature part to creature. Not sure if this works. If so, we can improve how we do it.
 		
+				
 		// Add creature parts
 /*		
 		//var creature_parts_array[creature_index][];// = creature_array[creature_index][]; // does this work?
