@@ -1092,6 +1092,66 @@
 			case "Creature-22":
 				createLifePath4();
 				break;
+			case "Creature-23":
+				createLifePath4();
+				break;
+			case "Creature-24":
+				createLifePath4();
+				break;
+			case "Creature-25":
+				createLifePath4();
+				break;
+			case "Creature-26":
+				createLifePath4();
+				break;
+			case "Creature-27":
+				createLifePath4();
+				break;
+			case "Creature-28":
+				createLifePath4();
+				break;
+			case "Creature-29":
+				createLifePath4();
+				break;
+			case "Creature-30":
+				createLifePath4();
+				break;
+			case "Creature-31":
+				createLifePath4();
+				break;
+			case "Creature-32":
+				createLifePath4();
+				break;
+			case "Creature-33":
+				createLifePath4();
+				break;
+			case "Creature-34":
+				createLifePath4();
+				break;
+			case "Creature-35":
+				createLifePath4();
+				break;
+			case "Creature-36":
+				createLifePath4();
+				break;
+			case "Creature-37":
+				createLifePath4();
+				break;
+			case "Creature-38":
+				createLifePath4();
+				break;
+			case "Creature-39":
+				createLifePath4();
+				break;
+			case "Creature-40":
+				createLifePath4();
+				break;
+			case "Creature-41":
+				createLifePath4();
+				break;
+			case "Creature-42":
+				createLifePath4();
+				break;
 			//etc.! :)
 			default:
 				createCool();
