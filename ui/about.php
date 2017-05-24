@@ -125,7 +125,7 @@
 
 <p>You can create a variety of creature types already, and we're continuing to add more. Try pressing some of the buttons! :)</p>
 
-<p><b>A few tips:</b> Use the <font color="blue">blue square navigator</font> to browse around the areas. Use the <font color="green">green square browser</font> to navigate among the creatures. Currently the first column of creatures are unique. Currently areas save every full period. We're still in the very early stages and welcome your comments on growth and development!</p>
+<p><b>A few tips:</b> Use the <font color="blue">blue square navigator</font> to browse around the areas. Use the <font color="green">green square browser</font> to navigate among the creatures. Currently the first two columns of creatures are unique, the rest are cool. Currently areas save every full period. We're still in the very early stages and welcome your comments on growth and development!</p>
 
 <p><b>Some questions for consideration:</b> How would you describe LifeFLOW? How does a digitarium compare with a terrarium or aquarium? Do you consider LifeFLOW creatures "alive"? What does it mean to you for something to be alive? What does evolution have to do with living? What is life?
 
