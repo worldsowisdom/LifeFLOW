@@ -810,8 +810,8 @@
 					***** this cloning causes a problem, in which deleting the creature through the later case fails *****
 					else*/ if (special_event <= 0.06) { // three in a hundred
 						createLifePath2(); //give birth! :)
-						createLifePath2(); //give birth to a litter! :)
-						createLifePath2(); //give birth to a litter! :)
+						createLifePath3(); //give birth to a litter! :)
+						createLifePath3(); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
 					}
