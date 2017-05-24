@@ -17,6 +17,7 @@
 <?php
 	include './flow.php';
 	include './ui/ui.php';
+	include './ui/about.php';
 ?>
 
 
