@@ -135,7 +135,16 @@
 
 <p><b>Contact:</b> <a href="mailto:life@worldsowisdom.com?subject=LifeFLOW">life@worldsowisdom.com</a>! :)</p>
 
-<p><h3 id="Music">Music</h3>
+
+<p><h3 id="Embed">Embed LifeFLOW! :)</h3></p>
+
+<p>To embed LifeFLOW into your website, please use the following code:<p>
+
+<textarea readonly cols="80">&lt;iframe width=&quot;100%&quot; height=&quot;800&quot; scrolling=&quot;yes&quot; frameborder=&quot;no&quot; src=&quot;http://life.worldsowisdom.com/flow/&quot;&gt;&lt;/iframe&gt;</textarea>
+
+
+<p><h3 id="Music">Music</h3></p>
+
 <p>Here is some music. Please let us know what else you would like! :)</p>
 <iframe width="100%" height="450" scrolling="no" frameborder="no" src="http://www.bitlisten.com/"></iframe>
 <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/309714233&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
