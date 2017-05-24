@@ -1062,34 +1062,34 @@
 			case "Creature-12":
 				createLifePath4();
 				break;
-			case "Creature-12":
+			case "Creature-13":
 				createLifePath4(); //can add arguments...
 				break;
-			case "Creature-12":
+			case "Creature-14":
 				createLifePath4();
 				break;
-			case "Creature-12":
+			case "Creature-15":
 				createLifePath4();
 				break;
-			case "Creature-12":
+			case "Creature-16":
 				createLifePath4();
 				break;
-			case "Creature-12":
+			case "Creature-17":
 				createLifePath4();
 				break;
-			case "Creature-12":
+			case "Creature-18":
 				createLifePath4();
 				break;
-			case "Creature-12":
+			case "Creature-19":
 				createLifePath4();
 				break;
-			case "Creature-12":
+			case "Creature-20":
 				createLifePath4();
 				break;
-			case "Creature-12":
+			case "Creature-21":
 				createLifePath4();
 				break;
-			case "Creature-12":
+			case "Creature-22":
 				createLifePath4();
 				break;
 			//etc.! :)
