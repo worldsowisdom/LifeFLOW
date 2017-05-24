@@ -1870,7 +1870,10 @@
 				
 		
 		// Add creature parts
+/*		
+		//var creature_parts_array[creature_index][];// = creature_array[creature_index][]; // does this work?
 		
+	
 		creature_array[creature_index][0] = document.createElementNS(xmlns,"path"); //create a new creature! :)
 	//			getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
 	//	creature_array[creature_index][0] = document.getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
@@ -1915,7 +1918,8 @@
 //	" +Math.random()*100+ ", " +Math.random()*100+ " )");
 
 		creature_desc_element.appendChild(creature_desc); // add AI to <desc> (I think this is necessary...)
-		creature_array[creature_index][1].appendChild(creature_desc_element); // add <desc> to new creature. Not sure if this worx...
+		creature_array[creature_index].appendChild(creature_desc_element); // add <desc> to new creature. Not sure if this worx...
+		creature_index++; // go to next creature
 
 
 		creature_array[creature_index][1] = document.createElementNS(xmlns,"path"); //create a new creature! :)
@@ -1974,7 +1978,7 @@
 			.appendChild(creature_array[creature_index][1]); //Add first creature part to creature. Not sure if this works. If so, we can improve how we do it.
 //			.insertBefore(creature_array[creature_index], document.getElementById("galaxy3")); // WHERE TO INSERT? add the new clone into the inline svg (to get written automatically to file later)
 				// m instead do an appendChild to svg2 (above)...
-		
+*/		
 		
 	} // createLifePath5()
 
