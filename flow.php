@@ -1559,8 +1559,8 @@
 		var cx_new = Math.random()*450; // create random starting x
 		var cy_new = Math.random()*450; // create random starting y
 		
-		var creature_fill = "blue"; // fill color
-		var creature_stroke = "pink"; // stroke color
+		var creature_fill = '#'+Math.floor(Math.random()*16777215).toString(16); // random fill color
+		var creature_stroke = '#'+Math.floor(Math.random()*16777215).toString(16); // random stroke color
 		
 		var creature_name = "Creature-"+Math.random(); //e.g. "Creature-0.17239898123"
 	//	var creature_name = creature.getAttribute("id")+"-"+Math.random(); //e.g. "the_rect-0.17239898123"
