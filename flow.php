@@ -1270,7 +1270,7 @@
 				createLifePath4();
 				break;
 			case "Creature-42":
-				createLifePath5();
+				createLifePath5(1.5,0.75);
 				break;
 			//etc.! :)
 			default:
