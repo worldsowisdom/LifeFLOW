@@ -811,7 +811,7 @@
 					else*/ if (special_event <= 0.06) { // three in a hundred
 						createLifePath2(); //give birth! :)
 						createLifePath3(); //give birth to a litter! :)
-						createLifePath3(); //give birth to a litter! :)
+						createLifePath4(Math.random(), Math.random()); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
 					}
