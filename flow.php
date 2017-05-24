@@ -1079,16 +1079,16 @@
 				createLifePath4(0.1, 0.3);
 				break;
 			case "Creature-16":
-				createLifePath4();
+				createLifePath4(10,10);
 				break;
 			case "Creature-17":
-				createLifePath4();
+				createLifePath4(20,25);
 				break;
 			case "Creature-18":
-				createLifePath4();
+				createLifePath4(100,2);
 				break;
 			case "Creature-19":
-				createLifePath4();
+				createLifePath4(5,50);
 				break;
 			case "Creature-20":
 				createLifePath4();
