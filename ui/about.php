@@ -17,13 +17,13 @@
 			<table>
 				<tbody>
 					<tr>
-						<td><input name="on0" type="hidden" value="Add" />Add:</td>
+						<td><input name="on0" type="hidden" value="Add" />Add species:</td>
 					</tr>
 					<tr>
 						<td><select name="os0"><option value="Little niblet">Little niblet $1.00 USD</option><option value="Medium creature">Medium creature $2.00 USD</option><option value="Big beauty">Big beauty $5.00 USD</option> </select></td>
 					</tr>
 					<tr>
-						<td><input name="on1" type="hidden" value="What do you want to feed life?" />What do you want to feed life?</td>
+						<td><input name="on1" type="hidden" value="What design do you want to feed life?" />What design do you want to feed life?</td>
 					</tr>
 					<tr>
 						<td><input maxlength="200" name="os1" type="text" /></td>
@@ -40,13 +40,13 @@
 			<table>
 				<tbody>
 					<tr>
-						<td><input name="on0" type="hidden" value="Add:" />Add:</td>
+						<td><input name="on0" type="hidden" value="Add:" />Add species:</td>
 					</tr>
 					<tr>
 						<td><select name="os0"><option value="Little niblet">Little niblet : $1.00 USD - weekly</option><option value="Medium creature">Medium creature : $2.00 USD - weekly</option><option value="Big beauty">Big beauty : $5.00 USD - weekly</option> </select></td>
 					</tr>
 					<tr>
-						<td><input name="on1" type="hidden" value="What do you want to feed life?" />What do you want to feed life?</td>
+						<td><input name="on1" type="hidden" value="What design do you want to feed life?" />What design do you want to feed life?</td>
 					</tr>
 					<tr>
 						<td><input maxlength="200" name="os1" type="text" /></td>
@@ -66,7 +66,7 @@
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="H56HWNAV9S6Z6">
 <table>
-<tr><td><input type="hidden" name="on0" value="Size">Size</td></tr><tr><td><select name="os0">
+<tr><td><input type="hidden" name="on0" value="Size">Size:</td></tr><tr><td><select name="os0">
 	<option value="450 pixel x 450 pixel">450 pixel x 450 pixel : $10.00 USD - monthly</option>
 	<option value="900 pixel x 450 pixel">900 pixel x 450 pixel : $15.00 USD - monthly</option>
 	<option value="900 pixel x 900 pixel">900 pixel x 900 pixel : $20.00 USD - monthly</option>
