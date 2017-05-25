@@ -11,7 +11,7 @@
 			<td width="30%" valign="top">
 			<p><strong>Contribute to the flow!</strong></p>
 
-			<p></p>
+			<p>Let's collaborate to make a new type! :)</p>
 
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="7FS6H88GTKDQY" />
 			<table>
@@ -34,7 +34,7 @@
 
 			<p><strong>Subscribe to the flow!</strong></p>
 
-			<p></p>
+			<p>Let's collaborate to make a new type! :)</p>
 
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="3VNCFPBM8JQM2" />
 			<table>
@@ -60,7 +60,7 @@
 			<td width=30% valign="top">
 			<p><strong>Rent a private flow area!</strong></p>
 			
-			<p></p>
+			<p>A place to experiment! :)</p>
 			
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
