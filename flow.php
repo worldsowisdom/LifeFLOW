@@ -6,7 +6,7 @@
 			</div>
 			
 			
-			<svg xmlns="http://www.w3.org/2000/svg" width="450px" height="250px">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="450px" height="250px">
 
 			
 			<svg id="svg1" onload="Start(evt)" height="250" version="1.1" width="450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -1035,9 +1035,9 @@
 					}
 					***** this cloning causes a problem, in which deleting the creature through the later case fails *****
 					else*/ if (special_event <= 0.06) { // three in a hundred
-						createLifePath2(); //give birth! :)
-						createLifePath3(); //give birth to a litter! :)
-						createLifePath4(Math.random(), Math.random()); //give birth to a litter! :)
+						createPsyCreat("Bact1",Math.random(), Math.random()); //give birth to a litter! :)
+						createPsyCreat("Bact4",Math.random(), Math.random()); //give birth to a litter! :)
+						createPsyCreat("Bact5",Math.random(), Math.random()); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
 					}
@@ -1440,13 +1440,13 @@
 				createLifePath5(1.5,0.75);
 				break;
 			case "Creature-61":
-				createPsyCreat("Bact1",1.5,0.75);
+				createPsyCreat("bact1",1.5,0.75);
 				break;
 			case "Creature-62":
-				createPsyCreat("Bact4",1.5,0.75);
+				createPsyCreat("bact4",1.5,0.75);
 				break;
 			case "Creature-63":
-				createPsyCreat("Bact5",1.5,0.75);
+				createPsyCreat("bact5",1.5,0.75);
 				break;
 			case "Creature-64":
 				createPsyCreat("Bicho1",1.5,0.75);
@@ -2216,8 +2216,8 @@
 		var cx_new = Math.random()*450 / x; // create random starting x
 		var cy_new = Math.random()*450 / y; // create random starting y
 		
-		var creature_fill = '#'+Math.floor(Math.random()*16777215).toString(16); // random fill color
-		var creature_stroke = '#'+Math.floor(Math.random()*16777215).toString(16); // random stroke color
+//		var creature_fill = '#'+Math.floor(Math.random()*16777215).toString(16); // random fill color
+//		var creature_stroke = '#'+Math.floor(Math.random()*16777215).toString(16); // random stroke color
 				
 		var creature_name = "Creature-"+Math.random(); //e.g. "Creature-0.17239898123"
 	//	var creature_name = creature.getAttribute("id")+"-"+Math.random(); //e.g. "the_rect-0.17239898123"
@@ -2231,7 +2231,7 @@
 			//or use object with {x:y}?
 			//remember that it should be (now or later) flexible enough to accommodte all kinds of curves too...
 			//or could read (from DOM) and then edit the attribute... m the best option... (I think so - eg 5/19/17)
-		creature_array[creature_index].setAttributeNS(null,"href","creatures/png/"+psycreat_type+".png"); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"xlink:href","creatures/png/"+psycreat_type+".png"); // give the new clone a different id.
 		//creature_array[creature_index].setAttributeNS(null,"xmlns:xlink","http://www.w3.org/1999/xlink"); // give the new clone a different id.
 	//	creature_array[creature_index].setAttributeNS(null,"style","fill:"+creature_fill+";stroke:"+creature_stroke); // give the new clone a different id.
 	//	creature_array[creature_index].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
