@@ -11,19 +11,19 @@
 			<td width="30%" valign="top">
 			<p><strong>Contribute to the flow!</strong></p>
 
-			<p></p>
+			<p>Let's collaborate to make a new type! :)</p>
 
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="7FS6H88GTKDQY" />
 			<table>
 				<tbody>
 					<tr>
-						<td><input name="on0" type="hidden" value="Add" />Add:</td>
+						<td><input name="on0" type="hidden" value="Add" />Add species:</td>
 					</tr>
 					<tr>
 						<td><select name="os0"><option value="Little niblet">Little niblet $1.00 USD</option><option value="Medium creature">Medium creature $2.00 USD</option><option value="Big beauty">Big beauty $5.00 USD</option> </select></td>
 					</tr>
 					<tr>
-						<td><input name="on1" type="hidden" value="What do you want to feed life?" />What do you want to feed life?</td>
+						<td><input name="on1" type="hidden" value="What design do you want to feed life?" />What design do you want to feed life?</td>
 					</tr>
 					<tr>
 						<td><input maxlength="200" name="os1" type="text" /></td>
@@ -34,19 +34,19 @@
 
 			<p><strong>Subscribe to the flow!</strong></p>
 
-			<p></p>
+			<p>Let's collaborate to make a new type! :)</p>
 
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="3VNCFPBM8JQM2" />
 			<table>
 				<tbody>
 					<tr>
-						<td><input name="on0" type="hidden" value="Add:" />Add:</td>
+						<td><input name="on0" type="hidden" value="Add:" />Add species:</td>
 					</tr>
 					<tr>
 						<td><select name="os0"><option value="Little niblet">Little niblet : $1.00 USD - weekly</option><option value="Medium creature">Medium creature : $2.00 USD - weekly</option><option value="Big beauty">Big beauty : $5.00 USD - weekly</option> </select></td>
 					</tr>
 					<tr>
-						<td><input name="on1" type="hidden" value="What do you want to feed life?" />What do you want to feed life?</td>
+						<td><input name="on1" type="hidden" value="What design do you want to feed life?" />What design do you want to feed life?</td>
 					</tr>
 					<tr>
 						<td><input maxlength="200" name="os1" type="text" /></td>
@@ -60,13 +60,13 @@
 			<td width=30% valign="top">
 			<p><strong>Rent a private flow area!</strong></p>
 			
-			<p></p>
+			<p>A place to experiment! :)</p>
 			
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="H56HWNAV9S6Z6">
 <table>
-<tr><td><input type="hidden" name="on0" value="Size">Size</td></tr><tr><td><select name="os0">
+<tr><td><input type="hidden" name="on0" value="Size">Size:</td></tr><tr><td><select name="os0">
 	<option value="450 pixel x 450 pixel">450 pixel x 450 pixel : $10.00 USD - monthly</option>
 	<option value="900 pixel x 450 pixel">900 pixel x 450 pixel : $15.00 USD - monthly</option>
 	<option value="900 pixel x 900 pixel">900 pixel x 900 pixel : $20.00 USD - monthly</option>
@@ -131,7 +131,7 @@
 
 <p><b>Some questions for improvement:</b> What do you like or dislike about LifeFLOW? What do you want next? What do you think makes or would make LifeFLOW more useful, beautiful, interesting?</p>
 
-<p><b>Development:</b> LifeFLOW is free and open source (MIT license). <a href="https://github.com/worldsowisdom/LifeFLOW">Come join us (at GitHub) in creating the coolest software on the planet!</a>! :)
+<p><b>Development:</b> LifeFLOW is free and open source (MIT license). <a href="https://github.com/worldsowisdom/LifeFLOW">Come join us (at GitHub) in creating the coolest software on the planet! :)</a>
 
 <p><b>Contact:</b> <a href="mailto:life@worldsowisdom.com?subject=LifeFLOW">life@worldsowisdom.com</a>! :)</p>
 
