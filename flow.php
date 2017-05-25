@@ -6,7 +6,7 @@
 			</div>
 			
 			
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="450px" height="250px">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/svg" width="450px" height="250px">
 
 			
 			<svg id="svg1" onload="Start(evt)" height="250" version="1.1" width="450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
