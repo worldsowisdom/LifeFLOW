@@ -2221,19 +2221,20 @@
 				
 		var creature_name = "Creature-"+Math.random(); //e.g. "Creature-0.17239898123"
 	//	var creature_name = creature.getAttribute("id")+"-"+Math.random(); //e.g. "the_rect-0.17239898123"
-		creature_array[creature_index] = document.createElementNS(xmlns,"path"); //create a new creature! :)
+		creature_array[creature_index] = document.createElementNS(xmlns,"image"); //create a new creature! :)
 	//			getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
 	//	creature_array[creature_index] = document.getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
 		creature_array[creature_index].setAttributeNS(null,"id",creature_name); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
+	//	creature_array[creature_index].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
 			//for now the creature gets some hand-coded articulation points. we should give it an array of points instead... Calling for a storage solution...
 			//creature_array[creature_index][articulation_index]
 			//or use object with {x:y}?
 			//remember that it should be (now or later) flexible enough to accommodte all kinds of curves too...
 			//or could read (from DOM) and then edit the attribute... m the best option... (I think so - eg 5/19/17)
-		creature_array[creature_index].setAttributeNS(null,"style","fill:"+creature_fill+";stroke:"+creature_stroke); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"xlink:href",psycreat_type+".png"); // give the new clone a different id.
+	//	creature_array[creature_index].setAttributeNS(null,"style","fill:"+creature_fill+";stroke:"+creature_stroke); // give the new clone a different id.
+	//	creature_array[creature_index].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
+//		creature_array[creature_index].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
