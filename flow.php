@@ -1336,22 +1336,22 @@
 				createPsyCreat("Bact5",1.5,0.75);
 				break;
 			case "Creature-64":
-				createPsyCreat("Bact1",1.5,0.75);
+				createPsyCreat("Bicho1",1.5,0.75);
 				break;
 			case "Creature-65":
-				createPsyCreat("Bact1",1.5,0.75);
+				createPsyCreat("Bubble3",1.5,0.75);
 				break;
 			case "Creature-66":
-				createPsyCreat("Bact1",1.5,0.75);
+				createPsyCreat("CIRC1",1.5,0.75);
 				break;
 			case "Creature-67":
-				createPsyCreat("Bact1",1.5,0.75);
+				createPsyCreat("flower1",1.5,0.75);
 				break;
 			case "Creature-68":
-				createPsyCreat("Bact1",1.5,0.75);
+				createPsyCreat("star1",1.5,0.75);
 				break;
 			case "Creature-69":
-				createPsyCreat("Bact1",1.5,0.75);
+				createPsyCreat("star2",1.5,0.75);
 				break;
 			case "Creature-70":
 				createLifePath5(1.5,0.75);
