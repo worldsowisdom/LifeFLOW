@@ -987,21 +987,22 @@
 
 	function movePsyCreat(creature_name, x, y) {
 //debug		var blah = "testblah";
+		//var firstRotate = 0; //maybe improve this later...
+			// Getting existing translate X and Y, and rotate, in order to apply subsequent X and Y and rotate
+			var xforms = document.getElementById(creature_name).transform.baseVal; // An SVGTransformList
+			var firstXForm = xforms.getItem(0);       // An SVGTransform
+//			var secondXForm = xforms.getItem(1);	// Rotation too
+			if (firstXForm.type == SVGTransform.SVG_TRANSFORM_TRANSLATE){
+			  var firstX = firstXForm.matrix.e,
+				  firstY = firstXForm.matrix.f;
+			}
+//			var firstRotate = secondXForm.angle; // I think this worx
 	
 		// Figure out nearest neighboring creature! :)
 		if (creature_index > 1) {
 			var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
 		
 			
-			// Getting existing translate X and Y, and rotate, in order to apply subsequent X and Y and rotate
-			var xforms = document.getElementById(creature_name).transform.baseVal; // An SVGTransformList
-			var firstXForm = xforms.getItem(0);       // An SVGTransform
-			var secondXForm = xforms.getItem(1);	// Rotation too
-			if (firstXForm.type == SVGTransform.SVG_TRANSFORM_TRANSLATE){
-			  var firstX = firstXForm.matrix.e,
-				  firstY = firstXForm.matrix.f;
-			}
-			var firstRotate = secondXForm.angle; // I think this worx
 
 			if (staticMode == 0) {
 				//if way out of bounds then mv back
@@ -1106,9 +1107,11 @@
 		} // if multiple creatures (figure out nearest neighbor) 
 
 		//translate creature_name x y
-		rotate_amount = (firstRotate + (x/y*30*(Math.random()-0.5))); // set the total amount of rotation, including previous rotation.
-		pivot_x = (document.getElementById(creature_name).getBoundingClientRect().left + document.getElementById(creature_name).getBoundingClientRect().right) / 2; // average coordinates for pivot around middle.
-		pivot_y = (document.getElementById(creature_name).getBoundingClientRect().top + document.getElementById(creature_name).getBoundingClientRect().bottom) / 2; // average coordinates for pivot around middle.
+		var rotate_amount = ((x/y*3*(Math.random()-0.5))); // set the total amount of rotation, including previous rotation.
+//		var rotate_amount = (firstRotate + (x/y*3*(Math.random()-0.5))); // set the total amount of rotation, including previous rotation.
+//		if (Math.abs(rotate_amount) > 360) {rotate_amount = 0};
+		var pivot_x = (document.getElementById(creature_name).getBoundingClientRect().left + document.getElementById(creature_name).getBoundingClientRect().right) / 2; // average coordinates for pivot around middle.
+		var pivot_y = (document.getElementById(creature_name).getBoundingClientRect().top + document.getElementById(creature_name).getBoundingClientRect().bottom) / 2; // average coordinates for pivot around middle.
 		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+rotate_amount+" "+pivot_x+" "+pivot_y+")"); // transform the creature
 
 	} //movePsyCreat()
