@@ -1302,6 +1302,75 @@
 			case "Creature-52":
 				createLifePath5(1.5,0.75);
 				break;
+			case "Creature-53":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-54":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-55":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-56":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-57":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-58":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-59":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-60":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-61":
+				createPsyCreat("Bact1",1.5,0.75);
+				break;
+			case "Creature-62":
+				createPsyCreat("Bact4",1.5,0.75);
+				break;
+			case "Creature-63":
+				createPsyCreat("Bact5",1.5,0.75);
+				break;
+			case "Creature-64":
+				createPsyCreat("Bact1",1.5,0.75);
+				break;
+			case "Creature-65":
+				createPsyCreat("Bact1",1.5,0.75);
+				break;
+			case "Creature-66":
+				createPsyCreat("Bact1",1.5,0.75);
+				break;
+			case "Creature-67":
+				createPsyCreat("Bact1",1.5,0.75);
+				break;
+			case "Creature-68":
+				createPsyCreat("Bact1",1.5,0.75);
+				break;
+			case "Creature-69":
+				createPsyCreat("Bact1",1.5,0.75);
+				break;
+			case "Creature-70":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-71":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-72":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-73":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-74":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-75":
+				createLifePath5(1.5,0.75);
+				break;
 			//etc.! :)
 			default:
 				createCool();
@@ -1835,6 +1904,76 @@
 		
 		
 	} // createLifePath4()
+
+	function createPsyCreat(psycreat_type, x, y) {
+		//Create a new creature! :)
+		//We'll want to generalize this...
+		//First let's make a new function for new creature type (Spiky), then we can generalize...
+		
+		var cx_new = Math.random()*450 / x; // create random starting x
+		var cy_new = Math.random()*450 / y; // create random starting y
+		
+		var creature_fill = '#'+Math.floor(Math.random()*16777215).toString(16); // random fill color
+		var creature_stroke = '#'+Math.floor(Math.random()*16777215).toString(16); // random stroke color
+				
+		var creature_name = "Creature-"+Math.random(); //e.g. "Creature-0.17239898123"
+	//	var creature_name = creature.getAttribute("id")+"-"+Math.random(); //e.g. "the_rect-0.17239898123"
+		creature_array[creature_index] = document.createElementNS(xmlns,"path"); //create a new creature! :)
+	//			getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
+	//	creature_array[creature_index] = document.getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
+		creature_array[creature_index].setAttributeNS(null,"id",creature_name); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
+			//for now the creature gets some hand-coded articulation points. we should give it an array of points instead... Calling for a storage solution...
+			//creature_array[creature_index][articulation_index]
+			//or use object with {x:y}?
+			//remember that it should be (now or later) flexible enough to accommodte all kinds of curves too...
+			//or could read (from DOM) and then edit the attribute... m the best option... (I think so - eg 5/19/17)
+		creature_array[creature_index].setAttributeNS(null,"style","fill:"+creature_fill+";stroke:"+creature_stroke); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
+		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
+	// add "Creature" class, for later readding/loading! :)
+		creature_array[creature_index].setAttributeNS(null,"class","creatureClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
+						// insert clone_index into clone, for ease of deletion. 
+	//		clone_array[clone_index].setAttribute("clone_index",clone_index); // insert clone_index into clone, for ease of deletion.
+			// or should it be : "onmousedown=deleteClone(clone_index)"...? py...
+			
+	// add <title> (hover-over tip where available) and <desc> (AI)! :)
+		//<title> - this is the hover-over tooltip on desktop/laptop...
+		var creature_title_element = document.createElementNS(xmlns,"title"); // creature_title_element is a <title> element
+		var creature_title = document.createTextNode(creature_name); // creature_title is the creature name. Right now this is autogenerated ID, could be user-given name instead.
+		creature_title_element.appendChild(creature_title); // add ID to <title> (I think this is necessary...)
+		creature_array[creature_index].appendChild(creature_title_element); // add <title> to new creature.
+
+		//<desc> - this is AI! :)
+		// m also add <id="a-##########"> and/or <class="personalityClass>
+		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
+
+		//moving cool creature for now to test static stuff, but should be moveStaticCreature! :) jejeje
+		var creature_desc = document.createTextNode("moveLifePathCreatureNext(\""+creature_name+"\", 1, 1)"); // make it flutter about like some kind of insect or bacterium
+
+//b4smoothy		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+33*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+//orig		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(Math.random()*30,Math.random()*50)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+			//eg_newy.setAttribute("transform", "translate(" +Math.random()*100+ ", " +Math.random()*100+ " )"); // mv randomly! :)
+	//document.getElementById("Creature-0.778706729708058");
+//	eg_newy.setAttribute("transform", "translate(3,5)");
+	
+//	" +Math.random()*100+ ", " +Math.random()*100+ " )");
+
+		creature_desc_element.appendChild(creature_desc); // add AI to <desc> (I think this is necessary...)
+		creature_array[creature_index].appendChild(creature_desc_element); // add <desc> to new creature. Not sure if this worx...
+
+
+	
+		// Add new creaturez to HTML DOM:	
+		document.getElementById("svg2")
+			.insertBefore(creature_array[creature_index], document.getElementById("galaxy3")); // WHERE TO INSERT? add the new clone into the inline svg (to get written automatically to file later)
+				// m instead do an appendChild to svg2 (above)...
+		creature_index++; // go to next creature
+		
+		
+	} // createPsyCreat()
 
 	function createLifePath5(x, y) {
 		//Create a new creature! :)
