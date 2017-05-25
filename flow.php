@@ -993,13 +993,15 @@
 			var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
 		
 			
-			// Getting existing translate X and Y, in order to apply subsequent X and Y
+			// Getting existing translate X and Y, and rotate, in order to apply subsequent X and Y and rotate
 			var xforms = document.getElementById(creature_name).transform.baseVal; // An SVGTransformList
 			var firstXForm = xforms.getItem(0);       // An SVGTransform
+			var secondXForm = xforms.getItem(1);	// Rotation too
 			if (firstXForm.type == SVGTransform.SVG_TRANSFORM_TRANSLATE){
 			  var firstX = firstXForm.matrix.e,
 				  firstY = firstXForm.matrix.f;
-			}		
+			}
+			var firstRotate = secondXForm.angle; // I think this worx
 
 			if (staticMode == 0) {
 				//if way out of bounds then mv back
@@ -1035,7 +1037,7 @@
 						return;
 					}
 					***** this cloning causes a problem, in which deleting the creature through the later case fails *****
-					else*/ if (special_event <= 0.003) { // three in a hundred
+					else*/ if (special_event <= 0.001) { // three in a hundred
 						createPsyCreat("bact1",Math.random(), Math.random()); //give birth to a litter! :)
 						createPsyCreat("bact4",Math.random(), Math.random()); //give birth to a litter! :)
 						createPsyCreat("bact5",Math.random(), Math.random()); //give birth to a litter! :)
@@ -1046,7 +1048,7 @@
 
 					//get eaten once every ten times...
 					//there's some issue w/ deleting if there are clones of this creature around...
-					else if (special_event <= 0.005) { //one in ten, five...
+					else if (special_event <= 0.003) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
@@ -1104,9 +1106,10 @@
 		} // if multiple creatures (figure out nearest neighbor) 
 
 		//translate creature_name x y
+		rotate_amount = (firstRotate + (x/y*30*(Math.random()-0.5))); // set the total amount of rotation, including previous rotation.
 		pivot_x = (document.getElementById(creature_name).getBoundingClientRect().left + document.getElementById(creature_name).getBoundingClientRect().right) / 2; // average coordinates for pivot around middle.
 		pivot_y = (document.getElementById(creature_name).getBoundingClientRect().top + document.getElementById(creature_name).getBoundingClientRect().bottom) / 2; // average coordinates for pivot around middle.
-		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+x/y*(Math.random()-0.5)+" "+pivot_x+" "+pivot_y+")"); // transform the creature
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+rotate_amount+" "+pivot_x+" "+pivot_y+")"); // transform the creature
 
 	} //movePsyCreat()
 
