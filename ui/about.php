@@ -131,7 +131,7 @@
 
 <p><b>Some questions for improvement:</b> What do you like or dislike about LifeFLOW? What do you want next? What do you think makes or would make LifeFLOW more useful, beautiful, interesting?</p>
 
-<p><b>Development:</b> LifeFLOW is free and open source (MIT license). <a href="https://github.com/worldsowisdom/LifeFLOW">Come join us (at GitHub) in creating the coolest software on the planet!</a>! :)
+<p><b>Development:</b> LifeFLOW is free and open source (MIT license). <a href="https://github.com/worldsowisdom/LifeFLOW">Come join us (at GitHub) in creating the coolest software on the planet! :)</a>
 
 <p><b>Contact:</b> <a href="mailto:life@worldsowisdom.com?subject=LifeFLOW">life@worldsowisdom.com</a>! :)</p>
 
