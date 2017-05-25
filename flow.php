@@ -1437,7 +1437,7 @@
 				createLifePath5(1.5,0.75);
 				break;
 			case "Creature-60":
-				createLifePath5(1.5,0.75);
+				createPsyCreat("bubble3",1.5,0.75);
 				break;
 			case "Creature-61":
 				createPsyCreat("bact1",1.5,0.75);
@@ -1449,10 +1449,10 @@
 				createPsyCreat("bact5",1.5,0.75);
 				break;
 			case "Creature-64":
-				createPsyCreat("Bicho1",1.5,0.75);
+				createPsyCreat("bicho1",1.5,0.75);
 				break;
 			case "Creature-65":
-				createPsyCreat("Bubble3",1.5,0.75);
+				createPsyCreat("bubble3",1.5,0.75);
 				break;
 			case "Creature-66":
 				createPsyCreat("CIRC1",1.5,0.75);
