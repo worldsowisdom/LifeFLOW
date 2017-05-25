@@ -1107,7 +1107,7 @@
 		} // if multiple creatures (figure out nearest neighbor) 
 
 		//translate creature_name x y
-		var rotate_amount = ((x/y*3*(Math.random()-0.5))); // set the total amount of rotation, including previous rotation.
+		var rotate_amount = ((x/y*2*(Math.random()-0.5))); // set the total amount of rotation, including previous rotation.
 //		var rotate_amount = (firstRotate + (x/y*3*(Math.random()-0.5))); // set the total amount of rotation, including previous rotation.
 //		if (Math.abs(rotate_amount) > 360) {rotate_amount = 0};
 		var pivot_x = (document.getElementById(creature_name).getBoundingClientRect().left + document.getElementById(creature_name).getBoundingClientRect().right) / 2; // average coordinates for pivot around middle.
