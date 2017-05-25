@@ -2231,8 +2231,8 @@
 			//or use object with {x:y}?
 			//remember that it should be (now or later) flexible enough to accommodte all kinds of curves too...
 			//or could read (from DOM) and then edit the attribute... m the best option... (I think so - eg 5/19/17)
-		creature_array[creature_index].setAttributeNS(null,"xlink:href","creatures/png/"+psycreat_type+".png"); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"xmlns:xlink","http://www.w3.org/1999/xlink"); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"href","creatures/png/"+psycreat_type+".png"); // give the new clone a different id.
+		//creature_array[creature_index].setAttributeNS(null,"xmlns:xlink","http://www.w3.org/1999/xlink"); // give the new clone a different id.
 	//	creature_array[creature_index].setAttributeNS(null,"style","fill:"+creature_fill+";stroke:"+creature_stroke); // give the new clone a different id.
 	//	creature_array[creature_index].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
 //		creature_array[creature_index].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
