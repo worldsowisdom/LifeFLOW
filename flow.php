@@ -1272,6 +1272,36 @@
 			case "Creature-42":
 				createLifePath5(1.5,0.75);
 				break;
+			case "Creature-43":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-44":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-45":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-46":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-47":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-48":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-49":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-50":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-51":
+				createLifePath5(1.5,0.75);
+				break;
+			case "Creature-52":
+				createLifePath5(1.5,0.75);
+				break;
 			//etc.! :)
 			default:
 				createCool();
