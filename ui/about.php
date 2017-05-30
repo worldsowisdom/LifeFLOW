@@ -119,6 +119,8 @@
 
 <p>You can think of LifeFLOW as a digital <a href="https://en.wikipedia.org/wiki/Vivarium">vivarium</a>, or <b><i>digitarium</i></b> (i.e. a <a href="https://life.worldsowisdom.com/?q=node/91">virtual terrarium/aquarium</a>). We create and play with living electronic creatures who travel their environmental realms. How cool is that? :)</p>
 
+<p>A hylozoogical garden, a constructal instructal, a physical living receptacle between the mathematical and the biological, however you look at it LifeFLOW is a perspective-warping wonderworld! :)</p>
+
 <p>LifeFLOW is a little place where we can play with moving machines. Each of these creatures goes around the area exploring and playing. You can observe them move, interact with them by touching, cloning, creating, removing, and more. New features continue to become available. You can also navigate around many different areas. <strong>Please contribute something to the flow, and enjoy! :)</strong></p>
 
 <p>For extra special creatures, we store information about them at <b><a href="http://life.worldsowisdom.com/?q=bank">LifeBANK</a></b>. This includes data like name and code, and metadata like imagery and what makes each creature so special.</p>
