@@ -80,7 +80,7 @@
 
 			<p><a href="mailto:life@worldsowisdom.com?subject=Free LifeFLOW area"><img src="img/LifeFLOWzone-11.png"></p>
 			
-			<p>FREE LifeFLOW area - E-mail now!</a></p>
+			<p>Free LifeFLOW area - E-mail now!</a></p>
 			
 			</td>
 
