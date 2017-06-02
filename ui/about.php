@@ -7,9 +7,13 @@
 
 			
 			<!--CONTRIBUTIONS-->
+			<p><div id="contribute">
+			
+			<a href="#" onclick="toggle_visibility('contribute');"> test</a>
 			
 			<td width="30%" valign="top">
-			<p><strong>Contribute to the flow!</strong></p>
+			
+			<strong>Contribute to the flow!</strong></p>
 
 			<p>Let's collaborate to make a new type! :)</p>
 
@@ -77,6 +81,9 @@
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
+
+		</div>
+		
 
 			<p><a href="mailto:life@worldsowisdom.com?subject=Free LifeFLOW area"><img src="img/LifeFLOWzone-11.png"></p>
 			

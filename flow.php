@@ -241,7 +241,21 @@
 		
 	}
 
-  
+
+	function toggle_visibility(id) {
+		
+		// utility function to show/hide components of the site.
+		// in use for example to show/hide the contribution buttonz! :)
+		
+		var toggleElement = document.getElementById(id); // use id as HTML element to show/hide
+		if (toggleElement.style.display == 'block')
+			toggleElement.style.display = 'none';
+		else
+			toggleElement.style.display = 'block';
+		//the above toggles the element on/off. we may instead want to replace in the DOM between a Contribute blue/green button, and the actual contribution buttonz! :)
+	}
+
+	
 	function dw_encodeVars(params) {
 		var str = '';
 		for (var i in params ) {
