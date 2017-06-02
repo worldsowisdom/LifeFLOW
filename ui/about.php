@@ -9,8 +9,9 @@
 			<!--CONTRIBUTIONS-->
 			<p><div id="contribute">
 			
-			<a href="#" onclick="toggle_visibility('contribute');"> test</a>
-			
+			<a href="#" onclick="toggle_visibility('contribute');"> test show/hide</a>
+			<a href="#" onclick="showContribute();"> test replace</a>
+	
 			<td width="30%" valign="top">
 			
 			<strong>Contribute to the flow!</strong></p>

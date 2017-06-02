@@ -254,6 +254,14 @@
 			toggleElement.style.display = 'block';
 		//the above toggles the element on/off. we may instead want to replace in the DOM between a Contribute blue/green button, and the actual contribution buttonz! :)
 	}
+	
+	
+	function showContribute() {
+		// show the contribution buttonz! :)
+		
+		document.getElementById("contribute")
+		  .replaceChild(document.getElementById("svgContainerCreatures").childNodes[1],document.getElementById("contribute").childNodes[1]);
+	}
 
 	
 	function dw_encodeVars(params) {
