@@ -9,15 +9,21 @@
 			<!--CONTRIBUTIONS-->
 			<p><div id="contribute">
 			
-		<div id="contributePlaceholder">
+		<div id="contributePlaceholder">testPlaceholder
+			<a href="#" onclick="toggle_visibility('contribute');"> test show/hide</a>
+			<a href="#" onclick="showContribute();"> test replace</a>
+			<a href="#" onclick="toggle_visibility('contributePlaceholder');"> test show/hide Placeholder</a>
+			<p onclick="toggle_visibility('contributeFull');"> test show/hide Full</p>
+		</div>
+	
+	
+			<div id="contributeFull">testFull
 			<a href="#" onclick="toggle_visibility('contribute');"> test show/hide</a>
 			<a href="#" onclick="showContribute();"> test replace</a>
 			<a href="#" onclick="toggle_visibility('contributePlaceholder');"> test show/hide Placeholder</a>
 			<a href="#" onclick="toggle_visibility('contributeFull');"> test show/hide Full</a>
-		</div>
-	
-	
-			<div id="contributeFull">
+			<td width="22%">blah within td</td>
+			
 			<td width="30%" valign="top">
 			
 			<strong>Contribute to the flow!</strong></p>
