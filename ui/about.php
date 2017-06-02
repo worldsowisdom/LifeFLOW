@@ -9,9 +9,15 @@
 			<!--CONTRIBUTIONS-->
 			<p><div id="contribute">
 			
+		<div id="contributePlaceholder">
 			<a href="#" onclick="toggle_visibility('contribute');"> test show/hide</a>
 			<a href="#" onclick="showContribute();"> test replace</a>
+			<a href="#" onclick="toggle_visibility('contributePlaceholder');"> test show/hide Placeholder</a>
+			<a href="#" onclick="toggle_visibility('contributeFull');"> test show/hide Full</a>
+		</div>
 	
+	
+			<div id="contributeFull">
 			<td width="30%" valign="top">
 			
 			<strong>Contribute to the flow!</strong></p>
@@ -83,6 +89,9 @@
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
+		</div>
+		
+		
 		</div>
 		
 

@@ -259,8 +259,13 @@
 	function showContribute() {
 		// show the contribution buttonz! :)
 		
+		// build up the contribute text
+		
+		
+		// replace the placeholder with the full contribute text we've built above! :)
+		
 		document.getElementById("contribute")
-		  .replaceChild(document.getElementById("svgContainerCreatures").childNodes[1],document.getElementById("contribute").childNodes[1]);
+		  .replaceChild(document.getElementById("contributeFull").childNodes[1],document.getElementById("contributePlaceholder").childNodes[1]);
 	}
 
 	
