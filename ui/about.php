@@ -97,7 +97,7 @@
 			<div class="addthis_sharing_toolbox"></div>
 			</td>
 			
-			<td valign="top" align="center" style="width:40px">
+			<td valign="top" style="width:40px">
 			<p><strong>Sponsors</strong></p>
 			<a href="http://eaglegamma.com/writing/el-burrito-que-queria-volar/"><img src="http://eaglegamma.com/wp-content/uploads/Burrito-front-300x193.png" width="160" /><br><i>El burrito que quer&iacute;a volar<br>The Flying Burrito</i><br>Print Edition<br>BONUS: English & Español!<br>200 Mexican pesos <br>$11.50 US</a></center>
 
