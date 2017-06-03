@@ -251,7 +251,7 @@
 		if (toggleElement.style.display != 'none')
 			toggleElement.style.display = 'none';
 		else
-			toggleElement.style.display = 'block';
+			toggleElement.style.display = 'inline';
 		//the above toggles the element on/off. we may instead want to replace in the DOM between a Contribute blue/green button, and the actual contribution buttonz! :)
 	}
 	
