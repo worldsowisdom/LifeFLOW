@@ -34,7 +34,7 @@
 			</table>
 			<input name="currency_code" type="hidden" value="USD" /> <input alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" type="image" /> <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" /></form>
 
-			<p onclick="toggle_visibility('contributeFull');"><b>Click for more ways to contribute! :)</b></p>
+			<p onclick="toggle_visibility('contributeFull');"><b>Click for more ways to contribute!</b></p>
 			
 			<p onclick="toggle_visibility('contributeFull');"><img src="img/LifeFLOWzone-11.png"></p>
 			
@@ -97,9 +97,9 @@
 			<div class="addthis_sharing_toolbox"></div>
 			</td>
 			
-			<td valign="top" align="center">
+			<td valign="top" align="center" style="width:40px">
 			<p><strong>Sponsors</strong></p>
-			<a href="http://eaglegamma.com/writing/el-burrito-que-queria-volar/"><img src="http://eaglegamma.com/wp-content/uploads/Burrito-front-300x193.png" width="160" /> El burrito que quer&iacute;a volar <br>Print Edition <br>BONUS: English & Español!<br>200 Mexican pesos <br>$11.50 US</a></center>
+			<a href="http://eaglegamma.com/writing/el-burrito-que-queria-volar/"><img src="http://eaglegamma.com/wp-content/uploads/Burrito-front-300x193.png" width="160" /><br><i>El burrito que quer&iacute;a volar<br>The Flying Burrito</i><br>Print Edition<br>BONUS: English & Español!<br>200 Mexican pesos <br>$11.50 US</a></center>
 
 			</td>
 		</tr>
