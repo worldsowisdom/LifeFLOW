@@ -17,6 +17,7 @@
 		</div>
 	
 	
+			<div>testFull
 			<a href="#" onclick="toggle_visibility('contribute');"> test show/hide</a>
 			<a href="#" onclick="showContribute();"> test replace</a>
 			<a href="#" onclick="toggle_visibility('contributePlaceholder');"> test show/hide Placeholder</a>
@@ -93,6 +94,7 @@
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
+		</div>
 		
 		
 		</div>
