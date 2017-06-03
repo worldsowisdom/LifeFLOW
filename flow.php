@@ -248,7 +248,7 @@
 		// in use for example to show/hide the contribution buttonz! :)
 		
 		var toggleElement = document.getElementById(id); // use id as HTML element to show/hide
-		if (toggleElement.style.display == 'block')
+		if (toggleElement.style.display != 'none')
 			toggleElement.style.display = 'none';
 		else
 			toggleElement.style.display = 'block';

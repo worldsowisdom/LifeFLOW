@@ -23,7 +23,7 @@
 			<a href="#" onclick="toggle_visibility('contributePlaceholder');"> test show/hide Placeholder</a>
 			<a href="#" onclick="toggle_visibility('contributeFull');"> test show/hide Full</a>
 			
-			<td id="contributeFull" width="30%" valign="top">
+			<td width="30%" valign="top">
 			
 			<strong>Contribute to the flow!</strong></p>
 
@@ -54,7 +54,8 @@
 
 
 			</td>
-			<td width=30% valign="top">
+
+			<td id="contributeFull" width=30% valign="top">
 
 			<p><strong>Subscribe to the flow!</strong></p>
 
