@@ -50,9 +50,9 @@
 
 			<p onclick="toggle_visibility('contributeFull');"><b>Click for more ways to contribute! :)</b></p>
 			
-			<p><a href="mailto:life@worldsowisdom.com?subject=Free LifeFLOW area"><img src="img/LifeFLOWzone-11.png"></p>
+			<p onclick="toggle_visibility('contributeFull');"><img src="img/LifeFLOWzone-11.png"></p>
 			
-			<p>Free LifeFLOW area - E-mail now!</a></p>
+			<p><a href="mailto:life@worldsowisdom.com?subject=Free LifeFLOW area">Free LifeFLOW area - E-mail now!</a></p>
 
 
 			</td>
