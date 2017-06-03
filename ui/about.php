@@ -7,11 +7,11 @@
 
 			
 			<!--CONTRIBUTIONS-->
-			<p>
+			
 
 			<td width="30%" valign="top">
 			
-			<strong>Contribute to the flow!</strong></p>
+			<p><strong>Contribute to the flow!</strong></p>
 
 			<p>Let's collaborate to make a new type! :)</p>
 
@@ -89,7 +89,7 @@
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-
+		<p onclick="toggle_visibility('contributeFull');">[Click to hide contributions]</p>
 			
 			</td>
 
