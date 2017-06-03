@@ -7,22 +7,8 @@
 
 			
 			<!--CONTRIBUTIONS-->
-			<p><div id="contribute">
-			
-		<div id="contributePlaceholder">testPlaceholder
-			<a href="#" onclick="toggle_visibility('contribute');"> test show/hide</a>
-			<a href="#" onclick="showContribute();"> test replace</a>
-			<a href="#" onclick="toggle_visibility('contributePlaceholder');"> test show/hide Placeholder</a>
-			<p onclick="toggle_visibility('contributeFull');"> test show/hide Full</p>
-		</div>
-	
-	
-			<div>testFull
-			<a href="#" onclick="toggle_visibility('contribute');"> test show/hide</a>
-			<a href="#" onclick="showContribute();"> test replace</a>
-			<a href="#" onclick="toggle_visibility('contributePlaceholder');"> test show/hide Placeholder</a>
-			<a href="#" onclick="toggle_visibility('contributeFull');"> test show/hide Full</a>
-			
+			<p>
+
 			<td width="30%" valign="top">
 			
 			<strong>Contribute to the flow!</strong></p>
@@ -103,11 +89,6 @@
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-		</div>
-		
-		
-		</div>
-		
 
 			
 			</td>
@@ -120,7 +101,6 @@
 			<p><strong>Sponsors</strong></p>
 			<a href="http://eaglegamma.com/writing/el-burrito-que-queria-volar/"><img src="http://eaglegamma.com/wp-content/uploads/Burrito-front-300x193.png" width="160" /> El burrito que quer&iacute;a volar <br>Print Edition <br>BONUS: English & Español!<br>200 Mexican pesos <br>$11.50 US</a></center>
 
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="HA5GGA9SNPZMN" /> <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" type="image" /> <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" /></form>
 			</td>
 		</tr>
 
