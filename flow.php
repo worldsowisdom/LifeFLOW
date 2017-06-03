@@ -241,7 +241,34 @@
 		
 	}
 
-  
+
+	function toggle_visibility(id) {
+		
+		// utility function to show/hide components of the site.
+		// in use for example to show/hide the contribution buttonz! :)
+		
+		var toggleElement = document.getElementById(id); // use id as HTML element to show/hide
+		if (toggleElement.style.display != 'none')
+			toggleElement.style.display = 'none';
+		else
+			toggleElement.style.display = 'table-cell';
+		//the above toggles the element on/off. we may instead want to replace in the DOM between a Contribute blue/green button, and the actual contribution buttonz! :)
+	}
+	
+	
+	function showContribute() {
+		// show the contribution buttonz! :)
+		
+		// build up the contribute text
+		
+		
+		// replace the placeholder with the full contribute text we've built above! :)
+		
+		document.getElementById("contribute")
+		  .replaceChild(document.getElementById("contributeFull").childNodes[1],document.getElementById("contributePlaceholder").childNodes[1]);
+	}
+
+	
 	function dw_encodeVars(params) {
 		var str = '';
 		for (var i in params ) {

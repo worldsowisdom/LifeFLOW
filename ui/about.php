@@ -8,7 +8,9 @@
 			
 			<!--CONTRIBUTIONS-->
 			
+
 			<td width="30%" valign="top">
+			
 			<p><strong>Contribute to the flow!</strong></p>
 
 			<p>Let's collaborate to make a new type! :)</p>
@@ -31,6 +33,17 @@
 				</tbody>
 			</table>
 			<input name="currency_code" type="hidden" value="USD" /> <input alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" type="image" /> <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" /></form>
+
+			<p onclick="toggle_visibility('contributeFull');"><b>Click for more ways to contribute!</b></p>
+			
+			<p onclick="toggle_visibility('contributeFull');"><img src="img/LifeFLOWzone-11.png"></p>
+			
+			<p><a href="mailto:life@worldsowisdom.com?subject=Free LifeFLOW area">Free LifeFLOW area - E-mail now!</a></p>
+
+
+			</td>
+
+			<td id="contributeFull" width=30% valign="top" style="display:none";>
 
 			<p><strong>Subscribe to the flow!</strong></p>
 
@@ -56,8 +69,6 @@
 			<input name="currency_code" type="hidden" value="USD" /> <input alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" type="image" /> <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" /></form>
 
 
-			</td>
-			<td width=30% valign="top">
 			<p><strong>Rent a private flow area!</strong></p>
 			
 			<p>A place to experiment! :)</p>
@@ -78,9 +89,7 @@
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-			<p><a href="mailto:life@worldsowisdom.com?subject=Free LifeFLOW area"><img src="img/LifeFLOWzone-11.png"></p>
-			
-			<p>Free LifeFLOW area - E-mail now!</a></p>
+		<p onclick="toggle_visibility('contributeFull');">[Click to hide contributions]</p>
 			
 			</td>
 
@@ -88,11 +97,10 @@
 			<div class="addthis_sharing_toolbox"></div>
 			</td>
 			
-			<td valign="top" align="center">
+			<td valign="top" style="width:40px">
 			<p><strong>Sponsors</strong></p>
-			<a href="http://eaglegamma.com/writing/el-burrito-que-queria-volar/"><img src="http://eaglegamma.com/wp-content/uploads/Burrito-front-300x193.png" width="160" /> El burrito que quer&iacute;a volar <br>Print Edition <br>BONUS: English & Español!<br>200 Mexican pesos <br>$11.50 US</a></center>
+			<a href="http://eaglegamma.com/writing/el-burrito-que-queria-volar/"><img src="http://eaglegamma.com/wp-content/uploads/Burrito-front-300x193.png" width="160" /><br><i>El burrito que quer&iacute;a volar<br>The Flying Burrito</i><br>Print Edition<br>BONUS: English & Español!<br>200 Mexican pesos <br>$11.50 US</a></center>
 
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="HA5GGA9SNPZMN" /> <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" type="image" /> <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" /></form>
 			</td>
 		</tr>
 
