@@ -48,6 +48,14 @@
 			</table>
 			<input name="currency_code" type="hidden" value="USD" /> <input alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" type="image" /> <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" /></form>
 
+			<p><a href="mailto:life@worldsowisdom.com?subject=Free LifeFLOW area"><img src="img/LifeFLOWzone-11.png"></p>
+			
+			<p>Free LifeFLOW area - E-mail now!</a></p>
+
+
+			</td>
+			<td width=30% valign="top">
+
 			<p><strong>Subscribe to the flow!</strong></p>
 
 			<p>Let's collaborate to make a new type! :)</p>
@@ -72,8 +80,6 @@
 			<input name="currency_code" type="hidden" value="USD" /> <input alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" type="image" /> <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" /></form>
 
 
-			</td>
-			<td width=30% valign="top">
 			<p><strong>Rent a private flow area!</strong></p>
 			
 			<p>A place to experiment! :)</p>
@@ -100,9 +106,6 @@
 		</div>
 		
 
-			<p><a href="mailto:life@worldsowisdom.com?subject=Free LifeFLOW area"><img src="img/LifeFLOWzone-11.png"></p>
-			
-			<p>Free LifeFLOW area - E-mail now!</a></p>
 			
 			</td>
 
