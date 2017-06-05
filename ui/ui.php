@@ -392,6 +392,6 @@
        cy="56"
        r="11.481482" />
 	   
-	<text id="Button10Text" class="ButtonText" x="390" y="90" font-size="12">Touch</text>	
+	<text id="Button10Text" class="ButtonText" x="391" y="90" font-size="12">Touch</text>	
 	   
 </g>
