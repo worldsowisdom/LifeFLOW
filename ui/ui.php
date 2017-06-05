@@ -221,7 +221,7 @@
 	<!--Button 5: New rectangular creature-->
 	
 	<g id="CreateRect" opacity="0.3"
-				onmouseout="setAttribute('opacity','0.5')" onmouseover="setAttribute('opacity','0.9')" onmousedown="createRect()";>
+				onmouseout="setAttribute('opacity','0.3')" onmouseover="setAttribute('opacity','0.9')" onmousedown="createRect()";>
 				<title>Create a rectangle! :)</title>
 			
 			<rect height="32" width="32" x="190" y="40" id="Button5" style="fill:red;stroke:pink"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
