@@ -186,8 +186,8 @@
 	
 	<!--Button4: New cool creature-->
 	
-	<g id="CreateCool"
-				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="createCool()";>
+	<g id="CreateCool" opacity="0.5"
+				onmouseout="setAttribute('opacity','0.5')" onmouseover="setAttribute('opacity','0.9')" onmousedown="createCool()";>
 				<title>Create a cool creature! :)</title>
 	
 			<rect height="32" width="32" x="150" y="40" id="Button4"  style="fill:yellow;stroke:lightgreen;opacity:0.75" onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','1.0')"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
@@ -212,11 +212,11 @@
 
 	<!--Button 5: New rectangular creature-->
 	
-	<g id="CreateRect"
-				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="createRect()";>
+	<g id="CreateRect" opacity="0.5"
+				onmouseout="setAttribute('opacity','0.5')" onmouseover="setAttribute('opacity','0.9')" onmousedown="createRect()";>
 				<title>Create a rectangle! :)</title>
 			
-			<rect height="32" width="32" x="190" y="40" id="Button5" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:red;stroke:pink"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
+			<rect height="32" width="32" x="190" y="40" id="Button5" style="fill:red;stroke:pink"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
 			</rect>
 			
 			
@@ -239,11 +239,11 @@
 
 	<!-- Button 6: New circular creature -->
 			
-	<g id="Create"
-				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="createSmoothy()";>
+	<g id="Create" opacity="0.5"
+				onmouseout="setAttribute('opacity','0.5')" onmouseover="setAttribute('opacity','0.9')" onmousedown="createSmoothy()";>
 				<title>Create a circle! :)</title>
 			
-			<rect height="32" width="32" x="230" y="40" id="Button7" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:blue;stroke:lightgreen"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
+			<rect height="32" width="32" x="230" y="40" id="Button7" style="fill:blue;stroke:lightgreen"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
 			</rect>
 			
 			
@@ -277,11 +277,11 @@
 
 	<!--Button 7: Delete creature! :)-->
 	
-	<g id="Delete"
-				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="setTool('Delete')";>
+	<g id="Delete" opacity="0.5"
+				onmouseout="setAttribute('opacity','0.5')" onmouseover="setAttribute('opacity','0.9')" onmousedown="setTool('Delete')";>
 				<title>Delete creature! :)</title>
 	
-			<rect height="32" width="32" x="270" y="40" id="Button6" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:brown;stroke:orange"> <desc id="Delete creature button! :)">A button to delete creatures in LifeFLOW :)</desc>
+			<rect height="32" width="32" x="270" y="40" id="Button6" style="fill:brown;stroke:orange"> <desc id="Delete creature button! :)">A button to delete creatures in LifeFLOW :)</desc>
 			</rect>
 
 			
@@ -304,11 +304,11 @@
 	<!--Button 8: Creature Browser!!! :)-->
 			<!--button 8 exterior-->
 			
-	<g id="CreatureBrowser"
-				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="browse()";>
+	<g id="CreatureBrowser" opacity="0.85"
+				onmouseout="setAttribute('opacity','0.85')" onmouseover="setAttribute('opacity','0.95')" onmousedown="browse()";>
 
 				<a style="fill-opacity:0.75">
-			<rect height="32" width="32" x="310" y="40" id="Button8" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:purple;stroke:lightpurple"> <desc id="Nth button on toolbar! :)">Creature browser! :)</desc><title>Browse creatures! :)</title>
+			<rect height="32" width="32" x="310" y="40" id="Button8" style="fill:purple;stroke:lightpurple"> <desc id="Nth button on toolbar! :)">Creature browser! :)</desc><title>Browse creatures! :)</title>
 			</rect> </a> 
 
 
@@ -331,10 +331,9 @@
 			
 		<!--button 9 exterior-->
 
-<g id="Navigate"
+<g id="Navigate" opacity="0.85"
 			onmousedown="navigate()"
-			onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')"
-><title>Navigate areas! :)</title>
+			onmouseout="setAttribute('opacity','0.85')" onmouseover="setAttribute('opacity','0.95')"><title>Navigate areas! :)</title>
 
 			<rect height="32" width="32" x="350" y="40" id="Button9ext" style="fill:blue;stroke:lightblue"> <desc id="First button on toolbar! :)"></desc>
 			
@@ -358,8 +357,8 @@
 
 <!--Button10: Touch-->
 
-<g id="Touch"
-		onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="setTool('Touch')";>
+<g id="Touch" opacity="0.85"
+		onmouseout="setAttribute('opacity','0.85')" onmouseover="setAttribute('opacity','0.95')" onmousedown="setTool('Touch')";>
 <title>Touch creature! :)</title>		
 			
 			<rect height="32" width="32" x="390" y="40" id="Button10" style="fill:almond;stroke:vanilla;fill-opacity:0.75"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
