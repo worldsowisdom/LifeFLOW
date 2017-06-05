@@ -119,6 +119,8 @@
          id="path4337"
          style="opacity:1;fill:#00ffff;stroke:#0000ff;stroke-width:0.27237353;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
+	
+	<text id="Button1Test" x="320" y="40">Clone</text>
 			
 			
 	</g>
