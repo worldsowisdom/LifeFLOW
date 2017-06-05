@@ -120,7 +120,7 @@
          style="opacity:1;fill:#00ffff;stroke:#0000ff;stroke-width:0.27237353;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
 	
-	<text id="Button1Text" class="ButtonText" x="30" y="90" font-size="12">Clone</text>
+	<text id="Button1Text" class="ButtonText" x="32" y="90" font-size="12">Clone</text>
 			
 			
 	</g>
@@ -150,7 +150,7 @@
 				   id="path4147"
 				   style="fill:#0000ff;stroke:#800080;stroke-width:0.18216613" />
 
-	<text id="Button2Text" class="ButtonText" x="70" y="90" font-size="12">Reverse</text>
+	<text id="Button2Text" class="ButtonText" x="67" y="90" font-size="12">Reverse</text>
 				   
 				   
 	</g>
@@ -185,7 +185,7 @@
          inkscape:connector-curvature="0" />
     </g>
 
-	<text id="Button3Text" class="ButtonText" x="120" y="90" font-size="12">Slow</text>
+	<text id="Button3Text" class="ButtonText" x="114" y="90" font-size="12">Slow</text>
 
 	
 	</g>
@@ -212,7 +212,7 @@
          d="m 157,48 c 0.62487,2.34949 1.41706,4.64194 1.9962,7.00388 0.74369,3.54565 1.04609,7.16208 1.24807,10.77317 0.12749,1.93138 0.11921,3.86839 -0.44216,5.72955 0,0 4.32362,-5.65785 4.32362,-5.65785 l 0,0 c 0.3595,-1.85435 0.27347,-3.74107 0.0878,-5.6147 -0.30015,-3.64562 -0.49691,-7.32684 -1.30362,-10.90386 -0.62037,-2.43924 -1.41164,-4.84433 -1.76227,-7.34327 0,0 -4.14759,6.01308 -4.14759,6.01308 z" />
     </g>
 
-	<text id="Button4Text" class="ButtonText" x="160" y="90" font-size="12">Cool</text>	
+	<text id="Button4Text" class="ButtonText" x="155" y="90" font-size="12">Cool</text>	
 	
 	</g>
 			
@@ -243,7 +243,7 @@
          inkscape:connector-curvature="0" />
     </g>
 
-	<text id="Button5Text" class="ButtonText" x="200" y="90" font-size="12">Recty</text>	
+	<text id="Button5Text" class="ButtonText" x="193" y="90" font-size="12">Recty</text>	
 	
 	</g>
 
@@ -283,7 +283,7 @@
          inkscape:connector-curvature="0" />
     </g>
 
-	<text id="Button5Text" class="ButtonText" x="240" y="90" font-size="12">Circy</text>	
+	<text id="Button6Text" class="ButtonText" x="233" y="90" font-size="12">Circy</text>	
     
 	</g>
 
@@ -311,7 +311,7 @@
          style="opacity:1;fill:#ff0000;stroke:#0000ff;stroke-width:0.74645996;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
 	
-	<text id="Button6Text" class="ButtonText" x="270" y="90" font-size="12">Delete</text>	
+	<text id="Button7Text" class="ButtonText" x="269" y="90" font-size="12">Delete</text>	
     
 	</g>
 
@@ -339,7 +339,7 @@
          id="desc4311">Creature browser icon</desc>
     </rect>
 
-	<text id="Button7Text" class="ButtonText" x="300" y="90" font-size="12">Browse</text>	
+	<text id="Button8Text" class="ButtonText" x="305" y="90" font-size="12">Browse</text>	
 	
 	</g>
 
@@ -369,7 +369,7 @@
          id="desc4311">Save icon</desc>
     </rect>
 	
-	<text id="Button9Text" class="ButtonText" x="330" y="90" font-size="12">Navigate</text>	
+	<text id="Button9Text" class="ButtonText" x="344" y="90" font-size="12">Navigate</text>	
 	
 	
 </g>
@@ -392,6 +392,6 @@
        cy="56"
        r="11.481482" />
 	   
-	<text id="Button10Text" class="ButtonText" x="400" y="90" font-size="12">Touch</text>	
+	<text id="Button10Text" class="ButtonText" x="390" y="90" font-size="12">Touch</text>	
 	   
 </g>
