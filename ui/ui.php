@@ -92,12 +92,12 @@
 
 	<!--Button 1: Clone creature-->
 	
-	<g id="Clone"
-			onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="setTool('Clone')";>
+	<g id="Clone" opacity="0.5"
+			onmouseout="setAttribute('opacity','0.5')" onmouseover="setAttribute('opacity','.9')" onmousedown="setTool('Clone')";>
 			<title>Clone creature! :)</title>
 
 		
-			<rect height="32" width="32" x="30" y="40" id="Button1" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:green;stroke:lightgreen"><desc id="First button on toolbar! :)">Inspect creature! :)</desc>
+			<rect height="32" width="32" x="30" y="40" id="Button1" style="fill:green;stroke:lightgreen"><desc id="First button on toolbar! :)">Inspect creature! :)</desc>
 			</rect>
 
     <g
@@ -126,7 +126,7 @@
 	
 		<!--Button 2: Reverse flow-->
 	
-	<g id="Reverse"
+	<g id="Reverse" opacity="0.5"
 				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="setTool('Reverse')";>
 				<title>Reverse flow! :)</title>
 
