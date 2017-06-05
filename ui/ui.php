@@ -156,11 +156,11 @@
 	
 		<!--Button 3: Slow flow-->
 	
-	<g id="Slow"
-				onmouseout="setAttribute('fill-opacity','0.75')" onmouseover="setAttribute('fill-opacity','0.9')" onmousedown="setTool('Slow')";>
+	<g id="Slow" opacity="0.5"
+				onmouseout="setAttribute('opacity','0.5')" onmouseover="setAttribute('opacity','0.9')" onmousedown="setTool('Slow')";>
 				<title>Slow flow! :)</title>
 
-			<rect height="32" width="32" x="110" y="40" id="Button3" onmousedown="Speed()" onmouseout="setAttribute('fill-opacity','0.5')" onmouseover="setAttribute('fill-opacity','1.0')" style="fill:green;stroke:lightgreen"> 
+			<rect height="32" width="32" x="110" y="40" id="Button3" onmousedown="Speed()" style="fill:green;stroke:lightgreen"> 
 			<title><desc id="First button on toolbar! :)">Pause/Resume! :)</desc></title>
 			</rect>
 			
