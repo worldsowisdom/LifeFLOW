@@ -92,8 +92,8 @@
 
 	<!--Button 1: Clone creature-->
 	
-	<g id="Clone" opacity="0.3"
-			onmouseout="setAttribute('opacity','0.3')" onmouseover="setAttribute('opacity','.9')" onmousedown="setTool('Clone')";>
+	<g id="Clone" opacity="0.5"
+			onmouseout="setAttribute('opacity','0.5')" onmouseover="setAttribute('opacity','.9')" onmousedown="setTool('Clone')";>
 			<title>Clone creature! :)</title>
 
 		
@@ -128,8 +128,8 @@
 	
 		<!--Button 2: Reverse flow-->
 	
-	<g id="Reverse" opacity="0.3"
-				onmouseout="setAttribute('opacity','0.3')" onmouseover="setAttribute('opacity','0.9')" onmousedown="setTool('Reverse')";>
+	<g id="Reverse" opacity="0.5"
+				onmouseout="setAttribute('opacity','0.5')" onmouseover="setAttribute('opacity','0.9')" onmousedown="setTool('Reverse')";>
 				<title>Reverse flow! :)</title>
 
 			
@@ -159,8 +159,8 @@
 	
 		<!--Button 3: Slow flow-->
 	
-	<g id="Slow" opacity="0.3"
-				onmouseout="setAttribute('opacity','0.3')" onmouseover="setAttribute('opacity','0.9')" onmousedown="setTool('Slow')";>
+	<g id="Slow" opacity="0.5"
+				onmouseout="setAttribute('opacity','0.5')" onmouseover="setAttribute('opacity','0.9')" onmousedown="setTool('Slow')";>
 				<title>Slow flow! :)</title>
 
 			<rect height="32" width="32" x="110" y="40" id="Button3" onmousedown="Speed()" style="fill:green;stroke:lightgreen"> 
@@ -381,7 +381,7 @@
 		onmouseout="setAttribute('opacity','0.7')" onmouseover="setAttribute('opacity','0.9')" onmousedown="setTool('Touch')";>
 <title>Touch creature! :)</title>		
 			
-			<rect height="32" width="32" x="390" y="40" id="Button10" style="fill:almond;stroke:vanilla;fill-opacity:0.75"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
+			<rect height="32" width="32" x="390" y="40" id="Button10" style="fill:almond;stroke:vanilla;"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
 			</rect> 
 			
 			
