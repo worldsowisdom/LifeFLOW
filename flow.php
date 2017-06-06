@@ -1265,7 +1265,7 @@
 			//goes with:  scale("+scale+")
 		var pivot_x = (document.getElementById(creature_name).getBoundingClientRect().left + document.getElementById(creature_name).getBoundingClientRect().right) / 2; // average coordinates for pivot around middle.
 		var pivot_y = (document.getElementById(creature_name).getBoundingClientRect().top + document.getElementById(creature_name).getBoundingClientRect().bottom) / 2; // average coordinates for pivot around middle.
-		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+rotate_amount+" "+pivot_x+" "+pivot_y+")"); // transform the creature
+		document.getElementById(creature_name).setAttribute("transform", "translate("+(x-150)+", "+(y-150)+") rotate("+rotate_amount+" "+pivot_x+" "+pivot_y+")"); // transform the creature
 
 	} //movePsyCreat()
 
