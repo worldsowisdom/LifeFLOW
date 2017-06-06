@@ -900,6 +900,7 @@
 
 	} //moveLifePathCreature2()
 
+	
 	function moveLifePathCreatureNext(creature_name, x, y) {
 //debug		var blah = "testblah";
 	
@@ -1156,8 +1157,8 @@
 
 			if (staticMode == 0) {
 				//if way out of bounds then mv back
-				if ((document.getElementById(creature_name).getBoundingClientRect().left < 0) || (document.getElementById(creature_name).getBoundingClientRect().top < 0)) {staticMode = 1};
-				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 2};
+				if ((document.getElementById(creature_name).getBoundingClientRect().left < 0) || (document.getElementById(creature_name).getBoundingClientRect().top < 0)) {staticMode = 1;};
+				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 2;};
 
 
 				
@@ -1213,8 +1214,8 @@
 					}
 
 					else { //default case
-						x = firstX + 6 * (Math.random() - .5);
-						y = firstY + 6 * (Math.random() - .5);
+						x = firstX + 3 * (Math.random() - .5);
+						y = firstY + 3 * (Math.random() - .5);
 						//mv about randomly...
 					}
 					
@@ -1222,10 +1223,10 @@
 				
 				//if way out of bounds then mv back
 				//probably move this or something like it into a more general creature-checking thing for area boundaryz! :)
-				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x -= 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x += 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y -= 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y += 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x = 450*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x = 450*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y = 450*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y = 450*Math.random()};
 			
 
 
@@ -1233,25 +1234,25 @@
 				
 			else if (staticMode == 1) {
 				//if way out of bounds, mv bak towards center
-				x = firstX + 13;
-				y = firstY + 13;
+				x = (450 * Math.random());
+				y = (450 * Math.random());
 				
-				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
+//				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
 				
 					staticMode = 0; //reset mode
-				}
+//				}
 
 			} //staticmode1
 			
 			else if (staticMode == 2) {
 				//if way out of bounds, mv bak towards center
-				x = firstX - 13;
-				y = firstY - 13;
+				x = (450 * Math.random());
+				y = (450 * Math.random());
 				
-				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
+//				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
 				
 					staticMode = 0; //reset mode
-				}
+//				}
 			} //staticmode2
 			
 		} // if multiple creatures (figure out nearest neighbor) 
