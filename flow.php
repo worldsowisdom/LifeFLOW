@@ -1160,21 +1160,40 @@
 //				if ((document.getElementById(creature_name).getBoundingClientRect().left < 0) || (document.getElementById(creature_name).getBoundingClientRect().top < 0)) {staticMode = 1;};
 //				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 2;};
 
-
+				var newmovez = 0; //kinda hacky way to test for collisionz...
 				
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
-					x = firstX - 3 * Math.random();
-					y = firstY - 3 * Math.random();
-					
+					x = firstX + .003 * Math.random();		
+					newmovez = 1; // not touching
 				}
 				
+				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x < 0) {
+					x = firstX - .003 * Math.random();					
+					newmovez = 1; // not touching
+				}
+				
+				if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y > 0) {
+					y = firstY + .003 * Math.random();					
+					newmovez = 1; // not touching
+				}
+				
+				if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
+					y = firstY - .003 * Math.random();					
+					newmovez = 1; // not touching
+				}	
+				
+/*
 				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
-					x = firstX + 3 * Math.random();
-					y = firstY + 3 * Math.random();
+					x = firstX + .003 * Math.random();
+					y = firstY + .003 * Math.random();
 					
 				}
+*/
 				
-				else {
+//				else {
+//				if (Math.abs((creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x) <= 25) && (Math.abs(creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y) <= 25)) {
+				if (newmovez == 0) {
+
 					//they're touching! :)
 					
 					//check for eating, mating, etc.! :)
@@ -1215,8 +1234,8 @@
 */
 
 					else { //default case
-						x = firstX + 3 * (Math.random() - .5);
-						y = firstY + 3 * (Math.random() - .5);
+						x = firstX + .003 * (Math.random() - .5);
+						y = firstY + .003 * (Math.random() - .5);
 						//mv about randomly...
 					}
 					
