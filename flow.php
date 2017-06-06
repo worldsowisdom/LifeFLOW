@@ -258,6 +258,7 @@
 	
 	function showContribute() {
 		// show the contribution buttonz! :)
+		// for now anywayz we're just using toggle_visibility() instead, which we'll probably keep! :)
 		
 		// build up the contribute text
 		
@@ -2066,8 +2067,7 @@
 
 	function createLifePath5(x, y) {
 		//Create a new creature! :)
-		//We'll want to generalize this...
-		//First let's make a new function for new creature type (Spiky), then we can generalize...
+		// This creature evolves. It has a few component creatures in its <g>. It's basically the organizational structure for compound creatures, a la <div> in HTML.
 		
 		var cx_new = Math.random()*450 / x; // create random starting x
 		var cy_new = Math.random()*450 / y; // create random starting y
