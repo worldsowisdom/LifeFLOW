@@ -1475,7 +1475,7 @@
 				createLifePath();
 				break;
 			case "Creature-10":
-				createLifePath2();
+				createLifePath3();
 				break;
 			case "Creature-11":
 				createLifePath3();
