@@ -47,7 +47,7 @@
 
 			<p><strong>Subscribe to the flow!</strong></p>
 
-			<p>Let's collaborate to make a new type! :)</p>
+			<p>Let's develop together! :)</p>
 
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="3VNCFPBM8JQM2" />
 			<table>
@@ -89,7 +89,7 @@
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-		<p onclick="toggle_visibility('contributeFull');">[Click to hide contributions]</p>
+		<p onclick="toggle_visibility('contributeFull');">[Select to hide subscriptions]</p>
 			
 			</td>
 

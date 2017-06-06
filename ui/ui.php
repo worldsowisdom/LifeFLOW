@@ -320,7 +320,7 @@
 			
 	<g id="CreatureBrowser" opacity="0.7"
 				onmouseout="setAttribute('opacity','0.7')" onmouseover="setAttribute('opacity','0.9')" onmousedown="browse()";>
-
+			<title>Browse creatures! :)</title>
 				<a style="fill-opacity:0.75">
 			<rect height="32" width="32" x="310" y="40" id="Button8" style="fill:purple;stroke:lightpurple"> <desc id="Nth button on toolbar! :)">Creature browser! :)</desc><title>Browse creatures! :)</title>
 			</rect> </a> 
@@ -334,7 +334,7 @@
        width="20"
        height="20"
        x="316"
-       y="46" ><title>Browse creatures! :)</title>
+       y="46" >
       <desc
          id="desc4311">Creature browser icon</desc>
     </rect>
