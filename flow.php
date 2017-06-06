@@ -1065,8 +1065,8 @@
 					}
 					***** this cloning causes a problem, in which deleting the creature through the later case fails *****
 					else*/ if (special_event <= 0.06) { // three in a hundred
-						createLifePath6(); //give birth! :)
-						createSpiky(); //give birth to a litter! :)
+						createLifePath2(); //give birth! :)
+						createLifePath3(); //give birth to a litter! :)
 						createLifePath6(Math.random(), Math.random()); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
@@ -1476,7 +1476,7 @@
 				createLifePath();
 				break;
 			case "Creature-10":
-				createLifePath3();
+				createLifePath2();
 				break;
 			case "Creature-11":
 				createLifePath3();
