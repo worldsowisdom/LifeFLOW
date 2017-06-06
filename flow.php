@@ -1134,6 +1134,7 @@
 
 	} //moveLifePathCreatureEvo()
 
+	
 	function movePsyCreat(creature_name, x, y) {
 //debug		var blah = "testblah";
 		//var firstRotate = 0; //maybe improve this later...
@@ -1356,8 +1357,8 @@
 				//iterate through creature_array[] and measure distance difference
 					//measure vector distance, only keep the smallest
 				//mv to a location between them
-			test12345 = (document.getElementById(creature_name).getBoundingClientRect().x);
-			test23456 = creature_array[nearestNeighbor];//(creature_array[nearestNeighbor].getBoundingClientRect().x);
+//debug			test12345 = (document.getElementById(creature_name).getBoundingClientRect().x);
+//debug			test23456 = creature_array[nearestNeighbor];//(creature_array[nearestNeighbor].getBoundingClientRect().x);
 			
 			//test12345 = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x);
 	//debug			if (Math.random() < 0.5) {x = document.getElementById(creature_name).getBoundingClientRect().x + 0.001} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 0.001};
