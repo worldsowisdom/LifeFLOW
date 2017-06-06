@@ -381,7 +381,7 @@
 		onmouseout="setAttribute('opacity','0.7')" onmouseover="setAttribute('opacity','0.9')" onmousedown="setTool('Touch')";>
 <title>Touch creature! :)</title>		
 			
-			<rect height="32" width="32" x="390" y="40" id="Button10" style="fill:almond;stroke:vanilla;fill-opacity:0.75"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
+			<rect height="32" width="32" x="390" y="40" id="Button10" style="fill:almond;stroke:vanilla;"> <desc id="First button on toolbar! :)">A clickable square to test simple JavaScript.</desc>
 			</rect> 
 			
 			

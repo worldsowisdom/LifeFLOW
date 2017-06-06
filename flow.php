@@ -2103,7 +2103,7 @@
 		// m also add <id="a-##########"> and/or <class="personalityClass>
 		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
 
-		//moving cool creature for now to test static stuff, but should be moveStaticCreature! :) jejeje
+		//moving evolving creature! :)
 		var creature_desc = document.createTextNode("moveLifePathCreatureNext(\""+creature_name+"\", 1, 1)"); // make it flutter about like some kind of insect or bacterium
 
 //b4smoothy		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+33*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
@@ -2127,16 +2127,29 @@
 		creature_index++; // go to next creature
 				
 
-		var creatureParty; //for now just add something manually, eventually we can modularize the creature parts.
-		creatureParty = document.createElementNS(xmlns,"path"); //create a new creature! :)
-		creatureParty.setAttributeNS(null,"id",creature_name+"-part"); // give the new clone a different id.
-		creatureParty.setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
-		creatureParty.setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
-		creatureParty.setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
-		creatureParty.setAttributeNS(null,"class","creaturePartClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
+		// Add creature parts to the <g> creature.
+				
+		var creatureParty = []; //for now just add something manually, eventually we can modularize the creature parts.
+
+		creatureParty[0] = document.createElementNS(xmlns,"path"); //create a new creature! :)
+		creatureParty[0].setAttributeNS(null,"id",creature_name+"-part"); // give the new clone a different id.
+		creatureParty[0].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
+		creatureParty[0].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
+		creatureParty[0].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
+		creatureParty[0].setAttributeNS(null,"class","creaturePartClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
 				
 		document.getElementById(creature_name)
-			.appendChild(creatureParty); //Add first creature part to creature. Not sure if this works. If so, we can improve how we do it.
+			.appendChild(creatureParty[0]); //Add first creature part to creature. Not sure if this works. If so, we can improve how we do it.
+		
+		creatureParty[1] = document.createElementNS(xmlns,"path"); //create a new creature! :)
+		creatureParty[1].setAttributeNS(null,"id",creature_name+"-part"); // give the new clone a different id.
+		creatureParty[1].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
+		creatureParty[1].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
+		creatureParty[1].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
+		creatureParty[1].setAttributeNS(null,"class","creaturePartClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
+				
+		document.getElementById(creature_name)
+			.appendChild(creatureParty[1]); //Add first creature part to creature. Not sure if this works. If so, we can improve how we do it.
 		
 				
 		// Add creature parts
