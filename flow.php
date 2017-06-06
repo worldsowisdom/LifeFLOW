@@ -2333,7 +2333,7 @@
 		var creatureParty = []; //for now just add something manually, eventually we can modularize the creature parts.
 
 		creatureParty[0] = document.createElementNS(xmlns,"path"); //create a new creature! :)
-		creatureParty[0].setAttributeNS(null,"id",creature_name+"-part"); // give the new clone a different id.
+		creatureParty[0].setAttributeNS(null,"id",creature_name+"-part-"+0); // give the new clone a different id.
 		creatureParty[0].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
 		creatureParty[0].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
 		creatureParty[0].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
@@ -2343,7 +2343,7 @@
 			.appendChild(creatureParty[0]); //Add first creature part to creature. Not sure if this works. If so, we can improve how we do it.
 		
 		creatureParty[1] = document.createElementNS(xmlns,"path"); //create a new creature! :)
-		creatureParty[1].setAttributeNS(null,"id",creature_name+"-part"); // give the new clone a different id.
+		creatureParty[1].setAttributeNS(null,"id",creature_name+"-part-"+1); // give the new clone a different id.
 		creatureParty[1].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
 		creatureParty[1].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
 		creatureParty[1].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
@@ -2353,7 +2353,7 @@
 			.appendChild(creatureParty[1]); //Add first creature part to creature. Not sure if this works. If so, we can improve how we do it.
 			
 		creatureParty[2] = document.createElementNS(xmlns,"path"); //create a new creature! :)
-		creatureParty[2].setAttributeNS(null,"id",creature_name+"-part"); // give the new clone a different id.
+		creatureParty[2].setAttributeNS(null,"id",creature_name+"-part-"+2); // give the new clone a different id.
 		creatureParty[2].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
 		creatureParty[2].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
 		creatureParty[2].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
@@ -2363,7 +2363,7 @@
 			.appendChild(creatureParty[2]); //Add first creature part to creature. Not sure if this works. If so, we can improve how we do it.
 		
 		creatureParty[3] = document.createElementNS(xmlns,"path"); //create a new creature! :)
-		creatureParty[3].setAttributeNS(null,"id",creature_name+"-part"); // give the new clone a different id.
+		creatureParty[3].setAttributeNS(null,"id",creature_name+"-part-"+3); // give the new clone a different id.
 		creatureParty[3].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
 		creatureParty[3].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
 		creatureParty[3].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
