@@ -1039,12 +1039,13 @@
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
 					x = firstX - 3 * Math.random();
 					y = firstY - 3 * Math.random();
-					
+					return;
 				}
 				
 				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
 					x = firstX + 3 * Math.random();
 					y = firstY + 3 * Math.random();
+					return;
 					
 				}
 				
