@@ -1064,9 +1064,9 @@
 					}
 					***** this cloning causes a problem, in which deleting the creature through the later case fails *****
 					else*/ if (special_event <= 0.06) { // three in a hundred
-						createLifePath2(); //give birth! :)
-						createLifePath3(); //give birth to a litter! :)
-						createLifePath4(Math.random(), Math.random()); //give birth to a litter! :)
+						createLifePath6(); //give birth! :)
+						createSpiky(); //give birth to a litter! :)
+						createLifePath6(Math.random(), Math.random()); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
 					}
@@ -2555,8 +2555,8 @@
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"x","200"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"y","200"); // translate the new clone.
-		creature_array[creature_index].setAttributeNS(null,"height","60"); // translate the new clone.
-		creature_array[creature_index].setAttributeNS(null,"width","60"); // translate the new clone.
+		creature_array[creature_index].setAttributeNS(null,"height","120"); // translate the new clone.
+		creature_array[creature_index].setAttributeNS(null,"width","120"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
