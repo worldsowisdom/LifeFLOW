@@ -1259,9 +1259,10 @@
 		var rotate_amount = ((time/max_time*x/y*2*(Math.random()-0.5))); // set the total amount of rotation, including previous rotation.
 //		var rotate_amount = (firstRotate + (x/y*3*(Math.random()-0.5))); // set the total amount of rotation, including previous rotation.
 //		if (Math.abs(rotate_amount) > 360) {rotate_amount = 0};
+		var scale = time/max_time*0.8; // set the scale to multiply...
 		var pivot_x = (document.getElementById(creature_name).getBoundingClientRect().left + document.getElementById(creature_name).getBoundingClientRect().right) / 2; // average coordinates for pivot around middle.
 		var pivot_y = (document.getElementById(creature_name).getBoundingClientRect().top + document.getElementById(creature_name).getBoundingClientRect().bottom) / 2; // average coordinates for pivot around middle.
-		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+rotate_amount+" "+pivot_x+" "+pivot_y+")"); // transform the creature
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+rotate_amount+" "+pivot_x+" "+pivot_y+") scale("+scale+")"); // transform the creature
 
 	} //movePsyCreat()
 
@@ -2496,7 +2497,9 @@
 		// Can replace the above statements with a FOR...
 			
 	} // createLifePath6()
-		
+
+
+	
 	function createPsyCreat(psycreat_type, x, y) {
 		//Create a new creature! :)
 		//We'll want to generalize this...
