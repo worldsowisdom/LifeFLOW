@@ -120,7 +120,7 @@
          style="opacity:1;fill:#00ffff;stroke:#0000ff;stroke-width:0.27237353;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
 	
-	<text id="Button1Text" class="ButtonText" x="32" y="90" font-size="12">Clone</text>
+	<text id="Button1Text" class="ButtonText" x="31" y="90" font-size="12">Clone</text>
 			
 			
 	</g>
@@ -185,7 +185,7 @@
          inkscape:connector-curvature="0" />
     </g>
 
-	<text id="Button3Text" class="ButtonText" x="114" y="90" font-size="12">Slow</text>
+	<text id="Button3Text" class="ButtonText" x="113" y="90" font-size="12">Slow</text>
 
 	
 	</g>
@@ -212,7 +212,7 @@
          d="m 157,48 c 0.62487,2.34949 1.41706,4.64194 1.9962,7.00388 0.74369,3.54565 1.04609,7.16208 1.24807,10.77317 0.12749,1.93138 0.11921,3.86839 -0.44216,5.72955 0,0 4.32362,-5.65785 4.32362,-5.65785 l 0,0 c 0.3595,-1.85435 0.27347,-3.74107 0.0878,-5.6147 -0.30015,-3.64562 -0.49691,-7.32684 -1.30362,-10.90386 -0.62037,-2.43924 -1.41164,-4.84433 -1.76227,-7.34327 0,0 -4.14759,6.01308 -4.14759,6.01308 z" />
     </g>
 
-	<text id="Button4Text" class="ButtonText" x="155" y="90" font-size="12">Cool</text>	
+	<text id="Button4Text" class="ButtonText" x="154" y="90" font-size="12">Cool</text>	
 	
 	</g>
 			
