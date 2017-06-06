@@ -1157,8 +1157,8 @@
 
 			if (staticMode == 0) {
 				//if way out of bounds then mv back
-				if ((document.getElementById(creature_name).getBoundingClientRect().left < 0) || (document.getElementById(creature_name).getBoundingClientRect().top < 0)) {staticMode = 1;};
-				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 2;};
+//				if ((document.getElementById(creature_name).getBoundingClientRect().left < 0) || (document.getElementById(creature_name).getBoundingClientRect().top < 0)) {staticMode = 1;};
+//				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 2;};
 
 
 				
@@ -1200,18 +1200,19 @@
 
 					//get eaten once every ten times...
 					//there's some issue w/ deleting if there are clones of this creature around...
-					else if (special_event <= 0.003) { //one in ten, five...
+					else if (special_event <= 0.004) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
 					}
 
 					//do other cool stuff! :)
-					else if (special_event <= 0.007 && x > 5 && y < 200) { //one in ten, five...
+/*					else if (special_event <= 0.007 && x > 5 && y < 200) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
 						return; //stop running function on deleted/eaten creature
 					}
+*/
 
 					else { //default case
 						x = firstX + 3 * (Math.random() - .5);
@@ -2535,8 +2536,8 @@
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"x","200"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"y","200"); // translate the new clone.
-		creature_array[creature_index].setAttributeNS(null,"height","200"); // translate the new clone.
-		creature_array[creature_index].setAttributeNS(null,"width","200"); // translate the new clone.
+		creature_array[creature_index].setAttributeNS(null,"height","60"); // translate the new clone.
+		creature_array[creature_index].setAttributeNS(null,"width","60"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
