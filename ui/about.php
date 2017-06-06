@@ -34,7 +34,7 @@
 			</table>
 			<input name="currency_code" type="hidden" value="USD" /> <input alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" type="image" /> <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" /></form>
 
-			<p onclick="toggle_visibility('contributeFull');"><b>Click for more ways to contribute!</b></p>
+			<p onclick="toggle_visibility('contributeFull');"><b>Press for more ways to contribute!</b></p>
 			
 			<p onclick="toggle_visibility('contributeFull');"><img src="img/LifeFLOWzone-11.png"></p>
 			
