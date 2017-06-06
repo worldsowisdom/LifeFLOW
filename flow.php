@@ -1164,22 +1164,22 @@
 				
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
 					x = firstX + .003 * Math.random();		
-					newmovez = 1; // not touching
+//					newmovez = 1; // not touching
 				}
 				
-				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x < 0) {
+				else if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x < 0) {
 					x = firstX - .003 * Math.random();					
-					newmovez = 1; // not touching
+//					newmovez = 1; // not touching
 				}
 				
-				if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y > 0) {
+				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y > 0) {
 					y = firstY + .003 * Math.random();					
-					newmovez = 1; // not touching
+//					newmovez = 1; // not touching
 				}
 				
-				if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
+				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
 					y = firstY - .003 * Math.random();					
-					newmovez = 1; // not touching
+//					newmovez = 1; // not touching
 				}	
 				
 /*
@@ -1190,9 +1190,9 @@
 				}
 */
 				
-//				else {
+				else {
 //				if (Math.abs((creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x) <= 25) && (Math.abs(creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y) <= 25)) {
-				if (newmovez == 0) {
+//				if (newmovez == 0) {
 
 					//they're touching! :)
 					
