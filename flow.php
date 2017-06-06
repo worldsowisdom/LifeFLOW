@@ -1160,25 +1160,25 @@
 //				if ((document.getElementById(creature_name).getBoundingClientRect().left < 0) || (document.getElementById(creature_name).getBoundingClientRect().top < 0)) {staticMode = 1;};
 //				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 2;};
 
-				var newmovez = 0; //kinda hacky way to test for collisionz...
+//				var newmovez = 0; //kinda hacky way to test for collisionz...
 				
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
-					x = firstX + .003 * Math.random();		
+					x = firstX + .0003 * Math.random();		
 //					newmovez = 1; // not touching
 				}
 				
 				else if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x < 0) {
-					x = firstX - .003 * Math.random();					
+					x = firstX - .0003 * Math.random();					
 //					newmovez = 1; // not touching
 				}
 				
 				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y > 0) {
-					y = firstY + .003 * Math.random();					
+					y = firstY + .0003 * Math.random();					
 //					newmovez = 1; // not touching
 				}
 				
 				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
-					y = firstY - .003 * Math.random();					
+					y = firstY - .0003 * Math.random();					
 //					newmovez = 1; // not touching
 				}	
 				
@@ -1251,7 +1251,7 @@
 
 
 			} //staticmode0
-				
+/*				
 			else if (staticMode == 1) {
 				//if way out of bounds, mv bak towards center
 				x = (450 * Math.random());
@@ -1274,7 +1274,7 @@
 					staticMode = 0; //reset mode
 //				}
 			} //staticmode2
-			
+*/			
 		} // if multiple creatures (figure out nearest neighbor) 
 
 		//translate creature_name x y
