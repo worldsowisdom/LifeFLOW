@@ -1259,10 +1259,11 @@
 		var rotate_amount = ((time/max_time*x/y*2*(Math.random()-0.5))); // set the total amount of rotation, including previous rotation.
 //		var rotate_amount = (firstRotate + (x/y*3*(Math.random()-0.5))); // set the total amount of rotation, including previous rotation.
 //		if (Math.abs(rotate_amount) > 360) {rotate_amount = 0};
-		var scale = time/max_time*0.8; // set the scale to multiply...
+//		var scale = time/max_time*0.8; // set the scale to multiply...
+			//goes with:  scale("+scale+")
 		var pivot_x = (document.getElementById(creature_name).getBoundingClientRect().left + document.getElementById(creature_name).getBoundingClientRect().right) / 2; // average coordinates for pivot around middle.
 		var pivot_y = (document.getElementById(creature_name).getBoundingClientRect().top + document.getElementById(creature_name).getBoundingClientRect().bottom) / 2; // average coordinates for pivot around middle.
-		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+rotate_amount+" "+pivot_x+" "+pivot_y+") scale("+scale+")"); // transform the creature
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+rotate_amount+" "+pivot_x+" "+pivot_y+")"); // transform the creature
 
 	} //movePsyCreat()
 
@@ -3254,6 +3255,10 @@
       // Calculate y position
       y_pos = (time * 25) / max_time;
 	  galaxy4_y_pos = y_pos / 2;
+
+//      back3.setAttribute("transform", "scale( " +time/max_time*0.5+ " )");
+	  //swell the bg
+
 
       the_rect.setAttribute("transform", "translate( 0.0 , " +y_pos+ " )");
       pink_rect.setAttribute("transform", "translate( 0.0 , " +y_pos+ " )");
