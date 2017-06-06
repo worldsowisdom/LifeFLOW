@@ -1203,6 +1203,14 @@
 						return; //stop running function on deleted/eaten creature
 					}
 
+					//do other cool stuff! :)
+					else if (special_event <= 0.009) { // check the odds...
+					// eat some other creature and add it to the evoCreat! :)
+						document.getElementById(creature_name).appendChild(nearestNeighbor); // not sure if/how this'll work...! :)
+						// prev document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
+						return; //stop running function on deleted/eaten creature
+					}
+
 					else { //default case
 						x = firstX + 6 * (Math.random() - .5);
 						y = firstY + 6 * (Math.random() - .5);
