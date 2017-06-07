@@ -1075,21 +1075,21 @@
 
 					//get eaten once every ten times...
 					//there's some issue w/ deleting if there are clones of this creature around...
-					else if (special_event <= 0.3) { //one in ten, five...
+					else if (special_event <= 0.2) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
 					}
 
 					//do other cool stuff! :)
-					else if (special_event <= 0.5 && x > 5 && y < 200) { //one in ten, five...
+					else if (special_event <= 0.3 && x > 5 && y < 200) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
 						return; //stop running function on deleted/eaten creature
 					}
 
 					//do other cool stuff! :)
-					else if (special_event <= 0.9) { // check the odds...
+					else if (special_event <= 0.7) { // check the odds...
 					// eat some other creature and add it to the evoCreat! :)
 						document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
 						// prev document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
@@ -1129,6 +1129,13 @@
 			
 		} // if multiple creatures (figure out nearest neighbor) 
 
+		else { //default case
+				x = 450 * Math.random(); // firstX + 6 * (Math.random() - .5);
+				y = 450 * Math.random(); // firstY + 6 * (Math.random() - .5);
+				//mv about randomly...
+		} // if only creature. this code is now also in the multicreature scenario above, maybe shouldn't be there...
+	
+		
 		//translate creature_name x y
 		pivot_x = (document.getElementById(creature_name).getBoundingClientRect().left + document.getElementById(creature_name).getBoundingClientRect().right) / 2; // average coordinates for pivot around middle.
 		pivot_y = (document.getElementById(creature_name).getBoundingClientRect().top + document.getElementById(creature_name).getBoundingClientRect().bottom) / 2; // average coordinates for pivot around middle.
