@@ -2879,8 +2879,11 @@
 //		testdel = creature_name; //debug
 //make it work
 
+		//delete from parent...
+		document.getElementById(creature_name).parentNode // rm clone from inline svg
+		
 
-		document.getElementById("svg2") // rm clone from inline svg
+//		document.getElementById("svg2") // rm clone from inline svg
 //orig			.removeChild(document.getElementById(""+creature_name+"")); //um...
 			.removeChild(document.getElementById(creature_name)); //um...
 
