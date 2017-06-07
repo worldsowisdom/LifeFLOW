@@ -1067,7 +1067,7 @@
 					else*/ if (special_event <= 0.06) { // three in a hundred
 						createLifePath2(); //give birth! :)
 						createLifePath3(); //give birth to a litter! :)
-						createLifePath6(Math.random(), Math.random()); //give birth to a litter! :)
+						createLifePath6(1, 1); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
 					}
@@ -1117,8 +1117,8 @@
 				
 			else if (staticMode == 1) {
 				//if way out of bounds, mv bak towards center
-				x = firstX - 13;
-				y = firstY - 13;
+				x = 450 * Math.random();
+				y = 450 * Math.random();
 				
 				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
 				
