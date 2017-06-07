@@ -900,6 +900,7 @@
 
 	} //moveLifePathCreature2()
 
+	
 	function moveLifePathCreatureNext(creature_name, x, y) {
 //debug		var blah = "testblah";
 	
@@ -1038,12 +1039,13 @@
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
 					x = firstX - 3 * Math.random();
 					y = firstY - 3 * Math.random();
-					
+					return;
 				}
 				
 				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
 					x = firstX + 3 * Math.random();
 					y = firstY + 3 * Math.random();
+					return;
 					
 				}
 				
@@ -1065,7 +1067,7 @@
 					else*/ if (special_event <= 0.06) { // three in a hundred
 						createLifePath2(); //give birth! :)
 						createLifePath3(); //give birth to a litter! :)
-						createLifePath4(Math.random(), Math.random()); //give birth to a litter! :)
+						createLifePath6(1, 1); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
 					}
@@ -1104,10 +1106,10 @@
 				
 				//if way out of bounds then mv back
 				//probably move this or something like it into a more general creature-checking thing for area boundaryz! :)
-				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x -= 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x += 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y -= 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y += 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x = 450*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x = 450*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y = 450*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y = 450*Math.random()};
 			
 
 
@@ -1115,8 +1117,8 @@
 				
 			else if (staticMode == 1) {
 				//if way out of bounds, mv bak towards center
-				x = firstX - 13;
-				y = firstY - 13;
+				x = 450 * Math.random();
+				y = 450 * Math.random();
 				
 				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
 				
@@ -1134,6 +1136,7 @@
 
 	} //moveLifePathCreatureEvo()
 
+	
 	function movePsyCreat(creature_name, x, y) {
 //debug		var blah = "testblah";
 		//var firstRotate = 0; //maybe improve this later...
@@ -1155,24 +1158,43 @@
 
 			if (staticMode == 0) {
 				//if way out of bounds then mv back
-				if ((document.getElementById(creature_name).getBoundingClientRect().left < 0) || (document.getElementById(creature_name).getBoundingClientRect().top < 0)) {staticMode = 1};
-				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 2};
+//				if ((document.getElementById(creature_name).getBoundingClientRect().left < 0) || (document.getElementById(creature_name).getBoundingClientRect().top < 0)) {staticMode = 1;};
+//				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 2;};
 
-
+//				var newmovez = 0; //kinda hacky way to test for collisionz...
 				
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
-					x = firstX - 3 * Math.random();
-					y = firstY - 3 * Math.random();
-					
+					x = firstX + .0003 * Math.random();		
+//					newmovez = 1; // not touching
+				}
+				
+				else if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x < 0) {
+					x = firstX - .0003 * Math.random();					
+//					newmovez = 1; // not touching
+				}
+				
+				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y > 0) {
+					y = firstY + .0003 * Math.random();					
+//					newmovez = 1; // not touching
 				}
 				
 				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
-					x = firstX + 3 * Math.random();
-					y = firstY + 3 * Math.random();
+					y = firstY - .0003 * Math.random();					
+//					newmovez = 1; // not touching
+				}	
+				
+/*
+				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
+					x = firstX + .003 * Math.random();
+					y = firstY + .003 * Math.random();
 					
 				}
+*/
 				
 				else {
+//				if (Math.abs((creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x) <= 25) && (Math.abs(creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y) <= 25)) {
+//				if (newmovez == 0) {
+
 					//they're touching! :)
 					
 					//check for eating, mating, etc.! :)
@@ -1198,22 +1220,23 @@
 
 					//get eaten once every ten times...
 					//there's some issue w/ deleting if there are clones of this creature around...
-					else if (special_event <= 0.003) { //one in ten, five...
+					else if (special_event <= 0.004) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
 					}
 
 					//do other cool stuff! :)
-					else if (special_event <= 0.007 && x > 5 && y < 200) { //one in ten, five...
+/*					else if (special_event <= 0.007 && x > 5 && y < 200) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
 						return; //stop running function on deleted/eaten creature
 					}
+*/
 
 					else { //default case
-						x = firstX + 6 * (Math.random() - .5);
-						y = firstY + 6 * (Math.random() - .5);
+						x = firstX + .003 * (Math.random() - .5);
+						y = firstY + .003 * (Math.random() - .5);
 						//mv about randomly...
 					}
 					
@@ -1221,47 +1244,49 @@
 				
 				//if way out of bounds then mv back
 				//probably move this or something like it into a more general creature-checking thing for area boundaryz! :)
-				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x -= 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x += 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y -= 200*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y += 200*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x = 450*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x = 450*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y = 450*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y = 450*Math.random()};
 			
 
 
 			} //staticmode0
-				
+/*				
 			else if (staticMode == 1) {
 				//if way out of bounds, mv bak towards center
-				x = firstX + 13;
-				y = firstY + 13;
+				x = (450 * Math.random());
+				y = (450 * Math.random());
 				
-				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
+//				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
 				
 					staticMode = 0; //reset mode
-				}
+//				}
 
 			} //staticmode1
 			
 			else if (staticMode == 2) {
 				//if way out of bounds, mv bak towards center
-				x = firstX - 13;
-				y = firstY - 13;
+				x = (450 * Math.random());
+				y = (450 * Math.random());
 				
-				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
+//				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
 				
 					staticMode = 0; //reset mode
-				}
+//				}
 			} //staticmode2
-			
+*/			
 		} // if multiple creatures (figure out nearest neighbor) 
 
 		//translate creature_name x y
 		var rotate_amount = ((time/max_time*x/y*2*(Math.random()-0.5))); // set the total amount of rotation, including previous rotation.
 //		var rotate_amount = (firstRotate + (x/y*3*(Math.random()-0.5))); // set the total amount of rotation, including previous rotation.
 //		if (Math.abs(rotate_amount) > 360) {rotate_amount = 0};
+//		var scale = time/max_time*0.8; // set the scale to multiply...
+			//goes with:  scale("+scale+")
 		var pivot_x = (document.getElementById(creature_name).getBoundingClientRect().left + document.getElementById(creature_name).getBoundingClientRect().right) / 2; // average coordinates for pivot around middle.
 		var pivot_y = (document.getElementById(creature_name).getBoundingClientRect().top + document.getElementById(creature_name).getBoundingClientRect().bottom) / 2; // average coordinates for pivot around middle.
-		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+rotate_amount+" "+pivot_x+" "+pivot_y+")"); // transform the creature
+		document.getElementById(creature_name).setAttribute("transform", "translate("+(x-150)+", "+(y-150)+") rotate("+rotate_amount+" "+pivot_x+" "+pivot_y+")"); // transform the creature
 
 	} //movePsyCreat()
 
@@ -1354,8 +1379,8 @@
 				//iterate through creature_array[] and measure distance difference
 					//measure vector distance, only keep the smallest
 				//mv to a location between them
-			test12345 = (document.getElementById(creature_name).getBoundingClientRect().x);
-			test23456 = creature_array[nearestNeighbor];//(creature_array[nearestNeighbor].getBoundingClientRect().x);
+//debug			test12345 = (document.getElementById(creature_name).getBoundingClientRect().x);
+//debug			test23456 = creature_array[nearestNeighbor];//(creature_array[nearestNeighbor].getBoundingClientRect().x);
 			
 			//test12345 = (document.getElementById(creature_name).getBoundingClientRect().x - creature_array[nearestNeighbor].getBoundingClientRect().x);
 	//debug			if (Math.random() < 0.5) {x = document.getElementById(creature_name).getBoundingClientRect().x + 0.001} else {x = document.getElementById(creature_name).getBoundingClientRect().x - 0.001};
@@ -2496,7 +2521,9 @@
 		// Can replace the above statements with a FOR...
 			
 	} // createLifePath6()
-		
+
+
+	
 	function createPsyCreat(psycreat_type, x, y) {
 		//Create a new creature! :)
 		//We'll want to generalize this...
@@ -2529,8 +2556,8 @@
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"x","200"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"y","200"); // translate the new clone.
-		creature_array[creature_index].setAttributeNS(null,"height","200"); // translate the new clone.
-		creature_array[creature_index].setAttributeNS(null,"width","200"); // translate the new clone.
+		creature_array[creature_index].setAttributeNS(null,"height","120"); // translate the new clone.
+		creature_array[creature_index].setAttributeNS(null,"width","120"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
 	// add "Creature" class, for later readding/loading! :)
@@ -3251,6 +3278,10 @@
       // Calculate y position
       y_pos = (time * 25) / max_time;
 	  galaxy4_y_pos = y_pos / 2;
+
+//      back3.setAttribute("transform", "scale( " +time/max_time*0.5+ " )");
+	  //swell the bg
+
 
       the_rect.setAttribute("transform", "translate( 0.0 , " +y_pos+ " )");
       pink_rect.setAttribute("transform", "translate( 0.0 , " +y_pos+ " )");
