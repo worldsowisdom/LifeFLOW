@@ -458,7 +458,7 @@
 	
 	function getNearestNeighbor(creature_name) {
 		var distanceMeasure; // check how far apart creature_name is from o creatures
-		var distanceShortest = 100000000000000; // tmp store the shortest distance while iterating through
+		var distanceShortest = 100000000000000000000000000; // tmp store the shortest distance while iterating through
 		var nearestNeighbor; //default to self = creature_array.indexOf(creature_name); // store the nearest neighbor
 		
 		//find the nearest other creature to creature_name
@@ -734,7 +734,9 @@
 
 			if (staticMode == 0) {
 				//if way out of bounds then mv back
-				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 1};
+				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) || (document.getElementById(creature_name).getBoundingClientRect().top < 0) || (document.getElementById(creature_name).getBoundingClientRect().left < 0)) {staticMode = 1};
+
+//				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 1};
 				
 				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
 					x = firstX + 3 * Math.random();
@@ -806,7 +808,8 @@
 
 			if (staticMode == 0) {
 				//if way out of bounds then mv back
-				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 1};
+				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) || (document.getElementById(creature_name).getBoundingClientRect().top < 0) || (document.getElementById(creature_name).getBoundingClientRect().left < 0)) {staticMode = 1};
+//				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 1};
 
 
 				
@@ -920,7 +923,9 @@
 
 			if (staticMode == 0) {
 				//if way out of bounds then mv back
-				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 1};
+				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) || (document.getElementById(creature_name).getBoundingClientRect().top < 0) || (document.getElementById(creature_name).getBoundingClientRect().left < 0)) {staticMode = 1};
+
+//				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 1};
 
 
 				
