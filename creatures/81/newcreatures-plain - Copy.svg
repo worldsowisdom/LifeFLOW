@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 450 450"
+   height="297mm"
+   width="210mm">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient6501">
+      <stop
+         id="stop6503"
+         offset="0"
+         style="stop-color:#0000ff;stop-opacity:1;" />
+      <stop
+         id="stop6505"
+         offset="1"
+         style="stop-color:#0000ff;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       osb:paint="solid"
+       id="linearGradient6455">
+      <stop
+         id="stop6457"
+         offset="0"
+         style="stop-color:#0000ff;stop-opacity:1;" />
+    </linearGradient>
+    <filter
+       height="2.3169684"
+       y="-0.65848422"
+       width="1.7582545"
+       x="-0.37912727"
+       id="filter5001"
+       style="color-interpolation-filters:sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur5003"
+         stdDeviation="6.3692616" />
+    </filter>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="178.50594"
+       x2="313.40628"
+       y1="178.50594"
+       x1="242.51431"
+       id="linearGradient6507"
+       xlink:href="#linearGradient6501" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <path
+       d="m 305.71429,412.3622 -55.19656,8.19877 -24.53781,50.11762 -24.85417,-49.96149 -55.24729,-7.84966 39.83584,-39.07666 -9.60689,-54.96897 49.47407,25.81077 49.30991,-26.12303 -9.25918,55.02861 z"
+       id="path4136"
+       style="opacity:0.28999999;fill:#00ffff;stroke:#800080" />
+    <path
+       style="opacity:0.28999999;fill:#00ffff;stroke:#800080"
+       id="path4138"
+       d="m 200.00001,166.3622 -55.19656,8.19877 -24.53782,50.11762 L 95.411459,174.7171 40.164173,166.86744 80.000009,127.79078 70.393127,72.821807 119.8672,98.632584 169.1771,72.509551 159.91793,127.53816 Z" />
+    <g
+       id="BiggoEG">
+      <desc
+         id="desc4151">A big creature for LifeFLOW! :)</desc>
+      <circle
+         style="opacity:0.28999999;fill:#ffff00;stroke:#800080;stroke-width:0.6047619"
+         id="path4137"
+         cx="302.39636"
+         cy="259.14496"
+         r="29.934187" />
+      <circle
+         style="opacity:0.28999999;fill:#ffff00;stroke:#800080;stroke-width:0.6047619"
+         id="path4139"
+         cx="307.8945"
+         cy="265.86487"
+         r="7.3308215" />
+      <ellipse
+         style="opacity:0.28999999;fill:#0000ff;stroke:#800080;stroke-width:0.6047619"
+         id="path4141"
+         cx="292.01105"
+         cy="251.20323"
+         rx="3.6654108"
+         ry="10.996231" />
+      <ellipse
+         style="opacity:0.28999999;fill:#0000ff;stroke:#800080;stroke-width:0.6047619"
+         id="path4143"
+         cx="317.66891"
+         cy="253.64687"
+         rx="9.7744284"
+         ry="3.6654108" />
+    </g>
+    <rect
+       y="166.8988"
+       x="257.80054"
+       height="23.214266"
+       width="40.319515"
+       id="MedyEG"
+       style="opacity:0.87;fill:url(#linearGradient6507);stroke:#0000ff;stroke-width:0.6047619;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter5001);fill-opacity:1" />
+  </g>
+  <rect
+     y="0"
+     x="0"
+     width="450"
+     style="fill:none;stroke:#800080"
+     id="Border"
+     height="450" />
+</svg>
