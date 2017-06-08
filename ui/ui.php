@@ -150,7 +150,7 @@
 				   id="path4147"
 				   style="fill:#0000ff;stroke:#800080;stroke-width:0.18216613" />
 
-	<text id="Button2Text" class="ButtonText" x="67" y="90" font-size="12">Reverse</text>
+	<text id="Button2Text" class="ButtonText" x="66" y="90" font-size="12">Reverse</text>
 				   
 				   
 	</g>
@@ -243,7 +243,7 @@
          inkscape:connector-curvature="0" />
     </g>
 
-	<text id="Button5Text" class="ButtonText" x="193" y="90" font-size="12">Recty</text>	
+	<text id="Button5Text" class="ButtonText" x="192" y="90" font-size="12">Recty</text>	
 	
 	</g>
 
@@ -311,7 +311,7 @@
          style="opacity:1;fill:#ff0000;stroke:#0000ff;stroke-width:0.74645996;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
 	
-	<text id="Button7Text" class="ButtonText" x="270" y="90" font-size="12">Delete</text>	
+	<text id="Button7Text" class="ButtonText" x="269" y="90" font-size="12">Delete</text>	
     
 	</g>
 
@@ -339,7 +339,7 @@
          id="desc4311">Creature browser icon</desc>
     </rect>
 
-	<text id="Button8Text" class="ButtonText" x="309" y="90" font-size="12">Create</text>	
+	<text id="Button8Text" class="ButtonText" x="308" y="90" font-size="12">Create</text>	
 	
 	</g>
 
