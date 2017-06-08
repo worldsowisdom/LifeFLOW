@@ -339,7 +339,7 @@
          id="desc4311">Creature browser icon</desc>
     </rect>
 
-	<text id="Button8Text" class="ButtonText" x="308" y="90" font-size="12">Create</text>	
+	<text id="Button8Text" class="ButtonText" x="309" y="90" font-size="12">Create</text>	
 	
 	</g>
 
