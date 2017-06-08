@@ -1068,7 +1068,7 @@
 					else*/ if (special_event <= 0.06) { // three in a hundred
 						createLifePath2(); //give birth! :)
 						createLifePath3(); //give birth to a litter! :)
-						createLifePath6(1, 1); //give birth to a litter! :)
+						createLifePath3(1, 1); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
 					}
@@ -1090,7 +1090,7 @@
 					}
 
 					//do other cool stuff! :)
-					else if (special_event <= 0.7) { // check the odds...
+					else if (special_event <= 0.999) { // check the odds...
 					// eat some other creature and add it to the evoCreat! :)
 						document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
 						// prev document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
