@@ -1086,6 +1086,7 @@
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
 					}
+/*comment out death for debugging */
 
 					//do other cool stuff! :)
 					else if (special_event <= 0.3 && x > 5 && y < 200) { //one in ten, five...
