@@ -462,7 +462,7 @@
 		var nearestNeighbor; //default to self = creature_array.indexOf(creature_name); // store the nearest neighbor
 		
 		//find the nearest other creature to creature_name
-		if (creature_index > 1) {
+//test		if (creature_index > 1) {
 			//if any other creatures around, calculate distances and keep the smallest
 			for (var i = 0; i < creature_index; i++) {
 				//iterate through creatures
@@ -480,9 +480,9 @@
 
 			return nearestNeighbor; //should we return the index, or the whole creature?
 			
-		}
+//		} // if (creature_index > 1)
 
-	}
+	} // getNearestNeighbor()
 	
 	function moveExtralCreature(creature_name, x, y) {
 		//another take at improving creature personality
@@ -1073,7 +1073,7 @@
 					else*/ if (special_event <= 0.06) { // three in a hundred
 						createLifePath2(); //give birth! :)
 						createLifePath3(); //give birth to a litter! :)
-						createLifePath6(0.5, 1.5); //give birth to a litter! :)
+						createLifePath3(0.5, 1.5); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
 					}
