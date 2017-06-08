@@ -1095,12 +1095,14 @@
 					}
 
 					//do other cool stuff! :)
-					else if (special_event <= 0.9) { // check the odds...
+/*					else if (special_event <= 0.9) { // check the odds...
 					// eat some other creature and add it to the evoCreat! :)
+						// THIS SEEMS TO CAUSE A FREEZING ISSUE
 						document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
 						// prev document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
 						return; //stop running function on deleted/eaten creature
 					}
+*/
 
 					else { //default case
 						x = firstX + 6 * (Math.random() - .5);
