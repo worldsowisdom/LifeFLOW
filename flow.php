@@ -458,7 +458,7 @@
 	
 	function getNearestNeighbor(creature_name) {
 		var distanceMeasure; // check how far apart creature_name is from o creatures
-		var distanceShortest = 100000000000; // tmp store the shortest distance while iterating through - should be 1000 but testing issues
+		var distanceShortest = 10000; // tmp store the shortest distance while iterating through - should be 1000 but testing issues
 		var nearestNeighbor; //default to self = creature_array.indexOf(creature_name); // store the nearest neighbor
 		
 		//find the nearest other creature to creature_name
@@ -1073,7 +1073,7 @@
 					else*/ if (special_event <= 0.06) { // three in a hundred
 						createLifePath2(); //give birth! :)
 						createLifePath3(); //give birth to a litter! :)
-						createLifePath3(0.5, 1.5); //give birth to a litter! :)
+						createLifePath6(0.5, 1.5); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
 					}
@@ -1081,7 +1081,7 @@
 
 					//get eaten once every ten times...
 					//there's some issue w/ deleting if there are clones of this creature around...
- 					else if (special_event <= 0.2) { //one in ten, five...
+ 					else if (special_event <= 0.16) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
