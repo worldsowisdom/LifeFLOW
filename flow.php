@@ -1081,12 +1081,12 @@
 
 					//get eaten once every ten times...
 					//there's some issue w/ deleting if there are clones of this creature around...
-					else if (special_event <= 0.2) { //one in ten, five...
+ 					else if (special_event <= 0.2) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
 					}
-/*comment out death for debugging */
+/*comment out death for debugging*/
 
 					//do other cool stuff! :)
 					else if (special_event <= 0.3 && x > 5 && y < 200) { //one in ten, five...
@@ -1096,14 +1096,17 @@
 					}
 
 					//do other cool stuff! :)
-/*					else if (special_event <= 0.9) { // check the odds...
+					else if (special_event <= 0.4) { // check the odds...
 					// eat some other creature and add it to the evoCreat! :)
 						// THIS SEEMS TO CAUSE A FREEZING ISSUE
-						document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
-						// prev document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
+						// It tries to append a node where it can't, or encounters other errors... Although the following code seems to work in isolation.
+						if (creature_array.indexOf(document.getElementById(creature_name)) != nearestNeighbor) {
+							document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
+							// prev document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
+						} // check that not trying to eat itself, due to some unknown issue...
 						return; //stop running function on deleted/eaten creature
 					}
-*/
+/**/
 
 					else { //default case
 						x = firstX + 6 * (Math.random() - .5);
