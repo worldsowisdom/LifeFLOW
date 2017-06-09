@@ -123,6 +123,10 @@
 
 <p><h2 id="About">Welcome to LifeFLOW! :)</h2></p>
 
+<p><blockquote>"Wow, cool!"</blockquote></p>
+
+<p><blockquote>"Now this is something!"</blockquote></p>
+
 <p><a href="http://life.worldsowisdom.com/flow"><img src="./img/LifeFLOW.png" align="right"><b>LifeFLOW</b></a> is a fun evolving part of <a href="http://life.worldsowisdom.com/">Life Worlds O Wisdom (LifeWOW)</a>. It is kind of like a game, and kind of like nature! :)</p>
 
 <p>You can think of LifeFLOW as a digital <a href="https://en.wikipedia.org/wiki/Vivarium">vivarium</a>, or <b><i>digitarium</i></b> (i.e. a <a href="https://life.worldsowisdom.com/?q=node/91">virtual terrarium/aquarium</a>). We create and play with living electronic creatures who travel their environmental realms. How cool is that? :)</p>
