@@ -459,7 +459,7 @@
 	
 	function getNearestNeighbor(creature_name) {
 		var distanceMeasure; // check how far apart creature_name is from o creatures
-		var distanceShortest = 10000000000000; // tmp store the shortest distance while iterating through - should be 1000 but testing issues
+		var distanceShortest = 1000000000000000000000; // tmp store the shortest distance while iterating through - should be 1000 but testing issues
 		var nearestNeighbor; //default to self = creature_array.indexOf(creature_name); // store the nearest neighbor
 		
 		//find the nearest other creature to creature_name
