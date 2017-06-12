@@ -141,11 +141,11 @@
 
 <p>You can create a variety of creature types already, and we're continuing to add more. Try pressing some of the buttons! :)</p>
 
-<p><b>A few tips:</b> Use the <font color="blue">blue square navigator</font> to browse around the areas. Use the <font color="green">green square browser</font> to navigate among the creatures. Currently the first few columns of creatures are unique, the rest are cool. Column six (creatures 60-69) contains psychedelic creatures. Currently areas save every full period. Columns four to six (areas 40-69) contain three different psychedelic backgrounds, one for each of those columns. We're still in the very early stages and welcome your comments on growth and development!</p>
+<p><b>A few tips:</b> Use the <font color="blue">blue square navigator</font> to browse around the areas. Use the <font color="green">green square browser</font> to navigate among the creatures. Currently most of the creatures are geometric, a few are naturalistic. <font color="green">Column six (creatures 60-69)</font> contains psychedelic creatures. Currently areas save every full period. <font color="blue">Columns four to six (areas 40-69)</font> contain three different psychedelic backgrounds, one for each of those columns. We're still in the very early stages and welcome your comments on growth and development!</p>
 
 <p><b>Some questions for consideration:</b> How would you describe LifeFLOW? How does a digitarium compare with a terrarium or aquarium? Do you consider LifeFLOW creatures "alive"? What does it mean to you for something to be alive? What does evolution have to do with living? What is life?
 
-<p><b>Some questions for improvement:</b> What do you like or dislike about LifeFLOW? What do you want next? What do you think makes or would make LifeFLOW more useful, beautiful, interesting?</p>
+<p><b>Some questions for improvement:</b> What do you like or dislike about LifeFLOW? What do you want next? What do you think would make LifeFLOW more useful, beautiful, interesting?</p>
 
 <p><b>Development:</b> LifeFLOW is free and open source (MIT license). <a href="https://github.com/worldsowisdom/LifeFLOW">Come join us (at GitHub) in creating the coolest software on the planet! :)</a>
 
