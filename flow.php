@@ -102,7 +102,7 @@
 	var coolMode = 0; // give cool creature a mode, default to 0
 	var staticMode = 0; // give static creature a mode, default to 0
 	var psyMode = 0; // these are kinda hacky and should p be done differently
-		
+	var evoMode= 0; // and another...
 
 	
     function Start(evt) {
@@ -459,7 +459,7 @@
 	
 	function getNearestNeighbor(creature_name) {
 		var distanceMeasure; // check how far apart creature_name is from o creatures
-		var distanceShortest = 1000000000000; // tmp store the shortest distance while iterating through - should be 1000 but testing issues
+		var distanceShortest = 1000000000000000000000; // tmp store the shortest distance while iterating through - should be 1000 but testing issues
 		var nearestNeighbor; //default to self = creature_array.indexOf(creature_name); // store the nearest neighbor
 		
 		//find the nearest other creature to creature_name
@@ -1037,7 +1037,7 @@
 				  firstY = firstXForm.matrix.f;
 			}		
 
-			if (staticMode == 0) {
+			if (evoMode == 0) {
 				//if way out of bounds then mv back
 				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) || (document.getElementById(creature_name).getBoundingClientRect().top < 0) || (document.getElementById(creature_name).getBoundingClientRect().left < 0)) {staticMode = 1};
 
@@ -1101,10 +1101,10 @@
 					// eat some other creature and add it to the evoCreat! :)
 						// THIS SEEMS TO CAUSE A FREEZING ISSUE
 						// It tries to append a node where it can't, or encounters other errors... Although the following code seems to work in isolation.
-						if (creature_array.indexOf(document.getElementById(creature_name)) != nearestNeighbor) { //even w/ this there's the issue
+						//if (creature_array.indexOf(document.getElementById(creature_name)) != nearestNeighbor) { //even w/ this there's the issue
 							document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
 							// prev document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
-						} // check that not trying to eat itself, due to some unknown issue...
+						//} // check that not trying to eat itself, due to some unknown issue...
 						return; //stop running function on deleted/eaten creature
 					}
 /**/
@@ -1135,7 +1135,7 @@
 				
 				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
 				
-					staticMode = 0; //reset mode
+					evoMode = 0; //reset mode
 				}
 			}
 			
