@@ -145,7 +145,7 @@
 
 <p><b>Some questions for consideration:</b> How would you describe LifeFLOW? How does a digitarium compare with a terrarium or aquarium? Do you consider LifeFLOW creatures "alive"? What does it mean to you for something to be alive? What does evolution have to do with living? What is life?
 
-<p><b>Some questions for improvement:</b> What do you like or dislike about LifeFLOW? What do you want next? What do you think makes or would make LifeFLOW more useful, beautiful, interesting?</p>
+<p><b>Some questions for improvement:</b> What do you like or dislike about LifeFLOW? What do you want next? What do you think would make LifeFLOW more useful, beautiful, interesting?</p>
 
 <p><b>Development:</b> LifeFLOW is free and open source (MIT license). <a href="https://github.com/worldsowisdom/LifeFLOW">Come join us (at GitHub) in creating the coolest software on the planet! :)</a>
 
