@@ -459,7 +459,7 @@
 	
 	function getNearestNeighbor(creature_name) {
 		var distanceMeasure; // check how far apart creature_name is from o creatures
-		var distanceShortest = 1000000000000000000000; // tmp store the shortest distance while iterating through - should be 1000 but testing issues
+		var distanceShortest = 10000000000000; // tmp store the shortest distance while iterating through - should be 1000 but testing issues
 		var nearestNeighbor; //default to self = creature_array.indexOf(creature_name); // store the nearest neighbor
 		
 		//find the nearest other creature to creature_name
@@ -886,13 +886,13 @@
 				
 			else if (staticMode == 1) {
 				//if way out of bounds, mv bak towards center
-				x = firstX - 13;
-				y = firstY - 13;
+				x = 450*Math.random();
+				y = 450*Math.random();
 				
-				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
+				//if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
 				
 					staticMode = 0; //reset mode
-				}
+				//}
 			}
 			
 			
@@ -1010,7 +1010,7 @@
 				nextMode = 0; //reset mode
 			} // nextMode == 1, creature way out of boundz
 			
-			//}// if multiple creatures.??? looks like a mistake... but works... ???
+			//}// if multiple creatures.??? looks like a mistake... but works... ??? oh i think this was from an if check now gone.
 			
 			
 		} // if multiple creatures (figure out nearest neighbor) 
@@ -1265,10 +1265,10 @@
 				
 				//if way out of bounds then mv back
 				//probably move this or something like it into a more general creature-checking thing for area boundaryz! :)
-				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x = 450*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x = 450*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y = 450*Math.random()};
-				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y = 450*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x = 450*Math.random()+150};
+				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x = 450*Math.random()+150};
+				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y = 450*Math.random()+150};
+				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y = 450*Math.random()+150};
 			
 
 
