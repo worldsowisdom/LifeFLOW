@@ -102,8 +102,8 @@
 	var coolMode = 0; // give cool creature a mode, default to 0
 	var staticMode = 0; // give static creature a mode, default to 0
 	var psyMode = 0; // these are kinda hacky and should p be done differently
-	var evoMode= 0; // and another...
-
+	var evoMode = 0; // and another...
+	var nextMode = 0; // I think we should replace these...
 	
     function Start(evt) {
 		//Start the mechanical magic!!! :)
@@ -922,9 +922,9 @@
 				  firstY = firstXForm.matrix.f;
 			}		
 
-			if (staticMode == 0) {
+			if (nextMode == 0) {
 				//if way out of bounds then mv back
-				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) || (document.getElementById(creature_name).getBoundingClientRect().top < 0) || (document.getElementById(creature_name).getBoundingClientRect().left < 0)) {staticMode = 1};
+				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) || (document.getElementById(creature_name).getBoundingClientRect().top < 0) || (document.getElementById(creature_name).getBoundingClientRect().left < 0)) {nextMode = 1};
 
 //				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450)) {staticMode = 1};
 
@@ -1000,16 +1000,17 @@
 
 			} //staticmode0
 				
-			else if (staticMode == 1) {
+			else if (nextMode == 1) {
 				//if way out of bounds, mv bak towards center
-				x = firstX - 13;
-				y = firstY - 13;
+				x = 450 * Math.random();
+				y = 450 * Math.random();
 				
-				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
+				//if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
 				
-					staticMode = 0; //reset mode
-				}
-			}
+				nextMode = 0; //reset mode
+			} // nextMode == 1, creature way out of boundz
+			
+			//}// if multiple creatures.??? looks like a mistake... but works... ???
 			
 			
 		} // if multiple creatures (figure out nearest neighbor) 
