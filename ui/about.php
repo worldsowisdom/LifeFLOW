@@ -13,13 +13,13 @@
 			
 			<p><strong>Contribute to the flow!</strong></p>
 
-			<p>Let's collaborate to make a new type! :)</p>
+			<p>We'll design a new creature species with you. Let's collaborate to make a new type! :)</p>
 
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="7FS6H88GTKDQY" />
 			<table>
 				<tbody>
 					<tr>
-						<td><input name="on0" type="hidden" value="Add" />Add species:</td>
+						<td><input name="on0" type="hidden" value="Add" />Add species (select size):</td>
 					</tr>
 					<tr>
 						<td><select name="os0"><option value="Little niblet">Little niblet $1.00 USD</option><option value="Medium creature">Medium creature $2.00 USD</option><option value="Big beauty">Big beauty $5.00 USD</option> </select></td>
@@ -47,13 +47,13 @@
 
 			<p><strong>Subscribe to the flow!</strong></p>
 
-			<p>Let's develop together! :)</p>
+			<p>Make ongoing contributions to create new species weekly. Let's develop together! :)</p>
 
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="3VNCFPBM8JQM2" />
 			<table>
 				<tbody>
 					<tr>
-						<td><input name="on0" type="hidden" value="Add:" />Add species:</td>
+						<td><input name="on0" type="hidden" value="Add:" />Add species (select size):</td>
 					</tr>
 					<tr>
 						<td><select name="os0"><option value="Little niblet">Little niblet : $1.00 USD - weekly</option><option value="Medium creature">Medium creature : $2.00 USD - weekly</option><option value="Big beauty">Big beauty : $5.00 USD - weekly</option> </select></td>
@@ -71,7 +71,7 @@
 
 			<p><strong>Rent a private flow area!</strong></p>
 			
-			<p>A place to experiment! :)</p>
+			<p>For complete freedom to experiment with creatures. A place to experiment! :)</p>
 			
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
