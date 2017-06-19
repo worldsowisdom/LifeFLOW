@@ -123,15 +123,41 @@
 
 <p><h2 id="About">Welcome to LifeFLOW! :)</h2></p>
 
+<a href="http://life.worldsowisdom.com/flow"><img src="./img/LifeFLOW.png" align="right"></a>
+
 <p><blockquote>"Wow, cool!"</blockquote></p>
 
 <p><blockquote>"Now this is something!"</blockquote></p>
 
 <p><blockquote>- Actual quotes from players.</blockquote></p>
 
-<p><a href="http://life.worldsowisdom.com/flow"><img src="./img/LifeFLOW.png" align="right"><b>LifeFLOW</b></a> is a fun evolving part of <a href="http://life.worldsowisdom.com/">Life Worlds O Wisdom (LifeWOW)</a>. It is kind of like a game, and kind of like nature! :)</p>
+<p><a href="http://life.worldsowisdom.com/flow"><b>LifeFLOW</b></a> is a fun evolving part of <a href="http://life.worldsowisdom.com/">Life Worlds O Wisdom (LifeWOW)</a>. It is kind of like a game, and kind of like nature! :)</p>
 
 <p>LifeFLOW creatures are <i>actually alive</i>! Play with LifeFLOW like you would an aquarium, except on your digital device! :)</p>
+
+<h3>Our life world</h3>
+
+This story describes an experience of playing with LifeFLOW in the future! :)
+
+<blockquote><i><p>As I play with Lilyana, we take a look at our LifeFLOW area. The creatures move about, minding their own business, before a few of them catch on to our presence.
+
+<p>Mind you, this is a long time after the original LifeFLOW. Those early ones were preposterously simple, basically just some artistic shapes moving about in patterns so simple that they could have been crafted by hand.
+
+<p>But nowadays, after years of evolution, our areas are way more fun to play with. Look, there goes one now.
+
+<p>"What should we call it?" asks Lilyana.
+
+<p>"I dunno, how about 'Squiggles'? That's sort of the shape it's making."
+
+<p>And as I say that, the little worm-like thing bobs around a few obstacles. It moves suddenly, in little squirts and splats, unlike some of the other creatures that have been hanging around longer.
+
+<p>"Oh look, I think Squiggles wants to play with Malobar," says Lilyana
+
+<p>She's referring one of our favorite creatures. Malobar started off as a descendant of Kawn, one of the longest surviving ancestries in our life world. Now, Malobar has developed to the point of tool use -- taking various parts of the area, and rearranging them to make it possible for Malobar to go around faster, for example by riding on a set of rails made from bent wall pieces.
+
+<p>The whole thing just goes to show: you never know what to expect while playing with LlifeFLOW. One day you see a simple shape, the next day you see a new community.
+
+<p>"Kind of like us," as Lilyana likes to say.</i></blockquote>
 
 <h3>The science and technology of LifeFLOW</h3>
 

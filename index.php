@@ -4,7 +4,7 @@
 	<title>LifeFLOW Digitarium: Grow a little bit! :)</title>
 </head>
 <body>
-<p><a href="/" id="logo" rel="home" title="Home"><img alt="LifeWOW" src="img/LifeWOW.png" />LifeFLOW Digitarium: Grow a little bit! :)<img alt="Hearts" src="img/hearts.svg" width="60"></a><a href="#About">About LifeFLOW! :)</a> - <a href="#Embed">Embed LifeFLOW! :)</a> - <a href="#Music">Choose Your Music! :)</a> - <i>Play with it like an electronic aquarium! :)</i></p>
+<p><a href="/" id="logo" rel="home" title="Home"><img alt="LifeWOW" src="img/LifeWOW.png" />LifeFLOW Digitarium: Grow a little bit! :)<img alt="Hearts" src="img/hearts.svg" width="60"></a><a href="#About">About LifeFLOW! :)</a> - <a href="#Embed">Embed LifeFLOW! :)</a> - <a href="#Music">Choose Your Music! :)</a> - <i><b><font color="green">Play with it like an electronic aquarium! :)</font></b></i></p>
 <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
 
 <table border="0" cellpadding="1" cellspacing="1" style="width: 600px;">
