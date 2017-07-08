@@ -159,6 +159,10 @@ This story describes an experience of playing with LifeFLOW in the future! :)
 
 <p>"Kind of like us," as Lilyana likes to say.</i></blockquote>
 
+<h3>Watch the sweet LifeFLOW video! :)</h3>
+
+<iframe src="https://player.vimeo.com/video/224737045" width="640" height="352" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/224737045">LIFE: The evolution of flow!</a> from <a href="http://life.worldsowisdom.com/flow/">Eagle Flight</a>.</p>
+
 <h3>The science and technology of LifeFLOW</h3>
 
 <p>You can think of LifeFLOW as a digital <a href="https://en.wikipedia.org/wiki/Vivarium">vivarium</a>, or <b><i>digitarium</i></b> (i.e. a <a href="https://life.worldsowisdom.com/?q=node/91">virtual terrarium/aquarium</a>). We create and play with living electronic creatures who travel their environmental realms. How cool is that? :)</p>
