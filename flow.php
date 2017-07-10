@@ -1294,7 +1294,8 @@
 
 	} //moveLifePathCreatureEvo2()
 
-		function moveLifePathCreatureEvo3(creature_name, x, y) {
+	
+	function moveLifePathCreatureEvo3(creature_name, x, y) {
 //debug		var blah = "testblah";
 	
 		// Figure out nearest neighboring creature! :)
@@ -1315,22 +1316,41 @@
 				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) || (document.getElementById(creature_name).getBoundingClientRect().top < 0) || (document.getElementById(creature_name).getBoundingClientRect().left < 0)) {staticMode = 1};
 
 
+				//some sloppy logic! :O
+				//it would probably make more sense to check for four conditions: 1. X & Y above; 2. X & Y below; 3. X above & Y below; 4. X below & Y above.
 				
-				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0) {
+				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0 && creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y > 0) {
+					//creature is to the upper-left of nearestNeighbor
+					x = firstX + 3 * Math.random();
+					y = firstY + 3 * Math.random();
+					return;
+				}
+					
+				else if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0 && creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
+					//creature is to the lower-left of nearestNeighbor
+					x = firstX + 3 * Math.random();
+					y = firstY - 3 * Math.random();
+					return;
+				}
+					
+				else if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x < 0 && creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
+					//creature is to the lower-right of nearestNeighbor
 					x = firstX - 3 * Math.random();
 					y = firstY - 3 * Math.random();
 					return;
 				}
-				
-				else if (creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
-					x = firstX + 3 * Math.random();
+					
+				else if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x < 0 && creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y > 0) {
+					//creature is to the lower-left of nearestNeighbor
+					x = firstX - 3 * Math.random();
 					y = firstY + 3 * Math.random();
 					return;
-					
 				}
-				
+					
 				else {
 					//they're touching! :)
+						//well, sort of... their Y's may be quite different...
+							//changed code, now maybe again...?
 					
 					//check for eating, mating, etc.! :)
 					var special_event = Math.random(); // roll the dice...
@@ -1344,10 +1364,10 @@
 						return;
 					}
 					***** this cloning causes a problem, in which deleting the creature through the later case fails *****
-					else*/ if (special_event <= 0.06) { // three in a hundred
-						createLifePath2(); //give birth! :)
-						createLifePath3(); //give birth to a litter! :)
-						createLifePath6(0.5, 1.5); //give birth to a litter! :)
+					else*/ if (special_event <= 0.05) { // three in a hundred
+						createLifePath9(0.1,1.9); //give birth! :)
+						createLifePath9(0.7,0.8); //give birth to a litter! :)
+						createLifePath9(0.5,1.5); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
 					}
@@ -1723,11 +1743,7 @@
 		
 		//translate creature_name x y
 		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+time*Math.random()+")"); // transform the creature
-			//now just make it relative to current position or o creature etc., instead of origin.
-			
-		
-		
-		
+			//now just make it relative to current position or o creature etc., instead of origin.		
 		
 	}
 	
