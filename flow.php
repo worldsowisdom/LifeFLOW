@@ -1311,9 +1311,9 @@
 				  firstY = firstXForm.matrix.f;
 			}		
 
-			if (evoMode == 0) {
+//			if (evoMode == 0) {
 				//if way out of bounds then mv back
-				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) || (document.getElementById(creature_name).getBoundingClientRect().top < 0) || (document.getElementById(creature_name).getBoundingClientRect().left < 0)) {staticMode = 1};
+//				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) || (document.getElementById(creature_name).getBoundingClientRect().top < 0) || (document.getElementById(creature_name).getBoundingClientRect().left < 0)) {staticMode = 1};
 
 
 				//some sloppy logic! :O
@@ -1323,28 +1323,24 @@
 					//creature is to the upper-left of nearestNeighbor
 					x = firstX + 3 * Math.random();
 					y = firstY + 3 * Math.random();
-					return;
 				}
 					
 				else if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0 && creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
 					//creature is to the lower-left of nearestNeighbor
 					x = firstX + 3 * Math.random();
 					y = firstY - 3 * Math.random();
-					return;
 				}
 					
 				else if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x < 0 && creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
 					//creature is to the lower-right of nearestNeighbor
 					x = firstX - 3 * Math.random();
 					y = firstY - 3 * Math.random();
-					return;
 				}
 					
 				else if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x < 0 && creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y > 0) {
 					//creature is to the lower-left of nearestNeighbor
 					x = firstX - 3 * Math.random();
 					y = firstY + 3 * Math.random();
-					return;
 				}
 					
 				else {
@@ -1382,12 +1378,14 @@
 					}
 /*comment out death for debugging*/
 
-					//do other cool stuff! :)
+/*					//do other cool stuff! :)
 					else if (special_event <= 0.3 && x > 5 && y < 200) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
 						return; //stop running function on deleted/eaten creature
 					}
+i don't think this applies to these <g> creats
+*/
 
 					//do other cool stuff! :)
 					else if (special_event <= 0.4) { // check the odds...
@@ -1419,9 +1417,9 @@
 			
 
 
-			} //staticmode0
+//			} //staticmode0
 				
-			else if (staticMode == 1) {
+/*			else if (staticMode == 1) {
 				//if way out of bounds, mv bak towards center
 				x = 450 * Math.random();
 				y = 450 * Math.random();
@@ -1430,8 +1428,8 @@
 				
 					evoMode = 0; //reset mode
 				}
-			}
-			
+			} //staticmode1
+*/			
 			
 		} // if multiple creatures (figure out nearest neighbor) 
 
