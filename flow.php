@@ -1361,7 +1361,7 @@
 						return;
 					}
 					***** this cloning causes a problem, in which deleting the creature through the later case fails *****
-					else*/ if (special_event <= 0.12) { // three in a hundred
+					else*/ if (special_event <= 0.07) { // three in a hundred
 						newX = x * Math.random(); //generate new X! :)
 						newY = y * Math.random(); //generate new Y! :)
 						createLifePath9(x*0.1,y*1.9); //give birth! :)
@@ -1396,7 +1396,8 @@ i don't think this applies to these <g> creats
 						// THIS SEEMS TO CAUSE A FREEZING ISSUE
 						// It tries to append a node where it can't, or encounters other errors... Although the following code seems to work in isolation.
 						//if (creature_array.indexOf(document.getElementById(creature_name)) != nearestNeighbor) { //even w/ this there's the issue
-							document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
+//							document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
+//CAUSES PROBLEMZ					document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
 							// prev document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
 						//} // check that not trying to eat itself, due to some unknown issue...
 						return; //stop running function on deleted/eaten creature
