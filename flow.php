@@ -1343,7 +1343,8 @@
 					y = firstY + 3 * Math.random();
 				}
 					
-				else {
+//				else {
+			if (Math.abs(creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x) < 2 && Math.abs(creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 2)) {
 					//they're touching! :)
 						//well, sort of... their Y's may be quite different...
 							//changed code, now maybe again...?
@@ -1360,10 +1361,12 @@
 						return;
 					}
 					***** this cloning causes a problem, in which deleting the creature through the later case fails *****
-					else*/ if (special_event <= 0.05) { // three in a hundred
-						createLifePath9(0.1,1.9); //give birth! :)
-						createLifePath9(0.7,0.8); //give birth to a litter! :)
-						createLifePath9(0.5,1.5); //give birth to a litter! :)
+					else*/ if (special_event <= 0.07) { // three in a hundred
+						newX = x * Math.random(); //generate new X! :)
+						newY = y * Math.random(); //generate new Y! :)
+						createLifePath9(x*0.1,y*1.9); //give birth! :)
+						createLifePath9(x*0.7,y*0.8); //give birth to a litter! :)
+						createLifePath9(x*0.5,y*1.5); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
 					}
@@ -1371,7 +1374,7 @@
 
 					//get eaten once every ten times...
 					//there's some issue w/ deleting if there are clones of this creature around...
- 					else if (special_event <= 0.16) { //one in ten, five...
+ 					else if (special_event <= 0.1) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
@@ -1393,7 +1396,8 @@ i don't think this applies to these <g> creats
 						// THIS SEEMS TO CAUSE A FREEZING ISSUE
 						// It tries to append a node where it can't, or encounters other errors... Although the following code seems to work in isolation.
 						//if (creature_array.indexOf(document.getElementById(creature_name)) != nearestNeighbor) { //even w/ this there's the issue
-							document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
+//							document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
+//CAUSES PROBLEMZ					document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
 							// prev document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
 						//} // check that not trying to eat itself, due to some unknown issue...
 						return; //stop running function on deleted/eaten creature
