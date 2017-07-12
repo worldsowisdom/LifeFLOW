@@ -1104,11 +1104,19 @@
 						// THIS SEEMS TO CAUSE A FREEZING ISSUE
 						// It tries to append a node where it can't, or encounters other errors... Although the following code seems to work in isolation.
 						//if (creature_array.indexOf(document.getElementById(creature_name)) != nearestNeighbor) { //even w/ this there's the issue
-							document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
+							//document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
 							// prev document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
 						//} // check that not trying to eat itself, due to some unknown issue...
-						return; //stop running function on deleted/eaten creature
-					}
+						//return; //stop running function on deleted/eaten creature
+						
+						if (document.getElementById(creature_name).parentNode != creature_array[nearestNeighbor]) {
+							document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)			
+							return; //stop running function on deleted/eaten creature
+						} // Safety check on eating, i.e. not eating parent
+
+
+						
+					} // case if eating
 /**/
 
 					else { //default case
@@ -1240,11 +1248,16 @@
 						// THIS SEEMS TO CAUSE A FREEZING ISSUE
 						// It tries to append a node where it can't, or encounters other errors... Although the following code seems to work in isolation.
 						//if (creature_array.indexOf(document.getElementById(creature_name)) != nearestNeighbor) { //even w/ this there's the issue
-							document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
+							//document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
 							// prev document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
 						//} // check that not trying to eat itself, due to some unknown issue...
-						return; //stop running function on deleted/eaten creature
-					}
+
+						if (document.getElementById(creature_name).parentNode != creature_array[nearestNeighbor]) {
+							document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)			
+							return; //stop running function on deleted/eaten creature
+						} // Safety check on eating, i.e. not eating parent
+
+					} // case if eating
 /**/
 
 					else { //default case
@@ -1400,8 +1413,14 @@ i don't think this applies to these <g> creats
 //CAUSES PROBLEMZ					document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
 							// prev document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
 						//} // check that not trying to eat itself, due to some unknown issue...
+				
+					//Eat after checking that not trying to eat own parent, which is illegal! :)
+					if (document.getElementById(creature_name).parentNode != creature_array[nearestNeighbor]) {
+						document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)			
 						return; //stop running function on deleted/eaten creature
-					}
+					} // Safety check on eating, i.e. not eating parent
+
+					} // case if creature is eating nearest neighbor
 /**/
 
 					else { //default case
