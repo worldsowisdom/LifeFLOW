@@ -1458,8 +1458,10 @@ i don't think this applies to these <g> creats
 		// Figure out nearest neighboring creature! :)
 		if (creature_index > 1) {
 			var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
-		
-			
+
+			//try eating up here
+			document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)			
+			return; //first let's see what happens if we just eat right away
 			// Getting existing translate X and Y, in order to apply subsequent X and Y
 			var xforms = document.getElementById(creature_name).transform.baseVal; // An SVGTransformList
 			var firstXForm = xforms.getItem(0);       // An SVGTransform
