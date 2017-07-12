@@ -1460,8 +1460,14 @@ i don't think this applies to these <g> creats
 			var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
 
 			//try eating up here
-			document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)			
-			return; //first let's see what happens if we just eat right away
+			//first check if creature hasn't already been eaten; er, if it isn't trying to eat its parent.
+			if (document.getElementById(creature_name).parentNode != creature_array[nearestNeighbor]) {
+				document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)			
+//ref differently				document.getElementById(creature_name).appendChild(document.getElementById(creature_array[nearestNeighbor].id)); // not sure if/how this'll work...! :) seems ok!!! :)			
+// snippet: document.getElementById("Creature-0.5429937798893708").appendChild(creature_array[testnearestNeighbor]);
+				return; //first let's see what happens if we just eat right away
+			}
+			
 			// Getting existing translate X and Y, in order to apply subsequent X and Y
 			var xforms = document.getElementById(creature_name).transform.baseVal; // An SVGTransformList
 			var firstXForm = xforms.getItem(0);       // An SVGTransform
