@@ -459,7 +459,7 @@
 	
 	function getNearestNeighbor(creature_name) {
 		var distanceMeasure; // check how far apart creature_name is from o creatures
-		var distanceShortest = 1000000000000000000000; // tmp store the shortest distance while iterating through - should be 1000 but testing issues
+		var distanceShortest = 10000000000000000000; // tmp store the shortest distance while iterating through - should be 1000 but testing issues (was really big, now 1,000,000 just in case)
 		var nearestNeighbor; //default to self = creature_array.indexOf(creature_name); // store the nearest neighbor
 		
 		//find the nearest other creature to creature_name
@@ -1084,7 +1084,7 @@
 
 					//get eaten once every ten times...
 					//there's some issue w/ deleting if there are clones of this creature around...
- 					else if (special_event <= 0.16) { //one in ten, five...
+ 					else if (special_event <= 0.18) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
@@ -1228,7 +1228,7 @@
 
 					//get eaten once every ten times...
 					//there's some issue w/ deleting if there are clones of this creature around...
- 					else if (special_event <= 0.16) { //one in ten, five...
+ 					else if (special_event <= 0.18) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
@@ -1374,7 +1374,7 @@
 						return;
 					}
 					***** this cloning causes a problem, in which deleting the creature through the later case fails *****
-					else*/ if (special_event <= 0.07) { // three in a hundred
+					else*/ if (special_event <= 0.05) { // three in a hundred
 						newX = x * Math.random(); //generate new X! :)
 						newY = y * Math.random(); //generate new Y! :)
 						createLifePath9(x*0.1,y*1.9); //give birth! :)
@@ -1387,7 +1387,7 @@
 
 					//get eaten once every ten times...
 					//there's some issue w/ deleting if there are clones of this creature around...
- 					else if (special_event <= 0.1) { //one in ten, five...
+ 					else if (special_event <= 0.15) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
