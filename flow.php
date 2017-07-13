@@ -459,7 +459,7 @@
 	
 	function getNearestNeighbor(creature_name) {
 		var distanceMeasure; // check how far apart creature_name is from o creatures
-		var distanceShortest = 10000000000000000000; // tmp store the shortest distance while iterating through - should be 1000 but testing issues (was really big, now 1,000,000 just in case)
+		var distanceShortest = 10000000000000000000000; // tmp store the shortest distance while iterating through - should be 1000 but testing issues (was really big, now 1,000,000 just in case)
 		var nearestNeighbor; //default to self = creature_array.indexOf(creature_name); // store the nearest neighbor
 		
 		//find the nearest other creature to creature_name
@@ -1636,6 +1636,172 @@ i don't think this applies to these <g> creats
 	} //moveLifePathCreatureBranch1()
 
 	
+	function moveLifePathCreatureBranch2(creature_name, x, y) {
+//debug		var blah = "testblah";
+	
+		// Figure out nearest neighboring creature! :)
+		if (creature_index > 1) {
+			var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
+
+			//try eating up here
+			//first check if creature hasn't already been eaten; er, if it isn't trying to eat its parent or itself.
+//			if (document.getElementById(creature_name).parentNode != creature_array[nearestNeighbor] && document.getElementById(creature_name) != creature_array[nearestNeighbor] && document.getElementById(creature_name) != creature_array[nearestNeighbor].parentNode) {
+			if (document.getElementById(creature_name).parentNode != creature_array[nearestNeighbor] && document.getElementById(creature_name) != creature_array[nearestNeighbor] && document.getElementById(creature_name)) {
+				document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)			
+//ref differently				document.getElementById(creature_name).appendChild(document.getElementById(creature_array[nearestNeighbor].id)); // not sure if/how this'll work...! :) seems ok!!! :)			
+// snippet: document.getElementById("Creature-0.5429937798893708").appendChild(creature_array[testnearestNeighbor]);
+				return; //first let's see what happens if we just eat right away
+			}
+			
+			// Getting existing translate X and Y, in order to apply subsequent X and Y
+			var xforms = document.getElementById(creature_name).transform.baseVal; // An SVGTransformList
+			var firstXForm = xforms.getItem(0);       // An SVGTransform
+			if (firstXForm.type == SVGTransform.SVG_TRANSFORM_TRANSLATE){
+			  var firstX = firstXForm.matrix.e,
+				  firstY = firstXForm.matrix.f;
+			}		
+
+//			if (evoMode == 0) {
+				//if way out of bounds then mv back
+//				if ((document.getElementById(creature_name).getBoundingClientRect().right > 450) || (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) || (document.getElementById(creature_name).getBoundingClientRect().top < 0) || (document.getElementById(creature_name).getBoundingClientRect().left < 0)) {staticMode = 1};
+
+
+				//some sloppy logic! :O
+				//it would probably make more sense to check for four conditions: 1. X & Y above; 2. X & Y below; 3. X above & Y below; 4. X below & Y above.
+				
+				if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0 && creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y > 0) {
+					//creature is to the upper-left of nearestNeighbor
+					x = firstX + 3 * Math.random();
+					y = firstY + 3 * Math.random();
+				}
+					
+				else if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x > 0 && creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
+					//creature is to the lower-left of nearestNeighbor
+					x = firstX + 3 * Math.random();
+					y = firstY - 3 * Math.random();
+				}
+					
+				else if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x < 0 && creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 0) {
+					//creature is to the lower-right of nearestNeighbor
+					x = firstX - 3 * Math.random();
+					y = firstY - 3 * Math.random();
+				}
+					
+				else if (creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x < 0 && creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y > 0) {
+					//creature is to the lower-left of nearestNeighbor
+					x = firstX - 3 * Math.random();
+					y = firstY + 3 * Math.random();
+				}
+					
+//				else {
+			if (Math.abs(creature_array[nearestNeighbor].getBoundingClientRect().x - document.getElementById(creature_name).getBoundingClientRect().x) < 2 && Math.abs(creature_array[nearestNeighbor].getBoundingClientRect().y - document.getElementById(creature_name).getBoundingClientRect().y < 2)) {
+					//they're touching! :)
+						//well, sort of... their Y's may be quite different...
+							//changed code, now maybe again...?
+					
+					//check for eating, mating, etc.! :)
+					var special_event = Math.random(); // roll the dice...
+					//can change this to a switch statement... although maybe don't want to...
+					
+					//can also check for random mutations, e.g. to articulation or other elements of code! :)
+					
+					/*
+					if (special_event <= 0.03) { // three in a hundred
+						clone(creature_name); //clone for now, could also reproduce sexually, etc.! :)
+						return;
+					}
+					***** this cloning causes a problem, in which deleting the creature through the later case fails *****
+					else*/ if (special_event <= 0.07) { // three in a hundred
+						newX = x * Math.random(); //generate new X! :)
+						newY = y * Math.random(); //generate new Y! :)
+						createLifePathBranch2(x*0.1,y*1.9); //give birth! :)
+						createLifePathBranch2(x*0.7,y*0.8); //give birth to a litter! :)
+						createLifePathBranch2(x*0.5,y*1.5); //give birth to a litter! :)
+						return;
+						//can later recombine creature codez... mutate... etc.! :)
+					}
+
+
+					//get eaten once every ten times...
+					//there's some issue w/ deleting if there are clones of this creature around...
+ 					else if (special_event <= 0.1) { //one in ten, five...
+					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
+						deleteCreature(creature_name); //get eaten
+						return; //stop running function on deleted/eaten creature
+					}
+/*comment out death for debugging*/
+
+/*					//do other cool stuff! :)
+					else if (special_event <= 0.3 && x > 5 && y < 200) { //one in ten, five...
+					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
+						document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
+						return; //stop running function on deleted/eaten creature
+					}
+i don't think this applies to these <g> creats
+*/
+
+					//do other cool stuff! :)
+					else if (special_event <= 0.4) { // check the odds...
+					// eat some other creature and add it to the evoCreat! :)
+						// THIS SEEMS TO CAUSE A FREEZING ISSUE
+						// It tries to append a node where it can't, or encounters other errors... Although the following code seems to work in isolation.
+						//if (creature_array.indexOf(document.getElementById(creature_name)) != nearestNeighbor) { //even w/ this there's the issue
+//							document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
+//CAUSES PROBLEMZ					document.getElementById(creature_name).appendChild(creature_array[nearestNeighbor]); // not sure if/how this'll work...! :) seems ok!!! :)
+							// prev document.getElementById(creature_name).setAttributeNS(null,"d","M "+450*Math.random()+", "+450*Math.random()+" Q "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" T "+450*Math.random()+", "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+", "+450*Math.random()+" "+450*Math.random()+" z"); // give the creature a new shape.
+						//} // check that not trying to eat itself, due to some unknown issue...
+						return; //stop running function on deleted/eaten creature
+					}
+/**/
+
+					else { //default case
+						x = firstX + 6 * (Math.random() - .5);
+						y = firstY + 6 * (Math.random() - .5);
+						//mv about randomly...
+					}
+					
+				}
+				
+				//if way out of bounds then mv back
+				//probably move this or something like it into a more general creature-checking thing for area boundaryz! :)
+				if (document.getElementById(creature_name).getBoundingClientRect().right > 450) {x = 450*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().left < 0) {x = 450*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().bottom > 450) {y = 450*Math.random()};
+				if (document.getElementById(creature_name).getBoundingClientRect().top < 0) {y = 450*Math.random()};
+			
+
+
+//			} //staticmode0
+				
+/*			else if (staticMode == 1) {
+				//if way out of bounds, mv bak towards center
+				x = 450 * Math.random();
+				y = 450 * Math.random();
+				
+				if ((document.getElementById(creature_name).getBoundingClientRect().x < 450) && (document.getElementById(creature_name).getBoundingClientRect().y  < 450)) {
+				
+					evoMode = 0; //reset mode
+				}
+			} //staticmode1
+*/			
+			
+		} // if multiple creatures (figure out nearest neighbor) 
+
+		else { //default case
+				x = 450 * Math.random(); // firstX + 6 * (Math.random() - .5);
+				y = 450 * Math.random(); // firstY + 6 * (Math.random() - .5);
+				//mv about randomly...
+		} // if only creature. this code is now also in the multicreature scenario above, maybe shouldn't be there...
+	
+		
+		//translate creature_name x y
+		pivot_x = (document.getElementById(creature_name).getBoundingClientRect().left + document.getElementById(creature_name).getBoundingClientRect().right) / 2; // average coordinates for pivot around middle.
+		pivot_y = (document.getElementById(creature_name).getBoundingClientRect().top + document.getElementById(creature_name).getBoundingClientRect().bottom) / 2; // average coordinates for pivot around middle.
+		document.getElementById(creature_name).setAttribute("transform", "translate("+x+", "+y+") rotate("+x/y*(Math.random()-0.5)+" "+pivot_x+" "+pivot_y+")"); // transform the creature
+
+	} //moveLifePathCreatureBranch2()
+
+	
 	function movePsyCreat(creature_name, x, y) {
 //debug		var blah = "testblah";
 		//var firstRotate = 0; //maybe improve this later...
@@ -2112,7 +2278,7 @@ i don't think this applies to these <g> creats
 				createLifePathBranch1(1.5,0.75);
 				break;
 			case "Creature-56":
-				createLifePath5(1.5,0.75);
+				createLifePathBranch2(1.5,0.75);
 				break;
 			case "Creature-57":
 				createLifePath5(1.5,0.75);
@@ -3459,6 +3625,118 @@ i don't think this applies to these <g> creats
 		// Can replace the above statements with a FOR...
 			
 	} // createLifePathBranch1()
+
+
+	function createLifePathBranch2(x, y) {
+		//Create a new creature! :)
+		// This creature evolves. It has a few component creatures in its <g>. It's basically the organizational structure for compound creatures, a la <div> in HTML.
+		
+		var cx_new = Math.random()*450 / x; // create random starting x
+		var cy_new = Math.random()*450 / y; // create random starting y
+		
+		var creature_fill = '#'+Math.floor(Math.random()*16777215).toString(16); // random fill color
+		var creature_stroke = '#'+Math.floor(Math.random()*16777215).toString(16); // random stroke color
+				
+		var creature_name = "Creature-"+Math.random(); //e.g. "Creature-0.17239898123"
+	//	var creature_name = creature.getAttribute("id")+"-"+Math.random(); //e.g. "the_rect-0.17239898123"
+		creature_array[creature_index] = document.createElementNS(xmlns,"g"); //create a new creature! :)
+	//			getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
+	//	creature_array[creature_index] = document.getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
+		creature_array[creature_index].setAttributeNS(null,"id",creature_name); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"style","fill:"+creature_fill+";stroke:"+creature_stroke); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
+		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
+	// add "Creature" class, for later readding/loading! :)
+		creature_array[creature_index].setAttributeNS(null,"class","creatureClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
+						// insert clone_index into clone, for ease of deletion. 
+	//		clone_array[clone_index].setAttribute("clone_index",clone_index); // insert clone_index into clone, for ease of deletion.
+			// or should it be : "onmousedown=deleteClone(clone_index)"...? py...
+			
+	// add <title> (hover-over tip where available) and <desc> (AI)! :)
+		//<title> - this is the hover-over tooltip on desktop/laptop...
+		var creature_title_element = document.createElementNS(xmlns,"title"); // creature_title_element is a <title> element
+		var creature_title = document.createTextNode(creature_name); // creature_title is the creature name. Right now this is autogenerated ID, could be user-given name instead.
+		creature_title_element.appendChild(creature_title); // add ID to <title> (I think this is necessary...)
+		creature_array[creature_index].appendChild(creature_title_element); // add <title> to new creature.
+
+		//<desc> - this is AI! :)
+		// m also add <id="a-##########"> and/or <class="personalityClass>
+		var creature_desc_element = document.createElementNS(xmlns,"desc"); // creature_desc_element is a <desc> element
+
+		//moving evolving creature! :)
+		var creature_desc = document.createTextNode("moveLifePathCreatureBranch2(\""+creature_name+"\", "+x+", "+y+")"); // make it flutter about like some kind of insect or bacterium
+//		var creature_desc = document.createTextNode("moveLifePathCreatureBranch2(\""+creature_name+"\", 0.7, 1.2)"); // make it flutter about like some kind of insect or bacterium
+
+//b4smoothy		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(\"+33*Math.random()+\", \"+50*Math.random()+\")\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+//orig		var creature_desc = document.createTextNode("document.getElementById(\""+creature_name+"\").setAttribute(\"transform\", \"translate(Math.random()*30,Math.random()*50)\");"); // creature_desc describes the creature's AI or movements. (Start with hard-coded, eventually refer to AI data.
+			//eg_newy.setAttribute("transform", "translate(" +Math.random()*100+ ", " +Math.random()*100+ " )"); // mv randomly! :)
+	//document.getElementById("Creature-0.778706729708058");
+//	eg_newy.setAttribute("transform", "translate(3,5)");
+	
+//	" +Math.random()*100+ ", " +Math.random()*100+ " )");
+
+		creature_desc_element.appendChild(creature_desc); // add AI to <desc> (I think this is necessary...)
+		creature_array[creature_index].appendChild(creature_desc_element); // add <desc> to new creature. Not sure if this worx...
+
+
+	
+		// Add new creaturez to HTML DOM:	
+		document.getElementById("svg2")
+			.insertBefore(creature_array[creature_index], document.getElementById("galaxy3")); // WHERE TO INSERT? add the new clone into the inline svg (to get written automatically to file later)
+				// m instead do an appendChild to svg2 (above)...
+				
+		creature_index++; // go to next creature
+				
+
+		// Add creature parts to the <g> creature.
+				
+		var creatureParty = []; //for now just add something manually, eventually we can modularize the creature parts.
+
+		creatureParty[0] = document.createElementNS(xmlns,"path"); //create a new creature! :)
+		creatureParty[0].setAttributeNS(null,"id",creature_name+"-part-"+0); // give the new clone a different id.
+		creatureParty[0].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
+		creatureParty[0].setAttributeNS(null,"stroke-width",10*Math.random()*x/y); // give the new clone a different id.
+		creatureParty[0].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
+		creatureParty[0].setAttributeNS(null,"class","creaturePartClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
+				
+		document.getElementById(creature_name)
+			.appendChild(creatureParty[0]); //Add first creature part to creature. Not sure if this works. If so, we can improve how we do it.
+		
+		creatureParty[1] = document.createElementNS(xmlns,"path"); //create a new creature! :)
+		creatureParty[1].setAttributeNS(null,"id",creature_name+"-part-"+1); // give the new clone a different id.
+		creatureParty[1].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
+		creatureParty[1].setAttributeNS(null,"stroke-width",10*Math.random()*x/y); // give the new clone a different id.
+		creatureParty[1].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
+		creatureParty[1].setAttributeNS(null,"class","creaturePartClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
+				
+		document.getElementById(creature_name)
+			.appendChild(creatureParty[1]); //Add first creature part to creature. Not sure if this works. If so, we can improve how we do it.
+			
+		creatureParty[2] = document.createElementNS(xmlns,"path"); //create a new creature! :)
+		creatureParty[2].setAttributeNS(null,"id",creature_name+"-part-"+2); // give the new clone a different id.
+		creatureParty[2].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
+		creatureParty[2].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
+		creatureParty[2].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
+		creatureParty[2].setAttributeNS(null,"class","creaturePartClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
+				
+		document.getElementById(creature_name)
+			.appendChild(creatureParty[2]); //Add first creature part to creature. Not sure if this works. If so, we can improve how we do it.
+		
+		creatureParty[3] = document.createElementNS(xmlns,"path"); //create a new creature! :)
+		creatureParty[3].setAttributeNS(null,"id",creature_name+"-part-"+3); // give the new clone a different id.
+		creatureParty[3].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
+		creatureParty[3].setAttributeNS(null,"stroke-width",10*Math.random()*x/y); // give the new clone a different id.
+		creatureParty[3].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
+		creatureParty[3].setAttributeNS(null,"class","creaturePartClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
+				
+		document.getElementById(creature_name)
+			.appendChild(creatureParty[3]); //Add first creature part to creature. Not sure if this works. If so, we can improve how we do it.
+			
+		// Can replace the above statements with a FOR...
+			
+	} // createLifePathBranch2()
 
 
 	
