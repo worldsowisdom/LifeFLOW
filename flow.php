@@ -1725,7 +1725,7 @@ i don't think this applies to these <g> creats
 
 					//get eaten once every ten times...
 					//there's some issue w/ deleting if there are clones of this creature around...
- 					else if (special_event <= 0.2) { //one in ten, five...
+ 					else if (special_event <= 0.4) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
@@ -1756,7 +1756,7 @@ i don't think this applies to these <g> creats
 /**/
 
 
-				else if (special_event <= 0.4) {
+				else if (special_event <= 0.6) {
 					// Reproduce differently...
 					newX = x + Math.random() - 0.5; //generate new X! :)
 					newY = y * Math.random() - 0.5; //generate new Y! :)
