@@ -1548,9 +1548,9 @@ i don't think this applies to these <g> creats
 					else*/ if (special_event <= 0.07) { // three in a hundred
 						newX = x * Math.random(); //generate new X! :)
 						newY = y * Math.random(); //generate new Y! :)
-						createLifePath9(x*0.1,y*1.9); //give birth! :)
-						createLifePath9(x*0.7,y*0.8); //give birth to a litter! :)
-						createLifePath9(x*0.5,y*1.5); //give birth to a litter! :)
+						createLifePath9(newX*0.1,newY*1.9); //give birth! :)
+						createLifePath9(newX*0.7,newY*0.8); //give birth to a litter! :)
+						createLifePath9(newX*0.5,newY*1.5); //give birth to a litter! :)
 						return;
 						//can later recombine creature codez... mutate... etc.! :)
 					}
@@ -1643,7 +1643,7 @@ i don't think this applies to these <g> creats
 		if (creature_index > 1) {
 			var nearestNeighbor = getNearestNeighbor(creature_name); // get (index of) nearbyest neighbor
 
-			//try eating up here
+/*			//try eating up here
 			//first check if creature hasn't already been eaten; er, if it isn't trying to eat its parent or itself.
 //			if (document.getElementById(creature_name).parentNode != creature_array[nearestNeighbor] && document.getElementById(creature_name) != creature_array[nearestNeighbor] && document.getElementById(creature_name) != creature_array[nearestNeighbor].parentNode) {
 			if (document.getElementById(creature_name).parentNode != creature_array[nearestNeighbor] && document.getElementById(creature_name) != creature_array[nearestNeighbor] && document.getElementById(creature_name)) {
@@ -1652,6 +1652,7 @@ i don't think this applies to these <g> creats
 // snippet: document.getElementById("Creature-0.5429937798893708").appendChild(creature_array[testnearestNeighbor]);
 				return; //first let's see what happens if we just eat right away
 			}
+*/
 			
 			// Getting existing translate X and Y, in order to apply subsequent X and Y
 			var xforms = document.getElementById(creature_name).transform.baseVal; // An SVGTransformList
@@ -1711,7 +1712,7 @@ i don't think this applies to these <g> creats
 						return;
 					}
 					***** this cloning causes a problem, in which deleting the creature through the later case fails *****
-					else*/ if (special_event <= 0.07) { // three in a hundred
+					else*/ if (special_event <= 0.03) { // three in a hundred
 						newX = x * Math.random(); //generate new X! :)
 						newY = y * Math.random(); //generate new Y! :)
 						createLifePathBranch2(x*0.1,y*1.9); //give birth! :)
@@ -1724,7 +1725,7 @@ i don't think this applies to these <g> creats
 
 					//get eaten once every ten times...
 					//there's some issue w/ deleting if there are clones of this creature around...
- 					else if (special_event <= 0.1) { //one in ten, five...
+ 					else if (special_event <= 0.2) { //one in ten, five...
 					//could also have creature e.g. reproduce and die at the same time... (by de-elsing this conditional and making other adjustments...)
 						deleteCreature(creature_name); //get eaten
 						return; //stop running function on deleted/eaten creature
@@ -1741,7 +1742,7 @@ i don't think this applies to these <g> creats
 */
 
 					//do other cool stuff! :)
-					else if (special_event <= 0.4) { // check the odds...
+/*					else if (special_event <= 0.4) { // check the odds...
 					// eat some other creature and add it to the evoCreat! :)
 						// THIS SEEMS TO CAUSE A FREEZING ISSUE
 						// It tries to append a node where it can't, or encounters other errors... Although the following code seems to work in isolation.
@@ -1753,6 +1754,17 @@ i don't think this applies to these <g> creats
 						return; //stop running function on deleted/eaten creature
 					}
 /**/
+
+
+				else if (special_event <= 0.4) {
+					// Reproduce differently...
+					newX = x + Math.random() - 0.5; //generate new X! :)
+					newY = y * Math.random() - 0.5; //generate new Y! :)
+					createLifePathBranch2(newX*0.1,newY*1.9); //give birth! :)
+					createLifePathBranch2(newX*0.7,newY*0.8); //give birth to a litter! :)
+					return;
+					
+				}
 
 					else { //default case
 						x = firstX + 6 * (Math.random() - .5);
@@ -3644,7 +3656,7 @@ i don't think this applies to these <g> creats
 	//	creature_array[creature_index] = document.getElementById("satellite3").cloneNode(true); // can we give the new clone a var on the basis of clone_name? let it use array instead.
 		creature_array[creature_index].setAttributeNS(null,"id",creature_name); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"style","fill:"+creature_fill+";stroke:"+creature_stroke); // give the new clone a different id.
-		creature_array[creature_index].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
+		creature_array[creature_index].setAttributeNS(null,"stroke-width",2*Math.random()*x/y); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
 		creature_array[creature_index].setAttributeNS(null,"transform","translate(0,0)"); // translate the new clone.
 		creature_array[creature_index].setAttributeNS(null,"onmousedown","tool('"+creature_name+"')"); // Self-destruct! :) although that would override other toolz... ok for now, later would ideally deal w/ clones more elegantly...
@@ -3697,7 +3709,7 @@ i don't think this applies to these <g> creats
 		creatureParty[0] = document.createElementNS(xmlns,"path"); //create a new creature! :)
 		creatureParty[0].setAttributeNS(null,"id",creature_name+"-part-"+0); // give the new clone a different id.
 		creatureParty[0].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
-		creatureParty[0].setAttributeNS(null,"stroke-width",10*Math.random()*x/y); // give the new clone a different id.
+		creatureParty[0].setAttributeNS(null,"stroke-width",1.2*Math.random()*x/y); // give the new clone a different id.
 		creatureParty[0].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
 		creatureParty[0].setAttributeNS(null,"class","creaturePartClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
 				
@@ -3707,7 +3719,7 @@ i don't think this applies to these <g> creats
 		creatureParty[1] = document.createElementNS(xmlns,"path"); //create a new creature! :)
 		creatureParty[1].setAttributeNS(null,"id",creature_name+"-part-"+1); // give the new clone a different id.
 		creatureParty[1].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
-		creatureParty[1].setAttributeNS(null,"stroke-width",10*Math.random()*x/y); // give the new clone a different id.
+		creatureParty[1].setAttributeNS(null,"stroke-width",1.8*Math.random()*x/y); // give the new clone a different id.
 		creatureParty[1].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
 		creatureParty[1].setAttributeNS(null,"class","creaturePartClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
 				
@@ -3717,7 +3729,7 @@ i don't think this applies to these <g> creats
 		creatureParty[2] = document.createElementNS(xmlns,"path"); //create a new creature! :)
 		creatureParty[2].setAttributeNS(null,"id",creature_name+"-part-"+2); // give the new clone a different id.
 		creatureParty[2].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
-		creatureParty[2].setAttributeNS(null,"stroke-width",20*Math.random()*x/y); // give the new clone a different id.
+		creatureParty[2].setAttributeNS(null,"stroke-width",0.2*Math.random()*x/y); // give the new clone a different id.
 		creatureParty[2].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
 		creatureParty[2].setAttributeNS(null,"class","creaturePartClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
 				
@@ -3727,7 +3739,7 @@ i don't think this applies to these <g> creats
 		creatureParty[3] = document.createElementNS(xmlns,"path"); //create a new creature! :)
 		creatureParty[3].setAttributeNS(null,"id",creature_name+"-part-"+3); // give the new clone a different id.
 		creatureParty[3].setAttributeNS(null,"d","M "+cx_new*Math.random()+", "+cy_new*Math.random()+" Q "+cx_new*Math.random()+", "+cy_new*Math.random()+" "+cx_new*Math.random()+", "+cy_new*Math.random()+" T "+cx_new*Math.random()+", "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+", "+cx_new*Math.random()+" "+cy_new*Math.random()+" z"); // give the new clone a different id.
-		creatureParty[3].setAttributeNS(null,"stroke-width",10*Math.random()*x/y); // give the new clone a different id.
+		creatureParty[3].setAttributeNS(null,"stroke-width",0.3*Math.random()*x/y); // give the new clone a different id.
 		creatureParty[3].setAttributeNS(null,"opacity",Math.sqrt(Math.sqrt(Math.random()))); // give the new clone a different id.
 		creatureParty[3].setAttributeNS(null,"class","creaturePartClass"); // Assign new creatures to creatureClass. We can load AI etc. with this.
 				
